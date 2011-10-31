@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="notificationTop">
+		<posy>9</posy>
+		<width>400</width>
+		<align>right</align>
+		<height>40</height>
+		<font>info1</font>
+		<aligny>center</aligny>
+		<textcolor>White</textcolor>
+		<animation effect="slide" start="0" end="-45" time="100" tween="Cubic" condition="Window.IsActive(107)">Conditional</animation>
+	</include>
+	<include name="notificationBottom">
+		<posy>28</posy>
+		<width>400</width>
+		<align>right</align>
+		<font>info1</font>
+		<height>40</height>
+		<aligny>center</aligny>
+		<textcolor>White</textcolor>
+		<animation effect="slide" start="0" end="-45" time="100" tween="Cubic" condition="Window.IsActive(107)">Conditional</animation>
+	</include>
+	<include name="notificationSide">
+		<posx>115</posx>
+		<posy>10</posy>
+		<align>left</align>
+		<aligny>top</aligny>
+		<font>info1</font>
+		<textcolor>White</textcolor>
+	</include>
+	<include name="dialogOpen">
+		<animation type="WindowOpen">
+            <effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+            <effect type="fade" start="0" end="100" time="300" />
+        </animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="100"/>
+		</animation>
+	</include>
+	<include name="dialogDiffuse">
+		<width>1920</width>
+		<height>1080</height>
+		<posx>-420</posx>
+		<posy>-280</posy>
+		<texture>dialogs/diffuse.png</texture>
+		<aspectratio>scale</aspectratio>
+		<animation effect="fade" time="200">VisibleChange</animation>
+	</include>
+	<include name="dialogWindowTop">
+		<width>662</width>
+		<height>94</height>
+		<texture>dialogs/dialog_top.png</texture>
+	</include>
+	<include name="dialogWindowCenter">
+		<width>662</width>
+		<texture>dialogs/dialog_center.png</texture>
+	</include>
+	<include name="dialogWindowBottom">
+		<width>662</width>
+		<height>94</height>
+		<texture>dialogs/dialog_bottom.png</texture>
+	</include>
+	<include name="contextMenuButton">
+		<font>list1</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>Orange</focusedcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>dialogs/button.png</texturefocus>
+		<height>54</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textoffsety>0</textoffsety>
+		<textoffsetx>0</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+		<width>422</width>
+	</include>
+	<include name="homeMenuButton">
+		<font>list1</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>Orange</focusedcolor>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>button_home.png</texturefocus>
+		<height>54</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<textoffsety>0</textoffsety>
+		<textoffsetx>0</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+		<width>244</width>
+	</include>
+	<include name="dialogLabel">
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>10</textoffsety>
+		<height>40</height>
+		<align>left</align>
+		<aligny>-</aligny>
+		<font>info1</font>
+		<textcolor>White</textcolor>
+	</include>
+	<include name="dialogHeading">
+		<posx>34</posx>
+		<posy>28</posy>
+		<font>title1</font>
+		<align>center</align>
+		<aligny>center</aligny>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<scroll>false</scroll>
+	</include>
+	<include name="dialogLine">
+		<posx>34</posx>
+		<height>22</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>info1</font>
+		<textcolor>White</textcolor>
+		<scroll>false</scroll>
+	</include>
+	<include name="dialogSubHeading">
+		<height>22</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>list1</font>
+		<textcolor>White</textcolor>
+	</include>
+	<include name="dialogListButton">
+		<textcolor>White</textcolor>
+		<textoffsetx>15</textoffsetx>
+		<focusedcolor>White</focusedcolor>
+		<font>info1</font>
+		<textoffsetx>15</textoffsetx>
+		<aligny>center</aligny>
+		<height>40</height>
+		<pulseonselect>false</pulseonselect>
+		<texturefocus border="3">button_media.png</texturefocus>
+		<texturenofocus border="3">-</texturenofocus>
+	</include>
+	<include name="dialogListLabel">
+		<textcolor>WhiteTrans</textcolor>
+		<font>info1</font>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>-2</textoffsety>
+		<aligny>center</aligny>
+		<height>40</height>
+		<texture border="3">dialogs/list-nofocus.png</texture>
+	</include>
+	<include name="dialogRadio">
+		<height>40</height>
+		<aligny>center</aligny>
+		<textoffsetx>15</textoffsetx>
+		<textcolor>WhiteTrans</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<font>info1</font>
+		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
+		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
+		<radioheight>24</radioheight>
+		<radiowidth>48</radiowidth>
+	</include>
+	<include name="dialogSpin">
+		<textcolor>White</textcolor>
+		<textoffsetx>15</textoffsetx>
+		<focusedcolor>White</focusedcolor>
+		<font>info1</font>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>-3</textoffsety>
+		<aligny>center</aligny>
+		<height>70</height>
+		<texturefocus border="3">button_media.png</texturefocus>
+		<texturenofocus border="3">-</texturenofocus>
+		<reverse>yes</reverse>
+	</include>
+	<include name="dialogSlider">
+		<texturefocus border="3">dialogs/list-focus.png</texturefocus>
+		<texturenofocus border="3">dialogs/list-nofocus.png</texturenofocus>
+		<font>info1</font>
+		<height>40</height>
+		<textcolor>WhiteTrans</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<textoffsetx>15</textoffsetx>
+		<textoffsety>15</textoffsety>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="keyboardButton">
+		<font>keyboardbutton</font>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>dialogs/buttonkb.png</texturefocus>
+		<textcolor>White</textcolor>
+		<focusedcolor>Orange</focusedcolor>
+		<width>46</width>
+		<height>54</height>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="keyboardWideButton">
+		<font>keyboardbutton</font>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>dialogs/buttonkb-wide.png</texturefocus>
+		<alttexturefocus>dialogs/buttonkb-wide.png</alttexturefocus>
+		<textcolor>White</textcolor>
+		<textoffsety>14</textoffsety>
+		<focusedcolor>Orange</focusedcolor>
+		<width>92</width>
+		<height>54</height>
+		<align>center</align>
+		<aligny>top</aligny>
+	</include>
+	<include name="keyboardSpaceButton">
+		<font>keyboardbutton</font>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>dialogs/buttonkb-space.png</texturefocus>
+		<textcolor>White</textcolor>
+		<textoffsety>14</textoffsety>
+		<focusedcolor>Orange</focusedcolor>
+		<width>222</width>
+		<height>54</height>
+		<align>center</align>
+		<aligny>top</aligny>
+	</include>
+</includes>

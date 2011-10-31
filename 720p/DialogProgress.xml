@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<window id="101">
+	<defaultcontrol>10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>60</posx>
+		<posy>13</posy>
+	</coordinates>
+	<controls>
+		<control type="image">	
+			<width>21</width>
+			<height>21</height>
+			<texture>loader.gif</texture>
+		</control>
+	</controls>
+</window>

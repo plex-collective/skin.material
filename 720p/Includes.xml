@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<includes>
+	<include file="Defaults.xml"/>
+	<include file="CommonViews.xml"/>
+	<include file="NowPlayingIncludes.xml"/>
+	<include file="IncludesDialogs.xml"/>
+	<include file="IncludesHome.xml"/>
+	<include name="ButtonPaused">
+		<texturenofocus>osd/osd_button_play.png</texturenofocus>
+		<texturefocus>osd/osd_button_play_fo.png</texturefocus>
+	</include>
+	<include name="ButtonNotPaused">
+		<texturenofocus>osd/osd_button_pause.png</texturenofocus>
+		<texturefocus>osd/osd_button_pause_fo.png</texturefocus>
+	</include>
+	<include name="Control298Focus">
+		<onfocus>SetFocus(298,0)</onfocus>
+	</include>
+	<include name="Control299Focus">
+		<onfocus>SetFocus(299,0)</onfocus>
+	</include>
+	<include name="videoPageLabel">
+		<posx>30</posx>
+		<posy>15</posy>
+		<width>1000</width>
+		<height>56</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>title1</font>
+		<textcolor>White</textcolor>
+	</include>
+	<include name="videoPageLabel">
+		<posx>30</posx>
+		<posy>15</posy>
+		<width>1000</width>
+		<height>56</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>title1</font>
+		<textcolor>White</textcolor>
+	</include>
+	<include name="Time">
+		<control type="label">
+			<posx>1189</posx>
+			<posy>2</posy>
+			<width>1280</width>
+			<height>46</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<info>System.Time</info>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+		</control>
+		<control type="label">
+			<posx>1189</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>46</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<info>System.Time</info>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+		</control>
+	</include>
+	<include name="Header">
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Container.FirstTitle]</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Container.FirstTitle]</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Container.FirstTitle,,  &#xB7;  ]$INFO[Container.SecondTitle]</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>!IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>$INFO[Container.FirstTitle,,  &#xB7;  ]$INFO[Container.SecondTitle]</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>!IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderAudio">
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Audio Channels</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Audio Channels</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderVideo">
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Video Channels</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Video Channels</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderShared">
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Shared Content</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Shared Content</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderPictures">
+		<control type="label">
+			<posx>91</posx>
+			<posy>2</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Picture Channels</label>
+			<font>title1</font>
+			<textcolor>Shadow</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+		<control type="label">
+			<posx>91</posx>
+			<posy>0</posy>
+			<width>800</width>
+			<height>46</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Picture Channels</label>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+		</control>
+	</include>
+	<include name="HeaderSettings">
+		<control type="label">
+			<posy>26</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Preferences</label>
+			<font>list1</font>
+			<textcolor>Gray</textcolor>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Appearance</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(appearancesettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Video</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(videossettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Music</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(musicsettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Picture</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(picturessettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>System</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(systemsettings)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>Simplex</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(CustomSettings.xml)</visible>
+		</control>
+	</include>
+	<include name="SideMenuBackground">
+		<control type="image">
+			<animation effect="slide" start="0" end="-250" time="400" tween="cubic" easing="inout" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
+			<height>680</height>
+			<posx>230</posx>
+			<posy>30</posy>
+			<texture>divider.png</texture>
+		</control>
+	</include>
+	<include name="Background">
+		<control type="largeimage">
+			<info background="true">ListItem.Property(fanart_image)</info>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="largeimage">
+			<texture>background_overlay_diffuse.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+		</control>
+		<control type="largeimage">
+			<texture>background_overlay_header.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>48</height>
+			<visible>true</visible>
+		</control>
+		<control type="largeimage">
+			<texture>background_overlay.png</texture>
+			<posx>0</posx>
+			<posy>212</posy>
+			<width>1280</width>
+			<height>508</height>
+			<visible>true</visible>
+		</control>
+	</include>
+</includes>

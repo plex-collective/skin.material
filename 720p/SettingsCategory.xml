@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<window id="12">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<texture>background.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+		</control>
+		<control type="image">
+			<posx>-36</posx>
+			<posy>0</posy>
+			<width>404</width>
+			<height>720</height>
+			<texture>background_sidebar.png</texture>
+		</control>
+		<include>HeaderSettings</include>
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>47</posx>
+			<posy>106</posy>
+			<width>272</width>
+			<height>480</height>
+			<itemgap>1</itemgap>
+			<onleft>5</onleft>
+			<onright>5</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+			<posx>418</posx>
+			<posy>106</posy>
+			<width>806</width>
+			<height>600</height>
+			<itemgap>1</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<orientation>vertical</orientation>
+		</control>
+		<control type="button" id="7">
+			<width>770</width>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<focusedcolor>Orange</focusedcolor>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>button_settings_wide.png</texturefocus>
+			<height>54</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsety>0</textoffsety>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="radiobutton" id="8">
+			<width>770</width>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<focusedcolor>Orange</focusedcolor>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>button_settings_wide.png</texturefocus>
+			<height>54</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsety>0</textoffsety>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+			<radioposx>756</radioposx>
+		</control>
+		<control type="spincontrolex" id="9">
+			<width>770</width>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<focusedcolor>Orange</focusedcolor>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>button_settings_wide.png</texturefocus>
+			<height>54</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsety>0</textoffsety>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="10">
+			<width>272</width>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<focusedcolor>Orange</focusedcolor>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>button_settings.png</texturefocus>
+			<height>54</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsety>0</textoffsety>
+			<textoffsetx>30</textoffsetx>
+			<pulseonselect>false</pulseonselect>
+		</control>
+	</controls>
+</window>

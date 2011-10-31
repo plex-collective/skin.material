@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<window id="11">
+	<defaultcontrol always="true">8</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background.png</texture>
+		</control>
+		<control type="mover" id="8">
+			<description>top left mover</description>
+			<posx>20</posx>
+			<posy>20</posy>
+			<texturefocus>calibrate/CalibrateTopLeftFo.png</texturefocus>
+			<texturenofocus>calibrate/CalibrateTopLeft.png</texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<description>right bottom mover</description>
+			<posx>699</posx>
+			<posy>499</posy>
+			<texturefocus>calibrate/CalibrateBottomRightFo.png</texturefocus>
+			<texturenofocus>calibrate/CalibrateBottomRight.png</texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<description>subtitle position mover</description>
+			<posx>200</posx>
+			<posy>500</posy>
+			<texturefocus>calibrate/CalibrateSubTitlesFo.png</texturefocus>
+			<texturenofocus>calibrate/CalibrateSubTitles.png</texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<description>pixel aspect ratio box</description>
+			<posx>0</posx>
+			<posy>270</posy>
+			<width>360</width>
+			<height>360</height>
+			<texturefocus>calibrate/CalibratePixelRatioFo.png</texturefocus>
+			<texturenofocus>calibrate/CalibratePixelRatio.png</texturenofocus>
+		</control>
+		<control type="label" id="2">
+			<description>coordinates label</description>
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1280</width>
+			<align>center</align>
+			<label>-</label>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+		</control>
+		<control type="label" id="3">
+			<description>help information</description>
+			<posx>0</posx>
+			<posy>68</posy>
+			<width>1280</width>
+			<align>center</align>
+			<label>-</label>
+			<font>info1</font>
+			<textcolor>Gray</textcolor>
+		</control>
+	</controls>
+</window>

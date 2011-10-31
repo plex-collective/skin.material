@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<window id="56">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<texture>background.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+		</control>
+		<control type="image">
+			<posx>-36</posx>
+			<posy>0</posy>
+			<width>404</width>
+			<height>720</height>
+			<texture>background_sidebar.png</texture>
+		</control>
+		<include>HeaderSettings</include>
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>47</posx>
+			<posy>106</posy>
+			<width>272</width>
+			<height>480</height>
+			<itemgap>1</itemgap>
+			<onleft>200</onleft>
+			<onright>200</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<orientation>vertical</orientation>
+			<control type="button" id="1">
+				<width>272</width>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<pulseonselect>false</pulseonselect>
+				<label>Home</label>
+			</control>
+		</control>
+		<control type="group" id="200">
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<orientation>vertical</orientation>
+				<control type="radiobutton" id="1001">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>Show Fanart Slideshow on Homescreen</label>
+					<selected>!Skin.HasSetting(HideHomeSlideshow)</selected>
+					<onclick>Skin.ToggleSetting(HideHomeSlideshow)</onclick>
+				</control>
+				<control type="radiobutton" id="1002">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>Show On Deck before Recently Added</label>
+					<selected>!Skin.HasSetting(RecentlyAddedFirst)</selected>
+					<onclick>Skin.ToggleSetting(RecentlyAddedFirst)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

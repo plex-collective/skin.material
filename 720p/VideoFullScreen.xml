@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<window id="2005">
+	<defaultcontrol>-</defaultcontrol>
+	<animation effect="fade" time="100">WindowOpen</animation>
+	<animation effect="fade" time="100">WindowClose</animation>
+	<controls>
+		<control type="group" id="1">
+			<posx>103</posx>
+			<posy>562</posy>
+			<width>1074</width>
+			<height>118</height>
+			<visible>Window.IsActive(2005) + !Window.IsActive(142) + !Window.IsActive(2901) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
+			<control type="image" id="1">
+				<description>Panel</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>120</height>
+				<width>1074</width>
+				<texture>osd/osd_back_small.png</texture>
+			</control>
+			<control type="progress" id="23">
+				<description>Progressbar</description>
+				<posx>132</posx>
+				<posy>66</posy>
+				<width>808</width>
+				<height>16</height>
+				<info>Player.Progress</info>
+				<visible>true</visible>
+			</control>
+			<control type="label" id="1">
+				<posx>-5</posx>
+				<posy>66</posy>
+				<width>160</width>
+				<height>16</height>
+				<font>info1</font>
+				<align>center</align>
+				<textcolor>Shadow</textcolor>
+				<label>$INFO[VideoPlayer.Time]</label>
+			</control>
+			<control type="label" id="1">
+				<posx>-5</posx>
+				<posy>64</posy>
+				<width>160</width>
+				<height>16</height>
+				<font>info1</font>
+				<align>center</align>
+				<textcolor>White</textcolor>
+				<label>$INFO[VideoPlayer.Time]</label>
+			</control>
+			<control type="label" id="1">
+				<posx>918</posx>
+				<posy>66</posy>
+				<width>160</width>
+				<height>16</height>
+				<font>info1</font>
+				<align>center</align>
+				<textcolor>Shadow</textcolor>
+				<label>$INFO[VideoPlayer.TimeRemaining]</label>
+			</control>
+			<control type="label" id="1">
+				<posx>918</posx>
+				<posy>64</posy>
+				<width>160</width>
+				<height>16</height>
+				<font>info1</font>
+				<align>center</align>
+				<textcolor>White</textcolor>
+				<label>$INFO[VideoPlayer.TimeRemaining]</label>
+			</control>
+		</control>
+	</controls>
+</window>

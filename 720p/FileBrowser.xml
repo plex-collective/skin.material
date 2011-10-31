@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="image">
+			<posx>274</posx>
+			<posy>78</posy>
+			<width>732</width>
+			<height>564</height>
+			<texture>dialogs/dialog_keyboard&browse.png</texture>
+		</control>
+		<control type="image">
+			<posx>394</posx>
+			<posy>253</posy>
+			<width>490</width>
+			<height>294</height>
+			<texture>dialogs/browse.png</texture>
+		</control>
+		<control type="label" id="411">
+			<description>heading label</description>
+			<posy>180</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+		</control>
+		<control type="label" id="412">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>left</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+		</control>
+		<control type="group" id="9002">
+			<control type="list" id="450">
+				<posx>413</posx>
+				<posy>259</posy>
+				<width>450</width>
+				<height>280</height>
+				<onleft>PageUp</onleft>
+				<onright>PageDown</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="39">
+					<control type="label">
+						<posx>18</posx>
+						<width>414</width>
+						<height>50</height>
+						<font>keyboardentry</font>
+						<aligny>top</aligny>
+						<textoffsety>7</textoffsety>
+						<info>ListItem.Label</info>
+						<scroll>false</scroll>
+						<textcolor>Gray</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="39">
+					<control type="image">
+						<posy>5</posy>
+						<width>450</width>
+						<height>38</height>
+						<texture>dialogs/button_browse.png</texture>
+					</control>
+					<control type="label">
+						<posx>18</posx>
+						<width>414</width>
+						<height>50</height>
+						<font>keyboardentry</font>
+						<textoffsety>7</textoffsety>
+						<aligny>top</aligny>
+						<info>ListItem.Label</info>
+						<textcolor>White</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</controls>
+</window>

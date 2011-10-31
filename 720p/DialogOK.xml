@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<window id="2002">
+	<defaultcontrol>10</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>198</posy>
+				<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>136</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>230</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<control type="label" id="1">
+					<description>heading label</description>
+					<posy>102</posy>
+					<width>422</width>
+					<align>center</align>
+					<font>list1</font>
+					<label>13406</label>
+				</control>
+				<control type="label" id="2">
+					<description>dialog line 1</description>
+					<posy>130</posy>
+					<width>422</width>
+					<align>center</align>
+					<textcolor>Gray</textcolor>
+					<font>plot1</font>
+				</control>
+				<control type="group">
+					<posy>122</posy>
+					<control type="button" id="10">
+						<description>OK button</description>
+						<posy>54</posy>
+						<label>186</label>
+						<ondown>11</ondown>
+						<onup>11</onup>
+						<include>contextMenuButton</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

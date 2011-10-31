@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<window id="106">
+	<defaultcontrol>1000</defaultcontrol>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="image" id="997">
+			<posy>-94</posy>
+			<include>dialogWindowTop</include>
+		</control>
+		<control type="image" id="999">
+			<include>dialogWindowCenter</include>
+		</control>
+		<control type="image" id="998">
+			<include>dialogWindowBottom</include>
+		</control>
+		<control type="button" id="1000">
+			<posx>120</posx>
+			<description>button template</description>
+			<include>contextMenuButton</include>
+		</control>
+	</controls>
+</window>
