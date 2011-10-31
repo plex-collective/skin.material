@@ -300,7 +300,7 @@
 			<control type="list" id="301">
 				<visible allowhiddenfocus="true">Control.HasFocus(301) | Stringcompare(Container(300).ListItem(0).Label2,pref)</visible>
 				<animation effect="fade" delay="300" time="200">Visible</animation>
-				<posx>518</posx>
+				<posx>496</posx>
 				<posy>364</posy>
 				<width>422</width>
 				<height>324</height>
@@ -311,10 +311,10 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -324,7 +324,7 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -335,7 +335,7 @@
 							<visible>!Control.HasFocus(301)</visible>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -349,7 +349,7 @@
 				</itemlayout>
 				<focusedlayout height="54">
 					<control type="image">
-						<width>244</width>
+						<width>288</width>
 						<height>54</height>
 						<texture>button_home.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -357,10 +357,10 @@
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnPrevious">Focus</animation>
 					</control>
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -371,7 +371,7 @@
 						</control>
 						<control type="label">
 							<posy>0</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -382,7 +382,7 @@
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -397,34 +397,34 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
+						<description>Skin</description>
+						<label>Skin</label>
+						<onclick>activatewindow(56)</onclick>
+					</item>
+					<item id="2">
 						<description>Appearance</description>
 						<label>$LOCALIZE[480]</label>
 						<onclick>activatewindow(AppearanceSettings)</onclick>
 					</item>
-					<item id="2">
+					<item id="3">
 						<description>Videos</description>
 						<label>$LOCALIZE[3]</label>
 						<onclick>activatewindow(MyVideosSettings)</onclick>
 					</item>
-					<item id="3">
+					<item id="4">
 						<description>Music</description>
 						<label>$LOCALIZE[2]</label>
 						<onclick>activatewindow(MyMusicSettings)</onclick>
 					</item>
-					<item id="4">
+					<item id="5">
 						<description>Pictures</description>
 						<label>$LOCALIZE[1]</label>
 						<onclick>activatewindow(MyPicturesSettings)</onclick>
 					</item>
-					<item id="5">
+					<item id="6">
 						<description>System</description>
 						<label>$LOCALIZE[13000]</label>
 						<onclick>activatewindow(SystemSettings)</onclick>
-					</item>
-					<item id="6">
-						<description>System</description>
-						<label>Simplex</label>
-						<onclick>activatewindow(56)</onclick>
 					</item>
 				</content>
 			</control>
@@ -432,7 +432,7 @@
 			<control type="list" id="302">
 				<visible allowhiddenfocus="true">Control.HasFocus(302) | Stringcompare(Container(300).ListItem(0).Label2,chan)</visible>
 				<animation effect="fade" delay="300" time="200">Visible</animation>
-				<posx>518</posx>
+				<posx>496</posx>
 				<posy>364</posy>
 				<width>422</width>
 				<height>324</height>
@@ -443,10 +443,10 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -456,7 +456,7 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -467,7 +467,7 @@
 							<visible>!Control.HasFocus(302)</visible>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -481,7 +481,7 @@
 				</itemlayout>
 				<focusedlayout height="54">
 					<control type="image">
-						<width>244</width>
+						<width>288</width>
 						<height>54</height>
 						<texture>button_home.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -489,10 +489,10 @@
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(302).OnPrevious">Focus</animation>
 					</control>
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -503,7 +503,7 @@
 						</control>
 						<control type="label">
 							<posy>0</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -514,7 +514,7 @@
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -545,7 +545,7 @@
 					</item>
 					<item id="4">
 						<description>Plex Connect</description>
-						<label>Channel Store</label>
+						<label>Channel Directory</label>
 						<onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
 					</item>
 				</content>
@@ -554,7 +554,7 @@
 			<control type="list" id="303">
 				<visible allowhiddenfocus="true">Control.HasFocus(303) + System.HasMediadvd | Stringcompare(Container(300).ListItem(0).Label2,dvd)</visible>
 				<animation effect="fade" delay="300" time="200">Visible</animation>
-				<posx>518</posx>
+				<posx>496</posx>
 				<posy>364</posy>
 				<width>422</width>
 				<height>324</height>
@@ -563,10 +563,10 @@
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -576,7 +576,7 @@
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -587,7 +587,7 @@
 							<visible>!Control.HasFocus(303)</visible>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -601,7 +601,7 @@
 				</itemlayout>
 				<focusedlayout height="54">
 					<control type="image">
-						<width>244</width>
+						<width>288</width>
 						<height>54</height>
 						<texture>button_home.png</texture>
 						<aspectratio>keep</aspectratio>
@@ -609,10 +609,10 @@
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnPrevious">Focus</animation>
 					</control>
 					<control type="group">
-						<posx>122</posx>
+						<posx>144</posx>
 						<control type="label">
 							<posy>2</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -623,7 +623,7 @@
 						</control>
 						<control type="label">
 							<posy>0</posy>
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>
@@ -634,7 +634,7 @@
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="label">
-							<width>244</width>
+							<width>288</width>
 							<height>50</height>
 							<align>center</align>
 							<aligny>center</aligny>

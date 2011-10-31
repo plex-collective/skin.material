@@ -289,7 +289,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Simplex</label>
+			<label>Skin</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(CustomSettings.xml)</visible>
