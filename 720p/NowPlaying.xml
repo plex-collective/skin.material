@@ -24,9 +24,9 @@
 					<fadetime>200</fadetime>
 				</control>
 				<control type="image">
-					<posx>0</posx>
+					<posx>-127</posx>
 					<posy>46</posy>
-					<width>772</width>
+					<width>899</width>
 					<height>621</height>
 					<texture>thumb_background_now_playing.png</texture>
 					<fadetime>200</fadetime>

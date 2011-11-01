@@ -22,7 +22,7 @@
 			<posx>394</posx>
 			<posy>253</posy>
 			<width>490</width>
-			<height>294</height>
+			<height>294</height> 
 			<texture>dialogs/browse.png</texture>
 		</control>
 		<control type="label" id="411">
