@@ -202,19 +202,19 @@
 						<label>DVD</label>
 						<label2>dvd</label2>
 						<visible>System.HasMediadvd</visible>
-						<onclick>-</onclick>
+						<onclick>SetFocus(303)</onclick>
 					</item>
 					<item>
 						<description>Preferences</description>
 						<label>Preferences</label>
 						<label2>pref</label2>
-						<onclick>-</onclick>
+						<onclick>SetFocus(301)</onclick>
 					</item>
 					<item>
 						<description>Channels</description>
 						<label>Channels</label>
 						<label2>chan</label2>
-						<onclick>-</onclick>
+						<onclick>SetFocus(302)</onclick>
 					</item>
 					<item>
 						<description>Search</description>
