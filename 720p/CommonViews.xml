@@ -590,7 +590,7 @@
 						</control>
 						<control type="label">
 							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>13</posy>
+							<posy>12</posy>
 							<posx>468</posx>
 							<width>42</width>
 							<height>31</height>
@@ -858,7 +858,7 @@
 						</control>
 						<control type="label">
 							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>13</posy>
+							<posy>12</posy>
 							<posx>468</posx>
 							<width>42</width>
 							<height>31</height>
@@ -871,7 +871,7 @@
 						</control>
 						<control type="label">
 							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>13</posy>
+							<posy>12</posy>
 							<posx>468</posx>
 							<width>42</width>
 							<height>31</height>
