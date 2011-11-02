@@ -94,25 +94,25 @@
 						<texture>osd/osd_button_pause.png</texture>
 						<width>62</width>
 						<height>38</height>
-						<visible>!Player.Paused + !Control.HasFocus(1012)</visible>
+						<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
 						<texture>osd/osd_button_play.png</texture>
 						<width>62</width>
 						<height>38</height>
-						<visible>Player.Paused + !Control.HasFocus(1012)</visible>
+						<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
 						<texture>osd/osd_button_pause_fo.png</texture>
 						<width>62</width>
 						<height>38</height>
-						<visible>!Player.Paused + Control.HasFocus(1012)</visible>
+						<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
 						<texture>osd/osd_button_play_fo.png</texture>
 						<width>62</width>
 						<height>38</height>
-						<visible>Player.Paused + Control.HasFocus(1012)</visible>
+						<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(1012)</visible>
 					</control>
 				</control>
 				<control type="grouplist" id="214">
@@ -126,6 +126,7 @@
 					<onright>1009</onright>
 					<onleft>1015</onleft>
 					<orientation>horizontal</orientation>
+					<visible>![Player.Forwarding | Player.Rewinding]</visible>
 					<control type="button" id="18">
 						<texturenofocus>osd/osd_button_audio.png</texturenofocus>
 						<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
@@ -139,6 +140,200 @@
 						<onclick>XBMC.ActivateWindow(123)</onclick>
 						<width>62</width>
 						<height>38</height>
+					</control>
+				</control>
+				<control type="group">
+					<posx>1036</posx>
+					<posy>26</posy>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Fast forward 2x</label>
+						<visible>player.forwarding2x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Fast forward 2x</label>
+						<visible>player.forwarding2x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Fast forward 4x</label>
+						<visible>player.forwarding4x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Fast forward 4x</label>
+						<visible>player.forwarding4x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Fast forward 8x</label>
+						<visible>player.forwarding8x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Fast forward 8x</label>
+						<visible>player.forwarding8x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Fast forward 16x</label>
+						<visible>player.forwarding16x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Fast forward 16x</label>
+						<visible>player.forwarding16x</visible>
+					</control>					
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Fast forward 32x</label>
+						<visible>player.forwarding32x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Fast forward 32x</label>
+						<visible>player.forwarding32x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Rewind 2x</label>
+						<visible>player.rewinding2x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Rewind 2x</label>
+						<visible>player.rewinding2x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Rewind 4x</label>
+						<visible>player.rewinding4x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Rewind 4x</label>
+						<visible>player.rewinding4x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Rewind 8x</label>
+						<visible>player.rewinding8x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Rewind 8x</label>
+						<visible>player.rewinding8x</visible>
+					</control>
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Rewind 16x</label>
+						<visible>player.rewinding16x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Rewind 16x</label>
+						<visible>player.rewinding16x</visible>
+					</control>					
+					<control type="label">
+						<posy>2</posy>
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Shadow</textcolor>
+						<label>Rewind 32x</label>
+						<visible>player.rewinding32x</visible>
+					</control>
+					<control type="label">
+						<width>200</width>
+						<height>16</height>
+						<font>osd1</font>
+						<align>right</align>
+						<textcolor>Gray</textcolor>
+						<label>Rewind 32x</label>
+						<visible>player.rewinding32x</visible>
 					</control>
 				</control>
 				<control type="progress" id="23">
