@@ -54,6 +54,12 @@
 			<variant>Bold</variant>
 		</font>
 		<font>
+			<name>osd2</name>
+			<size>19</size>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+		</font>
+		<font>
 			<name>list1</name>
 			<filename>HelveticaNeue</filename>
 			<variant>Medium</variant>
