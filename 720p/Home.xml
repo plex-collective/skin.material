@@ -546,7 +546,7 @@
 					<item id="4">
 						<description>Plex Connect</description>
 						<label>Channel Directory</label>
-						<onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
+						<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 					</item>
 				</content>
 			</control>
