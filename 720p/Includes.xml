@@ -295,15 +295,6 @@
 			<visible>Window.IsActive(CustomSettings.xml)</visible>
 		</control>
 	</include>
-	<include name="SideMenuBackground">
-		<control type="image">
-			<animation effect="slide" start="0" end="-250" time="400" tween="cubic" easing="inout" condition="!ControlGroup(9000).HasFocus">Conditional</animation>
-			<height>680</height>
-			<posx>230</posx>
-			<posy>30</posy>
-			<texture>divider.png</texture>
-		</control>
-	</include>
 	<include name="Background">
 		<control type="largeimage">
 			<info background="true">ListItem.Property(fanart_image)</info>
@@ -313,7 +304,7 @@
 			<height>720</height>
 			<fadetime>300</fadetime>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<texture>background_overlay_diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -321,7 +312,7 @@
 			<height>720</height>
 			<visible>true</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<texture>background_overlay_header.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -329,7 +320,7 @@
 			<height>48</height>
 			<visible>true</visible>
 		</control>
-		<control type="largeimage">
+		<control type="image">
 			<texture>background_overlay.png</texture>
 			<posx>0</posx>
 			<posy>212</posy>
