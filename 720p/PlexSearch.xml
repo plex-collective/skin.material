@@ -19,12 +19,15 @@
 		<!-- Loading indicator -->
 		<control type="group">
 			<visible>System.SearchInProgress</visible>
-			<posx>254</posx>
-			<posy>27</posy>
-			<control type="image">
-				<texture>loader.gif</texture>
-				<width>21</width>
-				<height>21</height>
+			<posx>131</posx>
+			<posy>544</posy>
+			<control type="multiimage">
+				<width>140</width>
+				<height>134</height>
+				<imagepath background="true">loading</imagepath>
+				<timeperimage>50</timeperimage>
+				<fadetime>1</fadetime>
+				<loop>yes</loop>
 			</control>
 		</control>
 		<!-- Keyboard & text field & results -->

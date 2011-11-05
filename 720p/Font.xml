@@ -120,6 +120,12 @@
 			<size>17</size>
 		</font>
 		<font>
+			<name>info4</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Medium</variant>
+			<size>20</size>
+		</font>
+		<font>
 			<name>homelabel</name>
 			<filename>HelveticaNeue</filename>
 			<variant>Medium</variant>
