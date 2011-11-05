@@ -1424,7 +1424,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>scroll_letter.png</texture>
+				<texture>overlay.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>
