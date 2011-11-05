@@ -544,7 +544,12 @@
 						<onclick>xbmc.activatewindow(2)</onclick>
 					</item>
 					<item id="4">
-						<description>Plex Connect</description>
+						<description>Applications</description>
+						<label>Applications</label>
+						<onclick>xbmc.activatewindow(1)</onclick>
+					</item>
+					<item id="5">
+						<description>Channel Directory</description>
 						<label>Channel Directory</label>
 						<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 					</item>
