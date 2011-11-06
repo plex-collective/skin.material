@@ -682,7 +682,7 @@
 			<!-- This label show when the menubar is unfocused -->
 			<control type="label">
 				<posx>544</posx>
-				<posy>291</posy>
+				<posy>289</posy>
 				<width>190</width>
 				<height>76</height>
 				<label>$INFO[Container(300).ListItem(0).Label]</label>
