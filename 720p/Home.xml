@@ -107,7 +107,7 @@
 			<control type="wraplist" id="300">
 				<description>Home Main Menu</description>
 				<posx>0</posx>
-				<posy>291</posy>
+				<posy>289</posy>
 				<width>1280</width>
 				<height>300</height>
 				<onup>-</onup>
