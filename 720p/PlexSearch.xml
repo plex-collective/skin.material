@@ -42,7 +42,7 @@
 				<focusedcolor>Gray</focusedcolor>
 				<width>402</width>
 				<font>list1</font>
-				<label>Search</label>
+				<label>$LOCALIZE[31400]</label>
 				<aligny>center</aligny>
 				<align>center</align>
 			</control>
@@ -559,7 +559,7 @@
 							<onright>32</onright>
 							<onup>95</onup>
 							<ondown>-</ondown>
-							<label>Delete</label>
+							<label>$LOCALIZE[31401]</label>
 							<aligny>center</aligny>
 							<onclick/>
 							<include>keyboardWideButton</include>
@@ -577,7 +577,7 @@
 								<onright>10</onright>
 								<onup>97</onup>
 								<ondown>-</ondown>
-								<label>Space</label>
+								<label>$LOCALIZE[31402]</label>
 								<aligny>center</aligny>
 								<onclick/>
 								<include>keyboardWideButton</include>
@@ -596,7 +596,7 @@
 								<onright>9001</onright>
 								<onup>99</onup>
 								<ondown>-</ondown>
-								<label>Clear</label>
+								<label>$LOCALIZE[31403]</label>
 								<aligny>center</aligny>
 								<onclick/>
 								<include>keyboardWideButton</include>
@@ -636,7 +636,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Movies</label>
+							<label>$LOCALIZE[31404]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -763,7 +763,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>TV Shows</label>
+							<label>$LOCALIZE[31405]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -890,7 +890,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Episodes</label>
+							<label>$LOCALIZE[31002]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -1064,7 +1064,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Artists</label>
+							<label>$LOCALIZE[31406]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -1191,7 +1191,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Albums</label>
+							<label>$LOCALIZE[31407]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -1366,7 +1366,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Songs</label>
+							<label>$LOCALIZE[31408]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -1541,7 +1541,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Actors</label>
+							<label>$LOCALIZE[31005]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
@@ -1668,7 +1668,7 @@
 							<texture>thumb_background_search.png</texture>
 						</control>
 						<control type="label" id="8001">
-							<label>Videos</label>
+							<label>$LOCALIZE[31203]</label>
 							<font>searchresultheader</font>
 							<textcolor>DarkGray</textcolor>
 							<posx>63</posx>
