@@ -28,7 +28,7 @@
 				<height>56</height>
 				<align>center</align>
 				<aligny>center</aligny>
-				<label>Channel Preferences</label>
+				<label>$LOCALIZE[31305] $LOCALIZE[31200]</label>
 				<font>list1</font>
 				<textcolor>Gray</textcolor>
 			</control>

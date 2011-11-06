@@ -102,7 +102,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Details</label>
+						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="label">
 						<posx>206</posx>
@@ -111,7 +111,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Starring</label>
+						<label>$LOCALIZE[31005]</label>
 					</control>
 					<control type="label">
 						<posy>72</posy>
@@ -121,7 +121,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Director</label>
+						<label>$LOCALIZE[31006]</label>
 					</control>
 					<control type="label">
 						<posy>72</posy>
@@ -131,7 +131,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Writer</label>
+						<label>$LOCALIZE[31007]</label>
 					</control>
 					<control type="grouplist">
 						<orientation>vertical</orientation>
@@ -153,7 +153,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>Released $INFO[ListItem.Year]</label>
+							<label>$LOCALIZE[31008] $INFO[ListItem.Year]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
@@ -163,7 +163,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>Length $INFO[ListItem.Duration]</label>
+							<label>$LOCALIZE[31011] $INFO[ListItem.Duration]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
@@ -378,7 +378,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Details</label>
+						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="grouplist">
 						<orientation>vertical</orientation>
@@ -400,7 +400,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>First Aired $INFO[ListItem.Date]</label>
+							<label>$LOCALIZE[31009] $LOCALIZE[31010] $INFO[ListItem.Date]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
@@ -410,7 +410,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>$INFO[ListItem.Episode] Episodes ($INFO[ListItem.Property(UnWatchedEpisodes)] Unwatched)</label>
+							<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
@@ -497,7 +497,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>White</textcolor>
-						<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.season]</label>
+						<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.season]</label>
 					</control>
 				</control>
 				<control type="label">
@@ -533,7 +533,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Details</label>
+						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="label">
 						<posx>256</posx>
@@ -542,7 +542,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Director</label>
+						<label>$LOCALIZE[31006]</label>
 					</control>
 					<control type="label">
 						<posx>476</posx>
@@ -551,7 +551,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
-						<label>Writer</label>
+						<label>$LOCALIZE[31007]</label>
 					</control>
 					<control type="grouplist">
 						<orientation>vertical</orientation>
@@ -563,7 +563,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>Aired $INFO[ListItem.Date]</label>
+							<label>$LOCALIZE[31010] $INFO[ListItem.Date]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
@@ -573,7 +573,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
-							<label>Length $INFO[ListItem.Duration]</label>
+							<label>$LOCALIZE[31011] $INFO[ListItem.Duration]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">

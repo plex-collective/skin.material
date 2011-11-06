@@ -1,6 +1,62 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<!-- $Revision: 204$ -->
+<!--  strings 31000 thru 31999 reserved for skins  -->
+
 <strings>
+<!--  Video  -->
+	<string id="31001">Episode</string>
+	<string id="31002">Episodes</string>
+	<string id="31003">Season</string>
+	<string id="31004">Details</string>
+	<string id="31005">Actors</string>
+	<string id="31006">Director</string>
+	<string id="31007">Writer</string>
+	<string id="31008">Released</string>
+	<string id="31009">First</string>
+	<string id="31010">Aired</string>
+	<string id="31011">Length</string>
+	<string id="31012">Unwatched</string>
 
-  <string id="31000"></string>
+<!--  Skin Preferences  -->
+	<string id="31101">Show Slideshow</string>
+	<string id="31102">Show On Deck before</string>
+	<string id="31103">Show Power Menu</string>
+	<string id="31104">Quit</string>
+	<string id="31105">Sleep</string>
+	<string id="31106">Shut Down</string>
 
+<!--  Preferences  -->
+	<string id="31200">Preferences</string>
+	<string id="31201">Skin</string>
+	<string id="31202">Appearance</string>
+	<string id="31203">Videos</string>
+	<string id="31204">Music</string>
+	<string id="31205">Pictures</string>
+	<string id="31206">System</string>
+
+<!--  Channels  -->
+	<string id="31300">Channels</string>
+	<string id="31301">Video</string>
+	<string id="31302">Audio</string>
+	<string id="31303">Picture</string>
+	<string id="31304">Applications</string>
+	<string id="31305">Channel</string>
+	<string id="31306">Directory</string>
+
+<!--  Home  -->
+	<string id="31500">Home</string>
+	<string id="31501">Recently Added</string>
+	<string id="31502">On Deck</string>
+	<string id="31504">Shared Content</string>
+
+<!--  DVD  -->
+	<string id="31600">Play</string>
+	<string id="31601">Eject Disc</string>
+
+<!--  Search  -->
+	<string id="31400">Search</string>
+	<string id="31401">Delete</string>
+	<string id="31402">Space</string>
+	<string id="31403">Clear</string>
+	
 </strings>

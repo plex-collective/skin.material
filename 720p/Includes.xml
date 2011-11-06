@@ -151,7 +151,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Audio Channels</label>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -163,7 +163,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Audio Channels</label>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -177,7 +177,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Video Channels</label>
+			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -189,7 +189,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Video Channels</label>
+			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -203,7 +203,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Shared Content</label>
+			<label>$LOCALIZE[31504]</label>
 			<font>list1</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -215,7 +215,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Shared Content</label>
+			<label>$LOCALIZE[31504]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -229,7 +229,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Picture Channels</label>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -241,7 +241,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Picture Channels</label>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -255,7 +255,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Applications</label>
+			<label>$LOCALIZE[31304]</label>
 			<font>list1</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -267,7 +267,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>Applications</label>
+			<label>$LOCALIZE[31304]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -280,7 +280,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Preferences</label>
+			<label>$LOCALIZE[31200]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
 		</control>
@@ -290,7 +290,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Appearance</label>
+			<label>$LOCALIZE[31202]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(appearancesettings)</visible>
@@ -301,7 +301,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Video</label>
+			<label>$LOCALIZE[31203]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(videossettings)</visible>
@@ -312,7 +312,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Music</label>
+			<label>$LOCALIZE[31204]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(musicsettings)</visible>
@@ -323,7 +323,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Picture</label>
+			<label>$LOCALIZE[31205]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(picturessettings)</visible>
@@ -334,7 +334,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>System</label>
+			<label>$LOCALIZE[31206]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(systemsettings)</visible>
@@ -345,7 +345,7 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>Skin</label>
+			<label>$LOCALIZE[31201]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(CustomSettings.xml)</visible>

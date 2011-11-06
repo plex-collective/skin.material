@@ -37,7 +37,6 @@
 					<posy>131</posy>
 					<width>422</width>
 					<align>center</align>
-					<label>Set Rating</label>
 					<font>info1</font>
 					<textcolor>Gray</textcolor>
 				</control>

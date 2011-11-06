@@ -11,7 +11,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>On Deck</label>
+				<label>$LOCALIZE[31502]</label>
 				<posx>18</posx>
 				<posy>2</posy>
 			</control>
@@ -21,7 +21,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>On Deck</label>
+				<label>$LOCALIZE[31502]</label>
 				<posx>18</posx>
 			</control>
 			<control type="list" id="11001">
@@ -48,7 +48,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>Recently Added</label>
+				<label>$LOCALIZE[31501]</label>
 				<posx>18</posx>
 				<posy>2</posy>
 				<visible>[!Control.HasFocus(300) + Control.IsVisible(11001)] | !Control.IsVisible(11001)</visible>
@@ -60,7 +60,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>Recently Added</label>
+				<label>$LOCALIZE[31501]</label>
 				<posx>18</posx>
 				<visible>[!Control.HasFocus(300) + Control.IsVisible(11001)] | !Control.IsVisible(11001)</visible>
 				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -91,7 +91,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>Recently Added</label>
+				<label>$LOCALIZE[31501]</label>
 				<posx>18</posx>
 				<posy>2</posy>
 			</control>
@@ -101,7 +101,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>Recently Added</label>
+				<label>$LOCALIZE[31501]</label>
 				<posx>18</posx>
 			</control>
 			<control type="list" id="11000">
@@ -128,7 +128,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>On Deck</label>
+				<label>$LOCALIZE[31502]</label>
 				<posx>18</posx>
 				<posy>2</posy>
 				<visible>!Control.HasFocus(300)</visible>
@@ -140,7 +140,7 @@
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
-				<label>On Deck</label>
+				<label>$LOCALIZE[31502]</label>
 				<posx>18</posx>
 				<visible>!Control.HasFocus(300)</visible>
 				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
@@ -206,7 +206,7 @@
 					<posy>221</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Shadow</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -216,7 +216,7 @@
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Gray</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -226,7 +226,7 @@
 					<posy>239</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Season $INFO[ListItem.Season]</label>
+					<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 					<textcolor>Shadow</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -236,7 +236,7 @@
 					<posy>241</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Season $INFO[ListItem.Season]</label>
+					<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 					<textcolor>DarkGray</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -329,7 +329,7 @@
 				<posy>221</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Episode $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Shadow</textcolor>
 				<font>homelabel</font>
@@ -340,7 +340,7 @@
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Episode $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Orange</textcolor>
 				<font>homelabel</font>
@@ -351,7 +351,7 @@
 				<posy>239</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Season $INFO[ListItem.Season]</label>
+				<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Shadow</textcolor>
 				<font>homelabel</font>
@@ -362,7 +362,7 @@
 				<posy>241</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Season $INFO[ListItem.Season]</label>
+				<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>White</textcolor>
 				<font>homelabel</font>
@@ -608,7 +608,7 @@
 					<posy>221</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Shadow</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -618,7 +618,7 @@
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Episode $INFO[ListItem.Episode]</label>
+					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Gray</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -628,7 +628,7 @@
 					<posy>239</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Season $INFO[ListItem.Season]</label>
+					<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 					<textcolor>Shadow</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -638,7 +638,7 @@
 					<posy>241</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>Season $INFO[ListItem.Season]</label>
+					<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 					<textcolor>DarkGray</textcolor>
 					<font>homelabel</font>
 					<align>center</align>
@@ -731,7 +731,7 @@
 				<posy>221</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Episode $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Shadow</textcolor>
 				<font>homelabel</font>
@@ -742,7 +742,7 @@
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Episode $INFO[ListItem.Episode]</label>
+				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Orange</textcolor>
 				<font>homelabel</font>
@@ -753,7 +753,7 @@
 				<posy>239</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Season $INFO[ListItem.Season]</label>
+				<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Shadow</textcolor>
 				<font>homelabel</font>
@@ -764,7 +764,7 @@
 				<posy>241</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>Season $INFO[ListItem.Season]</label>
+				<label>$LOCALIZE[31002] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>White</textcolor>
 				<font>homelabel</font>

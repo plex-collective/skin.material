@@ -26,7 +26,7 @@
 					<posx>120</posx>
 					<control type="label">
 						<description>First title</description>
-						<label>Skin</label>
+						<label>$LOCALIZE[31201]</label>
 						<posy>133</posy>
 						<width>422</width>
 						<height>56</height>

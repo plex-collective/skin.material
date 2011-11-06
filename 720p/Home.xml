@@ -194,9 +194,22 @@
 				<content>
 					<item>
 						<description>Quit</description>
-						<label>Quit</label>
+						<label>$LOCALIZE[31104]</label>
 						<onclick>Plex.Shutdown()</onclick>
+						<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 					</item>
+					<item>
+						<description>Sleep</description>
+						<label>$LOCALIZE[31105]</label>
+						<onclick>Plex.SleepSystem()</onclick>
+						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
+					</item>			
+					<item>
+						<description>Shutdown</description>
+						<label>$LOCALIZE[31106]</label>
+						<onclick>Plex.ShutDownSystem()</onclick>
+						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
+					</item>			
 					<item>
 						<description>DVD Button</description>
 						<label>DVD</label>
@@ -206,85 +219,85 @@
 					</item>
 					<item>
 						<description>Preferences</description>
-						<label>Preferences</label>
+						<label>$LOCALIZE[31200]</label>
 						<label2>pref</label2>
 						<onclick>SetFocus(301)</onclick>
 					</item>
 					<item>
 						<description>Channels</description>
-						<label>Channels</label>
+						<label>$LOCALIZE[31300]</label>
 						<label2>chan</label2>
 						<onclick>SetFocus(302)</onclick>
 					</item>
 					<item>
 						<description>Search</description>
-						<label>Search</label>
+						<label>$LOCALIZE[31400]</label>
 						<onclick>Plex.ActivateWindow(10051)</onclick>
 					</item>
 					<!-- The following code might fix a crash issue with Plex -->
 					<item id="6">
 						<description>Preferences Menu</description>
-						<label> $LOCALIZE[31955] </label>
+						<label>$LOCALIZE[31200]</label>
 						<onclick>SetFocus(506)</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="7">
 						<description>Search Menu</description>
-						<label> Search </label>
+						<label>$LOCALIZE[31400]</label>
 						<onclick>Plex.ActivateWindow(10051)</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="111">
 						<description>Quit Button</description>
-						<label> $LOCALIZE[31007] </label>
+						<label>$LOCALIZE[31104]</label>
 						<onclick>Plex.ShutDown</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="112">
 						<description>Sleep Button</description>
-						<label> $LOCALIZE[31960] </label>
+						<label>$LOCALIZE[31105]</label>
 						<onclick>Plex.SleepSystem</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="113">
 						<description>Shut Down Button</description>
-						<label> $LOCALIZE[31961] </label>
+						<label>$LOCALIZE[31106]</label>
 						<onclick>Plex.ShutDownSystem</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="2">
 						<description>My Music Button</description>
-						<label> $LOCALIZE[31972] </label>
+						<label>-</label>
 						<visible>false</visible>
 						<onclick>XBMC.ActivateWindow(5)</onclick>
 					</item>
 					<item id="13">
 						<description>Help Menu</description>
-						<label> $LOCALIZE[31954] </label>
+						<label>-</label>
 						<visible>false</visible>
 						<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/help,return)</onclick>
 					</item>
 					<item id="12">
 						<description>Plex Online Menu</description>
-						<label> $LOCALIZE[31952] </label>
+						<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
 						<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="1">
 						<description>My Videos Button</description>
-						<label> $LOCALIZE[31971] </label>
+						<label>-</label>
 						<visible>false</visible>
 						<onclick>XBMC.ActivateWindow(24)</onclick>
 					</item>
 					<item id="3">
 						<description>My Pics Button</description>
-						<label> $LOCALIZE[31973] </label>
+						<label>-</label>
 						<visible>false</visible>
 						<onclick>XBMC.ActivateWindow(2)</onclick>
 					</item>
 					<item id="4">
 						<description>My Programs Menu</description>
-						<label> $LOCALIZE[31004] </label>
+						<label>-</label>
 						<visible>false</visible>
 						<onclick>XBMC.ActivateWindow(1)</onclick>
 					</item>
@@ -398,32 +411,32 @@
 				<content>
 					<item id="1">
 						<description>Skin</description>
-						<label>Skin</label>
+						<label>$LOCALIZE[31201]</label>
 						<onclick>activatewindow(56)</onclick>
 					</item>
 					<item id="2">
 						<description>Appearance</description>
-						<label>$LOCALIZE[480]</label>
+						<label>$LOCALIZE[31202]</label>
 						<onclick>activatewindow(AppearanceSettings)</onclick>
 					</item>
 					<item id="3">
 						<description>Videos</description>
-						<label>$LOCALIZE[3]</label>
+						<label>$LOCALIZE[31203]</label>
 						<onclick>activatewindow(MyVideosSettings)</onclick>
 					</item>
 					<item id="4">
 						<description>Music</description>
-						<label>$LOCALIZE[2]</label>
+						<label>$LOCALIZE[31204]</label>
 						<onclick>activatewindow(MyMusicSettings)</onclick>
 					</item>
 					<item id="5">
 						<description>Pictures</description>
-						<label>$LOCALIZE[1]</label>
+						<label>$LOCALIZE[31205]</label>
 						<onclick>activatewindow(MyPicturesSettings)</onclick>
 					</item>
 					<item id="6">
 						<description>System</description>
-						<label>$LOCALIZE[13000]</label>
+						<label>$LOCALIZE[31206]</label>
 						<onclick>activatewindow(SystemSettings)</onclick>
 					</item>
 				</content>
@@ -530,27 +543,27 @@
 				<content>
 					<item id="1">
 						<description>Video Channels</description>
-						<label>Video</label>
+						<label>$LOCALIZE[31301]</label>
 						<onclick>xbmc.activatewindow(6)</onclick>
 					</item>
 					<item id="2">
 						<description>Audio Channels</description>
-						<label>Audio</label>
+						<label>$LOCALIZE[31302]</label>
 						<onclick>xbmc.activatewindow(5)</onclick>
 					</item>
 					<item id="3">
 						<description>Picture Channels</description>
-						<label>Picture</label>
+						<label>$LOCALIZE[31303]</label>
 						<onclick>xbmc.activatewindow(2)</onclick>
 					</item>
 					<item id="4">
 						<description>Applications</description>
-						<label>Applications</label>
+						<label>$LOCALIZE[31304]</label>
 						<onclick>xbmc.activatewindow(1)</onclick>
 					</item>
 					<item id="5">
 						<description>Channel Directory</description>
-						<label>Channel Directory</label>
+						<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
 						<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 					</item>
 				</content>
@@ -655,13 +668,12 @@
 				<content>
 					<item id="1">
 						<description>Play</description>
-						<label>Play</label>
+						<label>$LOCALIZE[31600]</label>
 						<onclick>XBMC.PlayDVD</onclick>
 					</item>
 					<item id="2">
 						<description>Eject</description>
-						<label>Eject Disc</label>
-						<onclick>XBMC.EjectTray()</onclick>
+						<label>$LOCALIZE[31601]</label>
 						<onclick>XBMC.EjectTray()</onclick>
 						<onclick>Control.SetFocus(300,3)</onclick>
 					</item>
@@ -705,7 +717,7 @@
 						<width>350</width>
 						<height>30</height>
 						<align>left</align>
-						<label>Recently Added</label>
+						<label>$LOCALIZE[31501]</label>
 						<posx>18</posx>
 						<posy>2</posy>
 					</control>
@@ -715,7 +727,7 @@
 						<width>350</width>
 						<height>30</height>
 						<align>left</align>
-						<label>Recently Added</label>
+						<label>$LOCALIZE[31501]</label>
 						<posx>18</posx>
 					</control>
 					<control type="list" id="11003">

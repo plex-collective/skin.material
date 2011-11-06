@@ -454,7 +454,7 @@
 					<description>Delete button</description>
 					<posx>0</posx>
 					<textoffsetx>-16</textoffsetx>
-					<label>Delete</label>
+					<label>$LOCALIZE[31401]</label>
 					<font>keyboardbuttonsmall</font>
 					<onleft>300</onleft>
 					<onright>305</onright>
