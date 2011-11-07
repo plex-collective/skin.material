@@ -412,7 +412,7 @@
 			<control type="textbox">
 				<description>Plot/Details</description>
 				<width>504</width>
-				<height>142</height>
+				<height>146</height>
 				<align>justify</align>
 				<label>$INFO[ListItem.Plot]</label>
 				<font>plot1</font>
