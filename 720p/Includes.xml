@@ -66,78 +66,78 @@
 	<include name="Header">
 		<control type="grouplist">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<orientation>horizontal</orientation>
 			<width>800</width>
 			<align>left</align>
 			<itemgap>13</itemgap>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<label>$INFO[Container.SecondTitle]</label>
-				<font>list1</font>
+				<font>list2</font>
 				<textcolor>Shadow</textcolor>
 			</control>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<textoffsetx>-14</textoffsetx>
 				<label>$INFO[Container.FirstTitle]</label>
-				<font>list1</font>
+				<font>list2</font>
 				<textcolor>Shadow</textcolor>
 				<visible>IsEmpty(Container.SecondTitle)</visible>
 			</control>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="400">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsety>8</textoffsety>
+				<textoffsety>5</textoffsety>
 				<label>$INFO[Container.FirstTitle]</label>
-				<font>info4</font>
+				<font>info1</font>
 				<textcolor>Shadow</textcolor>
 				<visible>!IsEmpty(Container.SecondTitle)</visible>
 			</control>
 		</control>
 		<control type="grouplist">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<orientation>horizontal</orientation>
 			<width>800</width>
 			<align>left</align>
 			<itemgap>13</itemgap>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<label>$INFO[Container.SecondTitle]</label>
-				<font>list1</font>
+				<font>list2</font>
 				<textcolor>Gray</textcolor>
 			</control>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
 				<textoffsetx>-14</textoffsetx>
 				<label>$INFO[Container.FirstTitle]</label>
-				<font>list1</font>
+				<font>list2</font>
 				<textcolor>Gray</textcolor>
 				<visible>IsEmpty(Container.SecondTitle)</visible>
 			</control>
 			<control type="label">
-				<width min="1" max="800">auto</width>
+				<width min="1" max="400">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsety>8</textoffsety>
+				<textoffsety>5</textoffsety>
 				<label>$INFO[Container.FirstTitle]</label>
-				<font>info4</font>
+				<font>info1</font>
 				<textcolor>DarkGray</textcolor>
 				<visible>!IsEmpty(Container.SecondTitle)</visible>
 			</control>
@@ -383,6 +383,16 @@
 			<width>1280</width>
 			<height>508</height>
 			<visible>true</visible>
+		</control>
+	</include>
+	<include name="AudioPlayingIndicator">
+		<control type="image">
+			<visible>Player.HasAudio + Player.Playing</visible>
+			<posx>1065</posx>
+			<posy>17</posy>
+			<width>16</width>
+			<height>16</height>
+			<texture>audio_playing.png</texture>
 		</control>
 	</include>
 </includes>
