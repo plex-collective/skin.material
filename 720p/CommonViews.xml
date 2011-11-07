@@ -1418,7 +1418,7 @@
 		<!-- /Scroll Letter -->
 		<control type="group">
 			<visible>Container.Scrolling + !Control.IsVisible(53)</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="400">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
 			<control type="image">
 				<posx>850</posx>
 				<posy>396</posy>

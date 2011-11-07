@@ -5,6 +5,7 @@
 	<controls>
 		<include>Background</include>
 		<include>Header</include>
+		<include>HeaderVideo</include>
 		<include>AudioPlayingIndicator</include>
 		<include>Time</include>
 		<include>List</include>

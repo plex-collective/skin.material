@@ -146,25 +146,25 @@
 	<include name="HeaderAudio">
 		<control type="label">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
@@ -172,25 +172,25 @@
 	<include name="HeaderVideo">
 		<control type="label">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
@@ -198,25 +198,25 @@
 	<include name="HeaderShared">
 		<control type="label">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31504]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31504]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
@@ -224,25 +224,25 @@
 	<include name="HeaderPictures">
 		<control type="label">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
@@ -250,25 +250,25 @@
 	<include name="HeaderApplications">
 		<control type="label">
 			<posx>91</posx>
-			<posy>3</posy>
+			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31304]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
 			<posx>91</posx>
-			<posy>1</posy>
+			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
 			<label>$LOCALIZE[31304]</label>
-			<font>list1</font>
+			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
