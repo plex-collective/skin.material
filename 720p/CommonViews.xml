@@ -564,6 +564,7 @@
 							<font>list1</font>
 						</control>
 						<control type="image">
+							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>1</posy>
 							<posx>10</posx>
 							<width>12</width>
@@ -811,6 +812,7 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
+							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>1</posy>
 							<posx>10</posx>
 							<width>12</width>
