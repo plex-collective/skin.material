@@ -68,14 +68,14 @@
 				<ondown>-</ondown>
 				<orientation>horizontal</orientation>
 				<control type="button" id="13">
-					<texturenofocus>button_skipbwd.png</texturenofocus>
+					<texturenofocus>dialogs/button_skipbwd.png</texturenofocus>
 					<texturefocus>osd/osd_button_skipbwd_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Previous)</onclick>
 					<width>62</width>
 					<height>38</height>
 				</control>
 				<control type="button" id="15">
-					<texturenofocus>button_stop.png</texturenofocus>
+					<texturenofocus>dialogs/button_stop.png</texturenofocus>
 					<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Stop)</onclick>
 					<onclick>XBMC.Action(previousmenu)</onclick>
@@ -90,7 +90,7 @@
 					<height>38</height>
 				</control>
 				<control type="button" id="18">
-					<texturenofocus>button_skipfwd.png</texturenofocus>
+					<texturenofocus>dialogs/button_skipfwd.png</texturenofocus>
 					<texturefocus>osd/osd_button_skipfwd_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Next)</onclick>
 					<width>62</width>
@@ -101,13 +101,13 @@
 				<posx>326</posx>
 				<posy>194</posy>
 				<control type="image">
-					<texture>button_pause.png</texture>
+					<texture>dialogs/button_pause.png</texture>
 					<width>62</width>
 					<height>38</height>
 					<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<texture>button_play.png</texture>
+					<texture>dialogs/button_play.png</texture>
 					<width>62</width>
 					<height>38</height>
 					<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(16)</visible>
