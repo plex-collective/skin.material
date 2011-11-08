@@ -13,7 +13,7 @@
 		</control>
 		<control type="group">
 			<posx>309</posx>
-			<posy>198</posy>
+			<posy>195</posy>
 				<control type="image">
 				<include>dialogWindowTop</include>
 			</control>
@@ -35,7 +35,7 @@
 					<width>422</width>
 					<label>$INFO[MusicPlayer.Title]</label>
 					<font>list1</font>
-					<textcolor>White</textcolor>
+					<textcolor>Orange</textcolor>
 					<align>center</align>
 					<scroll>true</scroll>
 				</control>
@@ -45,7 +45,7 @@
 					<width>422</width>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<font>plot1</font>
-					<textcolor>Gray</textcolor>
+					<textcolor>White</textcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -54,7 +54,7 @@
 					<width>422</width>
 					<label>$INFO[MusicPlayer.Album]</label>
 					<font>plot1</font>
-					<textcolor>DarkGray</textcolor>
+					<textcolor>Gray</textcolor>
 					<align>center</align>
 				</control>
 			</control>
