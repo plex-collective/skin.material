@@ -1,66 +1,66 @@
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 
 <strings>
 
 <!--  Video  -->
-	<string id="31001">Avsnitt</string>
-	<string id="31002">Avsnitt</string>
-	<string id="31003">Säsong</string>
-	<string id="31004">Detaljer</string>
-	<string id="31005">Skådespelare</string>
-	<string id="31006">Regissör</string>
-	<string id="31007">Författare</string>
-	<string id="31008">Släppdatum</string>
-	<string id="31009">Första</string>
-	<string id="31010">Sänd</string>
-	<string id="31011">Längd</string>
-	<string id="31012">Osedd</string>
+        <string id="31001">Avsnitt</string>
+        <string id="31002">Avsnitt</string>
+        <string id="31003">SÃ¤song</string>
+        <string id="31004">Detaljer</string>
+        <string id="31005">SkÃ¥despelare</string>
+        <string id="31006">RegissÃ¶r</string>
+        <string id="31007">FÃ¶rfattare</string>
+        <string id="31008">SlÃ¤ppdatum</string>
+        <string id="31009">FÃ¶rsta</string>
+        <string id="31010">SÃ¤nd</string>
+        <string id="31011">LÃ¤ngd</string>
+        <string id="31012">Osedd</string>
 
 <!--  Skin Preferences  -->
-	<string id="31101">Visa bildspel</string>
-	<string id="31102">Visa "On Deck" före</string>
-	<string id="31103">Visa Power meny</string>
-	<string id="31104">Avsluta</string>
-	<string id="31105">Vila</string>
-	<string id="31106">Stäng av</string>
+        <string id="31101">Visa bildspel</string>
+        <string id="31102">Visa "On Deck" fÃ¶re</string>
+        <string id="31103">Visa Power meny</string>
+        <string id="31104">Avsluta</string>
+        <string id="31105">Vila</string>
+        <string id="31106">StÃ¤ng av</string>
 
 <!--  Preferences  -->
-	<string id="31200">Inställningar</string>
-	<string id="31201">Tema</string>
-	<string id="31202">Utseende</string>
-	<string id="31203">Videos</string>
-	<string id="31204">Musik</string>
-	<string id="31205">Bilder</string>
-	<string id="31206">System</string>
+        <string id="31200">InstÃ¤llningar</string>
+        <string id="31201">Tema</string>
+        <string id="31202">Utseende</string>
+        <string id="31203">Videos</string>
+        <string id="31204">Musik</string>
+        <string id="31205">Bilder</string>
+        <string id="31206">System</string>
 
 <!--  Channels  -->
-	<string id="31300">Kanaler</string>
-	<string id="31301">Video</string>
-	<string id="31302">Ljud</string>
-	<string id="31303">Bilder</string>
-	<string id="31304">Program</string>
-	<string id="31305">Kanal</string>
-	<string id="31306">Katalog</string>
+        <string id="31300">Kanaler</string>
+        <string id="31301">Video</string>
+        <string id="31302">Ljud</string>
+        <string id="31303">Bilder</string>
+        <string id="31304">Program</string>
+        <string id="31305">Plex</string>
+        <string id="31306">Kanalkatalog</string>
 
 <!--  Search  -->
-	<string id="31400">Sök</string>
-	<string id="31401">Ta bort</string>
-	<string id="31402">Mellanslag</string>
-	<string id="31403">Rensa</string>
-	<string id="31404">Filmer</string>
-	<string id="31405">TV-serier</string>
-	<string id="31406">Artister</string>
-	<string id="31407">Album</string>
-	<string id="31408">Låtar</string>
-	
+        <string id="31400">SÃ¶k</string>
+        <string id="31401">Sudda</string>
+        <string id="31402">Tomrum</string>
+        <string id="31403">Rensa</string>
+        <string id="31404">Filmer</string>
+        <string id="31405">TV-serier</string>
+        <string id="31406">Artister</string>
+        <string id="31407">Album</string>
+        <string id="31408">LÃ¥tar</string>
+        
 <!--  Home  -->
-	<string id="31500">Hem</string>
-	<string id="31501">Senast tillagda</string>
-	<string id="31502">On Deck</string>
-	<string id="31504">Delat innehåll</string>
+        <string id="31500">Hem</string>
+        <string id="31501">Senast tillagda</string>
+        <string id="31502">On Deck</string>
+        <string id="31504">Delat innehÃ¥ll</string>
 
 <!--  DVD  -->
-	<string id="31600">Spela</string>
-	<string id="31601">Mata ut skiva</string>
-	
+        <string id="31600">Spela</string>
+        <string id="31601">Mata ut skiva</string>
+        
 </strings>
