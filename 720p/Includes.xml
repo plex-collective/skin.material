@@ -5,6 +5,7 @@
 	<include file="NowPlayingIncludes.xml"/>
 	<include file="IncludesDialogs.xml"/>
 	<include file="IncludesHome.xml"/>
+	<include file="IncludesDevMode.xml"/>
 	<include name="ButtonPaused">
 		<texturenofocus>osd/osd_button_play.png</texturenofocus>
 		<texturefocus>osd/osd_button_play_fo.png</texturefocus>

@@ -2,6 +2,10 @@
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+	<!-- XXX:Remove-->
+	<!--onload condition="!Window.Previous(Startup)">RunScript(script.watchlist,movies=$INFO[Skin.String(Watchlist_Movies)]&amp;episodes=$INFO[Skin.String(Watchlist_Episodes)]&amp;albums=$INFO[Skin.String(Watchlist_Albums)]&amp;limit=30)</onload-->
+	<!--onload condition="!Window.Previous(Startup)">RunScript(script.menucategories,limit=30)</onload-->
+	<!--onload>RunScript(script.menucategories,limit=30)</onload-->
 	<controls>
 		<control type="group">
 			<control type="group" id="350">
@@ -103,10 +107,12 @@
 				<visible>Control.HasFocus(300) + ![Window.IsVisible(4567) | Window.IsVisible(5678) | Window.IsVisible(6789)]</visible>
 				<animation effect="fade" time="200">VisibleChange</animation>
 			</control>
-			<!-- The main menu. Label2 is used for tracking focus -->
-			<control type="wraplist" id="300">
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<control type="list" id="300">
 				<description>Home Main Menu</description>
-				<posx>0</posx>
+				<!--posx>0</posx>
 				<posy>289</posy>
 				<width>1280</width>
 				<height>300</height>
@@ -116,123 +122,142 @@
 				<focusposition>3</focusposition>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<itemlayout width="213" height="76">
-					<control type="label">
-						<posx>0</posx>
-						<posy>2</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>Shadow</textcolor>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>DarkGray</textcolor>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>White</textcolor>
-						<visible>![Control.HasFocus(350) | Control.HasFocus(352) | Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)]</visible>
-						<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
+				<itemlayout width="213" height="76"-->
+				<!--visible allowhiddenfocus="true">Control.HasFocus(301) | Stringcompare(Container(300).ListItem(0).Label2,pref)</visible>
+				<animation effect="fade" delay="300" time="200">Visible</animation-->
+				<!--posx>496</posx-->
+				<posx>96</posx>
+				<posy>364</posy>
+				<width>1280</width>
+				<height>324</height>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout width="1280" height="54" condition="!Container.Content(movies)">
+					<control type="group" id="310">
+						<posx>144</posx>
+						<!--control type="label">
+							<width>417</width>
+							<height>50</height>
+							<label>JJ1:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>Shadow</textcolor>
+						</control>
+						<control type="label">
+							<width>417</width>
+							<height>50</height>
+							<label>JJ2:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>DarkGray</textcolor>
+						</control-->
+						<control type="label">
+							<width>417</width>
+							<height>50</height>
+							<!--
+							Type, View, Category, Label2, mediaTag,type, mediaType, show, movie
+							content	
+							-->
+							<label>JJ3:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>White</textcolor>
+							<visible>![Control.HasFocus(350) | Control.HasFocus(352) | Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)]</visible>
+							<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
+						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="213" height="76">
-					<control type="label">
-						<posx>0</posx>
-						<posy>2</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>Shadow</textcolor>
-						<visible>Control.HasFocus(300)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>Orange</textcolor>
-						<visible>Control.HasFocus(300)</visible>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>200</width>
-						<height>76</height>
-						<label>$INFO[ListItem.Label]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>HomeMenuItem</font>
-						<textcolor>Gray</textcolor>
-						<visible>!Control.HasFocus(300)</visible>
+				<focusedlayout width="1280" height="54" condition="Container.Content(movies)">
+					<control type="group" id="320">
+						<posx>144</posx>
+						<!--control type="label">
+							<width>417</width>
+							<height>50</height>
+							<label>JJ4:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>Shadow</textcolor>
+							<visible>Control.HasFocus(300)</visible>
+						</control>
+						<control type="label">
+							<width>417</width>
+							<height>50</height>
+							<label>JJ5:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>Orange</textcolor>
+							<visible>Control.HasFocus(300)</visible>
+						</control-->
+						<control type="label">
+							<width>417</width>
+							<height>50</height>
+							<label>JJ6:$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>HomeMenuItem</font>
+							<textcolor>Gray</textcolor>
+							<visible>!Control.HasFocus(300)</visible>
+						</control>
 					</control>
 				</focusedlayout>
 				<content>
-					<item>
+					<!--item-->
+						<!--label>JJ1:$INFO[Window(Home).Property(MenuMovie.1.Label)]</label-->
+						<!--onclick>$INFO[Window(Home).Property(MenuMovie.1.Path),PlayMedia(,)]</onclick-->
+						<!--visible>!IsEmpty(Window.Property(MenuMovie.1.Label))</visible-->
+						<!--onclick>SetFocus(301)</onclick-->
+						<!--visible>true</visible-->
+					<!--/item-->
+					<!--item>
 						<description>Quit</description>
 						<label>$LOCALIZE[31104]</label>
 						<onclick>Plex.Shutdown()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
-					</item>
-					<item>
+					</item-->
+					<!--item>
 						<description>Sleep</description>
 						<label>$LOCALIZE[31105]</label>
 						<onclick>Plex.SleepSystem()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
-					</item>			
-					<item>
+					</item-->			
+					<!--item>
 						<description>Shutdown</description>
 						<label>$LOCALIZE[31106]</label>
 						<onclick>Plex.ShutDownSystem()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
-					</item>			
-					<item>
+					</item-->			
+					<!--item>
 						<description>DVD Button</description>
 						<label>DVD</label>
 						<label2>dvd</label2>
 						<visible>System.HasMediadvd</visible>
 						<onclick>SetFocus(303)</onclick>
-					</item>
+					</item-->
 					<item>
 						<description>Preferences</description>
 						<label>$LOCALIZE[31200]</label>
 						<label2>pref</label2>
 						<onclick>SetFocus(301)</onclick>
 					</item>
-					<item>
+					<!--item>
 						<description>Channels</description>
 						<label>$LOCALIZE[31300]</label>
 						<label2>chan</label2>
 						<onclick>SetFocus(302)</onclick>
-					</item>
+					</item-->
 					<item>
 						<description>Search</description>
 						<label>$LOCALIZE[31400]</label>
 						<onclick>Plex.ActivateWindow(10051)</onclick>
+						<visible>false</visible>
 					</item>
 					<!-- The following code might fix a crash issue with Plex -->
 					<item id="6">
@@ -309,6 +334,9 @@
 					</item>
 				</content>
 			</control>
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 			<!-- The submenu for Preferences -->
 			<control type="list" id="301">
 				<visible allowhiddenfocus="true">Control.HasFocus(301) | Stringcompare(Container(300).ListItem(0).Label2,pref)</visible>
@@ -701,7 +729,7 @@
 			</control>
 			<control type="grouplist" id="5100">
 				<posx>47</posx>
-				<posy>379</posy>
+				<posy>6</posy>
 				<height>330</height>
 				<itemgap>0</itemgap>
 				<onup>300</onup>
@@ -896,5 +924,6 @@
 			<width>1280</width>
 			<height>45</height>
 		</control>
+		<include>DevMode</include>
 	</controls>
 </window>
