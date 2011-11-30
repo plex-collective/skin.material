@@ -964,4 +964,186 @@
 			</control>
 		</focusedlayout>
 	</include>
+	<include name="Queue">
+		<!-- "Queue" -->
+		<control type="group" id="7002">
+			<visible>Control.IsVisible(11003) + !Container(299).OnNext + !Container(299).OnPrevious</visible>
+			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Shadow</textcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<label>$LOCALIZE[31501]</label>
+				<posx>18</posx>
+				<posy>2</posy>
+			</control>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<label>$LOCALIZE[31501]</label>
+				<posx>18</posx>
+			</control>
+			<control type="list" id="11003">
+				<visible allowhiddenfocus="false">false</visible>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<ondown>-</ondown>
+				<onup>299</onup>
+				<width>1190</width>
+				<height>340</height>
+				<posy>21</posy>
+				<posx>0</posx>
+				<itemlayout width="238" height="280">
+					<control type="group">
+						<control type="image">
+							<posx>19</posx>
+							<posy>219</posy>
+							<width>200</width>
+							<height>200</height>
+							<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<posx>19</posx>
+							<posy>19</posy>
+							<width>200</width>
+							<height>200</height>
+							<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+							<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
+							<bordertexture>border_square_home.png</bordertexture>
+						</control>
+						<control type="label">
+							<posx>119</posx>
+							<posy>221</posy>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>Shadow</textcolor>
+							<font>homelabel</font>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<posx>119</posx>
+							<posy>223</posy>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>Gray</textcolor>
+							<font>homelabel</font>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<posx>119</posx>
+							<posy>239</posy>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Property(sourceTitle)]</label>
+							<textcolor>Shadow</textcolor>
+							<font>homelabel</font>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<posx>119</posx>
+							<posy>241</posy>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Property(sourceTitle)]</label>
+							<textcolor>DarkGray</textcolor>
+							<font>homelabel</font>
+							<align>center</align>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="238" height="280">
+					<control type="image">
+						<posx>19</posx>
+						<posy>219</posy>
+						<width>200</width>
+						<height>200</height>
+						<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>19</posx>
+						<posy>19</posy>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
+						<bordertexture>border_square_home.png</bordertexture>
+					</control>
+					<control type="image">
+						<posx>1</posx>
+						<posy>1</posy>
+						<width>236</width>
+						<height>236</height>
+						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+						<texture>focus_square_home.png</texture>
+					</control>
+					<control type="label">
+						<posx>119</posx>
+						<posy>221</posy>
+						<width>200</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(11003)</visible>
+						<textcolor>Shadow</textcolor>
+						<scrollsuffix> | </scrollsuffix>
+						<scroll>true</scroll>
+						<scrollspeed>30</scrollspeed>
+						<font>homelabel</font>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>119</posx>
+						<posy>223</posy>
+						<width>200</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(11003)</visible>
+						<textcolor>Orange</textcolor>
+						<scrollsuffix> | </scrollsuffix>
+						<scroll>true</scroll>
+						<scrollspeed>30</scrollspeed>
+						<font>homelabel</font>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>119</posx>
+						<posy>239</posy>
+						<width>200</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(sourceTitle)]</label>
+						<visible>Control.HasFocus(11003)</visible>
+						<textcolor>Shadow</textcolor>
+						<scrollsuffix> | </scrollsuffix>
+						<scroll>true</scroll>
+						<scrollspeed>30</scrollspeed>
+						<font>homelabel</font>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>119</posx>
+						<posy>241</posy>
+						<width>200</width>
+						<height>30</height>
+						<label>$INFO[ListItem.Property(sourceTitle)]</label>
+						<visible>Control.HasFocus(11003)</visible>
+						<textcolor>White</textcolor>
+						<scrollsuffix> | </scrollsuffix>
+						<scroll>true</scroll>
+						<scrollspeed>30</scrollspeed>
+						<font>homelabel</font>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
 </includes>
