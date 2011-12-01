@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- Common Stuff -->
+	<!-- ============ -->
+	<!-- Backgrounds -->
+	<include name="FullScreenBGImageDims">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	<include name="FullScreenOverlayDims">
+		<include>FullScreenBGImageDims</include>
+	</include>
+</includes>

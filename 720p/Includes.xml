@@ -6,6 +6,7 @@
 	<include file="IncludesDialogs.xml"/>
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesDevMode.xml"/>
+	<include file="IncludesDims.xml"/>
 	<include file="HomeDefault.xml"/>
 	<include file="HomeAlternate1.xml"/>
 	<include name="ButtonPaused">
@@ -354,21 +355,19 @@
 			<visible>Window.IsActive(CustomSettings.xml)</visible>
 		</control>
 	</include>
+	<!-- Backgrounds -->
+	<include name="FullScreenBGImage">
+		<include>FullScreenBGImageDims</include>
+	</include>
 	<include name="Background">
 		<control type="largeimage">
 			<info background="true">ListItem.Property(fanart_image)</info>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="image">
 			<texture>background_overlay_diffuse.png</texture>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+			<include>FullScreenBGImageDims</include>
 			<visible>true</visible>
 		</control>
 		<control type="image">
