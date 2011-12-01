@@ -133,15 +133,27 @@
 				</control>
 				<!-- /Current Thumb reflection-->
 				<!-- Current Thumb -->
-				<control type="image">
+				<control type="group">
 					<posx>248</posx>
 					<posy>239</posy>
-					<width>188</width>
-					<height>280</height>
-					<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_poster.png</bordertexture>
-					<fadetime>1</fadetime>
+					<control type="image">
+						<width>188</width>
+						<height>280</height>
+						<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture>border_poster.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- MPAA / TV Rating -->
+					<control type="image">
+						<visible>Skin.HasSetting(mpaaRatingOverlay)</visible>
+						<posx>-6</posx>
+						<posy>255</posy>
+						<width>188</width>
+						<height>20</height>
+						<info>Listitem.Property(mediaTag::contentRating)</info>
+						<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					</control>
 				</control>
 				<!-- /Current Thumb -->
 			</control>
@@ -166,15 +178,27 @@
 				</control>
 				<!-- /Current Thumb reflection-->
 				<!-- Current Thumb -->
-				<control type="image">
+				<control type="group">
 					<posx>142</posx>
 					<posy>250</posy>
-					<width>400</width>
-					<height>224</height>
-					<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
-					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_episode.png</bordertexture>
-					<fadetime>1</fadetime>
+					<control type="image">
+						<width>400</width>
+						<height>224</height>
+						<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture>border_episode.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- MPAA / TV Rating -->
+					<control type="image">
+						<visible>Skin.HasSetting(mpaaRatingOverlay)</visible>
+						<posx>-6</posx>
+						<posy>201</posy>
+						<width>400</width>
+						<height>20</height>
+						<info>Listitem.Property(mediaTag::contentRating)</info>
+						<aspectratio aligny="bottom" align="right">keep</aspectratio>
+					</control>
 				</control>
 				<!-- /Current Thumb -->
 			</control>
@@ -303,10 +327,12 @@
 				<textcolor>Gray</textcolor>
 			</control>
 		</control>
+		<!-- tvshows list -->
 		<control type="grouplist">
 			<posx>91</posx>
 			<posy>534</posy>
 			<visible>Container.Content(tvshows)</visible>
+			<!-- Title and Rating -->
 			<control type="group">
 				<height>31</height>
 				<visible>!IsEmpty(ListItem.Rating)</visible>
@@ -329,6 +355,7 @@
 					<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				</control>
 			</control>
+			<!-- Title only since there is no rating -->
 			<control type="group">
 				<height>31</height>
 				<visible>IsEmpty(ListItem.Rating)</visible>
@@ -345,12 +372,14 @@
 					</control>
 				</control>
 			</control>
+			<!-- Show Description -->
 			<control type="textbox">
 				<description>Plot/Details</description>
 				<width>504</width>
 				<height>98</height>
 				<align>justify</align>
-				<info>ListItem.Plot</info>
+				<!--info>ListItem.Plot</info-->
+				<label>$INFO[ListItem.Plot]</label>
 				<font>plot1</font>
 				<textcolor>Gray</textcolor>
 			</control>
@@ -1451,5 +1480,6 @@
 				<align>center</align>
 			</control>
 		</control>
+		<include>DevMode</include>
 	</include>
 </includes>

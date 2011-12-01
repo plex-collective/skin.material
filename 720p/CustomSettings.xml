@@ -233,7 +233,6 @@
 					<selected>Skin.HasSetting(AlternateHome1)</selected>
 				</control>
 				<control type="radiobutton" id="99051">
-					
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -251,6 +250,25 @@
 					<label>Developer Mode</label>
 					<onclick>Skin.ToggleSetting(dev.enable)</onclick>
 					<selected>Skin.HasSetting(dev.enable)</selected>
+				</control>
+				<control type="radiobutton" id="99052">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Enable MPAA / Content Rating Overlay</label>
+					<onclick>Skin.ToggleSetting(mpaaRatingOverlay)</onclick>
+					<selected>Skin.HasSetting(mpaaRatingOverlay)</selected>
 				</control>
 			</control>
 		</control>
