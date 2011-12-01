@@ -7,18 +7,18 @@
 			<control type="group">
 				<control type="group" id="350">
 					<posy>900</posy>
-					<control type="button">
+					<!--control type="button">
 						<visible>Control.IsVisible(11001) + !Skin.HasSetting(RecentlyAddedFirst)</visible>
 						<onfocus>SetFocus(11001)</onfocus>
-					</control>
-					<control type="button">
+					</control-->
+					<!--control type="button">
 						<visible>Control.IsVisible(11000)</visible>
 						<onfocus>SetFocus(11000)</onfocus>
-					</control>
-					<control type="button">
+					</control-->
+					<!--control type="button">
 						<visible>!Control.IsVisible(11000) + Control.IsVisible(11001)</visible>
 						<onfocus>SetFocus(11001)</onfocus>
-					</control>
+					</control-->
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,media)</visible>
 						<onfocus>SetFocus(300,0)</onfocus>
@@ -40,10 +40,11 @@
 						<onfocus>SetFocus(11003)</onfocus>
 					</control>
 					<!-- TODO: FIX -->
-					<control type="button">
-						<visible>!Stringcompare(Container(299).ListItem(0).Label2,pref) + !Stringcompare(Container(299).ListItem(0).Label2,chan) + !Stringcompare(Container(299).ListItem(0).Label2,media) + !Stringcompare(Container(299).ListItem(0).Label2,dvd) + !Control.IsVisible(11000) + !Control.IsVisible(11001) + !Control.IsVisible(11003)</visible>
+						<!--visible>!Stringcompare(Container(299).ListItem(0).Label2,pref) + !Stringcompare(Container(299).ListItem(0).Label2,chan) + !Stringcompare(Container(299).ListItem(0).Label2,media) + !Stringcompare(Container(299).ListItem(0).Label2,dvd) + !Control.IsVisible(11000) + !Control.IsVisible(11001) + !Control.IsVisible(11003)</visible-->
+					<!--control type="button">
+						<visible>!Control.IsVisible(300)</visible>
 						<onfocus>SetFocus(299)</onfocus>
-					</control>
+					</control-->
 				</control>
 				<!-- Fanart from PMS -->
 				<control type="multiimage">
@@ -76,13 +77,34 @@
 					<height>416</height>
 					<visible>true</visible>
 				</control>
+				<!-- Background behind Ondeck -->
 				<control type="image">
 					<texture background="true">thumb_background_home.png</texture>
 					<posx>0</posx>
 					<posy>265</posy>
 					<width>1280</width>
 					<height>414</height>
-					<visible>Control.IsVisible(11000) | Control.IsVisible(11003)</visible>
+					<!--visible>!Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible-->
+					<visible>[ControlGroup(5100).HasFocus() | ControlGroup(5101).HasFocus()] + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
+				</control>
+				<control type="image">
+					<texture background="true">thumb_background_home.png</texture>
+					<posx>0</posx>
+					<posy>265</posy>
+					<width>498</width>
+					<height>414</height>
+					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
+				</control>
+				<control type="image">
+					<texture background="true">thumb_background_home.png</texture>
+					<posx>782</posx>
+					<center>right</center>
+					<posy>265</posy>
+					<width>498</width>
+					<height>414</height>
+					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<!-- Menubar focus/unfocus -->
@@ -125,7 +147,6 @@
 					<focusposition>3</focusposition>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<!--defaultcontrol>29901</defaultcontrol-->
 					<itemlayout width="213" height="76">
 						<control type="label">
 							<posx>0</posx>
@@ -148,6 +169,7 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>DarkGray</textcolor>
+							<visible>!Control.HasFocus(299)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -159,7 +181,7 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>White</textcolor>
-							<visible>![Control.HasFocus(350) | Control.HasFocus(352) | Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(300) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)]</visible>
+							<visible>Control.HasFocus(299)</visible>
 							<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
 						</control>
 					</itemlayout>
@@ -357,18 +379,20 @@
 					</focusedlayout>
 					<content>
 						<!-- XXX: Need these 2 so it wont crash on reload of skin otherwise its fine -->
-						<item>
+						<!----------------------------------------------------------------------------->
+						<!--item>
 							<description>Debug Mode Only (don't forget to comment out)</description>
 							<label>Debug Mode Only (don't forget to comment out)</label>
 							<label2>pref</label2>
 							<onclick>SetFocus(300)</onclick>
-						</item>
+						</item-->
 						<item>
 							<description>Search</description>
 							<label>$LOCALIZE[31400]</label>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
 							<visible>false</visible>
 						</item>
+						<!----------------------------------------------------------------------------->
 						<!-- The following code might fix a crash issue with Plex -->
 						<item id="6">
 							<description>Preferences Menu</description>
@@ -839,7 +863,8 @@
 				</control>
 				<!-- On Deck -->
 				<control type="grouplist" id="5100">
-					<visible>[Control.HasFocus(300) | [!ControlGroup(5101).HasFocus() + !ControlGroup(5101).HasFocus()]] + !Control.HasFocus(299)</visible>
+					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5101).HasFocus() + !ControlGroup(5101).HasFocus()]] + !Control.HasFocus(299)</visible-->
+					<visible>Control.HasFocus(300) | ControlGroup(5100).HasFocus()</visible>
 					<posx>47</posx>
 					<posy>379</posy>
 					<height>330</height>
@@ -852,7 +877,8 @@
 				</control>
 				<!-- Recently Added -->
 				<control type="grouplist" id="5101">
-					<visible>[Control.HasFocus(300) | [!ControlGroup(5100).HasFocus() + !ControlGroup(5100).HasFocus()]] + !Control.HasFocus(299)</visible>
+					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5100).HasFocus() + !ControlGroup(5100).HasFocus()]] + !Control.HasFocus(299)</visible-->
+					<visible>Control.HasFocus(300) | ControlGroup(5101).HasFocus()</visible>
 					<posx>47</posx>
 					<posy>379</posy>
 					<height>330</height>
