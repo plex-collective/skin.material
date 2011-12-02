@@ -727,6 +727,7 @@
 		</control>
 		<!-- Media flags -->
 		<control type="group">
+			<visible>Skin.HasSetting(showMediaFlags)</visible>
 			<posx>-687</posx>
 			<posy>681</posy>
 			<control type="grouplist">

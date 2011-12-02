@@ -327,6 +327,25 @@
 					<onclick>Skin.ToggleSetting(movieTextRatings)</onclick>
 					<selected>Skin.HasSetting(movieTextRatings)</selected>
 				</control>
+				<control type="radiobutton" id="99056">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Show Media Flags at Bottom of Screen</label>
+					<onclick>Skin.ToggleSetting(showMediaFlags)</onclick>
+					<selected>Skin.HasSetting(showMediaFlags)</selected>
+				</control>
 			</control>
 		</control>
 	</controls>
