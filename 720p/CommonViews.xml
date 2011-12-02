@@ -353,6 +353,7 @@
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<wrapmultiline>false</wrapmultiline>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 					</control>
 					<control type="label">
@@ -364,17 +365,19 @@
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<wrapmultiline>false</wrapmultiline>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 					</control>
 					<control type="label">
 						<description>Genre</description>
-						<label> &#xB7; $INFO[ListItem.FirstGenre]</label>
+						<label> &#xB7; $INFO[ListItem.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<width min="1" max="300">auto</width>
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<wrapmultiline>false</wrapmultiline>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 					</control>
 				</control>
@@ -388,6 +391,7 @@
 					<height>12</height>
 					<font>heading3</font>
 					<textcolor>Gray</textcolor>
+					<wrapmultiline>false</wrapmultiline>
 					<visible>!IsEmpty(ListItem.Rating)</visible>
 				</control>
 			</control>
@@ -488,13 +492,14 @@
 					</control>
 					<control type="label">
 						<description>Genre</description>
-						<label> &#xB7; $INFO[ListItem.FirstGenre]</label>
+						<label> &#xB7; $INFO[ListItem.Genre]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<width min="1" max="300">auto</width>
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<wrapmultiline>false</wrapmultiline>
 						<visible>!IsEmpty(ListItem.Duration)</visible>
 					</control>
 				</control>
