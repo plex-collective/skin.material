@@ -137,6 +137,12 @@
 			<variant>Bold</variant>
 			<size>82</size>
 		</font>
+		<font>
+			<name>heading3</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>14</size>
+		</font>
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
