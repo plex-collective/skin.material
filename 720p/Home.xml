@@ -195,19 +195,19 @@
 					<item>
 						<description>Quit</description>
 						<label>$LOCALIZE[31104]</label>
-						<onclick>Plex.Shutdown()</onclick>
+						<onclick>Plex.Quit()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 					</item>
 					<item>
 						<description>Sleep</description>
 						<label>$LOCALIZE[31105]</label>
-						<onclick>Plex.SleepSystem()</onclick>
+						<onclick>Plex.Suspend()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
 					</item>			
 					<item>
 						<description>Shutdown</description>
 						<label>$LOCALIZE[31106]</label>
-						<onclick>Plex.ShutDownSystem()</onclick>
+						<onclick>Plex.Powerdown()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
 					</item>			
 					<item>
