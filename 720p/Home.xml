@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<window id="0">
+	<include condition="!Skin.HasSetting(AlternateHome1)">homeDefault</include>
+	<include condition="Skin.HasSetting(AlternateHome1)">homeAlternate1</include>
+</window>
