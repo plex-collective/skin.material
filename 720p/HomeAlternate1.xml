@@ -341,19 +341,19 @@
 						<item id="29906">
 							<description>Quit</description>
 							<label>$LOCALIZE[31104]</label>
-							<onclick>Plex.Shutdown()</onclick>
+							<onclick>Plex.Quit()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 						</item>
 						<item id="29907">
 							<description>Sleep</description>
 							<label>$LOCALIZE[31105]</label>
-							<onclick>Plex.SleepSystem()</onclick>
+							<onclick>Plex.Suspend()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
 						</item>			
 						<item id="29908">
 							<description>Shutdown</description>
 							<label>$LOCALIZE[31106]</label>
-							<onclick>Plex.ShutDownSystem()</onclick>
+							<onclick>Plex.Powerdown()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
 						</item>			
 					</content>
@@ -490,19 +490,19 @@
 						<item id="111">
 							<description>Quit Button</description>
 							<label>$LOCALIZE[31104]</label>
-							<onclick>Plex.ShutDown</onclick>
+							<onclick>Plex.Quit()</onclick>
 							<visible>false</visible>
 						</item>
 						<item id="112">
 							<description>Sleep Button</description>
 							<label>$LOCALIZE[31105]</label>
-							<onclick>Plex.SleepSystem</onclick>
+							<onclick>Plex.Suspend()</onclick>
 							<visible>false</visible>
 						</item>
 						<item id="113">
 							<description>Shut Down Button</description>
 							<label>$LOCALIZE[31106]</label>
-							<onclick>Plex.ShutDownSystem</onclick>
+							<onclick>Plex.Powerdown()</onclick>
 							<visible>false</visible>
 						</item>
 						<item id="2">
