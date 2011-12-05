@@ -4,14 +4,6 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="image">
-			<texture>background.png</texture>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<visible>true</visible>
-		</control>
-		<control type="image">
 			<posx>-36</posx>
 			<posy>0</posy>
 			<width>404</width>
@@ -62,6 +54,7 @@
 				<ondown>5</ondown>
 				<orientation>vertical</orientation>
 				<control type="radiobutton" id="1001">
+					<description>Show Slideshow</description>
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -80,6 +73,7 @@
 					<onclick>Skin.ToggleSetting(HideHomeSlideshow)</onclick>
 				</control>
 				<control type="radiobutton" id="1002">
+					<description>Show On Deck before Recently Added</description>
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -98,6 +92,44 @@
 					<onclick>Skin.ToggleSetting(RecentlyAddedFirst)</onclick>
 				</control>
 				<control type="radiobutton" id="1003">
+					<description>Show Channels</description>
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>$LOCALIZE[31107] $LOCALIZE[31300]</label>
+					<selected>!Skin.HasSetting(HideChannels)</selected>
+					<onclick>Skin.ToggleSetting(HideChannels)</onclick>
+				</control>
+				<control type="radiobutton" id="1004">
+					<description>Show Search</description>
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<label>$LOCALIZE[31107] $LOCALIZE[31400]</label>
+					<selected>!Skin.HasSetting(HideSearch)</selected>
+					<onclick>Skin.ToggleSetting(HideSearch)</onclick>
+				</control>
+				<control type="radiobutton" id="1005">
 					<description>Show Power Menu</description>
 					<width>770</width>
 					<font>list1</font>

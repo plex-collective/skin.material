@@ -5,13 +5,6 @@
 		<control type="image" id="0">
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>background.png</texture>
-		</control>
-		<control type="image" id="0">
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>404</width>
 			<height>720</height>
 			<texture>background_sidebar.png</texture>
@@ -83,7 +76,7 @@
 					<posy>44</posy>
 					<width>348</width>
 					<height>420</height>
-					<itemgap>0</itemgap>
+					<itemgap>-1</itemgap>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>false</usecontrolcoords>
 					<onup>-</onup>
@@ -555,13 +548,12 @@
 							<font>keyboardbuttonsmall</font>
 							<posx>0</posx>
 							<posy>9</posy>
-							<onleft>100</onleft>
+							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
+							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>							<onleft>100</onleft>
+							<onleft>5100</onleft>
 							<onright>32</onright>
 							<onup>95</onup>
 							<ondown>-</ondown>
-							<label>$LOCALIZE[31401]</label>
-							<aligny>center</aligny>
-							<onclick/>
 							<include>keyboardWideButton</include>
 							<textoffsetx>-16</textoffsetx>
 						</control>
@@ -571,15 +563,15 @@
 							<!-- Space -->
 							<control type="button" id="32">
 								<font>keyboardbuttonsmall</font>
-								<posx>0</posx>
+								<posx>-12</posx>
 								<posy>0</posy>
+								<width>116</width>
 								<onleft>8</onleft>
 								<onright>10</onright>
 								<onup>97</onup>
 								<ondown>-</ondown>
+								<texturefocus>dialogs/buttonkb-spacesearch.png</texturefocus>
 								<label>$LOCALIZE[31402]</label>
-								<aligny>center</aligny>
-								<onclick/>
 								<include>keyboardWideButton</include>
 								<textoffsetx>-16</textoffsetx>
 							</control>
@@ -594,11 +586,9 @@
 								<posy>0</posy>
 								<onleft>32</onleft>
 								<onright>9001</onright>
-								<onup>99</onup>
+								<onup>100</onup>
 								<ondown>-</ondown>
 								<label>$LOCALIZE[31403]</label>
-								<aligny>center</aligny>
-								<onclick/>
 								<include>keyboardWideButton</include>
 								<textoffsetx>-16</textoffsetx>
 							</control>

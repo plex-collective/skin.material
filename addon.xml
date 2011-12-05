@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.simplex" version="1.0.5" name="Simplex" provider-name="CloudDweller_and_Jaap">
+<addon id="skin.simplex" version="1.0.6" name="Simplex" provider-name="CloudDweller_and_Jaap">
 	<requires>
 		<import addon="xbmc.gui" version="2.11"/>
 		<import addon="script.recentlyadded" version="1.0.8"/>

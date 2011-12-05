@@ -25,8 +25,6 @@
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
 	</default>
-	<default type="image">
-	</default>
 	<default type="button">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -52,7 +50,7 @@
 		<textcolor>WhiteTrans</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
-		<alttexturefocus border="6,6,6,6">dialogs/buttonkb-focus.png</alttexturefocus>
+		<alttexturefocus>dialogs/buttonkb-focus.png</alttexturefocus>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
 		<aligny>center</aligny>

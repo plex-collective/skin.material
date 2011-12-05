@@ -23,6 +23,7 @@
         <string id="31104">Avsluta</string>
         <string id="31105">Vila</string>
         <string id="31106">Stäng av</string>
+		<string id="31107">Visa</string>
 
 <!--  Preferences  -->
         <string id="31200">Inställningar</string>
@@ -31,7 +32,8 @@
         <string id="31203">Videos</string>
         <string id="31204">Musik</string>
         <string id="31205">Bilder</string>
-        <string id="31206">System</string>
+        <string id="31206">Nätverk</string>
+        <string id="31207">System</string>
 
 <!--  Channels  -->
         <string id="31300">Kanaler</string>
@@ -41,6 +43,9 @@
         <string id="31304">Program</string>
         <string id="31305">Plex</string>
         <string id="31306">Kanalkatalog</string>
+        <string id="31307">Videokanaler</string>
+        <string id="31308">Ljudkanaler</string>
+        <string id="31309">Bildkanaler</string>
 
 <!--  Search  -->
         <string id="31400">Sök</string>

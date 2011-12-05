@@ -354,13 +354,14 @@
 				<visible>!Skin.HasSetting(keyboardButtons)</visible>
 				<control type="togglebutton" id="302">
 					<description>SHIFT button</description>
-					<textoffsetx>-16</textoffsetx>
-					<label>20178</label>
-					<font>keyboardbuttonsmall</font>
-					<onleft>304</onleft>
+					<texturenofocus>dialogs/buttonkb-shift.png</texturenofocus>
+					<texturefocus>dialogs/buttonkb-shift_fo.png</texturefocus>
+					<alttexturenofocus>dialogs/buttonkb-shiftalt.png</alttexturenofocus>
+					<alttexturefocus>dialogs/buttonkb-shiftalt_fo.png</alttexturefocus>					
+					<onleft>8</onleft>
 					<onright>90</onright>
 					<onup>65</onup>
-					<ondown>8</ondown>
+					<ondown>304</ondown>
 					<include>keyboardWideButton</include>
 				</control>
 				<control type="button" id="90">
@@ -428,17 +429,16 @@
 					<posx>354</posx>
 					<textoffsetx>-16</textoffsetx>
 					<onleft>78</onleft>
-					<onright>304</onright>
+					<onright>8</onright>
 					<onup>75</onup>
 					<ondown>306</ondown>
 					<include>keyboardButton</include>
 				</control>
-				<control type="togglebutton" id="304">
-					<description>SYMBOLS button</description>
+				<control type="togglebutton" id="8">
+					<description>Delete button</description>
 					<posx>398</posx>
-					<textoffsetx>-16</textoffsetx>
-					<label>.?#@</label>
-					<font>keyboardbuttonsmall</font>
+					<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
+					<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>
 					<onleft>77</onleft>
 					<onright>302</onright>
 					<onup>76</onup>
@@ -450,11 +450,11 @@
 				<posx>54</posx>
 				<posy>326</posy>
 				<visible>!Skin.HasSetting(keyboardButtons)</visible>
-				<control type="button" id="8">
-					<description>Delete button</description>
+				<control type="button" id="304">
+					<description>SYMBOLS button</description>
 					<posx>0</posx>
 					<textoffsetx>-16</textoffsetx>
-					<label>$LOCALIZE[31401]</label>
+					<label>.?#@</label>
 					<font>keyboardbuttonsmall</font>
 					<onleft>300</onleft>
 					<onright>305</onright>
@@ -466,8 +466,9 @@
 					<description>previous button</description>
 					<posx>90</posx>
 					<textoffsetx>-16</textoffsetx>
+					<textoffsety>-3</textoffsety>
 					<label>&lt;</label>
-					<onleft>8</onleft>
+					<onleft>304</onleft>
 					<onright>32</onright>
 					<onup>90</onup>
 					<ondown>49</ondown>
@@ -489,6 +490,7 @@
 					<description>next button</description>
 					<posx>354</posx>
 					<textoffsetx>-16</textoffsetx>
+					<textoffsety>-3</textoffsety>
 					<label>&gt;</label>
 					<onleft>32</onleft>
 					<onright>300</onright>
@@ -503,8 +505,8 @@
 					<label>20177</label>
 					<font>keyboardbuttonsmall</font>
 					<onleft>306</onleft>
-					<onright>8</onright>
-					<onup>304</onup>
+					<onright>304</onright>
+					<onup>8</onup>
 					<ondown>57</ondown>
 					<include>keyboardWideButton</include>
 				</control>

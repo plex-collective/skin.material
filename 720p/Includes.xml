@@ -337,6 +337,17 @@
 			<label>$LOCALIZE[31206]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<visible>Window.IsActive(18)</visible>
+		</control>
+		<control type="label">
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[31207]</label>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(systemsettings)</visible>
 		</control>
 		<control type="label">

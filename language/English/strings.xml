@@ -23,6 +23,7 @@
 	<string id="31104">Quit</string>
 	<string id="31105">Sleep</string>
 	<string id="31106">Shut Down</string>
+	<string id="31107">Show</string>
 
 <!--  Preferences  -->
 	<string id="31200">Preferences</string>
@@ -31,7 +32,8 @@
 	<string id="31203">Videos</string>
 	<string id="31204">Music</string>
 	<string id="31205">Pictures</string>
-	<string id="31206">System</string>
+	<string id="31206">Network</string>
+	<string id="31207">System</string>
 
 <!--  Channels  -->
 	<string id="31300">Channels</string>
@@ -40,7 +42,10 @@
 	<string id="31303">Picture</string>
 	<string id="31304">Applications</string>
 	<string id="31305">Channel</string>
-	<string id="31306">Directory</string>
+	<string id="31306">Channel Directory</string>	
+	<string id="31307">Video Channels</string>
+	<string id="31308">Audio Channels</string>
+	<string id="31309">Picture Channels</string>
 
 <!--  Search  -->
 	<string id="31400">Search</string>
