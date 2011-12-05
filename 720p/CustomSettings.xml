@@ -230,7 +230,7 @@
 					<!-- TODO: Localize -->
 					<label>Alternate Home Page</label>
 					<onclick>Skin.ToggleSetting(AlternateHome1)</onclick>
-					<selected>Skin.HasSetting(AlternateHome1)</selected>
+					<selected>!Skin.HasSetting(AlternateHome1)</selected>
 				</control>
 				<control type="radiobutton" id="99051">
 					<width>770</width>
@@ -268,7 +268,7 @@
 					<!-- TODO: Localize -->
 					<label>Enable MPAA / Content Rating Overlay</label>
 					<onclick>Skin.ToggleSetting(mpaaRatingOverlay)</onclick>
-					<selected>Skin.HasSetting(mpaaRatingOverlay)</selected>
+					<selected>!Skin.HasSetting(mpaaRatingOverlay)</selected>
 				</control>
 				<control type="radiobutton" id="99053">
 					<width>770</width>
@@ -287,7 +287,7 @@
 					<!-- TODO: Localize -->
 					<label>Show Extra Show/Movie Details</label>
 					<onclick>Skin.ToggleSetting(extraDetails)</onclick>
-					<selected>Skin.HasSetting(extraDetails)</selected>
+					<selected>!Skin.HasSetting(extraDetails)</selected>
 				</control>
 				<control type="radiobutton" id="99054">
 					<width>770</width>
@@ -306,7 +306,7 @@
 					<!-- TODO: Localize -->
 					<label>Show Episode Totals Overlay</label>
 					<onclick>Skin.ToggleSetting(episodeTotals)</onclick>
-					<selected>Skin.HasSetting(episodeTotals)</selected>
+					<selected>!Skin.HasSetting(episodeTotals)</selected>
 				</control>
 				<control type="radiobutton" id="99055">
 					<width>770</width>
@@ -325,7 +325,7 @@
 					<!-- TODO: Localize -->
 					<label>Include Text Ratings on Movie Focus Bar</label>
 					<onclick>Skin.ToggleSetting(movieTextRatings)</onclick>
-					<selected>Skin.HasSetting(movieTextRatings)</selected>
+					<selected>!Skin.HasSetting(movieTextRatings)</selected>
 				</control>
 				<control type="radiobutton" id="99056">
 					<width>770</width>
@@ -344,7 +344,7 @@
 					<!-- TODO: Localize -->
 					<label>Show Media Flags at Bottom of Screen</label>
 					<onclick>Skin.ToggleSetting(showMediaFlags)</onclick>
-					<selected>Skin.HasSetting(showMediaFlags)</selected>
+					<selected>!Skin.HasSetting(showMediaFlags)</selected>
 				</control>
 			</control>
 		</control>
