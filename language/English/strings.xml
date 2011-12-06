@@ -63,4 +63,27 @@
 	<string id="31600">Play</string>
 	<string id="31601">Eject Disc</string>
 	
+<!--  HELP -->
+<!-- 32 = Help String + 00 = Window ID + XXX -->
+	<string id="3200001">To access skin options, navigate left or right to 'Preferences', then navigate down to 'Skin' and press 'OK' or &lt;Enter&gt;.  
+
+Added sections to this skin from the original one are 'Mods', 'Developer', and 'Experimental'.  Here is a brief explaination of each item you can change:
+
+Hide Alternate Home Page:  Will show the original home page
+Hide MPAA / Content Rating:  Will make the 'TV-PG' type ratings disappear
+Hide Extra Show Details: Will remove the line that lists Year, Duration, Genre and Text Rating
+Hide Episode Totals: Will remove the total number of episodes listed above the poster
+Hide Text Rating on Movie List:  Will remove the Text Rating of the movie that is on the list itself in a circle type border
+Hide Media Flags in Info Area: Will Remove all the media flags (720p, etc) in the area that the video is detailed
+Show Help: Not implemented yet :)
+
+The Developer section is for developers mostly.
+
+The experimential section currently will allow you to enable a fanart view I am working on.  If it is enabled you will be able to press right arrow/key when you are in the tv / movies section to toggle back and forth between that view and the default one.  Note that the view is unfinished and will change; its mostly there to make it easy for me to work on it :)
+
+When using the Alternate Home Page (enabled by default), when you are in the 'Media' section you can scroll left to view recently, added shows and right to view 'On Deck' shows.  The Deck will expand to fit the width of the TV screen.  Once you are in the deck area, you can press Down to go to the other deck, or UP to exit and go back to main list.
+
+If someone want to write better help, please do; and I will include it.  It is my plan to have context sensitive help in each section!
+</string>
+
 </strings>

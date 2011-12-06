@@ -46,7 +46,7 @@
 					<pulseonselect>false</pulseonselect>
 					<label>$LOCALIZE[31500]</label>
 				</control>
-				<control type="button" id="99000">
+				<control type="button" id="100">
 					<width>272</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -61,6 +61,38 @@
 					<pulseonselect>false</pulseonselect>
 					<!-- TODO: Localize -->
 					<label>Mods</label>
+				</control>
+				<control type="button" id="101">
+					<width>272</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<!-- TODO: Localize -->
+					<label>Developer</label>
+				</control>
+				<control type="button" id="102">
+					<width>272</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<!-- TODO: Localize -->
+					<label>Experimental</label>
 				</control>
 		</control>
 		<control type="group" id="200">
@@ -200,8 +232,8 @@
 			</control>
 		</control>
 		<control type="group" id="200">
-			<control type="grouplist" id="99010">
-				<visible>ControlGroup(3).Hasfocus(99000)</visible>
+			<control type="grouplist" id="120">
+				<visible>ControlGroup(3).Hasfocus(100)</visible>
 				<description>Control Area</description>
 				<posx>418</posx>
 				<posy>106</posy>
@@ -210,10 +242,10 @@
 				<itemgap>1</itemgap>
 				<onleft>3</onleft>
 				<onright>3</onright>
-				<onup>99010</onup>
-				<ondown>99010</ondown>
+				<onup>120</onup>
+				<ondown>120</ondown>
 				<orientation>vertical</orientation>
-				<control type="radiobutton" id="99050">
+				<control type="radiobutton" id="12000">
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -228,11 +260,141 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Alternate Home Page</label>
-					<onclick>Skin.ToggleSetting(AlternateHome1)</onclick>
-					<selected>!Skin.HasSetting(AlternateHome1)</selected>
+					<label>Hide Alternate Home Page</label>
+					<onclick>Skin.ToggleSetting(HideAlternateHome1)</onclick>
+					<selected>Skin.HasSetting(HideAlternateHome1)</selected>
 				</control>
-				<control type="radiobutton" id="99051">
+				<control type="radiobutton" id="12001">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Hide MPAA / Content Rating Overlay</label>
+					<onclick>Skin.ToggleSetting(HideMPAARatingOverlay)</onclick>
+					<selected>Skin.HasSetting(HideMPAARatingOverlay)</selected>
+				</control>
+				<control type="radiobutton" id="12002">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Hide Extra Show/Movie Details</label>
+					<onclick>Skin.ToggleSetting(HideExtraDetails)</onclick>
+					<selected>Skin.HasSetting(HideExtraDetails)</selected>
+				</control>
+				<control type="radiobutton" id="12003">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Hide Episode Totals Overlay</label>
+					<onclick>Skin.ToggleSetting(HideEpisodeTotals)</onclick>
+					<selected>Skin.HasSetting(HideEpisodeTotals)</selected>
+				</control>
+				<control type="radiobutton" id="12004">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Hide Text Ratings on Movie List</label>
+					<onclick>Skin.ToggleSetting(HideMovieListTextRatings)</onclick>
+					<selected>Skin.HasSetting(HideMovieListTextRatings)</selected>
+				</control>
+				<control type="radiobutton" id="12005">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Hide Media Flags in Info Area</label>
+					<onclick>Skin.ToggleSetting(HideMediaFlags)</onclick>
+					<selected>Skin.HasSetting(HideMediaFlags)</selected>
+				</control>
+				<control type="radiobutton" id="12006">
+					<width>770</width>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<pulseonselect>false</pulseonselect>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Show Help</label>
+					<onclick>Skin.ToggleSetting(help)</onclick>
+					<selected>Skin.HasSetting(help)</selected>
+				</control>
+			</control>
+		</control>
+		<control type="group" id="200">
+			<control type="grouplist" id="121">
+				<visible>ControlGroup(3).Hasfocus(101)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>121</onup>
+				<ondown>121</ondown>
+				<orientation>vertical</orientation>
+				<control type="radiobutton" id="12101">
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -251,7 +413,7 @@
 					<onclick>Skin.ToggleSetting(dev.enable)</onclick>
 					<selected>Skin.HasSetting(dev.enable)</selected>
 				</control>
-				<control type="radiobutton" id="99052">
+				<control type="button" id="12102">
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -266,11 +428,13 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Enable MPAA / Content Rating Overlay</label>
-					<onclick>Skin.ToggleSetting(mpaaRatingOverlay)</onclick>
-					<selected>!Skin.HasSetting(mpaaRatingOverlay)</selected>
+					<label>Reset Settings</label>
+					<onclick>Skin.ResetSettings</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>Control.Move(3,101)</onclick>
+					
 				</control>
-				<control type="radiobutton" id="99053">
+				<control type="button" id="12103">
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -285,11 +449,26 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Show Extra Show/Movie Details</label>
-					<onclick>Skin.ToggleSetting(extraDetails)</onclick>
-					<selected>!Skin.HasSetting(extraDetails)</selected>
+					<label>Reload Skin</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
 				</control>
-				<control type="radiobutton" id="99054">
+			</control>
+		</control>
+		<control type="group" id="200">
+			<control type="grouplist" id="122">
+				<visible>ControlGroup(3).Hasfocus(102)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>121</onup>
+				<ondown>121</ondown>
+				<orientation>vertical</orientation>
+				<control type="radiobutton" id="12201">
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -304,47 +483,9 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Show Episode Totals Overlay</label>
-					<onclick>Skin.ToggleSetting(episodeTotals)</onclick>
-					<selected>!Skin.HasSetting(episodeTotals)</selected>
-				</control>
-				<control type="radiobutton" id="99055">
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<!-- TODO: Localize -->
-					<label>Include Text Ratings on Movie Focus Bar</label>
-					<onclick>Skin.ToggleSetting(movieTextRatings)</onclick>
-					<selected>!Skin.HasSetting(movieTextRatings)</selected>
-				</control>
-				<control type="radiobutton" id="99056">
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<!-- TODO: Localize -->
-					<label>Show Media Flags at Bottom of Screen</label>
-					<onclick>Skin.ToggleSetting(showMediaFlags)</onclick>
-					<selected>!Skin.HasSetting(showMediaFlags)</selected>
+					<label>Enable Unfinished Fanart View</label>
+					<onclick>Skin.ToggleSetting(ExperimentalFanartView)</onclick>
+					<selected>Skin.HasSetting(ExperimentalFanartView)</selected>
 				</control>
 			</control>
 		</control>

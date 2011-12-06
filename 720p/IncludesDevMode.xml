@@ -6,7 +6,7 @@
 			<posy>25r</posy>
 			<width>1280</width>
 			<align>left</align>
-			<label>$INFO[Window.Property(xmlfile)] • $INFO[Container.FolderName] • $INFO[System.BuildVersion] • $INFO[System.BuildDate] • $INFO[System.ScreenResolution]</label>
+			<label>$INFO[Window.Property(xmlfile)]$INFO[Container.FolderName, &#xB7; ]$INFO[System.BuildVersion, &#xB7; ]$INFO[System.BuildDate, &#xB7; ]$INFO[System.ScreenResolution, &#xB7; ]</label>
 			<font>homelabel</font>
 			<textcolor>White</textcolor>
 			<visible>Skin.HasSetting(dev.enable)</visible>
