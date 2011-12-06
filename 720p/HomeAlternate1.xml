@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <includes>
 	<include name="homeAlternate1">
-		<defaultcontrol always="true">299</defaultcontrol>
+		<defaultcontrol always="false">350</defaultcontrol>
 		<allowoverlay>yes</allowoverlay>
 		<controls>
 			<control type="group">
@@ -21,7 +21,13 @@
 					</control-->
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,media)</visible>
+						<onfocus>Control.Move(300,0)</onfocus>
 						<onfocus>SetFocus(300,0)</onfocus>
+					
+					</control>
+					<control type="button">
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,help)</visible>
+						<onfocus>SetFocus(299,4)</onfocus>
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,pref)</visible>
@@ -33,7 +39,23 @@
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,dvd)</visible>
-						<onfocus>SetFocus(303,0)</onfocus>
+						<onfocus>SetFocus(299)</onfocus>
+					</control>
+					<control type="button">
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,search)</visible>
+						<onfocus>SetFocus(299)</onfocus>
+					</control>
+					<control type="button">
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,quit)</visible>
+						<onfocus>SetFocus(299)</onfocus>
+					</control>
+					<control type="button">
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,sleep)</visible>
+						<onfocus>SetFocus(299)</onfocus>
+					</control>
+					<control type="button">
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,shutdown)</visible>
+						<onfocus>SetFocus(299)</onfocus>
 					</control>
 					<control type="button">
 						<visible>Control.IsVisible(11003)</visible>
@@ -217,6 +239,7 @@
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!-- The main menu. Label2 is used for tracking focus -->
 				<control type="wraplist" id="299">
+					<visible allowhiddenfocus="true">true</visible>
 					<description>Home Main Menu</description>
 					<posx>0</posx>
 					<posy>289</posy>
@@ -224,6 +247,7 @@
 					<height>299</height>
 					<onup>-</onup>
 					<ondown>350</ondown>
+					<onleft>299</onleft>
 					<onright>299</onright>
 					<focusposition>3</focusposition>
 					<scrolltime>200</scrolltime>
@@ -315,6 +339,7 @@
 						<item id="29904">
 							<description>Search</description>
 							<label>$LOCALIZE[31400]</label>
+							<label2>search</label2>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
 						</item>
 						<item id="29902">
@@ -331,6 +356,14 @@
 							<visible>true</visible>
 							<onclick>SetFocus(300)</onclick>
 						</item>
+						<item id="29906">
+							<!-- TODO: Localize -->
+							<description>Help</description>
+							<label>Help</label>
+							<label2>help</label2>
+							<visible>true</visible>
+							<onclick>SetFocus(299)</onclick>
+						</item>
 						<item id="29903">
 							<description>DVD Button</description>
 							<label>DVD</label>
@@ -341,18 +374,21 @@
 						<item id="29906">
 							<description>Quit</description>
 							<label>$LOCALIZE[31104]</label>
+							<label2>quit</label2>
 							<onclick>Plex.Quit()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 						</item>
 						<item id="29907">
 							<description>Sleep</description>
 							<label>$LOCALIZE[31105]</label>
+							<label2>sleep</label2>
 							<onclick>Plex.Suspend()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
 						</item>			
 						<item id="29908">
 							<description>Shutdown</description>
 							<label>$LOCALIZE[31106]</label>
+							<label2>shutdown</label2>
 							<onclick>Plex.Powerdown()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
 						</item>			
@@ -360,8 +396,8 @@
 				</control>
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<control type="list" id="300">
-					<visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + [!Control.HasFocus(11000) + !Control.HasFocus(11001)]</visible>
 					<description>Media Menu</description>
+					<visible allowhiddenfocus="false">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + [!Control.HasFocus(11000) + !Control.HasFocus(11001)]</visible>
 					<animation effect="fade" delay="300" time="200">Visible</animation>
 					<posx>496</posx>
 					<posy>364</posy>
@@ -411,6 +447,10 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="54">
+						<control type="button">
+							<width>288</width>
+							<onfocus>Play</onfocus>
+						</control>
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
@@ -461,12 +501,14 @@
 					<content>
 						<!-- XXX: Need these 2 so it wont crash on reload of skin otherwise its fine -->
 						<!----------------------------------------------------------------------------->
-						<!--item>
+						<!-- Comment this one out when not debugging -->
+						<item>
 							<description>Debug Mode Only (don't forget to comment out)</description>
-							<label>Debug Mode Only (don't forget to comment out)</label>
+							<label> </label>
 							<label2>pref</label2>
-							<onclick>SetFocus(300)</onclick>
-						</itemi-->
+							<onclick>SetFocus(299)</onclick>
+							<visible>!Control.HasFocus(299) + !Control.HasFocus(300)</visible>
+						</item>
 						<item>
 							<description>Search</description>
 							<label>$LOCALIZE[31400]</label>
@@ -944,6 +986,7 @@
 				<control type="grouplist" id="5100">
 					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5101).HasFocus() + !ControlGroup(5101).HasFocus()]] + !Control.HasFocus(299)</visible-->
 					<visible>Control.HasFocus(300) | ControlGroup(5100).HasFocus()</visible>
+					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ControlGroup(5100).HasFocus()]</visible-->
 					<posx>47</posx>
 					<posy>379</posy>
 					<height>330</height>
@@ -958,6 +1001,7 @@
 				<control type="grouplist" id="5101">
 					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5100).HasFocus() + !ControlGroup(5100).HasFocus()]] + !Control.HasFocus(299)</visible-->
 					<visible>Control.HasFocus(300) | ControlGroup(5101).HasFocus()</visible>
+					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ControlGroup(5101).HasFocus()]</visible-->
 					<posx>47</posx>
 					<posy>379</posy>
 					<height>330</height>
@@ -1014,7 +1058,7 @@
 				<width>1280</width>
 				<height>45</height>
 			</control>
-			<include>DevMode</include>
-			</controls>
+			<include>GlobalIncludes</include>
+		</controls>
 	</include>
 </includes>

@@ -71,7 +71,7 @@
 			<posy>474</posy>
 			<width>114</width>
 			<height>171</height>
-			<texture background="true" diffuse="diffuse_episode.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture background="true" diffuse="diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<bordertexture>border_episode.png</bordertexture>
 			<fadetime>1</fadetime>

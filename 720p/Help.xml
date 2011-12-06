@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="Help">
+		<control type="grouplist" id="400">
+			<!--visible>Skin.HasSetting(help)</visible-->
+			<visible allowhiddenfocus="true">[Control.HasFocus(400) | Stringcompare(Container(299).ListItem(0).Label2,help)] + !Control.HasFocus(300)</visible>
+			<posx>54</posx>
+			<posy>364</posy>
+			<width>1161</width>
+			<height>300</height>
+			<onup>294</onup>
+			<ondown>-</ondown>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<align>center</align>
+			<control type="group">
+				<control type="image">
+					<description>Help Background</description>
+					<posy>0</posy>
+					<width>1161</width>
+					<height>300</height>
+					<texture border="0,1,0,11">overlay.png</texture>
+				</control>
+				<control type="label">
+					<description>Help Label</description>
+					<posy>21</posy>
+					<onup>294</onup>
+					<ondown>-</ondown>
+					<onleft>-</onleft>
+					<onright>-</onright>
+					<height>30</height>
+					<width>1161</width>
+					<align>center</align>
+					<label>HELP - (Will Auto Scroll in 15 seconds...)</label>
+					<font>list1</font>
+					<textcolor>Orange</textcolor>
+				</control>
+				<control type="textbox" id="8">
+					<visible>Window.IsVisible(0)</visible>
+					<description>Home - General Help</description>
+					<posx>16</posx>
+					<posy>51</posy>
+					<width>1125</width>
+					<height>200</height>
+					<align>justify</align>
+					<aligny>top</aligny>
+					<label>$LOCALIZE[3200001]</label>
+					<textcolor>Gray</textcolor>
+					<font>plot1</font>
+					<autoscroll delay="15000" time="4000" repeat="15000"/>
+				</control>
+				<!--control type="label">
+					<visible>Window.IsActive(videofiles)</visible>
+					<description>My Videos - General Help</description>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>MY VIDEOS</label>
+				</control-->
+			</control>
+		</control>
+	</include>
+</includes>
