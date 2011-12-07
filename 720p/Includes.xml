@@ -11,6 +11,7 @@
 	<include file="IncludesAnimations.xml"/>
 	<include file="HomeDefault.xml"/>
 	<include file="HomeAlternate1.xml"/>
+	<include file="ViewsListIncludes.xml"/>
 	<include file="Help.xml"/>
 	<include name="GlobalIncludes">
 		<include>DevMode</include>
