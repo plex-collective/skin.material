@@ -432,11 +432,86 @@
 				<itemlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
 					<!--include>ListItemLayoutAllMinusSongsEpisodesWithMixedParents</include-->
 					
-					<include>ListItemUnwatchedOverlay</include>
-					<include>ListItemLabel</include>
-					<include>ListItemUnwatchedCount</include>
-					<include>ListItemVideoResolution</include>
-					<include>ListItemTextRating</include>
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>551</width>
+						<height>50</height>
+						<itemgap>15</itemgap>
+						
+						<!-- (<unwatched indicator>) -->
+						<control type="group">
+							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
+							<!--visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(songs)]</visible-->
+							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>10</posx>
+							<posy>1</posy>
+							<width>12</width>
+							<height>52</height>
+							<include>ListItemUnwatchedOverlay</include>
+						</control>
+						
+						<!-- (Episode #) + Label -->
+						<control type="group">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>395</width>
+							<height>50</height>
+							<include>ListItemLabel</include>
+						</control>
+						
+						<!-- (<# of unwatched episodes text / image>) -->
+						<control type="group">
+							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
+							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
+							<posx>450</posx>
+							<posy>17</posy>
+							<width>42</width>
+							<height>31</height>
+							<include>ListItemUnwatchedCount</include>
+						</control>
+						
+						<!-- (<HD indicator>) -->
+						<control type="group">
+							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>450</posx>
+							<posy>2</posy>
+							<width>36</width>
+							<height>54</height>
+							<include>ListItemVideoResolution</include>
+						</control>
+						
+						<!-- (<text rating / image>) -->
+						<control type="group">
+							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
+							<posx>489</posx>
+							<posy>17</posy>
+							<width>51</width>
+							<height>24</height>
+							<include>ListItemTextRating</include>
+						</control>
+						
+						<!-- (<now playing overlay>) -->
+						<control type="group">
+							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+							<posx>457</posx>
+							<posy>18</posy>
+							<width>22</width>
+							<height>20</height>
+							<include>ListItemNowPlayingOverlay</include>
+						</control>
+						
+						<!-- (<duration>) -->
+						<control type="group">
+							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+							<posy>13</posy>
+							<posx>468</posx>
+							<width>50</width>
+							<height>31</height>
+							<include>ListItemDuration</include>
+						</control>
+					</control>
+					
 				</itemlayout>
 				<focusedlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
 					<include>ListFocusedLayoutAllMinusSongsEpisodesWithMixedParents</include>
