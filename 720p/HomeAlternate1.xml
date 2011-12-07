@@ -450,6 +450,7 @@
 						<control type="button">
 							<width>288</width>
 							<onfocus>Play</onfocus>
+							<onfocus>Play</onfocus>
 						</control>
 						<control type="image">
 							<width>288</width>

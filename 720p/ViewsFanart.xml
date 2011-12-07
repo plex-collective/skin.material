@@ -620,15 +620,98 @@
 					</control>
 				</focusedlayout>
 				
-				<!-- EPISODES -->
+				<!-- MIXED PARENTS EPISODES (Recently Added, etc) -->
 				<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
-					<include>ListItemLayoutEpisodesWithMixedParents</include>
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>551</width>
+						<height>50</height>
+						<itemgap>15</itemgap>
+						
+						<!-- (<unwatched indicator>) -->
+						<control type="group">
+							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>10</posx>
+							<posy>9</posy>
+							<width>12</width>
+							<height>72</height>
+							<include>ListItemUnwatchedOverlay</include>
+						</control>
+						
+						<!-- (Episode #) + Label 
+						      Showname, Season -->
+						<control type="group">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>395</width>
+							<height>50</height>
+							<include>ListItemLabel</include>
+						</control>
+						
+						<!-- (<HD indicator>) -->
+						<control type="group">
+							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>450</posx>
+							<posy>10</posy>
+							<width>36</width>
+							<height>54</height>
+							<include>ListItemVideoResolutionOverlay</include>
+						</control>
+					</control>
+					
 				</itemlayout>
 				<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
-					<include>ListFocusedLayoutEpisodesWithMixedParents</include>
+					<control type="image">
+						<posy>1</posy>
+						<width>512</width>
+						<height>70</height>
+						<texture>button_media_info.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
+					</control>
+					
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>551</width>
+						<height>50</height>
+						<itemgap>15</itemgap>
+						
+						<!-- (<unwatched indicator>) -->
+						<control type="group">
+							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>10</posx>
+							<posy>9</posy>
+							<width>12</width>
+							<height>72</height>
+							<include>ListFocusedUnwatchedOverlay</include>
+						</control>
+						
+						<!-- (Episode #) + Label 
+						      Showname, Season -->
+						<control type="group">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>395</width>
+							<height>50</height>
+							<include>ListFocusedLabel</include>
+						</control>
+						
+						<!-- (<HD indicator>) -->
+						<control type="group">
+							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+							<posx>450</posx>
+							<posy>10</posy>
+							<width>36</width>
+							<height>54</height>
+							<include>ListFocusedVideoResolutionOverlay</include>
+						</control>
+					</control>
 				</focusedlayout>
 				
-				<!-- SONGS -->
+				<!-- MIXED PARENTS SONGS (All Tracks) -->
 				<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
 					<include>ListItemLayoutSongsWithMixedParents</include>
 				</itemlayout>
