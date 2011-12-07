@@ -8,6 +8,7 @@
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesDevMode.xml"/>
 	<include file="IncludesDims.xml"/>
+	<include file="IncludesAnimations.xml"/>
 	<include file="HomeDefault.xml"/>
 	<include file="HomeAlternate1.xml"/>
 	<include file="Help.xml"/>
@@ -406,7 +407,13 @@
 			<fadetime>300</fadetime>
 		</control>
 		<control type="image">
-			<texture>background_overlay_header.png</texture>
+			<include>FullScreenBGImageDims</include>
+			<include>fadeinout</include>
+			<texture>home/menuBackground.png</texture>
+			<colordiffuse>Red</colordiffuse>
+		</control>
+		<control type="image">
+			<texture diffuse="bottom_home.png">background_overlay_diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>

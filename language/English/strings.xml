@@ -79,7 +79,7 @@ Show Help: Not implemented yet :)
 
 The Developer section is for developers mostly.
 
-The experimential section currently will allow you to enable a fanart view I am working on.  If it is enabled you will be able to press right arrow/key when you are in the tv / movies section to toggle back and forth between that view and the default one.  Note that the view is unfinished and will change; its mostly there to make it easy for me to work on it :)
+The experimential section currently will allow you to enable a fanart view I am working on.  If it is enabled you will be able to press left arrow/key when you are in the tv / movies section to toggle back and forth between that view and the default one.  Note that the view is unfinished and will change; its mostly there to make it easy for me to work on it :)
 
 When using the Alternate Home Page (enabled by default), when you are in the 'Media' section you can scroll left to view recently, added shows and right to view 'On Deck' shows.  The Deck will expand to fit the width of the TV screen.  Once you are in the deck area, you can press Down to go to the other deck, or UP to exit and go back to main list.
 
