@@ -403,7 +403,14 @@
 	</include>
 	<include name="BackgroundFanart">
 		<control type="largeimage">
+			<visible>!Container.Content(episodes)</visible>
 			<info background="true">ListItem.Property(fanart_image)</info>
+			<include>FullScreenBGImageDims</include>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="largeimage">
+			<visible>Container.Content(episodes)</visible>
+			<info background="true">ListItem.Thumb</info>
 			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
