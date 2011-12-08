@@ -502,8 +502,8 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>13</posy>
 							<posx>468</posx>
+							<posy>13</posy>
 							<width>50</width>
 							<height>31</height>
 							<include>ListItemDuration</include>
@@ -611,8 +611,8 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>13</posy>
 							<posx>468</posx>
+							<posy>13</posy>
 							<width>50</width>
 							<height>31</height>
 							<include>ListFocusedDuration</include>
@@ -713,57 +713,94 @@
 				
 				<!-- MIXED PARENTS SONGS (All Tracks) -->
 				<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
-					<include>ListItemLayoutSongsWithMixedParents</include>
-				</itemlayout>
-				<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
-					<include>ListFocusedLayoutSongsWithMixedParents</include>
-				</focusedlayout>
-			</control>
-			
-			
-			
-			<control type="panel" id="53">
-				<posx>47</posx>
-				<posy>237</posy>
-				<width>1200</width>
-				<height>440</height>
-				<onleft>-</onleft>
-				<onright>-</onright>
-				<scrolltime>200</scrolltime>
-				<visible>Window.IsActive(2) + Container.HasFiles</visible>
-				<preloaditems>2</preloaditems>
-				<itemlayout height="146" width="146">
-					<control type="image">
-						<posx>18</posx>
-						<posy>18</posy>
-						<width>128</width>
-						<height>128</height>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture>border_photo.png</bordertexture>
-					</control>
-				</itemlayout>
-				<focusedlayout height="164" width="164">
-					<control type="image">
-						<posx>18</posx>
-						<posy>18</posy>
-						<width>128</width>
-						<height>128</height>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-						<bordertexture>border_photo.png</bordertexture>
-					</control>
-					<control type="image">
+					<control type="group">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>164</width>
-						<height>164</height>
-						<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-						<texture>focus_photo.png</texture>
+						<width>551</width>
+						<height>50</height>
+						<itemgap>15</itemgap>
+						
+						<!-- (Episode #) + Label 
+						      Showname, Season -->
+						<control type="group">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>395</width>
+							<height>50</height>
+							<include>ListItemLabel</include>
+						</control>
+						
+						<!-- (<now playing overlay>) -->
+						<control type="group">
+							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+							<posx>457</posx>
+							<posy>26</posy>
+							<width>22</width>
+							<height>20</height>
+							<include>ListItemNowPlayingOverlay</include>
+						</control>
+						
+						<!-- (<duration>) -->
+						<control type="group">
+							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+							<posx>468</posx>
+							<posy>18</posy>
+							<width>50</width>
+							<height>31</height>
+							<include>ListItemDuration</include>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
+					<control type="image">
+						<posy>1</posy>
+						<width>512</width>
+						<height>70</height>
+						<texture>button_media_info.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
+					</control>
+					
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>551</width>
+						<height>50</height>
+						<itemgap>15</itemgap>
+						
+						<!-- (Episode #) + Label 
+						      Showname, Season -->
+						<control type="group">
+							<posx>30</posx>
+							<posy>1</posy>
+							<width>395</width>
+							<height>50</height>
+							<include>ListFocusedLabel</include>
+						</control>
+						
+						<!-- (<now playing overlay>) -->
+						<control type="group">
+							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+							<posx>457</posx>
+							<posy>26</posy>
+							<width>22</width>
+							<height>20</height>
+							<include>ListFocusedNowPlayingOverlay</include>
+						</control>
+						
+						<!-- (<duration>) -->
+						<control type="group">
+							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+							<posx>468</posx>
+							<posy>18</posy>
+							<width>50</width>
+							<height>31</height>
+							<include>ListFocusedDuration</include>
+						</control>
 					</control>
 				</focusedlayout>
 			</control>
-			
 			
 			<!-- /Scroll Letter -->
 			<control type="group">
