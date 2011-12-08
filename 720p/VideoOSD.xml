@@ -162,12 +162,12 @@
 						<visible>Player.Rewinding</visible>
 					</control>
 					<control type="label">
-						<posy>2</posy>
 						<width>200</width>
 						<height>16</height>
 						<font>osd2</font>
 						<align>right</align>
-						<textcolor>Shadow</textcolor>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>2X</label>
 						<visible>player.forwarding2x | player.rewinding2x</visible>
 					</control>
@@ -177,16 +177,7 @@
 						<font>osd2</font>
 						<align>right</align>
 						<textcolor>Gray</textcolor>
-						<label>2X</label>
-						<visible>player.forwarding2x | player.rewinding2x</visible>
-					</control>
-					<control type="label">
-						<posy>2</posy>
-						<width>200</width>
-						<height>16</height>
-						<font>osd2</font>
-						<align>right</align>
-						<textcolor>Shadow</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>4X</label>
 						<visible>player.forwarding4x | player.rewinding4x</visible>
 					</control>
@@ -196,16 +187,7 @@
 						<font>osd2</font>
 						<align>right</align>
 						<textcolor>Gray</textcolor>
-						<label>4X</label>
-						<visible>player.forwarding4x | player.rewinding4x</visible>
-					</control>
-					<control type="label">
-						<posy>2</posy>
-						<width>200</width>
-						<height>16</height>
-						<font>osd2</font>
-						<align>right</align>
-						<textcolor>Shadow</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>8X</label>
 						<visible>player.forwarding8x | player.rewinding8x</visible>
 					</control>
@@ -215,44 +197,17 @@
 						<font>osd2</font>
 						<align>right</align>
 						<textcolor>Gray</textcolor>
-						<label>8X</label>
-						<visible>player.forwarding8x | player.rewinding8x</visible>
-					</control>
-					<control type="label">
-						<posy>2</posy>
-						<width>200</width>
-						<height>16</height>
-						<font>osd2</font>
-						<align>right</align>
-						<textcolor>Shadow</textcolor>
-						<label>16X</label>
-						<visible>player.forwarding16x | player.rewinding16x</visible>
-					</control>
-					<control type="label">
-						<width>200</width>
-						<height>16</height>
-						<font>osd2</font>
-						<align>right</align>
-						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>16X</label>
 						<visible>player.forwarding16x | player.rewinding16x</visible>
 					</control>					
 					<control type="label">
-						<posy>2</posy>
-						<width>200</width>
-						<height>16</height>
-						<font>osd2</font>
-						<align>right</align>
-						<textcolor>Shadow</textcolor>
-						<label>32X</label>
-						<visible>player.forwarding32x | player.rewinding32x</visible>
-					</control>
-					<control type="label">
 						<width>200</width>
 						<height>16</height>
 						<font>osd2</font>
 						<align>right</align>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>32X</label>
 						<visible>player.forwarding32x | player.rewinding32x</visible>
 					</control>
@@ -268,57 +223,27 @@
 				</control>
 				<control type="label">
 					<posx>37</posx>
-					<posy>28</posy>
-					<width>270</width>
-					<height>16</height>
-					<font>osd1</font>
-					<align>left</align>
-					<textcolor>Shadow</textcolor>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<autoscroll>false</autoscroll>
-					<scroll>false</scroll>
-				</control>
-				<control type="label">
-					<posx>37</posx>
 					<posy>26</posy>
 					<width>270</width>
 					<height>16</height>
 					<font>osd1</font>
 					<align>left</align>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<autoscroll>false</autoscroll>
 					<scroll>false</scroll>
 				</control>
 				<control type="label">
 					<posx>-5</posx>
-					<posy>66</posy>
-					<width>160</width>
-					<height>16</height>
-					<font>info1</font>
-					<align>center</align>
-					<textcolor>Shadow</textcolor>
-					<label>$INFO[VideoPlayer.Time]</label>
-				</control>
-				<control type="label">
-					<posx>-5</posx>
 					<posy>64</posy>
 					<width>160</width>
 					<height>16</height>
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[VideoPlayer.Time]</label>
-				</control>
-				<control type="label">
-					<posx>918</posx>
-					<posy>66</posy>
-					<width>160</width>
-					<height>16</height>
-					<font>info1</font>
-					<align>center</align>
-					<textcolor>Shadow</textcolor>
-					<label>$INFO[VideoPlayer.TimeRemaining]</label>
 				</control>
 				<control type="label">
 					<posx>918</posx>
@@ -328,6 +253,7 @@
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[VideoPlayer.TimeRemaining]</label>
 				</control>
 			</control>

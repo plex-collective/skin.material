@@ -42,6 +42,7 @@
 					<width>422</width>
 					<align>center</align>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>plot1</font>
 				</control>
 				<control type="group">

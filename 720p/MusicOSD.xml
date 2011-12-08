@@ -116,6 +116,7 @@
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Time]</label>
 				</control>
 				<control type="label">
@@ -126,6 +127,7 @@
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Time]</label>
 				</control>
 				<control type="label">
@@ -136,6 +138,7 @@
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.TimeRemaining]</label>
 				</control>
 				<control type="label">
@@ -146,6 +149,7 @@
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.TimeRemaining]</label>
 				</control>
 			</control>

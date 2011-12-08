@@ -34,6 +34,7 @@
 					<label>HELP - (Will Auto Scroll in 15 seconds...)</label>
 					<font>list1</font>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 				<control type="textbox" id="8">
 					<visible>Window.IsVisible(0)</visible>
@@ -46,6 +47,7 @@
 					<aligny>top</aligny>
 					<label>$LOCALIZE[3200001]</label>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>plot1</font>
 					<autoscroll delay="15000" time="4000" repeat="15000"/>
 				</control>

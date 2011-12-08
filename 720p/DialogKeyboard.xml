@@ -32,6 +32,7 @@
 				<posx>34</posx>
 				<width>542</width>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<align>center</align>
 				<font>list1</font>
 			</control>
@@ -44,6 +45,7 @@
 				<font>keyboardentry</font>
 				<ondown>52</ondown>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>

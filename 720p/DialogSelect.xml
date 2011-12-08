@@ -34,6 +34,7 @@
 						<aligny>center</aligny>
 						<font>list1</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 					<control type="list" id="3">
 						<posy>194</posy>
@@ -50,6 +51,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 							</control>
 						</itemlayout>
@@ -73,6 +75,7 @@
 									<info>ListItem.Label</info>
 									<font>list1</font>
 									<textcolor>White</textcolor>
+									<shadowcolor>Shadow</shadowcolor>
 									<scroll>true</scroll>
 									<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 								</control>
@@ -85,6 +88,7 @@
 									<info>ListItem.Label</info>
 									<font>list1</font>
 									<textcolor>Orange</textcolor>
+									<shadowcolor>Shadow</shadowcolor>
 									<scroll>true</scroll>
 									<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(3).OnNext">Focus</animation>
 									<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(3).OnPrevious">Focus</animation>

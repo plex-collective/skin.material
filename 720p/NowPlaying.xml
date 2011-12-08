@@ -60,6 +60,7 @@
 					<width>600</width>
 					<font>tracktitle</font>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Title]</label>
 					<align>left</align>
 				</control>
@@ -68,6 +69,7 @@
 					<width>600</width>
 					<font>trackartist</font>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<align>left</align>
 				</control>
@@ -76,6 +78,7 @@
 					<width>600</width>
 					<font>trackalbum</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Album]</label>
 					<align>left</align>
 				</control>
@@ -85,6 +88,7 @@
 					<width>500</width>
 					<font>info2</font>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.PlaylistPosition] of $INFO[MusicPlayer.PlaylistLength]</label>
 					<align>left</align>
 				</control>
@@ -178,6 +182,7 @@
 					<width>600</width>
 					<font>tracktitle</font>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Title]</label>
 					<align>right</align>
 				</control>
@@ -187,6 +192,7 @@
 					<width>600</width>
 					<font>trackartist</font>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<align>right</align>
 				</control>
@@ -196,6 +202,7 @@
 					<width>600</width>
 					<font>trackalbum</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.Album]</label>
 					<align>right</align>
 				</control>
@@ -205,6 +212,7 @@
 					<width>500</width>
 					<font>info2</font>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<label>$INFO[MusicPlayer.PlaylistPosition] of $INFO[MusicPlayer.PlaylistLength]</label>
 					<align>right</align>
 				</control>

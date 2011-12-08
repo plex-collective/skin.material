@@ -96,18 +96,6 @@
 			<!-- Finish Time -->
 			<control type="label">
 				<posx>1173</posx>
-				<posy>482</posy>
-				<width>800</width>
-				<height>46</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<!-- TODO: Localize -->
-				<label>Finish Time: $INFO[Player.FinishTime]</label>
-				<font>title1</font>
-				<textcolor>Shadow</textcolor>
-			</control>
-			<control type="label">
-				<posx>1173</posx>
 				<posy>480</posy>
 				<width>800</width>
 				<height>46</height>
@@ -117,6 +105,7 @@
 				<label>Finish Time: $INFO[Player.FinishTime]</label>
 				<font>title1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 			</control>
 				
 		</control>
@@ -134,6 +123,7 @@
 					<label>$INFO[VideoPlayer.Title]</label>
 					<align>left</align>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>osd1</font>
 				</control>
 			</control>
@@ -147,6 +137,7 @@
 					<align>left</align>
 					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>VideoPlayer.Content(movies)</visible>
 				</control>
@@ -157,6 +148,7 @@
 					<!-- TODO: Localize -->
 					<label>Duration: $INFO[Player.Duration]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>VideoPlayer.Content(movies)</visible>
 				</control>
@@ -171,6 +163,7 @@
 					<align>left</align>
 					<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, &#xB7; ]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
@@ -181,6 +174,7 @@
 					<!-- TODO: Localize -->
 					<label>Duration: $INFO[Player.Duration]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>VideoPlayer.Content(episodes)</visible>
 				</control>
@@ -196,6 +190,7 @@
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.PlotOutline]</label>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>plot1</font>
 				<autoscroll delay="10000" time="3000" repeat="10000"/>
 			</control>
@@ -209,6 +204,7 @@
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.Plot]</label>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>plot1</font>
 				<autoscroll delay="10000" time="3000" repeat="10000"/>
 			</control>
@@ -226,6 +222,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Player.Time]</label>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>true</visible>
 				</control>
@@ -246,6 +243,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Player.TimeRemaining]</label>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>heading3</font>
 					<visible>true</visible>
 				</control>

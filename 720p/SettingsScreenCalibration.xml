@@ -48,6 +48,7 @@
 			<label>-</label>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 		<control type="label" id="3">
 			<description>help information</description>
@@ -58,6 +59,7 @@
 			<label>-</label>
 			<font>info1</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 	</controls>
 </window>

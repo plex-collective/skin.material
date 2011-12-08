@@ -36,6 +36,7 @@
 					<label>$INFO[MusicPlayer.Title]</label>
 					<font>list1</font>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<align>center</align>
 					<scroll>true</scroll>
 				</control>
@@ -46,6 +47,7 @@
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<font>plot1</font>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -55,6 +57,7 @@
 					<label>$INFO[MusicPlayer.Album]</label>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<align>center</align>
 				</control>
 			</control>

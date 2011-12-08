@@ -61,6 +61,7 @@
 					<width>465</width>
 					<height>30</height>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>

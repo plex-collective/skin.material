@@ -32,6 +32,7 @@
 			<align>center</align>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 		<control type="label" id="412">
 			<description>path label control</description>
@@ -42,6 +43,7 @@
 			<font>plot1</font>
 			<haspath>true</haspath>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 		<control type="group" id="9002">
 			<control type="list" id="450">
@@ -63,6 +65,7 @@
 						<info>ListItem.Label</info>
 						<scroll>false</scroll>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="39">
@@ -81,6 +84,7 @@
 						<aligny>top</aligny>
 						<info>ListItem.Label</info>
 						<textcolor>White</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</focusedlayout>
 			</control>

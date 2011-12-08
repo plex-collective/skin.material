@@ -40,29 +40,9 @@
 		<aligny>center</aligny>
 		<font>title1</font>
 		<textcolor>White</textcolor>
-	</include>
-	<include name="videoPageLabel">
-		<posx>30</posx>
-		<posy>15</posy>
-		<width>1000</width>
-		<height>56</height>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>title1</font>
-		<textcolor>White</textcolor>
+		<shadowcolor>Shadow</shadowcolor>
 	</include>
 	<include name="Time">
-		<control type="label">
-			<posx>1189</posx>
-			<posy>2</posy>
-			<width>1280</width>
-			<height>46</height>
-			<align>right</align>
-			<aligny>center</aligny>
-			<info>System.Time</info>
-			<font>title1</font>
-			<textcolor>Shadow</textcolor>
-		</control>
 		<control type="label">
 			<posx>1189</posx>
 			<posy>0</posy>
@@ -73,49 +53,11 @@
 			<info>System.Time</info>
 			<font>title1</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 	</include>
 	<include name="Header">
 		<include>GlobalIncludes</include>
-		<control type="grouplist">
-			<posx>91</posx>
-			<posy>6</posy>
-			<orientation>horizontal</orientation>
-			<width>800</width>
-			<align>left</align>
-			<itemgap>13</itemgap>
-			<control type="label">
-				<width min="1" max="500">auto</width>
-				<height>46</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<label>$INFO[Container.SecondTitle]</label>
-				<font>list2</font>
-				<textcolor>Shadow</textcolor>
-			</control>
-			<control type="label">
-				<width min="1" max="500">auto</width>
-				<height>46</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<textoffsetx>-14</textoffsetx>
-				<label>$INFO[Container.FirstTitle]</label>
-				<font>list2</font>
-				<textcolor>Shadow</textcolor>
-				<visible>IsEmpty(Container.SecondTitle)</visible>
-			</control>
-			<control type="label">
-				<width min="1" max="400">auto</width>
-				<height>46</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<textoffsety>5</textoffsety>
-				<label>$INFO[Container.FirstTitle]</label>
-				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<visible>!IsEmpty(Container.SecondTitle)</visible>
-			</control>
-		</control>
 		<control type="grouplist">
 			<posx>91</posx>
 			<posy>4</posy>
@@ -131,6 +73,7 @@
 				<label>$INFO[Container.SecondTitle]</label>
 				<font>list2</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 			</control>
 			<control type="label">
 				<width min="1" max="500">auto</width>
@@ -141,6 +84,7 @@
 				<label>$INFO[Container.FirstTitle]</label>
 				<font>list2</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<visible>IsEmpty(Container.SecondTitle)</visible>
 			</control>
 			<control type="label">
@@ -152,6 +96,7 @@
 				<label>$INFO[Container.FirstTitle]</label>
 				<font>info1</font>
 				<textcolor>DarkGray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<visible>!IsEmpty(Container.SecondTitle)</visible>
 			</control>
 		</control>
@@ -160,18 +105,6 @@
 		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>91</posx>
-			<posy>6</posy>
-			<width>800</width>
-			<height>46</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
-			<font>list2</font>
-			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
-		</control>
-		<control type="label">
-			<posx>91</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -180,24 +113,13 @@
 			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 	</include>
 	<include name="HeaderVideo">
 		<control type="label">
 			<posx>91</posx>
-			<posy>6</posy>
-			<width>800</width>
-			<height>46</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
-			<font>list2</font>
-			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
-		</control>
-		<control type="label">
-			<posx>91</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -206,6 +128,7 @@
 			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 	</include>
@@ -213,18 +136,6 @@
 		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>91</posx>
-			<posy>6</posy>
-			<width>800</width>
-			<height>46</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[31504]</label>
-			<font>list2</font>
-			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
-		</control>
-		<control type="label">
-			<posx>91</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -233,6 +144,7 @@
 			<label>$LOCALIZE[31504]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 	</include>
@@ -240,18 +152,6 @@
 		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>91</posx>
-			<posy>6</posy>
-			<width>800</width>
-			<height>46</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
-			<font>list2</font>
-			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
-		</control>
-		<control type="label">
-			<posx>91</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -260,6 +160,7 @@
 			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 	</include>
@@ -267,18 +168,6 @@
 		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>91</posx>
-			<posy>6</posy>
-			<width>800</width>
-			<height>46</height>
-			<align>left</align>
-			<aligny>top</aligny>
-			<label>$LOCALIZE[31304]</label>
-			<font>list2</font>
-			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
-		</control>
-		<control type="label">
-			<posx>91</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -287,6 +176,7 @@
 			<label>$LOCALIZE[31304]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 	</include>
@@ -301,6 +191,7 @@
 			<label>$LOCALIZE[31200]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 		</control>
 		<control type="label">
 			<posy>55</posy>
@@ -311,6 +202,7 @@
 			<label>$LOCALIZE[31202]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(appearancesettings)</visible>
 		</control>
 		<control type="label">
@@ -322,6 +214,7 @@
 			<label>$LOCALIZE[31203]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(videossettings)</visible>
 		</control>
 		<control type="label">
@@ -333,6 +226,7 @@
 			<label>$LOCALIZE[31204]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(musicsettings)</visible>
 		</control>
 		<control type="label">
@@ -344,6 +238,7 @@
 			<label>$LOCALIZE[31205]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(picturessettings)</visible>
 		</control>
 		<control type="label">
@@ -355,6 +250,7 @@
 			<label>$LOCALIZE[31206]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(systemsettings)</visible>
 		</control>
 		<control type="label">
@@ -366,6 +262,7 @@
 			<label>$LOCALIZE[31201]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Window.IsActive(CustomSettings.xml)</visible>
 		</control>
 	</include>

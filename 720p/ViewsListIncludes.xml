@@ -8,21 +8,12 @@
 			<control type="group" id="33">
 				<visible>!Container.Content(episodes)</visible>
 				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<info>ListItem.Label</info>
-					<textcolor>Shadow</textcolor>
-					<scroll>false</scroll>
-					<font>list1</font>
-				</control>
-				<control type="label">
 					<width>395</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>false</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -32,22 +23,12 @@
 			<control type="group">
 				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-					<textcolor>Shadow</textcolor>
-					<scroll>false</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
 					<width>395</width>
 					<aligny>center</aligny>
 					<height>50</height>
 					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>false</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -57,22 +38,12 @@
 			<control type="group">
 				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>Shadow</textcolor>
-					<scroll>false</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
 					<width>395</width>
 					<aligny>center</aligny>
 					<height>50</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>false</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -82,37 +53,23 @@
 		<!------------------------------------------------------------------------------------->
 		<!-- EPISODES, MIXED PARENTS -->
 		<control type="group">
-			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
-			<control type="label">
-				<posy>+5</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>list2</font>
-			</control>
 			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<textcolor>White</textcolor>
-				<scroll>false</scroll>
+				<shadowcolor>Shadow</shadowcolor>
+				<scroll>true</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 			</control>
-			<control type="label">
-				<posy>+30</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>plot1</font>
-			</control>
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
 			<control type="label">
 				<posy>+29</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
 				<textcolor>DarkGray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -123,35 +80,21 @@
 		<control type="group">
 			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
 			<control type="label">
-				<posy>+5</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Title]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>list2</font>
-			</control>
-			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-			</control>
-			<control type="label">
-				<posy>+30</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>plot1</font>
 			</control>
 			<control type="label">
 				<posy>+29</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
 				<textcolor>DarkGray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -165,21 +108,12 @@
 			<control type="group">
 				<visible>!Container.Content(episodes)</visible>
 				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<height>50</height>
-					<aligny>center</aligny>
-					<info>ListItem.Label</info>
-					<textcolor>Shadow</textcolor>
-					<scroll>true</scroll>
-					<font>list1</font>
-				</control>
-				<control type="label">
 					<width>395</width>
 					<height>50</height>
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>true</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -190,6 +124,7 @@
 					<aligny>center</aligny>
 					<info>ListItem.Label</info>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>true</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="0" end="100" time="100" delay="0" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -200,37 +135,15 @@
 			<control type="group">
 				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-					<textcolor>Shadow</textcolor>
-					<scroll>true</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
 					<width>395</width>
 					<aligny>center</aligny>
 					<height>50</height>
 					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>true</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
-					<posy>+2</posy>
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-					<textcolor>Shadow</textcolor>
-					<scroll>true</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
-					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 				</control>
 				<control type="label">
 					<width>395</width>
@@ -238,6 +151,7 @@
 					<height>50</height>
 					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
 					<textcolor>Orange</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>true</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -248,12 +162,12 @@
 			<control type="group">
 				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
-					<posy>+2</posy>
 					<width>395</width>
 					<aligny>center</aligny>
 					<height>50</height>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>Shadow</textcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>true</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -264,16 +178,7 @@
 					<height>50</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>White</textcolor>
-					<scroll>true</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<scroll>false</scroll>
 					<font>list1</font>
 					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -285,18 +190,11 @@
 		<control type="group">
 			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
 			<control type="label">
-				<posy>+5</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.TVShowTitle]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<font>list2</font>
-			</control>
-			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -306,24 +204,18 @@
 				<width>395</width>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 			</control>
 			<control type="label">
-				<posy>+30</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>plot1</font>
-			</control>
-			<control type="label">
 				<posy>+29</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
 				<textcolor>DarkGray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -333,6 +225,7 @@
 				<width>395</width>
 				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -343,18 +236,11 @@
 		<control type="group">
 			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
 			<control type="label">
-				<posy>+5</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Title]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<font>list2</font>
-			</control>
-			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -364,23 +250,17 @@
 				<width>395</width>
 				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
 				<textcolor>DarkGray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-			</control>
-			<control type="label">
-				<posy>+30</posy>
-				<width>395</width>
-				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-				<textcolor>Shadow</textcolor>
-				<scroll>false</scroll>
-				<font>plot1</font>
 			</control>
 			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
 				<label>$INFO[ListItem.Title]</label>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<font>list2</font>
 				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -391,6 +271,7 @@
 				<width>395</width>
 				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>false</scroll>
 				<font>plot1</font>
 				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
@@ -420,6 +301,7 @@
 			<aligny>center</aligny>
 			<font>list3</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Property(UnWatchedEpisodes)</info>
 			<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -444,6 +326,7 @@
 			<aligny>center</aligny>
 			<font>list3</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Property(UnWatchedEpisodes)</info>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
@@ -487,6 +370,7 @@
 			<aligny>center</aligny>
 			<font>list3</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Rating</info>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control>
@@ -510,6 +394,7 @@
 			<aligny>center</aligny>
 			<font>list3</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Rating</info>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
@@ -570,22 +455,13 @@
 	<!------------------------------------------------------------------------------------->
 	<include name="ListItemDuration">
 		<control type="label">
-			<posy>+1</posy>
-			<width>50</width>
-			<height>31</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>plot1</font>
-			<textcolor>Shadow</textcolor>
-			<info>ListItem.Duration</info>
-		</control>
-		<control type="label">
 			<width>50</width>
 			<height>31</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Duration</info>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control>
@@ -600,6 +476,7 @@
 			<aligny>center</aligny>
 			<font>plot1</font>
 			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<info>ListItem.Duration</info>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
