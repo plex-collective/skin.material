@@ -1,0 +1,608 @@
+<includes>
+	<!------------------------------------------------------------------------------------->
+	<!-- (Episode #) + Label                                                             -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemLabel">
+		<control type="group">
+			<visible>IsEmpty(Container.Property(mixedParents))</visible>
+			<control type="group" id="33">
+				<visible>!Container.Content(episodes)</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>Shadow</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+			</control>
+			<!-- EPISODES -->
+			<control type="group">
+				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>Shadow</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+			</control>
+			<!-- EPISODES -->
+			<control type="group">
+				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Shadow</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+			</control>
+		</control>
+		<!------------------------------------------------------------------------------------->
+		<!-- EPISODES, MIXED PARENTS -->
+		<control type="group">
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
+			<control type="label">
+				<posy>+5</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>list2</font>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<textcolor>White</textcolor>
+				<scroll>false</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+30</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
+				<textcolor>DarkGray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+		</control>
+		<!------------------------------------------------------------------------------------->
+		<!-- SONGS, MIXED PARENTS -->
+		<control type="group">
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
+			<control type="label">
+				<posy>+5</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>list2</font>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>White</textcolor>
+				<scroll>false</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+30</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
+				<textcolor>DarkGray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedLabel">
+		<control type="group">
+			<visible>IsEmpty(Container.Property(mixedParents))</visible>
+			<control type="group">
+				<visible>!Container.Content(episodes)</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>Shadow</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>White</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<height>50</height>
+					<aligny>center</aligny>
+					<info>ListItem.Label</info>
+					<textcolor>Orange</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="0" end="100" time="100" delay="0" reversible="false" condition="Container().OnNext">Focus</animation>
+					<animation effect="fade" start="0" end="100" time="100" delay="0" reversible="false" condition="Container().OnPrevious">Focus</animation>
+				</control>
+			</control>
+			<!-- EPISODES -->
+			<control type="group">
+				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>Shadow</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>White</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>Shadow</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+					<textcolor>Orange</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+				</control>
+			</control>
+			<!-- EPISODES -->
+			<control type="group">
+				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
+				<control type="label">
+					<posy>+2</posy>
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Shadow</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>White</textcolor>
+					<scroll>true</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+				</control>
+				<control type="label">
+					<width>395</width>
+					<aligny>center</aligny>
+					<height>50</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<font>list1</font>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+				</control>
+			</control>
+		</control>
+		<!------------------------------------------------------------------------------------->
+		<control type="group">
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
+			<control type="label">
+				<posy>+5</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<textcolor>White</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<textcolor>Orange</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+30</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
+				<textcolor>DarkGray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,, ]$INFO[ListItem.Label]</label>
+				<textcolor>Gray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+			</control>
+		</control>
+		<!------------------------------------------------------------------------------------->
+		<control type="group">
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
+			<control type="label">
+				<posy>+5</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>White</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
+				<textcolor>DarkGray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+30</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
+				<textcolor>Shadow</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+			</control>
+			<control type="label">
+				<posy>+3</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Title]</label>
+				<textcolor>Orange</textcolor>
+				<scroll>true</scroll>
+				<font>list2</font>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+			</control>
+			<control type="label">
+				<posy>+29</posy>
+				<width>395</width>
+				<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
+				<textcolor>Gray</textcolor>
+				<scroll>false</scroll>
+				<font>plot1</font>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+				<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+			</control>
+		</control>
+	</include>
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<# of unwatched episodes text / image>)                                        -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemUnwatchedCountOverlay">
+		<!-- TVSHOWS : SEASONS -->
+		<control type="image">
+			<width>36</width>
+			<height>24</height>
+			<texture>unwatchedlabel.png</texture>
+			<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+		<control type="label">
+			<posx>+18</posx>
+			<posy>-5</posy>
+			<width>42</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>list3</font>
+			<textcolor>DarkGray</textcolor>
+			<info>ListItem.Property(UnWatchedEpisodes)</info>
+			<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedUnwatchedCountOverlay">
+		<include>ListItemUnwatchedCountOverlay</include>
+		<control type="image">
+			<width>36</width>
+			<height>24</height>
+			<texture>unwatchedlabelfocus.png</texture>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+		<control type="label">
+			<posx>+18</posx>
+			<posy>-5</posy>
+			<width>42</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>list3</font>
+			<textcolor>Gray</textcolor>
+			<info>ListItem.Property(UnWatchedEpisodes)</info>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+	</include>
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<unwatched indicator>)                                                         -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemUnwatchedOverlay">
+		<!-- MOVIES : EPISODES : CLIPS -->
+		<control type="image">
+			<width>12</width>
+			<height>52</height>
+			<texture>$INFO[ListItem.Overlay]</texture>
+			<aspectratio align="left" alingy="center">keep</aspectratio>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedUnwatchedOverlay">
+		<include>ListItemUnwatchedOverlay</include>
+	</include>
+	
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<text rating / image>) Overlay                                                        -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemTextRatingOverlay">
+		<control type="image">
+			<width>51</width>
+			<height>24</height>
+			<texture>unwatchedlabel.png</texture>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+		<control type="label">
+			<posy>-4</posy>
+			<posx>+24</posx>
+			<width>45</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>list3</font>
+			<textcolor>DarkGray</textcolor>
+			<info>ListItem.Rating</info>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedTextRatingOverlay">
+		<include>ListItemTextRatingOverlay</include>
+		<control type="image">
+			<width>51</width>
+			<height>24</height>
+			<texture>unwatchedlabelfocus.png</texture>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+		<control type="label">
+			<posy>-4</posy>
+			<posx>+24</posx>
+			<width>45</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>list3</font>
+			<textcolor>Gray</textcolor>
+			<info>ListItem.Rating</info>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+	</include>
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<HD overlay>)                                                                -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemVideoResolutionOverlay">
+		<control type="image">
+			<width>36</width>
+			<height>54</height>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedVideoResolutionOverlay">
+		<control type="image">
+			<width>36</width>
+			<height>54</height>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/focus/,.png]</texture>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+	</include>
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<now playing overlay>)                                                         -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemNowPlayingOverlay">
+		<control type="image">
+			<width>22</width>
+			<height>20</height>
+			<texture>OverlayNowPlaying.png</texture>
+			<aspectratio align="left" alingy="center">keep</aspectratio>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedNowPlayingOverlay">
+		<include>ListItemNowPlayingOverlay</include>
+		<control type="image">
+			<width>22</width>
+			<height>20</height>
+			<texture>OverlayNowPlayingFO.png</texture>
+			<aspectratio align="left" alingy="center">keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+	</include>
+	
+	<!------------------------------------------------------------------------------------->
+	<!-- (<duration>)                                                                    -->
+	<!------------------------------------------------------------------------------------->
+	<include name="ListItemDuration">
+		<control type="label">
+			<posy>+1</posy>
+			<width>50</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>plot1</font>
+			<textcolor>Shadow</textcolor>
+			<info>ListItem.Duration</info>
+		</control>
+		<control type="label">
+			<width>50</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<info>ListItem.Duration</info>
+			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+		</control>
+	</include>
+	<!--========================================================================================================================================================================================-->
+	<include name="ListFocusedDuration">
+		<include>ListItemDuration</include>
+		<control type="label">
+			<width>50</width>
+			<height>31</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>plot1</font>
+			<textcolor>Gray</textcolor>
+			<info>ListItem.Duration</info>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
+			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
+		</control>
+	</include>
+</includes>

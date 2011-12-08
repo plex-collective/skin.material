@@ -8,8 +8,10 @@
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesDevMode.xml"/>
 	<include file="IncludesDims.xml"/>
+	<include file="IncludesAnimations.xml"/>
 	<include file="HomeDefault.xml"/>
 	<include file="HomeAlternate1.xml"/>
+	<include file="ViewsListIncludes.xml"/>
 	<include file="Help.xml"/>
 	<include name="GlobalIncludes">
 		<include>DevMode</include>
@@ -401,12 +403,40 @@
 	</include>
 	<include name="BackgroundFanart">
 		<control type="largeimage">
+			<visible>![Container.Content(episodes)| Container.Content(photo) | Container.Content(album)] | !IsEmpty(Container.Property(mixedParents))</visible>
 			<info background="true">ListItem.Property(fanart_image)</info>
 			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
+		<control type="largeimage">
+			<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+			<info background="true">ListItem.Icon</info>
+			<include>FullScreenBGImageDims</include>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="group">
+			<visible>Container.Content(photo) | Container.Content(album)</visible>
+			<control type="image">
+				<texture>background.png</texture>
+				<include>FullScreenBGImageDims</include>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<info background="true">ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<include>FullScreenBGImageDims</include>
+				<fadetime>300</fadetime>
+			</control>
+		</control>
+		
 		<control type="image">
-			<texture>background_overlay_header.png</texture>
+			<include>FullScreenBGImageDims</include>
+			<include>fadeinout</include>
+			<texture>mods/menuBackground.png</texture>
+			<colordiffuse>Red</colordiffuse>
+		</control>
+		<control type="image">
+			<texture diffuse="bottom_home.png">background_overlay_diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>

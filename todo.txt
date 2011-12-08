@@ -1,0 +1,39 @@
+TODO
+----
+
+- Fanart View
+- Mode code from ViewFanart to Info OSD
+- Another optional home screen (fanart based)
+- In Queue
+- Show in Progesss (change dech so DOWN will switch beteeen all views)
+- Now playing
+- Localize
+- Hide help
+- Hide Notes; Add Notes (this)
+- Reorganize skin menu
+
+- Merge Simplex 1.0.6 changes
+
+Requests TODO
+-------------
+- Time clock on home screen would be great! 
+- An optional OSD that pops up while in Recently Added/On Deck that tells plot and video details...it would be great to go to a poster and get the info on that video without going into your library 
+- add tagline to Movies view. Possibly replace year or length.
+- disable recently added/on deck. 
+
+Requests PENDING
+----------------
+- tiles/icons view options added for both Tv shows and movies
+- Ability to change poster/fanart from video info screen
+- To separate Plugins section, and just have it aggregate most used plugins (in general), not for just specific types of plugins. Right now, we have to go to Video Plugins, or Music plugins, but in the mobile app we get a list of our most used plugins from all categories, including Applications. It would be awesome if in Simplex, we could navigate to "Channels," and see all the most used plugins from all sections. Is this possible?
+- remove HD icon from ALL lists and extend the line. I like media flags on the bottom which serve this purpose.
+
+
+
+Need help from graphic artist (I have zero skill here; plese help!)
+-------------------------------------------------------------------
+- Background Image for default home page that diffuses deck on left and right.  Current one has a white line above deck since it is stretched too much (bsed on homemenu_diffuse.png) needs to be 1280x330
+- rectangular boarder image for text ratings on movie list (now using a circluar / bullet that looks odd beside [HD])
+- better head graphic (1280x48) for header on fanart view to diffuse and transition better into fanart (gradient?) (where title and time are located)
+- actually, combine above into 1 1280z720 image
+- need a 512x54 graphic for the fanart list focused item outline

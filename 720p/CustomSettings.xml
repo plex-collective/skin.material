@@ -374,9 +374,9 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Show Help</label>
-					<onclick>Skin.ToggleSetting(help)</onclick>
-					<selected>Skin.HasSetting(help)</selected>
+					<label>Hide Help</label>
+					<onclick>Skin.ToggleSetting(HideHelp)</onclick>
+					<selected>Skin.HasSetting(HideHelp)</selected>
 				</control>
 			</control>
 		</control>

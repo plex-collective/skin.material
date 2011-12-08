@@ -27,7 +27,7 @@
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,help)</visible>
-						<onfocus>SetFocus(299,4)</onfocus>
+						<onfocus>SetFocus(299)</onfocus>
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,pref)</visible>
@@ -357,11 +357,11 @@
 							<onclick>SetFocus(300)</onclick>
 						</item>
 						<item id="29906">
+							<visible>!Skin.HasSetting(HideHelp)</visible>
 							<!-- TODO: Localize -->
 							<description>Help</description>
 							<label>Help</label>
 							<label2>help</label2>
-							<visible>true</visible>
 							<onclick>SetFocus(299)</onclick>
 						</item>
 						<item id="29903">
@@ -449,6 +449,7 @@
 					<focusedlayout height="54">
 						<control type="button">
 							<width>288</width>
+							<onfocus>Play</onfocus>
 							<onfocus>Play</onfocus>
 						</control>
 						<control type="image">

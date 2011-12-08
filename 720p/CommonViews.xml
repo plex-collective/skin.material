@@ -851,673 +851,242 @@
 			<onfocus>SetFocus(555)</onfocus>
 		</control>
 		
+		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!-- ### LIST VIEW ITSELF ### -->
 		<control type="list" id="50">
 			<posx>664</posx>
 			<posy>253</posy>
 			<width>551</width>
 			<height>426</height>
-			<!--onleft>PageUp</onleft>
-			<onright>PageDown</onright-->
-			<!--onleft>Container.SetViewMode(555)</onleft-->
 			<onleft>41</onleft>
 			<onright>-</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
+			
+			<!-- (<unwatched indicator>) + <label> + (<# unwatched episodes> | <hd>) + (text rating) -->   
+			<!-- TVSHOWS : SEASONS : MOVIES : EPISODES : CLIPS -->
 			<itemlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>1</posy>
+						<width>12</width>
+						<height>52</height>
+						<include>ListItemUnwatchedOverlay</include>
+					</control>
+					
+					<!-- (Episode #) + Label -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+					
+					<!-- (<# of unwatched episodes text / image>) -->
+					<control type="group">
+						<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
+						<posx>450</posx>
+						<posy>17</posy>
+						<width>42</width>
+						<height>31</height>
+						<include>ListItemUnwatchedCountOverlay</include>
+					</control>
+					
+					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-						<control type="label">
-							<visible>!Container.Content(episodes)</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>!Container.Content(episodes)</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="image">
-							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-							<posy>1</posy>
-							<posx>10</posx>
-							<width>12</width>
-							<height>52</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-						</control>
-						<control type="image">
-							<posy>2</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-						</control>
-						<!-- Movie text rating on menu bar -->
-						<control type="image">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>17</posy>
-							<posx>489</posx>
-							<width>51</width>
-							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>13</posy>
-							<posx>513</posx>
-							<width>45</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Rating</info>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-						<control type="image">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>17</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
-							<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
-						</control>
-						<control type="label">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>12</posy>
-							<posx>468</posx>
-							<width>42</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Property(UnWatchedEpisodes)</info>
-							<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
-						</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+						<posx>450</posx>
+						<posy>2</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListItemVideoResolutionOverlay</include>
 					</control>
+					
+					<!-- (<text rating / image>) -->
 					<control type="group">
-						<visible>!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(movies) + !Container.Content(clips)</visible>
-						<control type="label">
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-						</control>
-						<control type="image">
-							<posy>18</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-						</control>
-						<control type="label">
-							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>15</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Shadow</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
-						<control type="label">
-							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>13</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
+						<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
+						<posx>489</posx>
+						<posy>17</posy>
+						<width>51</width>
+						<height>24</height>
+						<include>ListItemTextRatingOverlay</include>
+					</control>
+					
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>18</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListItemNowPlayingOverlay</include>
+					</control>
+					
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>13</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListItemDuration</include>
 					</control>
 				</control>
+				
 			</itemlayout>
 			<focusedlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-				<control type="image">
-					<visible>!!Skin.HasSetting(HideMovieListTextRatings) | [!Skin.HasSetting(HideMovieListTextRatings) + !Container.Content(movies)]</visible>
-					<posy>1</posy>
-					<width>512</width>
-					<height>54</height>
-					<texture>button_media.png</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
-					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
-				</control>
-				<!-- For extended menu button for Movie text ratings -->
-				<control type="image">
-					<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies)</visible>
-					<posy>1</posy>
-					<width>549</width>
-					<height>54</height>
-					<texture>button_media.png</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
-					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
-				</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- LIST BUTTON -->
+					<control type="image">
+						<visible>!!Skin.HasSetting(HideMovieListTextRatings) | [!Skin.HasSetting(HideMovieListTextRatings) + !Container.Content(movies)]</visible>
+						<posy>1</posy>
+						<width>512</width>
+						<height>54</height>
+						<texture>button_media.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					</control>
+					<!-- For extended menu button for Movie text ratings -->
+					<control type="image">
+						<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies)</visible>
+						<posy>1</posy>
+						<width>549</width>
+						<height>54</height>
+						<texture>button_media.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					</control>
+					
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>1</posy>
+						<width>12</width>
+						<height>52</height>
+						<include>ListFocusedUnwatchedOverlay</include>
+					</control>
+					
+					<!-- (Episode #) + Label -->
+					<control type="group" id="121212">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+					
+					<!-- (<# of unwatched episodes text / image>) -->
+					<control type="group">
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
+						<posx>450</posx>
+						<posy>17</posy>
+						<width>42</width>
+						<height>31</height>
+						<include>ListFocusedUnwatchedCountOverlay</include>
+					</control>
+					
+					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-						<control type="label">
-							<visible>!Container.Content(episodes)</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Shadow</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<visible>!Container.Content(episodes)</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>White</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>!Container.Content(episodes)</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Orange</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
-							<textcolor>Orange</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<aligny>center</aligny>
-							<height>50</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="image">
-							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-							<posy>1</posy>
-							<posx>10</posx>
-							<width>12</width>
-							<height>52</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-						</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-						<control type="image">
-							<posy>2</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>2</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/focus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<!-- Movie text rating on menu bar -->
-						<control type="image">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>17</posy>
-							<posx>489</posx>
-							<width>51</width>
-							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>17</posy>
-							<posx>489</posx>
-							<width>51</width>
-							<height>24</height>
-							<texture>unwatchedlabelfocus.png</texture>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>13</posy>
-							<posx>513</posx>
-							<width>45</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Rating</info>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
-							<posy>13</posy>
-							<posx>513</posx>
-							<width>45</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>Gray</textcolor>
-							<info>ListItem.Rating</info>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-						<control type="image">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>17</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>17</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>24</height>
-							<texture>unwatchedlabelfocus.png</texture>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>12</posy>
-							<posx>468</posx>
-							<width>42</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Property(UnWatchedEpisodes)</info>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posy>12</posy>
-							<posx>468</posx>
-							<width>42</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>list3</font>
-							<textcolor>Gray</textcolor>
-							<info>ListItem.Property(UnWatchedEpisodes)</info>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+						<posx>450</posx>
+						<posy>2</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListFocusedVideoResolutionOverlay</include>
 					</control>
+					
+					<!-- (<text rating / image>) -->
 					<control type="group">
-						<visible>!Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(movies) + !Container.Content(clips)</visible>
-						<control type="label">
-							<posy>3</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Shadow</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-						</control>
-						<control type="label">
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>White</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<posy>1</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<height>50</height>
-							<aligny>center</aligny>
-							<info>ListItem.Label</info>
-							<textcolor>Orange</textcolor>
-							<scroll>true</scroll>
-							<font>list1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>18</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>18</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlayingFO.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>15</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Shadow</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
-						<control type="label">
-							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>13</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Duration</info>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>13</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Gray</textcolor>
-							<info>ListItem.Duration</info>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
+						<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
+						<posx>489</posx>
+						<posy>17</posy>
+						<width>51</width>
+						<height>24</height>
+						<include>ListFocusedTextRatingOverlay</include>
+					</control>
+					
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>18</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListFocusedNowPlayingOverlay</include>
+					</control>
+					
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>13</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListFocusedDuration</include>
 					</control>
 				</control>
 			</focusedlayout>
+			
+			<!-- MIXED PARENTS EPISODES (Recently Added, etc) -->
 			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- (<unwatched indicator>) -->
 					<control type="group">
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>6</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>32</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-							<textcolor>DarkGray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="image">
-							<posy>-1</posy>
-							<posx>10</posx>
-							<width>12</width>
-							<height>72</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-						</control>
-						<control type="image">
-							<posy>0</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-						</control>
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>12</width>
+						<height>72</height>
+						<include>ListItemUnwatchedOverlay</include>
+					</control>
+					
+					<!-- (Episode #) + Label 
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+					
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>10</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListItemVideoResolutionOverlay</include>
 					</control>
 				</control>
+				
 			</itemlayout>
 			<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
 				<control type="image">
@@ -1526,183 +1095,86 @@
 					<height>70</height>
 					<texture>button_media_info.png</texture>
 					<aspectratio>keep</aspectratio>
-					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
-					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
 				</control>
+				
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- (<unwatched indicator>) -->
 					<control type="group">
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>6</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</label>
-							<textcolor>White</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Episode,,. ]$INFO[ListItem.Label]</label>
-							<textcolor>Orange</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>32</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-							<textcolor>DarkGray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>Container.Content(episodes)</visible>
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-							<textcolor>Gray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>-1</posy>
-							<posx>10</posx>
-							<width>12</width>
-							<height>72</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-						</control>
-						<control type="image">
-							<posy>0</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>0</posy>
-							<posx>450</posx>
-							<width>36</width>
-							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/focus/,.png]</texture>
-							<aspectratio align="left" aligny="center">keep</aspectratio>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>12</width>
+						<height>72</height>
+						<include>ListFocusedUnwatchedOverlay</include>
+					</control>
+					
+					<!-- (Episode #) + Label 
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+					
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>10</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListFocusedVideoResolutionOverlay</include>
 					</control>
 				</control>
 			</focusedlayout>
+			
+			<!-- MIXED PARENTS SONGS (All Tracks) -->
 			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- (Episode #) + Label 
+					      Showname, Season -->
 					<control type="group">
-						<control type="label">
-							<posy>6</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Title]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Title]</label>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<posy>32</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="label">
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-							<textcolor>DarkGray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="image">
-							<posy>26</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-						</control>
-						<control type="label">
-							<visible>![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>20</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Shadow</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
-						<control type="label">
-							<visible>![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>18</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+					
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListItemNowPlayingOverlay</include>
+					</control>
+					
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>18</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListItemDuration</include>
 					</control>
 				</control>
 			</itemlayout>
@@ -1713,137 +1185,50 @@
 					<height>70</height>
 					<texture>button_media_info.png</texture>
 					<aspectratio>keep</aspectratio>
-					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
-					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
 				</control>
+				
 				<control type="group">
-					<posy>0</posy>
 					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+					
+					<!-- (Episode #) + Label 
+					      Showname, Season -->
 					<control type="group">
-						<control type="label">
-							<posy>6</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Title]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-						</control>
-						<control type="label">
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Title]</label>
-							<textcolor>White</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<posy>4</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Title]</label>
-							<textcolor>Orange</textcolor>
-							<scroll>true</scroll>
-							<font>list2</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<posy>32</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-							<textcolor>Shadow</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-						</control>
-						<control type="label">
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-							<textcolor>DarkGray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<posy>30</posy>
-							<posx>30</posx>
-							<width>395</width>
-							<label>$INFO[ListItem.Album], $INFO[ListItem.Artist]</label>
-							<textcolor>Gray</textcolor>
-							<scroll>false</scroll>
-							<font>plot1</font>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>26</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="image">
-							<posy>26</posy>
-							<posx>457</posx>
-							<width>22</width>
-							<height>20</height>
-							<texture>OverlayNowPlayingFO.png</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>20</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Shadow</textcolor>
-							<info>ListItem.Duration</info>
-						</control>
-						<control type="label">
-							<visible>![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>18</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>DarkGray</textcolor>
-							<info>ListItem.Duration</info>
-							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-						</control>
-						<control type="label">
-							<visible>![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posy>18</posy>
-							<posx>468</posx>
-							<width>50</width>
-							<height>31</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>plot1</font>
-							<textcolor>Gray</textcolor>
-							<info>ListItem.Duration</info>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
-							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+					
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListFocusedNowPlayingOverlay</include>
+					</control>
+					
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>18</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListFocusedDuration</include>
 					</control>
 				</control>
 			</focusedlayout>
 		</control>
+			
 		<control type="panel" id="53">
 			<posx>47</posx>
 			<posy>237</posy>
