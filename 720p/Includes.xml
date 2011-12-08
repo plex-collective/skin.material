@@ -403,19 +403,19 @@
 	</include>
 	<include name="BackgroundFanart">
 		<control type="largeimage">
-			<visible>![Container.Content(episodes) | Container.Content(albums)]</visible>
+			<visible>![Container.Content(episodes)| Container.Content(photo) | Container.Content(album)] | !IsEmpty(Container.Property(mixedParents))</visible>
 			<info background="true">ListItem.Property(fanart_image)</info>
 			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="largeimage">
-			<visible>Container.Content(episodes)</visible>
+			<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
 			<info background="true">ListItem.Icon</info>
 			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="group">
-			<visible>Container.Content(photo)</visible>
+			<visible>Container.Content(photo) | Container.Content(album)</visible>
 			<control type="image">
 				<texture>background.png</texture>
 				<include>FullScreenBGImageDims</include>
@@ -432,7 +432,7 @@
 		<control type="image">
 			<include>FullScreenBGImageDims</include>
 			<include>fadeinout</include>
-			<texture>home/menuBackground.png</texture>
+			<texture>mods/menuBackground.png</texture>
 			<colordiffuse>Red</colordiffuse>
 		</control>
 		<control type="image">

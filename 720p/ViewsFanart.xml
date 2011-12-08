@@ -27,46 +27,46 @@
 			<!-- MPAA / TV Rating -->
 			<control type="image">
 				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
-				<posx>77r</posx>
-				<posy>78</posy>
-				<width>40</width>
-				<height>40</height>
+				<posx>70r</posx>
+				<posy>53</posy>
+				<width>60</width>
+				<height>60</height>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
 				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
-				<posx>79r</posx>
-				<posy>78</posy>
-				<width>40</width>
-				<height>40</height>
+				<posx>72r</posx>
+				<posy>53</posy>
+				<width>60</width>
+				<height>60</height>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
 				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
-				<posx>78r</posx>
-				<posy>77</posy>
-				<width>40</width>
-				<height>40</height>
+				<posx>71r</posx>
+				<posy>52</posy>
+				<width>60</width>
+				<height>60</height>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
 				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
-				<posx>78r</posx>
-				<posy>79</posy>
-				<width>40</width>
-				<height>40</height>
+				<posx>71r</posx>
+				<posy>54</posy>
+				<width>60</width>
+				<height>60</height>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
 				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
-				<posx>78r</posx>
-				<posy>78</posy>
-				<width>40</width>
-				<height>40</height>
+				<posx>71r</posx>
+				<posy>53</posy>
+				<width>60</width>
+				<height>60</height>
 				<info>Listitem.Property(mediaTag::contentRating)</info>
 				<colordiffuse>White</colordiffuse>
 			</control>
@@ -74,7 +74,7 @@
 			<control type="group" id="52000">
 				<posx>78</posx>
 				<!--posy>480</posy-->
-				<posy>520</posy>
+				<posy>534</posy>
 				<width>1125</width>
 				<!--itemgap>0</itemgap-->
 				
@@ -417,11 +417,10 @@
 			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 			<!-- ### LIST VIEW ITSELF ### -->
 			<control type="list" id="555">
-				<!--posx>664</posx-->
 				<posx>12</posx>
 				<posy>53</posy>
 				<width>551</width>
-				<height>426</height>
+				<height>480</height>
 				<onleft>42</onleft>
 				<onright>-</onright>
 				<scrolltime>200</scrolltime>
@@ -439,10 +438,8 @@
 						
 						<!-- (<unwatched indicator>) -->
 						<control type="group">
-							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
-							<!--visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(songs)]</visible-->
 							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>10</posx>
+							<posx>61</posx>
 							<posy>1</posy>
 							<width>12</width>
 							<height>52</height>
@@ -451,7 +448,7 @@
 						
 						<!-- (Episode #) + Label -->
 						<control type="group">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -460,10 +457,9 @@
 						
 						<!-- (<# of unwatched episodes text / image>) -->
 						<control type="group">
-							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
 							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posx>450</posx>
-							<posy>17</posy>
+							<posx>10</posx>
+							<posy>14</posy>
 							<width>42</width>
 							<height>31</height>
 							<include>ListItemUnwatchedCountOverlay</include>
@@ -472,28 +468,28 @@
 						<!-- (<HD indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>450</posx>
-							<posy>2</posy>
+							<posx>10</posx>
+							<posy>0</posy>
 							<width>36</width>
 							<height>54</height>
 							<include>ListItemVideoResolutionOverlay</include>
 						</control>
 						
 						<!-- (<text rating / image>) -->
-						<control type="group">
+						<!--control type="group">
 							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
 							<posx>489</posx>
 							<posy>17</posy>
 							<width>51</width>
 							<height>24</height>
 							<include>ListItemTextRatingOverlay</include>
-						</control>
+						</control-->
 						
 						<!-- (<now playing overlay>) -->
 						<control type="group">
 							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<posx>457</posx>
-							<posy>18</posy>
+							<posx>30</posx>
+							<posy>15</posy>
 							<width>22</width>
 							<height>20</height>
 							<include>ListItemNowPlayingOverlay</include>
@@ -502,8 +498,8 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posx>468</posx>
-							<posy>13</posy>
+							<posx>42</posx>
+							<posy>10</posy>
 							<width>50</width>
 							<height>31</height>
 							<include>ListItemDuration</include>
@@ -521,17 +517,20 @@
 						
 						<!-- LIST BUTTON -->
 						<control type="image">
-							<visible>!!Skin.HasSetting(HideMovieListTextRatings) | [!Skin.HasSetting(HideMovieListTextRatings) + !Container.Content(movies)]</visible>
+							<!--visible>!!Skin.HasSetting(HideMovieListTextRatings) | [!Skin.HasSetting(HideMovieListTextRatings) + !Container.Content(movies)]</visible-->
+							<visible>!!Skin.HasSetting(HideMovieListTextRatings)</visible>
 							<posy>1</posy>
 							<width>512</width>
 							<height>54</height>
 							<texture>button_media.png</texture>
+							<!--texture>mods/list-focus.png</texture>
+							<colordiffuse>11B5B5B5</colordiffuse-->
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<!-- For extended menu button for Movie text ratings -->
-						<control type="image">
+						<!--control type="image">
 							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies)</visible>
 							<posy>1</posy>
 							<width>549</width>
@@ -540,27 +539,21 @@
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
-						</control>
+						</control-->
 						
 						<!-- (<unwatched indicator>) -->
 						<control type="group">
-							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
-							<!--visible>![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(songs)]</visible-->
 							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>10</posx>
+							<posx>61</posx>
 							<posy>1</posy>
 							<width>12</width>
 							<height>52</height>
 							<include>ListFocusedUnwatchedOverlay</include>
 						</control>
 						
-						<!--control type="button" id="12">
-							<width>288</width>
-							<onfocus>Skin.SetString(MyPrettyColor,Red)</onfocus>
-						</control-->
 						<!-- (Episode #) + Label -->
 						<control type="group" id="121212">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -569,10 +562,9 @@
 						
 						<!-- (<# of unwatched episodes text / image>) -->
 						<control type="group">
-							<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
 							<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
-							<posx>450</posx>
-							<posy>17</posy>
+							<posx>10</posx>
+							<posy>14</posy>
 							<width>42</width>
 							<height>31</height>
 							<include>ListFocusedUnwatchedCountOverlay</include>
@@ -581,28 +573,28 @@
 						<!-- (<HD indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>450</posx>
-							<posy>2</posy>
+							<posx>10</posx>
+							<posy>0</posy>
 							<width>36</width>
 							<height>54</height>
 							<include>ListFocusedVideoResolutionOverlay</include>
 						</control>
 						
 						<!-- (<text rating / image>) -->
-						<control type="group">
+						<!--control type="group">
 							<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
 							<posx>489</posx>
 							<posy>17</posy>
 							<width>51</width>
 							<height>24</height>
 							<include>ListFocusedTextRatingOverlay</include>
-						</control>
+						</control-->
 						
 						<!-- (<now playing overlay>) -->
 						<control type="group">
 							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<posx>457</posx>
-							<posy>18</posy>
+							<posx>30</posx>
+							<posy>15</posy>
 							<width>22</width>
 							<height>20</height>
 							<include>ListFocusedNowPlayingOverlay</include>
@@ -611,8 +603,8 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posx>468</posx>
-							<posy>13</posy>
+							<posx>42</posx>
+							<posy>10</posy>
 							<width>50</width>
 							<height>31</height>
 							<include>ListFocusedDuration</include>
@@ -632,7 +624,7 @@
 						<!-- (<unwatched indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>10</posx>
+							<posx>61</posx>
 							<posy>9</posy>
 							<width>12</width>
 							<height>72</height>
@@ -642,7 +634,7 @@
 						<!-- (Episode #) + Label 
 						      Showname, Season -->
 						<control type="group">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -652,8 +644,8 @@
 						<!-- (<HD indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>450</posx>
-							<posy>10</posy>
+							<posx>10</posx>
+							<posy>8</posy>
 							<width>36</width>
 							<height>54</height>
 							<include>ListItemVideoResolutionOverlay</include>
@@ -682,7 +674,7 @@
 						<!-- (<unwatched indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>10</posx>
+							<posx>61</posx>
 							<posy>9</posy>
 							<width>12</width>
 							<height>72</height>
@@ -692,7 +684,7 @@
 						<!-- (Episode #) + Label 
 						      Showname, Season -->
 						<control type="group">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -702,8 +694,8 @@
 						<!-- (<HD indicator>) -->
 						<control type="group">
 							<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
-							<posx>450</posx>
-							<posy>10</posy>
+							<posx>10</posx>
+							<posy>8</posy>
 							<width>36</width>
 							<height>54</height>
 							<include>ListFocusedVideoResolutionOverlay</include>
@@ -723,7 +715,7 @@
 						<!-- (Episode #) + Label 
 						      Showname, Season -->
 						<control type="group">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -733,7 +725,7 @@
 						<!-- (<now playing overlay>) -->
 						<control type="group">
 							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<posx>457</posx>
+							<posx>30</posx>
 							<posy>26</posy>
 							<width>22</width>
 							<height>20</height>
@@ -743,7 +735,7 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posx>468</posx>
+							<posx>42</posx>
 							<posy>18</posy>
 							<width>50</width>
 							<height>31</height>
@@ -772,7 +764,7 @@
 						<!-- (Episode #) + Label 
 						      Showname, Season -->
 						<control type="group">
-							<posx>30</posx>
+							<posx>81</posx>
 							<posy>1</posy>
 							<width>395</width>
 							<height>50</height>
@@ -782,7 +774,7 @@
 						<!-- (<now playing overlay>) -->
 						<control type="group">
 							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
-							<posx>457</posx>
+							<posx>30</posx>
 							<posy>26</posy>
 							<width>22</width>
 							<height>20</height>
@@ -792,7 +784,7 @@
 						<!-- (<duration>) -->
 						<control type="group">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
-							<posx>468</posx>
+							<posx>42</posx>
 							<posy>18</posy>
 							<width>50</width>
 							<height>31</height>

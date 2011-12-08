@@ -36,3 +36,4 @@ Need help from graphic artist (I have zero skill here; plese help!)
 - rectangular boarder image for text ratings on movie list (now using a circluar / bullet that looks odd beside [HD])
 - better head graphic (1280x48) for header on fanart view to diffuse and transition better into fanart (gradient?) (where title and time are located)
 - actually, combine above into 1 1280z720 image
+- need a 512x54 graphic for the fanart list focused item outline
