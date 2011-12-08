@@ -34,11 +34,13 @@
 					<width min="1" max="900">auto</width>
 					<font>info1</font>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 				<control type="label" id="402">
 					<width min="1" max="900">auto</width>
 					<font>info1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 			</control>
 		</control>

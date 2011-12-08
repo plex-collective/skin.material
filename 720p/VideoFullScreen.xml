@@ -29,33 +29,14 @@
 			</control>
 			<control type="label" id="1">
 				<posx>-5</posx>
-				<posy>66</posy>
-				<width>160</width>
-				<height>16</height>
-				<font>info1</font>
-				<align>center</align>
-				<textcolor>Shadow</textcolor>
-				<label>$INFO[VideoPlayer.Time]</label>
-			</control>
-			<control type="label" id="1">
-				<posx>-5</posx>
 				<posy>64</posy>
 				<width>160</width>
 				<height>16</height>
 				<font>info1</font>
 				<align>center</align>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<label>$INFO[VideoPlayer.Time]</label>
-			</control>
-			<control type="label" id="1">
-				<posx>918</posx>
-				<posy>66</posy>
-				<width>160</width>
-				<height>16</height>
-				<font>info1</font>
-				<align>center</align>
-				<textcolor>Shadow</textcolor>
-				<label>$INFO[VideoPlayer.TimeRemaining]</label>
 			</control>
 			<control type="label" id="1">
 				<posx>918</posx>
@@ -65,6 +46,7 @@
 				<font>info1</font>
 				<align>center</align>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<label>$INFO[VideoPlayer.TimeRemaining]</label>
 			</control>
 		</control>

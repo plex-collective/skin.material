@@ -180,6 +180,7 @@
 						<aligny>center</aligny>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<visible>!IsEmpty(ListItem.Episode) + !Skin.HasSetting(HideEpisodeTotals) + !Container.Content(Movies)</visible>
 					</control>
 					<control type="image">
@@ -357,6 +358,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 					<control type="image">
@@ -384,6 +386,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 				</control>
@@ -405,6 +408,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<visible>!IsEmpty(ListItem.Year)</visible>
 						</control>
@@ -417,6 +421,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<visible>!IsEmpty(ListItem.Duration)</visible>
 						</control>
@@ -429,6 +434,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<visible>!IsEmpty(ListItem.Duration)</visible>
 						</control>
@@ -443,6 +449,7 @@
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<wrapmultiline>false</wrapmultiline>
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 					</control>
@@ -462,6 +469,7 @@
 					<info>ListItem.Plot</info>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<autoscroll delay="10000" time="3000" repeat="10000"/>
 				</control>
 			</control>
@@ -482,6 +490,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>title1</font>
 						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 					<control type="image">
 						<posx>399</posx>
@@ -507,6 +516,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 				</control>
@@ -529,6 +539,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!IsEmpty(ListItem.Year)</visible>
 						</control>
 						<control type="label">
@@ -540,6 +551,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="label">
@@ -551,6 +563,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 							<visible>!IsEmpty(ListItem.Duration)</visible>
 						</control>
@@ -565,6 +578,7 @@
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 					</control>
 				</control>
@@ -585,6 +599,7 @@
 					<info>ListItem.Plot</info>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<autoscroll delay="10000" time="3000" repeat="10000"/>
 				</control>
 			</control>
@@ -606,6 +621,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 				</control>
@@ -617,6 +633,7 @@
 					<label>$INFO[Container.Property(description)]</label>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 			</control>
 			<!-- episodes list -->
@@ -634,6 +651,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>title1</font>
 						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 					<control type="image">
 						<posx>399</posx>
@@ -663,6 +681,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!IsEmpty(ListItem.Date)</visible>
 						</control>
 						<control type="label">
@@ -674,6 +693,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!IsEmpty(ListItem.Date) + !IsEmpty(ListItem.Duration)</visible>
 						</control>
 						<control type="label">
@@ -685,6 +705,7 @@
 							<height>12</height>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!IsEmpty(ListItem.Duration)</visible>
 						</control>
 					</control>
@@ -698,6 +719,7 @@
 						<height>12</height>
 						<font>heading3</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 					</control>
 				</control>
@@ -716,6 +738,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<autoscroll delay="10000" time="3000" repeat="10000"/>
 				</control>
 			</control>
@@ -737,6 +760,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 					<control type="image">
@@ -763,6 +787,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>title1</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 						</control>
 					</control>
 				</control>
@@ -773,6 +798,7 @@
 					<align>justify</align>
 					<info>ListItem.Plot</info>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>plot1</font>
 					<autoscroll delay="10000" time="3000" repeat="10000"/>
 				</control>
@@ -1289,6 +1315,7 @@
 				<label>$INFO[ListItem.SortLetter]</label>
 				<font>sortletter</font>
 				<textcolor>Shadow</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<aligny>center</aligny>
 				<align>center</align>
 			</control>
@@ -1300,6 +1327,7 @@
 				<label>$INFO[ListItem.SortLetter]</label>
 				<font>sortletter</font>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<aligny>center</aligny>
 				<align>center</align>
 			</control>

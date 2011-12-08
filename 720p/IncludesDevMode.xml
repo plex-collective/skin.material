@@ -9,6 +9,7 @@
 			<label>$INFO[Window.Property(xmlfile)]$INFO[Container.FolderName, &#xB7; ]$INFO[System.BuildVersion, &#xB7; ]$INFO[System.BuildDate, &#xB7; ]$INFO[System.ScreenResolution, &#xB7; ]</label>
 			<font>homelabel</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<visible>Skin.HasSetting(dev.enable)</visible>
 		</control>
 		<control type="image">

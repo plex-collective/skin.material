@@ -28,6 +28,7 @@
 				<aligny>center</aligny>
 				<font>list1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>

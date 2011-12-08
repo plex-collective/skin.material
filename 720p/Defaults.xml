@@ -9,6 +9,7 @@
 		<aligny>center</aligny>
 		<font>plot1</font>
 		<textcolor>White</textcolor>
+		<shadowcolor>Shadow</shadowcolor>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
@@ -21,6 +22,7 @@
 		<aligny>top</aligny>
 		<font>info1</font>
 		<textcolor>White</textcolor>
+		<shadowcolor>Shadow</shadowcolor>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>

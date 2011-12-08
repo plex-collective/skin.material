@@ -255,17 +255,6 @@
 					<itemlayout width="213" height="76">
 						<control type="label">
 							<posx>0</posx>
-							<posy>2</posy>
-							<width>200</width>
-							<height>76</height>
-							<label>$INFO[ListItem.Label]</label>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>HomeMenuItem</font>
-							<textcolor>Shadow</textcolor>
-						</control>
-						<control type="label">
-							<posx>0</posx>
 							<posy>0</posy>
 							<width>200</width>
 							<height>76</height>
@@ -274,6 +263,7 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>DarkGray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!Control.HasFocus(299)</visible>
 						</control>
 						<control type="label">
@@ -286,23 +276,12 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>White</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>Control.HasFocus(299)</visible>
 							<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
 						</control>
 					</itemlayout>
 					<focusedlayout width="213" height="76">
-						<control type="label">
-							<posx>0</posx>
-							<posy>2</posy>
-							<width>200</width>
-							<height>76</height>
-							<label>$INFO[ListItem.Label]</label>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>HomeMenuItem</font>
-							<textcolor>Shadow</textcolor>
-							<visible>Control.HasFocus(299)</visible>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -313,6 +292,7 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>Control.HasFocus(299)</visible>
 						</control>
 						<control type="label">
@@ -325,6 +305,7 @@
 							<aligny>center</aligny>
 							<font>HomeMenuItem</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<visible>!Control.HasFocus(299)</visible>
 						</control>
 					</focusedlayout>
@@ -412,17 +393,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<width>288</width>
 								<height>50</height>
 								<align>center</align>
@@ -430,6 +400,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Gray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(300)</visible>
 							</control>
@@ -441,6 +412,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(300)</visible>
 							</control>
@@ -463,17 +435,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<posy>0</posy>
 								<width>288</width>
 								<height>50</height>
@@ -482,6 +443,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 							</control>
@@ -493,6 +455,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
@@ -610,17 +573,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<width>288</width>
 								<height>50</height>
 								<align>center</align>
@@ -628,6 +580,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Gray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(301)</visible>
 							</control>
@@ -639,6 +592,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(301)</visible>
 							</control>
@@ -656,17 +610,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<posy>0</posy>
 								<width>288</width>
 								<height>50</height>
@@ -675,6 +618,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 							</control>
@@ -686,6 +630,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(301).OnNext">Focus</animation>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(301).OnPrevious">Focus</animation>
@@ -742,17 +687,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<width>288</width>
 								<height>50</height>
 								<align>center</align>
@@ -760,6 +694,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Gray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(302)</visible>
 							</control>
@@ -771,6 +706,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(302)</visible>
 							</control>
@@ -788,17 +724,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<posy>0</posy>
 								<width>288</width>
 								<height>50</height>
@@ -807,6 +732,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 							</control>
@@ -818,6 +744,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(302).OnNext">Focus</animation>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(302).OnPrevious">Focus</animation>
@@ -867,17 +794,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<width>288</width>
 								<height>50</height>
 								<align>center</align>
@@ -885,6 +801,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Gray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(303)</visible>
 							</control>
@@ -896,6 +813,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(303)</visible>
 							</control>
@@ -913,17 +831,6 @@
 						<control type="group">
 							<posx>144</posx>
 							<control type="label">
-								<posy>2</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Shadow</textcolor>
-								<scroll>false</scroll>
-							</control>
-							<control type="label">
 								<posy>0</posy>
 								<width>288</width>
 								<height>50</height>
@@ -932,6 +839,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 							</control>
@@ -943,6 +851,7 @@
 								<info>ListItem.Label</info>
 								<font>list1</font>
 								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<scroll>true</scroll>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(303).OnNext">Focus</animation>
 								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(303).OnPrevious">Focus</animation>
@@ -974,6 +883,7 @@
 					<aligny>center</aligny>
 					<font>HomeMenuItem</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<visible>!Control.HasFocus(299)</visible>
 				</control>
 				<control type="image">
@@ -1017,21 +927,8 @@
 			<!-- Recently Added Label -->
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>right</align>
-				<label>$LOCALIZE[31501]</label>
-				<posx>418</posx>
-				<posy>381</posy>
-				<visible>Control.HasFocus(300) + Control.IsVisible(11000)</visible>
-				<visible>true</visible>
-				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-			</control>
-			<!-- Recently Added Label -->
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>right</align>

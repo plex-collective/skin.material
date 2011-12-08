@@ -58,6 +58,7 @@
 						<aligny>center</aligny>
 						<font>title2</font>
 						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 					<control type="label">
 						<width>600</width>
@@ -66,6 +67,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>White</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$INFO[ListItem.Tagline]</label>
 						<visible>!IsEmpty(ListItem.Tagline)</visible>
 					</control>
@@ -88,6 +90,7 @@
 						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</control>
 				<control type="label">
@@ -103,6 +106,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="label">
@@ -112,6 +116,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31005]</label>
 					</control>
 					<control type="label">
@@ -122,6 +127,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31006]</label>
 					</control>
 					<control type="label">
@@ -132,6 +138,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31007]</label>
 					</control>
 					<control type="grouplist">
@@ -144,6 +151,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Genre]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -154,6 +162,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$LOCALIZE[31008] $INFO[ListItem.Year]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -164,6 +173,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$LOCALIZE[31011] $INFO[ListItem.Duration]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -198,6 +208,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Cast]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
@@ -213,6 +224,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Director]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
@@ -228,6 +240,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Writer]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
@@ -344,6 +357,7 @@
 						<aligny>center</aligny>
 						<font>title2</font>
 						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</control>
 				<control type="label">
@@ -364,6 +378,7 @@
 						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</control>
 				<control type="label">
@@ -379,6 +394,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="grouplist">
@@ -391,6 +407,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Genre]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -401,6 +418,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$LOCALIZE[31009] $LOCALIZE[31010] $INFO[ListItem.Date]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -411,6 +429,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -490,6 +509,7 @@
 						<aligny>center</aligny>
 						<font>title2</font>
 						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 					<control type="label">
 						<width>690</width>
@@ -498,6 +518,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>White</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.season]</label>
 					</control>
 				</control>
@@ -519,6 +540,7 @@
 						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</control>
 				<control type="label">
@@ -534,6 +556,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31004]</label>
 					</control>
 					<control type="label">
@@ -543,6 +566,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31006]</label>
 					</control>
 					<control type="label">
@@ -552,6 +576,7 @@
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<label>$LOCALIZE[31007]</label>
 					</control>
 					<control type="grouplist">
@@ -564,6 +589,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$LOCALIZE[31010] $INFO[ListItem.Date]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -574,6 +600,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$LOCALIZE[31011] $INFO[ListItem.Duration]</label>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
@@ -608,6 +635,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Director]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
@@ -623,6 +651,7 @@
 							<align>left</align>
 							<aligny>bottom</aligny>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<label>$INFO[ListItem.Writer]</label>
 							<wrapmultiline>true</wrapmultiline>
 						</control>

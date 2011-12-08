@@ -44,6 +44,7 @@
 					<align>center</align>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 				<control type="label" id="3">
 					<description>dialog line 2</description>
@@ -52,6 +53,7 @@
 					<align>center</align>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 				<control type="label" id="4">
 					<description>dialog line 3</description>
@@ -60,6 +62,7 @@
 					<align>center</align>
 					<font>plot1</font>
 					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 				</control>
 				<control type="group">
 					<posx>29</posx>

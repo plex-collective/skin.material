@@ -86,17 +86,6 @@
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					<control type="label">
 						<posx>1095</posx>
-						<posy>2</posy>
-						<width>800</width>
-						<align>right</align>
-						<aligny>center</aligny>
-						<!-- TODO: Localize -- >
-						<label>Finish Time: $INFO[Player.FinishTime]</label>
-						<font>title1</font>
-						<textcolor>Shadow</textcolor>
-					</control>
-					<control type="label">
-						<posx>1095</posx>
 						<posy>0</posy>
 						<width>800</width>
 						<align>right</align>
@@ -105,6 +94,7 @@
 						<label>Finish Time: $INFO[Player.FinishTime]</label>
 						<font>title1</font>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 					</control>
 				</control-->
 				
@@ -215,6 +205,8 @@
 							<label>$INFO[ListItem.Title]</label>
 							<aligny>center</aligny>
 							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<shadowcolor>ff000000</shadowcolor>
 							<font>osd1</font>
 						</control>
 						<!-- Image Rating -->
@@ -246,6 +238,7 @@
 								<align>left</align>
 								<label>$INFO[ListItem.Year]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<font>heading3</font>
 							</control>
 							<!-- Episode Details -->
@@ -257,6 +250,7 @@
 								<align>left</align>
 								<label>$INFO[ListItem.TVShowTitle]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label>
 								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<font>heading3</font>
 							</control>
 						</control>
@@ -271,6 +265,7 @@
 							<label>$INFO[ListItem.Rating]</label>
 							<font>heading3</font>
 							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 					</control>
@@ -286,19 +281,21 @@
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.PlotOutline]</label>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<font>plot1</font>
 						<autoscroll delay="10000" time="3000" repeat="10000"/>
 					</control>
 					<control type="textbox" id="8">
 						<visible>IsEmpty(ListItem.PlotOutline)</visible>
-						<posx>192</posx>
-						<posy>45</posy>
+						<posx>188</posx>
+						<posy>75</posy>
 						<width>909</width>
 						<height>72</height>
 						<align>justify</align>
 						<aligny>top</aligny>
 						<label>$INFO[ListItem.Plot]</label>
 						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<font>plot1</font>
 						<autoscroll delay="10000" time="3000" repeat="10000"/>
 					</control>
@@ -322,6 +319,7 @@
 								<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
 								<font>heading3</font>
 								<textcolor>DarkGray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
 								<wrapmultiline>false</wrapmultiline>
 							</control>
 							<!-- Media flags -->
@@ -394,6 +392,7 @@
 							<label>Duration: $INFO[ListItem.Duration]</label>
 							<font>heading3</font>
 							<textcolor>DarkGray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 					</control>
@@ -807,23 +806,13 @@
 				</control>
 				<control type="label">
 					<posx>850</posx>
-					<posy>392</posy>
-					<width>140</width>
-					<height>134</height>
-					<label>$INFO[ListItem.SortLetter]</label>
-					<font>sortletter</font>
-					<textcolor>Shadow</textcolor>
-					<aligny>center</aligny>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>850</posx>
 					<posy>390</posy>
 					<width>140</width>
 					<height>134</height>
 					<label>$INFO[ListItem.SortLetter]</label>
 					<font>sortletter</font>
 					<textcolor>White</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<aligny>center</aligny>
 					<align>center</align>
 				</control>

@@ -31,6 +31,7 @@
 				<label>$LOCALIZE[31305] $LOCALIZE[31200]</label>
 				<font>list1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 			</control>
 			<control type="grouplist" id="2">
 				<posx>165</posx>

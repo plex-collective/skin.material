@@ -49,6 +49,7 @@
 			<width>770</width>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>button_settings_wide.png</texturefocus>
@@ -63,6 +64,7 @@
 			<width>770</width>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>button_settings_wide.png</texturefocus>
@@ -78,6 +80,7 @@
 			<width>770</width>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>button_settings_wide.png</texturefocus>
@@ -92,6 +95,7 @@
 			<width>272</width>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>button_settings.png</texturefocus>

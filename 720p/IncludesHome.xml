@@ -7,17 +7,8 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31502]</label>
-				<posx>18</posx>
-				<posy>2</posy>
-			</control>
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
@@ -44,19 +35,8 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="100">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31501]</label>
-				<posx>18</posx>
-				<posy>2</posy>
-				<visible>[!Control.HasFocus(300) + Control.IsVisible(11001)] | !Control.IsVisible(11001)</visible>
-				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-			</control>
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
@@ -87,17 +67,8 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="100">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31501]</label>
-				<posx>18</posx>
-				<posy>2</posy>
-			</control>
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
@@ -124,19 +95,8 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31502]</label>
-				<posx>18</posx>
-				<posy>2</posy>
-				<visible>!Control.HasFocus(300)</visible>
-				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
-			</control>
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
@@ -203,31 +163,12 @@
 				</control>
 				<control type="label">
 					<posx>86</posx>
-					<posy>221</posy>
-					<width>162</width>
-					<height>30</height>
-					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
-					<textcolor>Shadow</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>86</posx>
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
 					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Gray</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>86</posx>
-					<posy>239</posy>
-					<width>162</width>
-					<height>30</height>
-					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
-					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -238,6 +179,7 @@
 					<height>30</height>
 					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -271,26 +213,13 @@
 			</control>
 			<control type="label">
 				<posx>86</posx>
-				<posy>221</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>Control.HasFocus(11001)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> | </scrollsuffix>
@@ -326,34 +255,13 @@
 			</control>
 			<control type="label">
 				<posx>86</posx>
-				<posy>221</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
-				<visible>Control.HasFocus(11001)</visible>
-				<textcolor>Shadow</textcolor>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
 				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Orange</textcolor>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
-				<posy>239</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
-				<visible>Control.HasFocus(11001)</visible>
-				<textcolor>Shadow</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>homelabel</font>
 				<align>center</align>
 			</control>
@@ -365,6 +273,7 @@
 				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>homelabel</font>
 				<align>center</align>
 			</control>
@@ -438,31 +347,12 @@
 				</control>
 				<control type="label">
 					<posx>119</posx>
-					<posy>221</posy>
-					<width>200</width>
-					<height>30</height>
-					<label>$INFO[ListItem.Album]</label>
-					<textcolor>Shadow</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>119</posx>
 					<posy>223</posy>
 					<width>200</width>
 					<height>30</height>
 					<label>$INFO[ListItem.Album]</label>
 					<textcolor>Gray</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>119</posx>
-					<posy>239</posy>
-					<width>200</width>
-					<height>30</height>
-					<label>$INFO[ListItem.Artist]</label>
-					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -473,6 +363,7 @@
 					<height>30</height>
 					<label>$INFO[ListItem.Artist]</label>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -506,44 +397,17 @@
 			</control>
 			<control type="label">
 				<posx>119</posx>
-				<posy>221</posy>
-				<width>200</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Album]</label>
-				<visible>Control.HasFocus(11001)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>119</posx>
 				<posy>223</posy>
 				<width>200</width>
 				<height>30</height>
 				<label>$INFO[ListItem.Album]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<font>homelabel</font>
 				<scrollsuffix> | </scrollsuffix>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>119</posx>
-				<posy>239</posy>
-				<width>200</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Artist]</label>
-				<visible>Control.HasFocus(11001)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
 				<align>center</align>
 			</control>
 			<control type="label">
@@ -554,6 +418,7 @@
 				<label>$INFO[ListItem.Artist]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> | </scrollsuffix>
@@ -605,31 +470,12 @@
 				</control>
 				<control type="label">
 					<posx>86</posx>
-					<posy>221</posy>
-					<width>162</width>
-					<height>30</height>
-					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
-					<textcolor>Shadow</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>86</posx>
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
 					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 					<textcolor>Gray</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>86</posx>
-					<posy>239</posy>
-					<width>162</width>
-					<height>30</height>
-					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
-					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -640,6 +486,7 @@
 					<height>30</height>
 					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -673,26 +520,13 @@
 			</control>
 			<control type="label">
 				<posx>86</posx>
-				<posy>221</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Label]</label>
-				<visible>Control.HasFocus(11000)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
 				<label>$INFO[ListItem.Label]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> | </scrollsuffix>
@@ -728,34 +562,13 @@
 			</control>
 			<control type="label">
 				<posx>86</posx>
-				<posy>221</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
-				<visible>Control.HasFocus(11000)</visible>
-				<textcolor>Shadow</textcolor>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
 				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Orange</textcolor>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>86</posx>
-				<posy>239</posy>
-				<width>162</width>
-				<height>30</height>
-				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
-				<visible>Control.HasFocus(11000)</visible>
-				<textcolor>Shadow</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>homelabel</font>
 				<align>center</align>
 			</control>
@@ -767,6 +580,7 @@
 				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<font>homelabel</font>
 				<align>center</align>
 			</control>
@@ -840,31 +654,12 @@
 				</control>
 				<control type="label">
 					<posx>119</posx>
-					<posy>221</posy>
-					<width>200</width>
-					<height>30</height>
-					<label>$INFO[ListItem.Album]</label>
-					<textcolor>Shadow</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>119</posx>
 					<posy>223</posy>
 					<width>200</width>
 					<height>30</height>
 					<label>$INFO[ListItem.Album]</label>
 					<textcolor>Gray</textcolor>
-					<font>homelabel</font>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>119</posx>
-					<posy>239</posy>
-					<width>200</width>
-					<height>30</height>
-					<label>$INFO[ListItem.Artist]</label>
-					<textcolor>Shadow</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -875,6 +670,7 @@
 					<height>30</height>
 					<label>$INFO[ListItem.Artist]</label>
 					<textcolor>DarkGray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
 					<align>center</align>
 				</control>
@@ -908,44 +704,17 @@
 			</control>
 			<control type="label">
 				<posx>119</posx>
-				<posy>221</posy>
-				<width>200</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Album]</label>
-				<visible>Control.HasFocus(11000)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>119</posx>
 				<posy>223</posy>
 				<width>200</width>
 				<height>30</height>
 				<label>$INFO[ListItem.Album]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<font>homelabel</font>
 				<scrollsuffix> | </scrollsuffix>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>119</posx>
-				<posy>239</posy>
-				<width>200</width>
-				<height>30</height>
-				<label>$INFO[ListItem.Artist]</label>
-				<visible>Control.HasFocus(11000)</visible>
-				<textcolor>Shadow</textcolor>
-				<scroll>true</scroll>
-				<scrollspeed>30</scrollspeed>
-				<scrollsuffix> | </scrollsuffix>
-				<font>homelabel</font>
 				<align>center</align>
 			</control>
 			<control type="label">
@@ -956,6 +725,7 @@
 				<label>$INFO[ListItem.Artist]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
 				<scrollsuffix> | </scrollsuffix>
@@ -971,17 +741,8 @@
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
-				<textcolor>Shadow</textcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31501]</label>
-				<posx>18</posx>
-				<posy>2</posy>
-			</control>
-			<control type="label" id="8002">
-				<font>info1</font>
 				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
 				<width>350</width>
 				<height>30</height>
 				<align>left</align>
@@ -1020,31 +781,12 @@
 						</control>
 						<control type="label">
 							<posx>119</posx>
-							<posy>221</posy>
-							<width>200</width>
-							<height>30</height>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>Shadow</textcolor>
-							<font>homelabel</font>
-							<align>center</align>
-						</control>
-						<control type="label">
-							<posx>119</posx>
 							<posy>223</posy>
 							<width>200</width>
 							<height>30</height>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>Gray</textcolor>
-							<font>homelabel</font>
-							<align>center</align>
-						</control>
-						<control type="label">
-							<posx>119</posx>
-							<posy>239</posy>
-							<width>200</width>
-							<height>30</height>
-							<label>$INFO[ListItem.Property(sourceTitle)]</label>
-							<textcolor>Shadow</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<font>homelabel</font>
 							<align>center</align>
 						</control>
@@ -1055,6 +797,7 @@
 							<height>30</height>
 							<label>$INFO[ListItem.Property(sourceTitle)]</label>
 							<textcolor>DarkGray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
 							<font>homelabel</font>
 							<align>center</align>
 						</control>
@@ -1088,40 +831,13 @@
 					</control>
 					<control type="label">
 						<posx>119</posx>
-						<posy>221</posy>
-						<width>200</width>
-						<height>30</height>
-						<label>$INFO[ListItem.Label]</label>
-						<visible>Control.HasFocus(11003)</visible>
-						<textcolor>Shadow</textcolor>
-						<scrollsuffix> | </scrollsuffix>
-						<scroll>true</scroll>
-						<scrollspeed>30</scrollspeed>
-						<font>homelabel</font>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<posx>119</posx>
 						<posy>223</posy>
 						<width>200</width>
 						<height>30</height>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>Control.HasFocus(11003)</visible>
 						<textcolor>Orange</textcolor>
-						<scrollsuffix> | </scrollsuffix>
-						<scroll>true</scroll>
-						<scrollspeed>30</scrollspeed>
-						<font>homelabel</font>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<posx>119</posx>
-						<posy>239</posy>
-						<width>200</width>
-						<height>30</height>
-						<label>$INFO[ListItem.Property(sourceTitle)]</label>
-						<visible>Control.HasFocus(11003)</visible>
-						<textcolor>Shadow</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<scrollsuffix> | </scrollsuffix>
 						<scroll>true</scroll>
 						<scrollspeed>30</scrollspeed>
@@ -1136,6 +852,7 @@
 						<label>$INFO[ListItem.Property(sourceTitle)]</label>
 						<visible>Control.HasFocus(11003)</visible>
 						<textcolor>White</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
 						<scrollsuffix> | </scrollsuffix>
 						<scroll>true</scroll>
 						<scrollspeed>30</scrollspeed>
