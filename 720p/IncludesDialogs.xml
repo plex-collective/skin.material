@@ -204,7 +204,7 @@
 		<width>46</width>
 		<height>54</height>
 		<align>center</align>
-		<aligny>center</aligny>
+		<aligny>top</aligny>
 	</include>
 	<include name="keyboardWideButton">
 		<font>keyboardbutton</font>
@@ -213,7 +213,7 @@
 		<alttexturefocus>dialogs/buttonkb-wide.png</alttexturefocus>
 		<textcolor>White</textcolor>
 		<shadowcolor>Shadow</shadowcolor>
-		<textoffsety>14</textoffsety>
+		<textoffsety>8</textoffsety>
 		<focusedcolor>Orange</focusedcolor>
 		<width>92</width>
 		<height>54</height>
@@ -226,7 +226,7 @@
 		<texturefocus>dialogs/buttonkb-space.png</texturefocus>
 		<textcolor>White</textcolor>
 		<shadowcolor>Shadow</shadowcolor>
-		<textoffsety>14</textoffsety>
+		<textoffsety>8</textoffsety>
 		<focusedcolor>Orange</focusedcolor>
 		<width>222</width>
 		<height>54</height>

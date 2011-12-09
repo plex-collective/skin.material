@@ -2,27 +2,11 @@
 <window id="50">
 	<animation effect="fade" start="0" end="100" time="1000" reversible="true">WindowOpen</animation>
 	<controls>
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<texture>background.png</texture>
-			<fadetime>200</fadetime>
-		</control>
 		<control type="group">
 			<visible>!MusicPlayer.NowPlayingFlipped</visible>
 			<animation effect="rotatey" center="640" start="0" end="-90" time="500" reversible="false">Hidden</animation>
 			<animation effect="rotatey" center="640" start="-90" end="0" time="500" delay="500" reversible="false">Visible</animation>
 			<control type="group">
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture>background.png</texture>
-					<fadetime>200</fadetime>
-				</control>
 				<control type="image">
 					<posx>-127</posx>
 					<posy>46</posy>

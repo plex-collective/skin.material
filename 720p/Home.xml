@@ -257,19 +257,19 @@
 						<item>
 							<description>Quit</description>
 							<label>$LOCALIZE[31104]</label>
-							<onclick>Plex.Shutdown()</onclick>
+							<onclick>Plex.Quit()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 						</item>
 						<item>
 							<description>Sleep</description>
 							<label>$LOCALIZE[31105]</label>
-							<onclick>Plex.SleepSystem()</onclick>
+							<onclick>Plex.Suspend()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
 						</item>			
 						<item>
 							<description>Shutdown</description>
 							<label>$LOCALIZE[31106]</label>
-							<onclick>Plex.ShutDownSystem()</onclick>
+							<onclick>Plex.Powerdown()</onclick>
 							<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
 						</item>			
 						<item>
@@ -290,11 +290,13 @@
 							<label>$LOCALIZE[31300]</label>
 							<label2>chan</label2>
 							<onclick>SetFocus(302)</onclick>
+							<visible>!Skin.HasSetting(HideChannels)</visible>
 						</item>
 						<item>
 							<description>Search</description>
 							<label>$LOCALIZE[31400]</label>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
+							<visible>!Skin.HasSetting(HideSearch)</visible>
 						</item>
 						<!-- The following code might fix a crash issue with Plex -->
 						<item id="6">
@@ -341,7 +343,7 @@
 						</item>
 						<item id="12">
 							<description>Plex Online Menu</description>
-							<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
+							<label>$LOCALIZE[31306]</label>
 							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 							<visible>false</visible>
 						</item>
@@ -479,8 +481,13 @@
 							<onclick>activatewindow(MyPicturesSettings)</onclick>
 						</item>
 						<item id="6">
-							<description>System</description>
+							<description>Network</description>
 							<label>$LOCALIZE[31206]</label>
+							<onclick>activatewindow(18)</onclick>
+						</item>
+						<item id="7">
+							<description>System</description>
+							<label>$LOCALIZE[31207]</label>
 							<onclick>activatewindow(SystemSettings)</onclick>
 						</item>
 					</content>
@@ -589,7 +596,7 @@
 						</item>
 						<item id="5">
 							<description>Channel Directory</description>
-							<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
+							<label>$LOCALIZE[31306]</label>
 							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 						</item>
 					</content>
@@ -851,6 +858,7 @@
 				<posy>675</posy>
 				<width>1280</width>
 				<height>45</height>
+				<visible>Control.IsVisible(11000) + Control.IsVisible(11001)</visible>
 			</control>
 		</controls>
 	</include>

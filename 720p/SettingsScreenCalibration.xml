@@ -3,12 +3,6 @@
 	<defaultcontrol always="true">8</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
-		<control type="image">
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>background.png</texture>
-		</control>
 		<control type="mover" id="8">
 			<description>top left mover</description>
 			<posx>20</posx>

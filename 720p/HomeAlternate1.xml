@@ -322,12 +322,14 @@
 							<label>$LOCALIZE[31400]</label>
 							<label2>search</label2>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
+							<visible>!Skin.HasSetting(HideSearch)</visible>
 						</item>
 						<item id="29902">
 							<description>Channels</description>
 							<label>$LOCALIZE[31300]</label>
 							<label2>chan</label2>
 							<onclick>SetFocus(302)</onclick>
+							<visible>!Skin.HasSetting(HideChannels)</visible>
 						</item>
 						<item id="29901">
 							<!-- TODO: Localize -->
@@ -525,7 +527,7 @@
 						</item>
 						<item id="12">
 							<description>Plex Online Menu</description>
-							<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
+							<label>$LOCALIZE[31306]</label>
 							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 							<visible>false</visible>
 						</item>
@@ -664,8 +666,13 @@
 							<onclick>activatewindow(MyPicturesSettings)</onclick>
 						</item>
 						<item id="6">
-							<description>System</description>
+							<description>Network</description>
 							<label>$LOCALIZE[31206]</label>
+							<onclick>activatewindow(18)</onclick>
+						</item>
+						<item id="7">
+							<description>System</description>
+							<label>$LOCALIZE[31207]</label>
 							<onclick>activatewindow(SystemSettings)</onclick>
 						</item>
 					</content>
@@ -774,7 +781,7 @@
 						</item>
 						<item id="5">
 							<description>Channel Directory</description>
-							<label>$LOCALIZE[31305] $LOCALIZE[31306]</label>
+							<label>$LOCALIZE[31306]</label>
 							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 						</item>
 					</content>
@@ -955,6 +962,7 @@
 				<posy>675</posy>
 				<width>1280</width>
 				<height>45</height>
+				<visible>Control.IsVisible(11000) + Control.IsVisible(11001)</visible>
 			</control>
 			<include>GlobalIncludes</include>
 		</controls>
