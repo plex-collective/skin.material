@@ -4,6 +4,22 @@
 	<controls>		
 		<control type="group">
 			<visible>![Window.IsActive(2901)]</visible>
+			
+			<!-- Time -->
+			<!-- Missing page heading (well, its greyed out)-->
+			<control type="group">
+				<description>Header (Time)</description>
+				<control type="image">
+					<texture>background_overlay_header.png</texture>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>48</height>
+					<visible>true</visible>
+				</control>
+				<include>Time</include>
+			</control>
+			
 			<control type="group" id="52000">
 				<posx>78</posx>
 				<posy>489</posy>
