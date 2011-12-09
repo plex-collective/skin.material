@@ -2,17 +2,13 @@ TODO
 ----
 
 - Fanart View
-- Mode code from ViewFanart to Info OSD
 - Another optional home screen (fanart based)
 - In Queue
 - Show in Progesss (change dech so DOWN will switch beteeen all views)
 - Now playing
 - Localize
-- Hide help
-- Hide Notes; Add Notes (this)
 - Reorganize skin menu
 
-- Merge Simplex 1.0.6 changes
 
 Requests TODO
 -------------
@@ -37,3 +33,11 @@ Need help from graphic artist (I have zero skill here; plese help!)
 - better head graphic (1280x48) for header on fanart view to diffuse and transition better into fanart (gradient?) (where title and time are located)
 - actually, combine above into 1 1280z720 image
 - need a 512x54 graphic for the fanart list focused item outline
+
+
+Completed
+---------
+- Hide help
+- Hide Notes; Add Notes (this)
+- Mode code from ViewFanart to Info OSD
+- Merge Simplex 1.0.6 changes

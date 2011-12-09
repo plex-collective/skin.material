@@ -1,251 +1,314 @@
 <?xml version="1.0"?>
 <window type="dialog" id="142">
 	<!--defaultcontrol always="true">603</defaultcontrol-->
-	<includes>
-		<include name="focus_PosterWithInfoNoEffect_GrainyEdition">
-			<animation type="Focus" reversible="false">
-				<effect type="zoom" center="auto" start="100" end="150" time="400" tween="back" easing="out" />
-			</animation>
-		</include>
-		<include name="videoFullScreenInfo">
-			<animation type="Visible">
-				<effect type="slide" start="0,200" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="0,200" tween="Cubic" center="auto" easing="In" time="400" />
-			</animation>
-			<animation type="WindowOpen">
-				<effect type="slide" start="0,200" end="0,0" tween="Cubic" center="auto" easing="Out" time="400" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="slide" start="0,0" end="0,200" tween="Cubic" center="auto" easing="In" time="400" />
-			</animation>
-		</include>
-	</includes>
-	<!-- THUMBNAILS WITH INFO -->
 	<controls>		
-		<!-- OSD Info background -->
-		<control type="image">
-			<posx>78</posx>
-			<posy>501</posy>
-			<width>1125</width>
-			<height>201</height>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<texture border="0,1,0,11">osd/osd_back.png</texture>
-		</control>
-		<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-		<!-- Episode Thumb -->
-		<control type="image">
-			<visible>[VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<posx>105</posx>
-			<posy>474</posy>
-			<width>150</width>
-			<height>99</height>
-			<texture>thumb_background.png</texture>
-		</control>
-		<control type="image">
-			<visible>[VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<posx>105</posx>
-			<posy>474</posy>
-			<width>150</width>
-			<height>99</height>
-			<texture background="true" diffuse="diffuse_episode.png">$INFO[VideoPlayer.Cover]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>border_episode.png</bordertexture>
-			<fadetime>1</fadetime>
-			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
-		</control>
-		<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-		<!-- Movie Thumb -->
-		<control type="image">
-			<visible>[VideoPlayer.Content(movies)] + ![Window.IsActive(2901)]</visible>
-			<posx>123</posx>
-			<posy>474</posy>
-			<width>114</width>
-			<height>171</height>
-			<texture>thumb_background.png</texture>
-		</control>
-		<control type="image">
-			<visible>[VideoPlayer.Content(movies)] + ![Window.IsActive(2901)]</visible>
-			<posx>123</posx>
-			<posy>474</posy>
-			<width>114</width>
-			<height>171</height>
-			<texture background="true" diffuse="diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
-			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>border_episode.png</bordertexture>
-			<fadetime>1</fadetime>
-			<include>focus_PosterWithInfoNoEffect_GrainyEdition</include>
-		</control>
-		<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-		<control type="group" id="2">
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<!-- Time -->
-			<control type="group">
-				<control type="image">
-					<texture>background_overlay_header.png</texture>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>48</height>
-					<visible>true</visible>
-				</control>
-				<include>Time</include>
-			</control>
-			<!-- Finish Time -->
-			<control type="label">
-				<posx>1173</posx>
-				<posy>480</posy>
-				<width>800</width>
-				<height>46</height>
-				<align>right</align>
-				<aligny>center</aligny>
-				<!-- TODO: Localize -->
-				<label>Finish Time: $INFO[Player.FinishTime]</label>
-				<font>title1</font>
-				<textcolor>Gray</textcolor>
-				<shadowcolor>Shadow</shadowcolor>
-			</control>
+		<control type="group">
+			<visible>![Window.IsActive(2901)]</visible>
+			<control type="group" id="52000">
+				<posx>78</posx>
+				<posy>489</posy>
+				<width>1125</width>
 				
-		</control>
-		
-		<!-- MOVIES & TV SHOWS -->
-		<control type="group" id="1">
-			<posx>72</posx>
-			<posy>516</posy>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + ![Window.IsActive(2901)]</visible>
-			<include>videoFullScreenInfo</include>
-			<control type="group">
-				<width>912</width>
-				<posx>192</posx>
-				<control type="label">
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align>
-					<textcolor>Orange</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>osd1</font>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Finish Time -->
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group" id="52002">
+					<height>15</height>
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+					<control type="label">
+						<posx>1095</posx>
+						<posy>0</posy>
+						<width>800</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<!-- TODO: Localize -->
+						<label>Finish Time: $INFO[Player.FinishTime]</label>
+						<font>title1</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+					</control>
 				</control>
-			</control>
-			<!-- movies : remaining time deleted, finish time separated and moved to right end -->
-			<control type="group">
-				<posy>18</posy>
-				<width>912</width>
-				<posx>192</posx>
-				<control type="label">
-					<width min="1" max="600">auto</width>
-					<align>left</align>
-					<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>VideoPlayer.Content(movies)</visible>
+				
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Thumbs -->
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group" id="52003">
+					<posy>15</posy>
+					<height>201</height>
+					<!-- Info background -->
+					<control type="image">
+						<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+						<description>Title</description>
+						<width>1125</width>
+						<height>201</height>
+						<texture border="0,1,0,11">osd/osd_back.png</texture>
+					</control>
+					<!-- Episode Thumb -->
+					<control type="group">
+						<visible>[VideoPlayer.Content(episodes)]</visible>
+						<description>Episode Thumb and Background</description>
+						<control type="image">
+							<description>Episode Thumb Background</description>
+							<posx>27</posx>
+							<posy>24</posy>
+							<width>150</width>
+							<height>99</height>
+							<texture>thumb_background.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster Thumb Reflection</description>
+							<posx>27</posx>
+							<posy>122</posy>
+							<width>150</width>
+							<height>99</height>
+							<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<fadetime>1</fadetime>
+						</control>
+						<control type="image">
+							<description>Episode Thumb</description>
+							<posx>27</posx>
+							<posy>24</posy>
+							<width>150</width>
+							<height>99</height>
+							<texture background="true" diffuse="diffuse_episode.png">$INFO[VideoPlayer.Cover]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<bordertexture>border_episode.png</bordertexture>
+							<fadetime>1</fadetime>
+						</control>
+					</control>
+					<!-- Movie, TVShows or Seasons Thumb -->
+					<control type="group">
+						<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+						<description>Poster Thumb and Background</description>
+						<control type="image">
+							<description>Poster Background</description>
+							<posx>45</posx>
+							<posy>-15</posy>
+							<width>114</width>
+							<height>171</height>
+							<texture>thumb_background.png</texture>
+						</control>
+						<control type="image">
+							<description>Poster Thumb Reflection</description>
+							<posx>45</posx>
+							<posy>155</posy>
+							<width>114</width>
+							<height>171</height>
+							<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<fadetime>1</fadetime>
+						</control>
+						<control type="image">
+							<description>Poster Thumb</description>
+							<posx>45</posx>
+							<posy>-15</posy>
+							<width>114</width>
+							<height>171</height>
+							<texture background="true" diffuse="diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<bordertexture>border_episode.png</bordertexture>
+							<fadetime>1</fadetime>
+						</control>
+					</control>
 				</control>
-				<control type="label">
-					<width min="1" max="300">auto</width>
-					<posx>0r</posx>
-					<align>right</align>
-					<!-- TODO: Localize -->
-					<label>Duration: $INFO[Player.Duration]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>VideoPlayer.Content(movies)</visible>
-				</control>
-			</control>
-			<!-- tv shows : remaining time deleted, finish time separated and moved to right end -->
-			<control type="group">
-				<posy>18</posy>
-				<width>912</width>
-				<posx>192</posx>
-				<control type="label">
-					<width min="1" max="600">auto</width>
-					<align>left</align>
-					<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, &#xB7; ]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>VideoPlayer.Content(episodes)</visible>
-				</control>
-				<control type="label">
-					<width min="1" max="300">auto</width>
-					<posx>0r</posx>
-					<align>right</align>
-					<!-- TODO: Localize -->
-					<label>Duration: $INFO[Player.Duration]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>VideoPlayer.Content(episodes)</visible>
-				</control>
-			</control>
-			<!-- Plot outline -->
-			<control type="textbox" id="8">
-				<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<posy>45</posy>
-				<posx>192</posx>
-				<width>909</width>
-				<height>72</height>
-				<align>justify</align>
-				<aligny>top</aligny>
-				<label>$INFO[VideoPlayer.PlotOutline]</label>
-				<textcolor>Gray</textcolor>
-				<shadowcolor>Shadow</shadowcolor>
-				<font>plot1</font>
-				<autoscroll delay="10000" time="3000" repeat="10000"/>
-			</control>
-			<control type="textbox" id="8">
-				<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
-				<posy>45</posy>
-				<posx>192</posx>
-				<width>909</width>
-				<height>72</height>
-				<align>justify</align>
-				<aligny>top</aligny>
-				<label>$INFO[VideoPlayer.Plot]</label>
-				<textcolor>Gray</textcolor>
-				<shadowcolor>Shadow</shadowcolor>
-				<font>plot1</font>
-				<autoscroll delay="10000" time="3000" repeat="10000"/>
-			</control>
-			<!-- Progress bar -->
-			<control type="grouplist">
-					<posx>192</posx>
-					<posy>125</posy>
-					<width>908</width>
-					<orientation>horizontal</orientation>
-					<itemgap>0</itemgap>
-				<control type="label">
-					<width>69</width>
-					<height>16</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$INFO[Player.Time]</label>
-					<textcolor>Gray</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>true</visible>
-				</control>
-				<control type="progress">
-					<description>Progressbar</description>
-					<width>771</width>
-					<height>16</height>
-					<align>center</align>
-					<aligny>bottom</aligny>
-					<info>Player.Progress</info>
-					<visible>true</visible>
-				</control>
-				<control type="label">
-					<posx>0r</posx>
-					<width>69</width>
-					<height>16</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<label>$INFO[Player.TimeRemaining]</label>
-					<textcolor>Gray</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<font>heading3</font>
-					<visible>true</visible>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Info -->
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Movies, TvShow, Seasons or Episodes Info -->
+				<control type="group">
+					<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+					<width>912</width>
+					<height>150</height>
+					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<control type="group">
+						<posx>188</posx>
+						<posy>39</posy>
+						<width>909</width>
+						<height>18</height>
+						<!-- Title -->
+						<control type="label">
+							<description>Title</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<height>18</height>
+							<width min="1" max="798">auto</width>
+							<label>$INFO[VideoPlayer.Title]</label>
+							<aligny>center</aligny>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<shadowcolor>ff000000</shadowcolor>
+							<font>osd1</font>
+						</control>
+						<!-- Image Rating -->
+						<!--control type="image">
+							<visible>!IsEmpty(VideoPlayer.Rating)</visible>
+							<description>Rating (5 Star) Image</description>
+							<posx>102r</posx>
+							<posy>0</posy>
+							<width>105</width>
+							<height>18</height>
+							<align>left</align>
+							<info>VideoPlayer.StarRating</info>
+							<aspectratio aligny="bottom" align="left">keep</aspectratio>
+						</control-->
+					</control>
+					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<control type="group">
+						<posx>188</posx>
+						<posy>45</posy>
+						<width>912</width>
+						<height>18</height>
+						<control type="group">
+							<!-- Movie, TVShows, Seasons Details -->
+							<control type="label">
+								<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+								<description>Movie Details</description>
+								<posy>3</posy>
+								<width min="1" max="600">auto</width>
+								<align>left</align>
+								<label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<font>heading3</font>
+							</control>
+							<!-- Episode Details -->
+							<control type="label">
+								<visible>VideoPlayer.Content(episodes)</visible>
+								<description>TV Show Details</description>
+								<posy>3</posy>
+								<width min="1" max="600">auto</width>
+								<align>left</align>
+								<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, &#xB7; ]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<font>heading3</font>
+							</control>
+						</control>
+						<!-- Text Rating -->
+						<!--control type="label">
+							<visible>!IsEmpty(VideoPlayer.Rating)</visible>
+							<description>Text Rating</description>
+							<posx>0r</posx>
+							<posy>3</posy>
+							<width min="1" max="300">auto</width>
+							<align>right</align>
+							<label>$INFO[VideoPlayer.Rating]</label>
+							<font>heading3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+						</control-->
+						<!-- Duration -->
+						<control type="label">
+							<visible>!IsEmpty(VideoPlayer.Duration)</visible>
+							<description>Duration</description>
+							<posx>0r</posx>
+							<posy>11</posy>
+							<width min="1" max="300">auto</width>
+							<align>right</align>
+							<aligny>bottom</aligny>
+							<!-- TODO: Localize -->
+							<label>Duration: $INFO[VideoPlayer.Duration]</label>
+							<font>heading3</font>
+							<textcolor>White</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+						</control>
+					</control>
+					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<!-- Plot outline -->
+					<control type="textbox" id="8">
+						<visible>!IsEmpty(VideoPlayer.PlotOutline)</visible>
+						<posx>188</posx>
+						<posy>75</posy>
+						<width>909</width>
+						<height>72</height>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<label>$INFO[VideoPlayer.PlotOutline]</label>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<font>plot1</font>
+						<autoscroll delay="10000" time="3000" repeat="10000"/>
+					</control>
+					<control type="textbox" id="8">
+						<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
+						<posx>188</posx>
+						<posy>75</posy>
+						<width>909</width>
+						<height>72</height>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<label>$INFO[VideoPlayer.Plot]</label>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<font>plot1</font>
+						<autoscroll delay="10000" time="3000" repeat="10000"/>
+					</control>
+					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<control type="group">
+						<posx>188</posx>
+						<posy>159</posy>
+						<height>18</height>
+						<width>906</width>
+						<control type="group">
+							<!-- Total Episodes -->
+							<control type="label">
+								<visible>[VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons)]</visible>
+								<description>Total Watched / Unwatched Episodes</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width min="1" max="300">auto</width>
+								<align>Left</align>
+								<aligny>bottom</aligny>
+								<!-- TODO: Localize -->
+								<label>$INFO[VideoPlayer.Episode] $LOCALIZE[31002] ($INFO[VideoPlayer.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
+								<font>heading3</font>
+								<textcolor>DarkGray</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<wrapmultiline>false</wrapmultiline>
+							</control>
+							<!-- Progress bar -->
+							<control type="grouplist">
+								<width>908</width>
+								<orientation>horizontal</orientation>
+								<itemgap>0</itemgap>
+								<control type="label">
+									<width>69</width>
+									<height>16</height>
+									<align>left</align>
+									<aligny>center</aligny>
+									<label>$INFO[Player.Time]</label>
+									<textcolor>Gray</textcolor>
+									<shadowcolor>Shadow</shadowcolor>
+									<font>heading3</font>
+									<visible>true</visible>
+								</control>
+								<control type="progress">
+									<description>Progressbar</description>
+									<width>771</width>
+									<height>16</height>
+									<align>center</align>
+									<aligny>bottom</aligny>
+									<info>Player.Progress</info>
+									<visible>true</visible>
+								</control>
+								<control type="label">
+									<posx>0r</posx>
+									<width>69</width>
+									<height>16</height>
+									<align>right</align>
+									<aligny>center</aligny>
+									<label>$INFO[Player.TimeRemaining]</label>
+									<textcolor>Gray</textcolor>
+									<shadowcolor>Shadow</shadowcolor>
+									<font>heading3</font>
+									<visible>true</visible>
+								</control>
+							</control>
+						</control>
+					</control>
 				</control>
 			</control>
 		</control>
