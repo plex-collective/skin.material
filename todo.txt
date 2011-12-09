@@ -8,6 +8,7 @@ TODO
 - Now playing
 - Localize
 - Reorganize skin menu
+- Shared content; what are they?
 
 
 Requests TODO
