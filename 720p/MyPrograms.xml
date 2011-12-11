@@ -6,7 +6,6 @@
 		<include>Background</include>
 		<include>Header</include>
 		<include>HeaderApplications</include>
-		<include>AudioPlayingIndicator</include>
 		<include>Time</include>
 		<include>List</include>
 	</controls>

@@ -5,6 +5,7 @@
 	<include file="NowPlayingIncludes.xml"/>
 	<include file="IncludesDialogs.xml"/>
 	<include file="IncludesHome.xml"/>
+	<include file="IncludesOSD.xml"/>
 	<include name="ButtonPaused">
 		<texturenofocus>osd/osd_button_play.png</texturenofocus>
 		<texturefocus>osd/osd_button_play_fo.png</texturefocus>
@@ -40,27 +41,48 @@
 		<textcolor>White</textcolor>
 	</include>
 	<include name="Time">
-		<control type="label">
-			<posx>1189</posx>
-			<posy>2</posy>
-			<width>1280</width>
-			<height>46</height>
+		<control type="grouplist">
+			<posx>1062</posx>
+			<posy>18</posy>
+			<width>128</width>
 			<align>right</align>
-			<aligny>center</aligny>
-			<info>System.Time</info>
-			<font>title1</font>
-			<textcolor>Shadow</textcolor>
+			<itemgap>12</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="label">
+				<posy>0</posy>
+				<width min="0" max="200">auto</width>
+				<height>13</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>System.Time</info>
+				<font>title1</font>
+				<textcolor>Shadow</textcolor>
+			</control>
 		</control>
-		<control type="label">
-			<posx>1189</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>46</height>
+		<control type="grouplist">
+			<posx>1062</posx>
+			<posy>16</posy>
+			<width>128</width>
 			<align>right</align>
-			<aligny>center</aligny>
-			<info>System.Time</info>
-			<font>title1</font>
-			<textcolor>Gray</textcolor>
+			<itemgap>12</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<visible>Player.HasAudio + Player.Playing</visible>
+				<posy>17</posy>
+				<width>16</width>
+				<height>16</height>
+				<texture>audio_playing.png</texture>
+			</control>
+			<control type="label">
+				<posy>0</posy>
+				<width min="0" max="200">auto</width>
+				<height>13</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<info>System.Time</info>
+				<font>title1</font>
+				<textcolor>Gray</textcolor>
+			</control>
 		</control>
 	</include>
 	<include name="Header">
@@ -394,16 +416,6 @@
 			<width>1280</width>
 			<height>508</height>
 			<visible>true</visible>
-		</control>
-	</include>
-	<include name="AudioPlayingIndicator">
-		<control type="image">
-			<visible>Player.HasAudio + Player.Playing</visible>
-			<posx>1065</posx>
-			<posy>17</posy>
-			<width>16</width>
-			<height>16</height>
-			<texture>audio_playing.png</texture>
 		</control>
 	</include>
 </includes>

@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <window id="123">
 	<defaultcontrol>2</defaultcontrol>
-	<animation effect="fade" time="100">WindowOpen</animation>
-	<animation effect="fade" time="100">WindowClose</animation>
+	<include>dialogOpen</include>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>

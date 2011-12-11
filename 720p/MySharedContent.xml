@@ -6,7 +6,6 @@
 		<include>Background</include>
 		<include>Header</include>
 		<include>HeaderShared</include>
-		<include>AudioPlayingIndicator</include>
 		<include>Time</include>
 		<control type="list" id="50">
 			<posx>664</posx>

@@ -74,10 +74,6 @@
       <deactivate>out.wav</deactivate>
     </window>
     <window>
-		<name>favourites</name>
-		<deactivate>click-back.wav</deactivate>
-	</window>  
-    <window>
 		<name>contextmenu</name>
 		<deactivate>click-back.wav</deactivate>
 	</window> 
