@@ -15,6 +15,16 @@
 	<string id="31010">Aired</string>
 	<string id="31011">Length</string>
 	<string id="31012">Unwatched</string>
+	<string id="31013">Change</string>
+	<string id="31014">Artwork</string>
+	<string id="31015">Poster</string>
+	<string id="31016">Background Art</string>
+	<string id="31017">Episode Art</string>
+	<string id="31020">Choose a poster for this movie</string>
+	<string id="31021">Choose a poster for this TV Show</string>
+	<string id="31022">Choose a background for this movie</string>
+	<string id="31023">Choose a background for this TV Show</string>
+	<string id="31024">Choose an image for this episode</string>
 
 <!--  Skin Preferences  -->
 	<string id="31101">Show Slideshow</string>

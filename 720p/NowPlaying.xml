@@ -127,7 +127,7 @@
 				<control type="image">
 					<posx>508</posx>
 					<posy>46</posy>
-					<width>772</width>
+					<width>899</width>
 					<height>621</height>
 					<texture flipx="true">thumb_background_now_playing.png</texture>
 					<fadetime>200</fadetime>

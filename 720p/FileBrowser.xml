@@ -32,6 +32,37 @@
 			<align>center</align>
 			<font>list1</font>
 			<textcolor>White</textcolor>
+			<visible>!Window.IsVisible(2003)</visible>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posy>180</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<label>$LOCALIZE[31013] $LOCALIZE[31015]</label>
+			<visible>Window.IsVisible(2003) + !container.content(episodes) + !stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posy>180</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<label>$LOCALIZE[31013] $LOCALIZE[31016]</label>
+			<visible>Window.IsVisible(2003) + !container.content(episodes) + stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="label">
+			<description>heading label</description>
+			<posy>180</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+			<label>$LOCALIZE[31013] $LOCALIZE[31017]</label>
+			<visible>Window.IsVisible(2003) + container.content(episodes)</visible>
 		</control>
 		<control type="label" id="412">
 			<description>path label control</description>
@@ -42,8 +73,69 @@
 			<font>plot1</font>
 			<haspath>true</haspath>
 			<textcolor>Gray</textcolor>
+			<visible>!Window.IsVisible(2003)</visible>
 		</control>
-		<control type="group" id="9002">
+		<control type="label">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>center</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31020]</label>
+			<visible>Window.IsVisible(2003) + container.content(movies) + !stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="label">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>center</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31022]</label>
+			<visible>Window.IsVisible(2003) + container.content(movies) + stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="label">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>center</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31021]</label>
+			<visible>Window.IsVisible(2003) + container.content(tvshows) + !stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="label">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>center</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31023]</label>
+			<visible>Window.IsVisible(2003) + container.content(tvshows) + stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>		
+		<control type="label">
+			<description>path label control</description>
+			<posx>394</posx>
+			<posy>208</posy>
+			<width>490</width>
+			<align>center</align>
+			<font>plot1</font>
+			<haspath>true</haspath>
+			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31024]</label>
+			<visible>Window.IsVisible(2003) + container.content(episodes) + !stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
+		</control>
+		<control type="group">
 			<control type="list" id="450">
 				<posx>413</posx>
 				<posy>259</posy>
@@ -81,6 +173,30 @@
 						<aligny>top</aligny>
 						<info>ListItem.Label</info>
 						<textcolor>White</textcolor>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="panel" id="451">
+				<posx>427</posx>
+				<posy>272</posy>
+				<width>450</width>
+				<height>272</height>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="136" width="224">
+					<control type="image">
+						<width>200</width>
+						<height>120</height>
+						<info>ListItem.Icon</info>
+						<colordiffuse>75999999</colordiffuse>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="136" width="224">
+					<control type="image">
+						<width>200</width>
+						<height>120</height>
+						<info>ListItem.Icon</info>
+						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
 			</control>

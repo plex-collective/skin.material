@@ -2,7 +2,6 @@
 <includes>
 	<include file="Defaults.xml"/>
 	<include file="CommonViews.xml"/>
-	<include file="NowPlayingIncludes.xml"/>
 	<include file="IncludesDialogs.xml"/>
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesOSD.xml"/>

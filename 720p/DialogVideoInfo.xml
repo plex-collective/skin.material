@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <window id="2003">
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">1</defaultcontrol>
 	<controls>
 		<include>Background</include>
 		<include>Header</include>
@@ -81,7 +81,7 @@
 					<control type="textbox" id="4">
 						<description>Plot</description>
 						<width>830</width>
-						<height>74</height>
+						<height>76</height>
 						<font>info1</font>
 						<scroll>true</scroll>
 						<autoscroll delay="6000" time="2000" repeat="10000"/>
@@ -167,7 +167,7 @@
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
-							<height>1</height>
+							<height>5</height>
 							<label/>
 						</control>
 						<control type="image">
@@ -179,7 +179,7 @@
 						<control type="image">
 							<visible>!IsEmpty(ListItem.Rating)</visible>
 							<width>106</width>
-							<height>18</height>
+							<height>19</height>
 							<info>ListItem.StarRating</info>
 							<posx>357</posx>
 							<posy>26</posy>
@@ -414,7 +414,7 @@
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
-							<height>1</height>
+							<height>5</height>
 							<label/>
 						</control>
 						<control type="image">
@@ -426,7 +426,7 @@
 						<control type="image">
 							<visible>!IsEmpty(ListItem.Rating)</visible>
 							<width>106</width>
-							<height>18</height>
+							<height>19</height>
 							<info>ListItem.StarRating</info>
 							<posx>357</posx>
 							<posy>26</posy>
@@ -577,7 +577,7 @@
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 						<control type="label">
-							<height>1</height>
+							<height>5</height>
 							<label/>
 						</control>
 						<control type="image">
@@ -589,7 +589,7 @@
 						<control type="image">
 							<visible>!IsEmpty(ListItem.Rating)</visible>
 							<width>106</width>
-							<height>18</height>
+							<height>19</height>
 							<info>ListItem.StarRating</info>
 							<posx>357</posx>
 							<posy>26</posy>
@@ -686,11 +686,20 @@
 				</control>
 			</control>
 		</control>
-		<control type="list" id="50">
-			<itemlayout height="50">
-		</itemlayout>
-			<focusedlayout height="50">
-		</focusedlayout>
+		<control type="button" id="1">
+			<onup>activatewindow(57)</onup>
+			<ondown>activatewindow(57)</ondown>
+			<onclick>SendClick(2003,8)</onclick>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>Container.Content(Movies) | Container.Content(episodes)</visible>
+		</control>
+		<control type="button" id="1">
+			<onup>activatewindow(57)</onup>
+			<ondown>activatewindow(57)</ondown>
+			<texturenofocus>-</texturenofocus>
+			<texturefocus>-</texturefocus>
+			<visible>![Container.Content(Movies) | Container.Content(episodes)]</visible>
 		</control>
 	</controls>
 </window>

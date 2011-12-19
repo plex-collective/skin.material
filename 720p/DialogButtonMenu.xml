@@ -8,10 +8,8 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-			<include>screentype</include>
 			<aspectratio>stretch</aspectratio>
 			<texture>overlays/background.png</texture>
-			<include>transition2.5</include>
 		</control>
 		<control type="group">
 			<include>HomeMenu</include>
