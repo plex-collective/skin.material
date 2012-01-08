@@ -77,5 +77,8 @@
 <!--  DVD  -->
 	<string id="31600">Play</string>
 	<string id="31601">Eject Disc</string>
-	
+
+<!--  Music  -->
+	<string id="31700">of</string>
+
 </strings>

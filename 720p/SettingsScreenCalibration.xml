@@ -4,59 +4,50 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="videowindow">
-			<description>Video Window</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 		</control>
 		<control type="mover" id="8">
-			<description>top left mover</description>
 			<posx>20</posx>
 			<posy>20</posy>
-			<texturefocus>calibrate/CalibrateTopLeftFo.png</texturefocus>
-			<texturenofocus>calibrate/CalibrateTopLeft.png</texturenofocus>
+			<texturefocus>Calibrate/TopLeftFocused.png</texturefocus>
+			<texturenofocus>Calibrate/TopLeft.png</texturenofocus>
 		</control>
 		<control type="mover" id="9">
-			<description>right bottom mover</description>
 			<posx>699</posx>
 			<posy>499</posy>
-			<texturefocus>calibrate/CalibrateBottomRightFo.png</texturefocus>
-			<texturenofocus>calibrate/CalibrateBottomRight.png</texturenofocus>
+			<texturefocus>Calibrate/BottomRightFocused.png</texturefocus>
+			<texturenofocus>Calibrate/BottomRight.png</texturenofocus>
 		</control>
 		<control type="mover" id="10">
-			<description>subtitle position mover</description>
 			<posx>200</posx>
 			<posy>500</posy>
-			<texturefocus>calibrate/CalibrateSubTitlesFo.png</texturefocus>
-			<texturenofocus>calibrate/CalibrateSubTitles.png</texturenofocus>
+			<texturefocus>Calibrate/SubTitlesFocused.png</texturefocus>
+			<texturenofocus>Calibrate/SubTitles.png</texturenofocus>
 		</control>
 		<control type="resize" id="11">
-			<description>pixel aspect ratio box</description>
 			<posx>0</posx>
 			<posy>270</posy>
 			<width>360</width>
 			<height>360</height>
-			<texturefocus>calibrate/CalibratePixelRatioFo.png</texturefocus>
-			<texturenofocus>calibrate/CalibratePixelRatio.png</texturenofocus>
+			<texturefocus>Calibrate/PixelRatioFocused.png</texturefocus>
+			<texturenofocus>Calibrate/PixelRatio.png</texturenofocus>
 		</control>
 		<control type="label" id="2">
-			<description>coordinates label</description>
 			<posx>0</posx>
 			<posy>40</posy>
 			<width>1280</width>
 			<align>center</align>
-			<label>-</label>
 			<font>list1</font>
 			<textcolor>White</textcolor>
 		</control>
 		<control type="label" id="3">
-			<description>help information</description>
 			<posx>0</posx>
 			<posy>68</posy>
 			<width>1280</width>
 			<align>center</align>
-			<label>-</label>
 			<font>info1</font>
 			<textcolor>Gray</textcolor>
 		</control>

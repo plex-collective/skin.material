@@ -5,11 +5,11 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
-		<include>dialogOpen</include>
+	<include>dialogOpen</include>
 	<controls>
-	<control type="image">
-		<include>dialogDiffuse</include>
-	</control>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
 		<control type="group">
 			<posx>309</posx>
 			<posy>191</posy>
@@ -30,15 +30,12 @@
 				<control type="label" id="2">
 					<posy>103</posy>
 					<width>422</width>
-					<align>center</align>
-					<font>list1</font>
+					<include>dialogHeading</include>
 				</control>
 				<control type="label" id="1">
 					<posy>131</posy>
 					<width>422</width>
-					<align>center</align>
-					<font>info1</font>
-					<textcolor>Gray</textcolor>
+					<include>dialogLine</include>
 				</control>
 				<control type="image" id="10">
 					<posx>70</posx>

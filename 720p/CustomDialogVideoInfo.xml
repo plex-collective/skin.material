@@ -37,7 +37,7 @@
 					<onup>12</onup>
 					<ondown>10</ondown>
 					<onclick>SendClick(2003,8)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 				<control type="button" id="10">
 					<posy>54</posy>
@@ -46,7 +46,7 @@
 					<ondown>12</ondown>
 					<onclick>Dialog.Close(57)</onclick>
 					<onclick>SendClick(2003,10)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 				<control type="button" id="12">
 					<posy>108</posy>
@@ -55,7 +55,7 @@
 					<ondown>8</ondown>
 					<onclick>Dialog.Close(57)</onclick>
 					<onclick>SendClick(2003,12)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 			</control>
 		</control>
@@ -84,7 +84,7 @@
 					<ondown>12</ondown>
 					<onclick>Dialog.Close(57)</onclick>
 					<onclick>SendClick(2003,10)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 				<control type="button" id="12">
 					<posy>54</posy>
@@ -93,7 +93,7 @@
 					<ondown>8</ondown>
 					<onclick>Dialog.Close(57)</onclick>
 					<onclick>SendClick(2003,12)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 			</control>
 		</control>
@@ -121,7 +121,7 @@
 					<onup>10</onup>
 					<ondown>10</ondown>
 					<onclick>SendClick(2003,8)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 				<control type="button" id="10">
 					<posy>54</posy>
@@ -130,7 +130,7 @@
 					<ondown>8</ondown>
 					<onclick>Dialog.Close(57)</onclick>
 					<onclick>SendClick(2003,10)</onclick>
-					<include>contextMenuButton</include>
+					<include>dialogButton</include>
 				</control>
 			</control>
 		</control>

@@ -1,44 +1,11 @@
 <?xml version="1.0"?>
 <includes>
-	<include file="Defaults.xml"/>
 	<include file="CommonViews.xml"/>
+	<include file="Defaults.xml"/>
 	<include file="IncludesDialogs.xml"/>
 	<include file="IncludesHome.xml"/>
 	<include file="IncludesOSD.xml"/>
-	<include name="ButtonPaused">
-		<texturenofocus>osd/osd_button_play.png</texturenofocus>
-		<texturefocus>osd/osd_button_play_fo.png</texturefocus>
-	</include>
-	<include name="ButtonNotPaused">
-		<texturenofocus>osd/osd_button_pause.png</texturenofocus>
-		<texturefocus>osd/osd_button_pause_fo.png</texturefocus>
-	</include>
-	<include name="Control298Focus">
-		<onfocus>SetFocus(298,0)</onfocus>
-	</include>
-	<include name="Control299Focus">
-		<onfocus>SetFocus(299,0)</onfocus>
-	</include>
-	<include name="videoPageLabel">
-		<posx>30</posx>
-		<posy>15</posy>
-		<width>1000</width>
-		<height>56</height>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>title1</font>
-		<textcolor>White</textcolor>
-	</include>
-	<include name="videoPageLabel">
-		<posx>30</posx>
-		<posy>15</posy>
-		<width>1000</width>
-		<height>56</height>
-		<align>left</align>
-		<aligny>center</aligny>
-		<font>title1</font>
-		<textcolor>White</textcolor>
-	</include>
+	<include file="IncludesHUD.xml"/>
 	<include name="Time">
 		<control type="grouplist">
 			<posx>1062</posx>
@@ -63,14 +30,14 @@
 			<posy>16</posy>
 			<width>128</width>
 			<align>right</align>
-			<itemgap>12</itemgap>
+			<itemgap>13</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="image">
 				<visible>Player.HasAudio + Player.Playing</visible>
 				<posy>17</posy>
 				<width>16</width>
-				<height>16</height>
-				<texture>audio_playing.png</texture>
+				<height>18</height>
+				<texture>BackgroundAudio.png</texture>
 			</control>
 			<control type="label">
 				<posy>0</posy>
@@ -86,7 +53,7 @@
 	</include>
 	<include name="Header">
 		<control type="grouplist">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<orientation>horizontal</orientation>
 			<width>800</width>
@@ -125,7 +92,7 @@
 			</control>
 		</control>
 		<control type="grouplist">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<orientation>horizontal</orientation>
 			<width>800</width>
@@ -166,7 +133,7 @@
 	</include>
 	<include name="HeaderAudio">
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
@@ -178,7 +145,7 @@
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -192,7 +159,7 @@
 	</include>
 	<include name="HeaderVideo">
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
@@ -204,7 +171,7 @@
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -218,7 +185,7 @@
 	</include>
 	<include name="HeaderShared">
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
@@ -230,7 +197,7 @@
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -244,7 +211,7 @@
 	</include>
 	<include name="HeaderPictures">
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
@@ -256,7 +223,7 @@
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
@@ -270,7 +237,7 @@
 	</include>
 	<include name="HeaderApplications">
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
@@ -282,7 +249,7 @@
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 		</control>
 		<control type="label">
-			<posx>91</posx>
+			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>

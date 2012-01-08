@@ -7,7 +7,7 @@
 			<visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
 		</control>
 		<control type="group">
-			<include>OSDMediaInformation</include>
+			<include>OSDMediaInfo</include>
 			<visible>ControlGroup(214).Hasfocus + ![Window.IsActive(123) | Window.IsActive(124)]</visible>
 		</control>
 	</controls>

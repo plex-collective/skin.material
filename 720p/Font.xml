@@ -48,13 +48,7 @@
 			<variant>Medium</variant>
 		</font>
 		<font>
-			<name>osd1</name>
-			<size>21</size>
-			<filename>HelveticaNeue</filename>
-			<variant>Bold</variant>
-		</font>
-		<font>
-			<name>osd2</name>
+			<name>osd</name>
 			<size>19</size>
 			<filename>HelveticaNeue</filename>
 			<variant>Bold</variant>

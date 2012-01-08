@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <window type="dialog" id="142">
-	<defaultcontrol>-</defaultcontrol>
 	<controls>
-		<include>OSDMediaInformation</include>
+		<include>OSDMediaInfo</include>
 	</controls>
 </window>

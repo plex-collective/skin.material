@@ -564,20 +564,27 @@
 							<font>list1</font>
 						</control>
 						<control type="image">
-							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-							<posy>1</posy>
+							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
-							<height>52</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
+							<height>12</height>
+							<texture>Badges/Unwatched.png</texture>
+						</control>
+						<control type="image">
+							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<posy>22</posy>
+							<posx>10</posx>
+							<width>12</width>
+							<height>12</height>
+							<texture>Badges/InProgress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 						</control>
 						<control type="image">
@@ -586,7 +593,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
+							<texture>Badges/UnwatchedCount.png</texture>
 							<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
 						</control>
 						<control type="label">
@@ -632,7 +639,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
+							<texture>Badges/NowPlaying.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -812,20 +819,27 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<visible>![Container.Content(tvshows) | Container.Content(seasons)]</visible>
-							<posy>1</posy>
+							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
-							<height>52</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
+							<height>12</height>
+							<texture>Badges/Unwatched.png</texture>
+						</control>
+						<control type="image">
+							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<posy>22</posy>
+							<posx>10</posx>
+							<width>12</width>
+							<height>12</height>
+							<texture>Badges/InProgress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
@@ -834,7 +848,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/focus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,Focused.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
@@ -845,7 +859,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>unwatchedlabel.png</texture>
+							<texture>Badges/UnwatchedCount.png</texture>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -854,7 +868,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>unwatchedlabelfocus.png</texture>
+							<texture>Badges/UnwatchedCountFocused.png</texture>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
@@ -929,7 +943,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
+							<texture>Badges/NowPlaying.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -939,7 +953,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlayingFO.png</texture>
+							<texture>Badges/NowPlayingFocused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
@@ -1033,19 +1047,27 @@
 							<font>plot1</font>
 						</control>
 						<control type="image">
-							<posy>-1</posy>
+							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png)</visible>
+							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
-							<height>72</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
+							<height>12</height>
+							<texture>Badges/Unwatched.png</texture>
+						</control>
+						<control type="image">
+							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
+							<posy>22</posy>
+							<posx>10</posx>
+							<width>12</width>
+							<height>12</height>
+							<texture>Badges/InProgress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 						</control>
 					</control>
@@ -1132,19 +1154,27 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<posy>-1</posy>
+							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png)</visible>
+							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
-							<height>72</height>
-							<texture>$INFO[ListItem.Overlay]</texture>
-							<aspectratio align="left" alingy="center">keep</aspectratio>
+							<height>12</height>
+							<texture>Badges/Unwatched.png</texture>
+						</control>
+						<control type="image">
+							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
+							<posy>22</posy>
+							<posx>10</posx>
+							<width>12</width>
+							<height>12</height>
+							<texture>Badges/InProgress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/unfocus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
@@ -1153,7 +1183,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),flags/resolution/focus/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,Focused.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
@@ -1207,7 +1237,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
+							<texture>Badges/NowPlaying.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -1317,7 +1347,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlaying.png</texture>
+							<texture>Badges/NowPlaying.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -1327,7 +1357,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>OverlayNowPlayingFO.png</texture>
+							<texture>Badges/NowPlayingFocused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
@@ -1419,37 +1449,7 @@
 		</control>
 		<!-- /Scroll Letter -->
 		<control type="group">
-			<visible>Container.Scrolling + !Control.IsVisible(53)</visible>
-			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
-			<control type="image">
-				<posx>850</posx>
-				<posy>396</posy>
-				<width>140</width>
-				<height>134</height>
-				<texture>overlay.png</texture>
-			</control>
-			<control type="label">
-				<posx>850</posx>
-				<posy>392</posy>
-				<width>140</width>
-				<height>134</height>
-				<label>$INFO[ListItem.SortLetter]</label>
-				<font>sortletter</font>
-				<textcolor>Shadow</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-			</control>
-			<control type="label">
-				<posx>850</posx>
-				<posy>390</posy>
-				<width>140</width>
-				<height>134</height>
-				<label>$INFO[ListItem.SortLetter]</label>
-				<font>sortletter</font>
-				<textcolor>White</textcolor>
-				<aligny>center</aligny>
-				<align>center</align>
-			</control>
+			<include>ScrollLetterHUD</include>
 		</control>
 	</include>
 </includes>

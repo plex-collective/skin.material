@@ -73,7 +73,7 @@
 				<control type="grouplist" id="350">
 					<visible>true</visible>
 					<posx>5</posx>
-					<posy>44</posy>
+					<posy>53</posy>
 					<width>348</width>
 					<height>420</height>
 					<itemgap>-1</itemgap>
@@ -96,7 +96,6 @@
 							<onup>310</onup>
 							<ondown>71</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]A[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="66">
@@ -108,7 +107,6 @@
 							<onup>310</onup>
 							<ondown>72</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]B[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="67">
@@ -120,7 +118,6 @@
 							<onup>310</onup>
 							<ondown>73</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]C[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="68">
@@ -132,7 +129,6 @@
 							<onup>310</onup>
 							<ondown>74</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]D[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="69">
@@ -144,7 +140,6 @@
 							<onup>310</onup>
 							<ondown>75</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]E[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="70">
@@ -156,7 +151,6 @@
 							<onup>310</onup>
 							<ondown>76</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]F[/LOWERCASE]</label>
 						</control>
 					</control>
@@ -172,7 +166,6 @@
 							<onup>65</onup>
 							<ondown>77</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]G[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="72">
@@ -184,7 +177,6 @@
 							<onup>66</onup>
 							<ondown>78</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]H[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="73">
@@ -196,7 +188,6 @@
 							<onup>67</onup>
 							<ondown>79</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]I[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="74">
@@ -208,7 +199,6 @@
 							<onup>68</onup>
 							<ondown>80</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]J[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="75">
@@ -220,7 +210,6 @@
 							<onup>69</onup>
 							<ondown>81</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]K[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="76">
@@ -232,7 +221,6 @@
 							<onup>70</onup>
 							<ondown>82</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]L[/LOWERCASE]</label>
 						</control>
 					</control>
@@ -248,7 +236,6 @@
 							<onup>71</onup>
 							<ondown>83</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]M[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="78">
@@ -260,7 +247,6 @@
 							<onup>72</onup>
 							<ondown>84</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]N[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="79">
@@ -272,7 +258,6 @@
 							<onup>73</onup>
 							<ondown>85</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]O[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="80">
@@ -284,7 +269,6 @@
 							<onup>74</onup>
 							<ondown>86</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]P[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="81">
@@ -296,7 +280,6 @@
 							<onup>75</onup>
 							<ondown>87</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]Q[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="82">
@@ -308,7 +291,6 @@
 							<onup>76</onup>
 							<ondown>88</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]R[/LOWERCASE]</label>
 						</control>
 					</control>
@@ -324,7 +306,6 @@
 							<onup>77</onup>
 							<ondown>89</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]S[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="84">
@@ -336,7 +317,6 @@
 							<onup>78</onup>
 							<ondown>90</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]T[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="85">
@@ -348,7 +328,6 @@
 							<onup>79</onup>
 							<ondown>91</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]U[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="86">
@@ -360,7 +339,6 @@
 							<onup>80</onup>
 							<ondown>92</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]V[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="87">
@@ -372,7 +350,6 @@
 							<onup>81</onup>
 							<ondown>93</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]W[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="88">
@@ -384,7 +361,6 @@
 							<onup>82</onup>
 							<ondown>94</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]X[/LOWERCASE]</label>
 						</control>
 					</control>
@@ -400,7 +376,6 @@
 							<onup>83</onup>
 							<ondown>95</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]Y[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="90">
@@ -412,7 +387,6 @@
 							<onup>84</onup>
 							<ondown>96</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]Z[/LOWERCASE]</label>
 						</control>
 						<control type="button" id="91">
@@ -424,7 +398,6 @@
 							<onup>85</onup>
 							<ondown>97</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12310][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="92">
@@ -436,7 +409,6 @@
 							<onup>86</onup>
 							<ondown>98</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12311][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="93">
@@ -448,7 +420,6 @@
 							<onup>87</onup>
 							<ondown>99</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12312][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="94">
@@ -460,7 +431,6 @@
 							<onup>88</onup>
 							<ondown>100</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12313][/LOWERCASE]</label>
 						</control>
 					</control>
@@ -476,7 +446,6 @@
 							<onup>89</onup>
 							<ondown>8</ondown>
 							<posx>0</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12314][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="96">
@@ -488,7 +457,6 @@
 							<onup>90</onup>
 							<ondown>8</ondown>
 							<posx>54</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12315][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="97">
@@ -500,7 +468,6 @@
 							<onup>91</onup>
 							<ondown>32</ondown>
 							<posx>108</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12316][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="98">
@@ -512,7 +479,6 @@
 							<onup>92</onup>
 							<ondown>32</ondown>
 							<posx>162</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12317][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="99">
@@ -524,7 +490,6 @@
 							<onup>93</onup>
 							<ondown>10</ondown>
 							<posx>216</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12318][/LOWERCASE]</label>
 						</control>
 						<control type="button" id="100">
@@ -536,62 +501,50 @@
 							<onup>94</onup>
 							<ondown>10</ondown>
 							<posx>270</posx>
-							<posy>9</posy>
 							<label>[LOWERCASE]$LOCALIZE[12319][/LOWERCASE]</label>
 						</control>
 					</control>
 					<control type="group" id="357">
 						<width>348</width>
 						<height>54</height>
-						<!-- Delete button -->
+						<!-- Clear -->
 						<control type="button" id="8">
 							<font>keyboardbuttonsmall</font>
 							<posx>0</posx>
-							<posy>9</posy>
-							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
-							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>							<onleft>100</onleft>
-							<onleft>5100</onleft>
-							<onright>32</onright>
 							<onup>95</onup>
 							<ondown>-</ondown>
+							<onleft>5100</onleft>
+							<onright>32</onright>
+							<label>$LOCALIZE[31403]</label>
 							<include>keyboardWideButton</include>
 							<textoffsetx>-16</textoffsetx>
 						</control>
-						<control type="group">
-							<posx>112</posx>
-							<posy>9</posy>
-							<!-- Space -->
-							<control type="button" id="32">
-								<font>keyboardbuttonsmall</font>
-								<posx>-12</posx>
-								<posy>0</posy>
-								<width>116</width>
-								<onleft>8</onleft>
-								<onright>10</onright>
-								<onup>97</onup>
-								<ondown>-</ondown>
-								<texturefocus>dialogs/buttonkb-spacesearch.png</texturefocus>
-								<label>$LOCALIZE[31402]</label>
-								<include>keyboardWideButton</include>
-								<textoffsetx>-16</textoffsetx>
-							</control>
-						</control>
-						<control type="group">
-							<!-- Clear -->
+						<!-- Delete button -->
+						<control type="button" id="10">
+							<font>keyboardbuttonsmall</font>
 							<posx>224</posx>
-							<posy>9</posy>
-							<control type="button" id="10">
-								<font>keyboardbuttonsmall</font>
-								<posx>0</posx>
-								<posy>0</posy>
-								<onleft>32</onleft>
-								<onright>9001</onright>
-								<onup>100</onup>
-								<ondown>-</ondown>
-								<label>$LOCALIZE[31403]</label>
-								<include>keyboardWideButton</include>
-								<textoffsetx>-16</textoffsetx>
-							</control>
+							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
+							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>							
+							<onup>100</onup>
+							<ondown>-</ondown>
+							<onleft>32</onleft>
+							<onright>9001</onright>
+							<include>keyboardWideButton</include>
+							<textoffsetx>-16</textoffsetx>
+						</control>
+						<!-- Space -->
+						<control type="button" id="32">
+							<font>keyboardbuttonsmall</font>
+							<posx>100</posx>
+							<width>116</width>
+							<onup>97</onup>
+							<ondown>-</ondown>
+							<onleft>8</onleft>
+							<onright>10</onright>
+							<texturefocus>dialogs/buttonkb-spacesearch.png</texturefocus>
+							<label>$LOCALIZE[31402]</label>
+							<include>keyboardWideButton</include>
+							<textoffsetx>-16</textoffsetx>
 						</control>
 					</control>
 				</control>

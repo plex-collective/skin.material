@@ -8,8 +8,8 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-			<aspectratio>stretch</aspectratio>
 			<texture>overlays/background.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="group">
 			<include>HomeMenu</include>

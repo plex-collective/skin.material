@@ -29,37 +29,24 @@
 			<control type="group">
 				<posx>91</posx>
 				<control type="label" id="1">
-					<description>heading label</description>
 					<posy>102</posy>
 					<width>480</width>
-					<label>13406</label>
-					<align>center</align>
-					<font>list1</font>
+					<include>dialogHeading</include>
 				</control>
 				<control type="label" id="2">
-					<description>dialog line 1</description>
 					<posy>130</posy>
 					<width>480</width>
-					<label>13406</label>
-					<align>center</align>
-					<font>plot1</font>
-					<textcolor>Gray</textcolor>
+					<include>dialogLine</include>
 				</control>
 				<control type="label" id="3">
-					<description>dialog line 2</description>
 					<posy>153</posy>
 					<width>480</width>
-					<align>center</align>
-					<font>plot1</font>
-					<textcolor>Gray</textcolor>
+					<include>dialogLine</include>
 				</control>
 				<control type="label" id="4">
-					<description>dialog line 3</description>
 					<posy>176</posy>
 					<width>480</width>
-					<align>center</align>
-					<font>plot1</font>
-					<textcolor>Gray</textcolor>
+					<include>dialogLine</include>
 				</control>
 				<control type="group">
 					<posx>29</posx>
@@ -69,7 +56,7 @@
 						<label>107</label>
 						<onup>10</onup>
 						<ondown>10</ondown>
-						<include>contextMenuButton</include>
+						<include>dialogButton</include>
 					</control>
 					<control type="button" id="10">
 						<description>No button</description>
@@ -77,7 +64,7 @@
 						<label>106</label>
 						<ondown>11</ondown>
 						<onup>11</onup>
-						<include>contextMenuButton</include>
+						<include>dialogButton</include>
 					</control>
 				</control>
 			</control>

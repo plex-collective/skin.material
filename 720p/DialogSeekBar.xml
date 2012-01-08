@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <window id="115">
-	<defaultcontrol>-</defaultcontrol>
-	<visible>[Player.ShowInfo + Window.IsActive(FullScreenVideo)] + !Window.IsActive(VideoOSD) | Window.IsActive(142) | [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![Window.IsActive(VideoOSD) | Window.IsActive(50)]</visible>
+	<visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + [Window.IsActive(2005) + !Window.IsActive(2901)] | Window.IsActive(142)</visible>
 	<controls>
-		<include>OSDProgressBar</include>
+		<include>OSDSeekBar</include>
 	</controls>
 </window>

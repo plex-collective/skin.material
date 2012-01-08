@@ -28,12 +28,11 @@
 			<posx>340</posx>
 			<posy>168</posy>
 			<control type="label" id="311">
-				<posy>13</posy>
 				<posx>34</posx>
+				<posy>13</posy>
 				<width>542</width>
 				<textcolor>Gray</textcolor>
-				<align>center</align>
-				<font>list1</font>
+				<include>dialogHeading</include>
 			</control>
 			<control type="label" id="310">
 				<description>Text Entry</description>
@@ -52,7 +51,6 @@
 				<posy>118</posy>
 				<control type="button" id="48">
 					<description>'0' button</description>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>57</onleft>
 					<onright>49</onright>
 					<onup>305</onup>
@@ -62,7 +60,6 @@
 				<control type="button" id="49">
 					<description>'1' button</description>
 					<posx>44</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>48</onleft>
 					<onright>50</onright>
 					<onup>306</onup>
@@ -72,7 +69,6 @@
 				<control type="button" id="50">
 					<description>'2' button</description>
 					<posx>88</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>49</onleft>
 					<onright>51</onright>
 					<onup>306</onup>
@@ -82,7 +78,6 @@
 				<control type="button" id="51">
 					<description>'3' button</description>
 					<posx>132</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>50</onleft>
 					<onright>52</onright>
 					<onup>32</onup>
@@ -92,7 +87,6 @@
 				<control type="button" id="52">
 					<description>'4' button</description>
 					<posx>176</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>51</onleft>
 					<onright>53</onright>
 					<onup>32</onup>
@@ -102,7 +96,6 @@
 				<control type="button" id="53">
 					<description>'5' button</description>
 					<posx>220</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>52</onleft>
 					<onright>54</onright>
 					<onup>32</onup>
@@ -112,7 +105,6 @@
 				<control type="button" id="54">
 					<description>'6' button</description>
 					<posx>264</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>53</onleft>
 					<onright>55</onright>
 					<onup>32</onup>
@@ -122,7 +114,6 @@
 				<control type="button" id="55">
 					<description>'7' button</description>
 					<posx>308</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>54</onleft>
 					<onright>56</onright>
 					<onup>304</onup>
@@ -132,7 +123,6 @@
 				<control type="button" id="56">
 					<description>'8' button</description>
 					<posx>352</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>55</onleft>
 					<onright>57</onright>
 					<onup>304</onup>
@@ -142,7 +132,6 @@
 				<control type="button" id="57">
 					<description>'9' button</description>
 					<posx>396</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>56</onleft>
 					<onright>48</onright>
 					<onup>307</onup>
@@ -153,10 +142,8 @@
 			<control type="group">
 				<posx>78</posx>
 				<posy>170</posy>
-				<visible>!Skin.HasSetting(keyboardButtons)</visible>
 				<control type="button" id="81">
 					<description>'Q' button</description>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>80</onleft>
 					<onright>87</onright>
 					<onup>48</onup>
@@ -166,7 +153,6 @@
 				<control type="button" id="87">
 					<description>'W' button</description>
 					<posx>44</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>81</onleft>
 					<onright>69</onright>
 					<onup>49</onup>
@@ -176,7 +162,6 @@
 				<control type="button" id="69">
 					<description>'E' button</description>
 					<posx>88</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>87</onleft>
 					<onright>82</onright>
 					<onup>50</onup>
@@ -186,7 +171,6 @@
 				<control type="button" id="82">
 					<description>'R' button</description>
 					<posx>132</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>69</onleft>
 					<onright>84</onright>
 					<onup>51</onup>
@@ -196,7 +180,6 @@
 				<control type="button" id="84">
 					<description>'T' button</description>
 					<posx>176</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>82</onleft>
 					<onright>89</onright>
 					<onup>52</onup>
@@ -206,7 +189,6 @@
 				<control type="button" id="89">
 					<description>'Y' button</description>
 					<posx>220</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>84</onleft>
 					<onright>85</onright>
 					<onup>53</onup>
@@ -216,7 +198,6 @@
 				<control type="button" id="85">
 					<description>'U' button</description>
 					<posx>264</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>89</onleft>
 					<onright>73</onright>
 					<onup>54</onup>
@@ -226,7 +207,6 @@
 				<control type="button" id="73">
 					<description>'I' button</description>
 					<posx>308</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>85</onleft>
 					<onright>79</onright>
 					<onup>55</onup>
@@ -236,7 +216,6 @@
 				<control type="button" id="79">
 					<description>'O' button</description>
 					<posx>352</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>73</onleft>
 					<onright>80</onright>
 					<onup>56</onup>
@@ -246,7 +225,6 @@
 				<control type="button" id="80">
 					<description>'P' button</description>
 					<posx>396</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>79</onleft>
 					<onright>81</onright>
 					<onup>57</onup>
@@ -257,10 +235,8 @@
 			<control type="group">
 				<posx>100</posx>
 				<posy>222</posy>
-				<visible>!Skin.HasSetting(keyboardButtons)</visible>
 				<control type="button" id="65">
 					<description>'A' button</description>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>76</onleft>
 					<onright>83</onright>
 					<onup>81</onup>
@@ -270,7 +246,6 @@
 				<control type="button" id="83">
 					<description>'S' button</description>
 					<posx>44</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>65</onleft>
 					<onright>68</onright>
 					<onup>87</onup>
@@ -280,7 +255,6 @@
 				<control type="button" id="68">
 					<description>'D' button</description>
 					<posx>88</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>83</onleft>
 					<onright>70</onright>
 					<onup>69</onup>
@@ -290,7 +264,6 @@
 				<control type="button" id="70">
 					<description>'F' button</description>
 					<posx>132</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>68</onleft>
 					<onright>71</onright>
 					<onup>82</onup>
@@ -300,7 +273,6 @@
 				<control type="button" id="71">
 					<description>'G' button</description>
 					<posx>176</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>70</onleft>
 					<onright>72</onright>
 					<onup>84</onup>
@@ -310,7 +282,6 @@
 				<control type="button" id="72">
 					<description>'H' button</description>
 					<posx>220</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>71</onleft>
 					<onright>74</onright>
 					<onup>89</onup>
@@ -320,7 +291,6 @@
 				<control type="button" id="74">
 					<description>'J' button</description>
 					<posx>264</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>72</onleft>
 					<onright>75</onright>
 					<onup>85</onup>
@@ -330,7 +300,6 @@
 				<control type="button" id="75">
 					<description>'K' button</description>
 					<posx>308</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>74</onleft>
 					<onright>76</onright>
 					<onup>73</onup>
@@ -340,7 +309,6 @@
 				<control type="button" id="76">
 					<description>'L' button</description>
 					<posx>352</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>75</onleft>
 					<onright>65</onright>
 					<onup>79</onup>
@@ -351,7 +319,6 @@
 			<control type="group">
 				<posx>54</posx>
 				<posy>274</posy>
-				<visible>!Skin.HasSetting(keyboardButtons)</visible>
 				<control type="togglebutton" id="302">
 					<description>SHIFT button</description>
 					<texturenofocus>dialogs/buttonkb-shift.png</texturenofocus>
@@ -367,7 +334,6 @@
 				<control type="button" id="90">
 					<description>'Z' button</description>
 					<posx>90</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>302</onleft>
 					<onright>88</onright>
 					<onup>83</onup>
@@ -377,7 +343,6 @@
 				<control type="button" id="88">
 					<description>'X' button</description>
 					<posx>134</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>90</onleft>
 					<onright>67</onright>
 					<onup>68</onup>
@@ -387,7 +352,6 @@
 				<control type="button" id="67">
 					<description>'C' button</description>
 					<posx>178</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>88</onleft>
 					<onright>86</onright>
 					<onup>70</onup>
@@ -397,7 +361,6 @@
 				<control type="button" id="86">
 					<description>'V' button</description>
 					<posx>222</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>67</onleft>
 					<onright>66</onright>
 					<onup>71</onup>
@@ -407,7 +370,6 @@
 				<control type="button" id="66">
 					<description>'B' button</description>
 					<posx>266</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>86</onleft>
 					<onright>78</onright>
 					<onup>72</onup>
@@ -417,7 +379,6 @@
 				<control type="button" id="78">
 					<description>'N' button</description>
 					<posx>310</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>66</onleft>
 					<onright>77</onright>
 					<onup>74</onup>
@@ -427,7 +388,6 @@
 				<control type="button" id="77">
 					<description>'M' button</description>
 					<posx>354</posx>
-					<textoffsetx>-16</textoffsetx>
 					<onleft>78</onleft>
 					<onright>8</onright>
 					<onup>75</onup>
@@ -449,11 +409,9 @@
 			<control type="group">
 				<posx>54</posx>
 				<posy>326</posy>
-				<visible>!Skin.HasSetting(keyboardButtons)</visible>
 				<control type="button" id="304">
 					<description>SYMBOLS button</description>
 					<posx>0</posx>
-					<textoffsetx>-16</textoffsetx>
 					<label>.?#@</label>
 					<font>keyboardbuttonsmall</font>
 					<onleft>300</onleft>
@@ -465,7 +423,6 @@
 				<control type="button" id="305">
 					<description>previous button</description>
 					<posx>90</posx>
-					<textoffsetx>-16</textoffsetx>
 					<textoffsety>-3</textoffsety>
 					<label>&lt;</label>
 					<onleft>304</onleft>
@@ -477,7 +434,6 @@
 				<control type="button" id="32">
 					<description>SPACE button</description>
 					<posx>134</posx>
-					<textoffsetx>-16</textoffsetx>
 					<label>20182</label>
 					<onleft>305</onleft>
 					<onright>306</onright>
@@ -489,7 +445,6 @@
 				<control type="button" id="306">
 					<description>next button</description>
 					<posx>354</posx>
-					<textoffsetx>-16</textoffsetx>
 					<textoffsety>-3</textoffsety>
 					<label>&gt;</label>
 					<onleft>32</onleft>
@@ -501,7 +456,6 @@
 				<control type="button" id="300">
 					<description>DONE button</description>
 					<posx>398</posx>
-					<textoffsetx>-16</textoffsetx>
 					<label>20177</label>
 					<font>keyboardbuttonsmall</font>
 					<onleft>306</onleft>

@@ -42,7 +42,7 @@
 			<!-- Fanart from PMS -->
 			<control type="multiimage">
 				<posx>0</posx>
-				<posy>-50</posy>
+				<posy>-20</posy>
 				<width>1280</width>
 				<height>720</height>
 				<aspectratio>scale</aspectratio>
@@ -106,9 +106,9 @@
 			<!-- The main menu. Label2 is used for tracking focus -->
 			<control type="wraplist" id="300">
 				<description>Home Main Menu</description>
-				<posx>0</posx>
+				<posx>-110</posx>
 				<posy>289</posy>
-				<width>1280</width>
+				<width>1500</width>
 				<height>300</height>
 				<onup>-</onup>
 				<ondown>350</ondown>
@@ -116,11 +116,11 @@
 				<focusposition>3</focusposition>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
-				<itemlayout width="213" height="76">
+				<itemlayout width="250" height="76">
 					<control type="label">
 						<posx>0</posx>
 						<posy>2</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -131,7 +131,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -142,7 +142,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -153,11 +153,11 @@
 						<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout width="213" height="76">
+				<focusedlayout width="250" height="76">
 					<control type="label">
 						<posx>0</posx>
 						<posy>2</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -169,7 +169,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -181,7 +181,7 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>200</width>
+						<width>250</width>
 						<height>76</height>
 						<label>$INFO[ListItem.Label]</label>
 						<align>center</align>
@@ -688,9 +688,9 @@
 			</control>
 			<!-- This label show when the menubar is unfocused -->
 			<control type="label">
-				<posx>544</posx>
+				<posx>515</posx>
 				<posy>289</posy>
-				<width>190</width>
+				<width>250</width>
 				<height>76</height>
 				<label>$INFO[Container(300).ListItem(0).Label]</label>
 				<align>center</align>

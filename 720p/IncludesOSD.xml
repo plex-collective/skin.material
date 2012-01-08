@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="OSDMediaInformation">
+	<include name="OSDMediaInfo">
 		<control type="image" id="1">
 			<posx>110</posx>
 			<posy>49</posy>
 			<height>282</height>
 			<width>1062</width>
-			<texture>osd/osd_back_info.png</texture>
-			<visible>[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]</visible>
+			<texture>OSD/MediaInfoBackground.png</texture>
+			<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 		</control>
 		<control type="image">
 			<posx>143</posx>
 			<posy>292</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="osd/osd_reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="OSD/osd_reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<visible>[VideoPlayer.Content(movies)]</visible>
+			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		<control type="image">
 			<posx>143</posx>
 			<posy>82</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="osd/osd_diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="OSD/osd_diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>osd/osd_border_poster.png</bordertexture>
-			<visible>[VideoPlayer.Content(movies)]</visible>
+			<bordertexture>OSD/osd_border_poster.png</bordertexture>
+			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		<control type="image">
 			<posx>143</posx>
 			<posy>292</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="osd/osd_reflection_square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="OSD/osd_reflection_square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
@@ -42,9 +42,9 @@
 			<posy>82</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="osd/osd_diffuse_square.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="OSD/osd_diffuse_square.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>osd/osd_border_square.png</bordertexture>
+			<bordertexture>OSD/osd_border_square.png</bordertexture>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="group" id="1">
@@ -136,7 +136,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="OSDProgressBar">
+	<include name="OSDSeekBar">
 		<control type="group">
 			<posx>103</posx>
 			<posy>562</posy>
@@ -148,13 +148,13 @@
 				<posy>0</posy>
 				<height>120</height>
 				<width>1074</width>
-				<texture>osd/osd_back_small.png</texture>
+				<texture>OSD/SeekBarBackground.png</texture>
 			</control>
 			<control type="progress" id="23">
 				<description>Progressbar</description>
-				<posx>132</posx>
+				<posx>133</posx>
 				<posy>66</posy>
-				<width>808</width>
+				<width>802</width>
 				<height>16</height>
 				<info>Player.Progress</info>
 				<visible>true</visible>
@@ -180,24 +180,26 @@
 				<label>$INFO[VideoPlayer.Time]</label>
 			</control>
 			<control type="label" id="1">
-				<posx>918</posx>
+				<posx>916</posx>
 				<posy>66</posy>
 				<width>160</width>
 				<height>16</height>
 				<font>info1</font>
 				<align>center</align>
 				<textcolor>Shadow</textcolor>
-				<label>$INFO[VideoPlayer.TimeRemaining]</label>
+				<label>-$INFO[VideoPlayer.TimeRemaining]</label>
+				<visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
 			</control>
 			<control type="label" id="1">
-				<posx>918</posx>
+				<posx>916</posx>
 				<posy>64</posy>
 				<width>160</width>
 				<height>16</height>
 				<font>info1</font>
 				<align>center</align>
 				<textcolor>White</textcolor>
-				<label>$INFO[VideoPlayer.TimeRemaining]</label>
+				<label>-$INFO[VideoPlayer.TimeRemaining]</label>
+				<visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
 			</control>
 		</control>
 		<control type="grouplist">
@@ -214,7 +216,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>2X</label>
 				<visible>player.forwarding2x</visible>
@@ -222,7 +224,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>2X</label>
 				<visible>player.rewinding2x</visible>
@@ -230,7 +232,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>4X</label>
 				<visible>player.forwarding4x</visible>
@@ -238,7 +240,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>4X</label>
 				<visible>player.rewinding4x</visible>
@@ -246,7 +248,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>8X</label>
 				<visible>player.forwarding8x</visible>
@@ -254,7 +256,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>8X</label>
 				<visible>player.rewinding8x</visible>
@@ -262,7 +264,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>16X</label>
 				<visible>player.forwarding16x</visible>
@@ -270,7 +272,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>16X</label>
 				<visible>player.rewinding16x</visible>
@@ -278,7 +280,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>32X</label>
 				<visible>player.forwarding32x</visible>
@@ -286,7 +288,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Shadow</textcolor>
 				<label>32X</label>
 				<visible>player.rewinding32x</visible>
@@ -304,7 +306,7 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="image">
-				<texture flipx="true">osd/osd_speed.png</texture>
+				<texture flipx="true">OSD/PlayerSpeed.png</texture>
 				<width>26</width>
 				<height>16</height>
 				<visible>player.rewinding</visible>
@@ -312,7 +314,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>2X</label>
 				<visible>player.forwarding2x</visible>
@@ -320,7 +322,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>2X</label>
 				<visible>player.rewinding2x</visible>
@@ -328,7 +330,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>4X</label>
 				<visible>player.forwarding4x</visible>
@@ -336,7 +338,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>4X</label>
 				<visible>player.rewinding4x</visible>
@@ -344,7 +346,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>8X</label>
 				<visible>player.forwarding8x</visible>
@@ -352,7 +354,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>8X</label>
 				<visible>player.rewinding8x</visible>
@@ -360,7 +362,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>16X</label>
 				<visible>player.forwarding16x</visible>
@@ -368,7 +370,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>16X</label>
 				<visible>player.rewinding16x</visible>
@@ -376,7 +378,7 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>32X</label>
 				<visible>player.forwarding32x</visible>
@@ -384,13 +386,13 @@
 			<control type="label">
 				<width min="0" max="40">auto</width>
 				<height>12</height>
-				<font>osd2</font>
+				<font>osd</font>
 				<textcolor>Gray</textcolor>
 				<label>32X</label>
 				<visible>player.rewinding32x</visible>
 			</control>
 			<control type="image">
-				<texture>osd/osd_speed.png</texture>
+				<texture>OSD/PlayerSpeed.png</texture>
 				<width>26</width>
 				<height>16</height>
 				<visible>player.forwarding</visible>
@@ -410,7 +412,7 @@
 					<posy>0</posy>
 					<height>120</height>
 					<width>1074</width>
-					<texture>osd/osd_back.png</texture>
+					<texture>OSD/OSDBackground.png</texture>
 				</control>
 				<control type="group" id="213">
 					<width>790</width>
@@ -423,8 +425,8 @@
 						<posx>317</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_stop.png</texturenofocus>
-						<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
+						<texturenofocus>OSD/Stop.png</texturenofocus>
+						<texturefocus>OSD/StopFocused.png</texturefocus>
 						<onup>2009</onup>
 						<ondown>2009</ondown>
 						<onleft>1017</onleft>
@@ -435,8 +437,8 @@
 						<posx>379</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipbwd_fo.png</texturefocus>
+						<texturenofocus>OSD/SkipBack.png</texturenofocus>
+						<texturefocus>OSD/SkipBackFocused.png</texturefocus>
 						<onup>2010</onup>
 						<ondown>2010</ondown>
 						<onleft>1009</onleft>
@@ -447,8 +449,8 @@
 						<posx>441</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_rew.png</texturenofocus>
-						<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
+						<texturenofocus>OSD/Rewind.png</texturenofocus>
+						<texturefocus>OSD/RewindFocused.png</texturefocus>
 						<onup>2011</onup>
 						<ondown>2011</ondown>
 						<onleft>1010</onleft>
@@ -459,11 +461,11 @@
 						<posx>503</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_play.png</texturenofocus>
-						<texturefocus>osd/osd_button_play_fo.png</texturefocus>
+						<texturenofocus>OSD/Play.png</texturenofocus>
+						<texturefocus>OSD/PlayFocused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>osd/osd_button_pause.png</alttexturenofocus>
-						<alttexturefocus>osd/osd_button_pause_fo.png</alttexturefocus>
+						<alttexturenofocus>OSD/Pause.png</alttexturenofocus>
+						<alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
 						<onup>2012</onup>
 						<ondown>2012</ondown>
 						<onleft>1011</onleft>
@@ -474,8 +476,8 @@
 						<posx>565</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_ff.png</texturenofocus>
-						<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
+						<texturenofocus>OSD/FastForward.png</texturenofocus>
+						<texturefocus>OSD/FastForwardFocused.png</texturefocus>
 						<onup>2013</onup>
 						<ondown>2013</ondown>
 						<onleft>1012</onleft>
@@ -486,8 +488,8 @@
 						<posx>627</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_skipfwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipfwd_fo.png</texturefocus>
+						<texturenofocus>OSD/SkipForward.png</texturenofocus>
+						<texturefocus>OSD/SkipForwardFocused.png</texturefocus>
 						<onup>2014</onup>
 						<ondown>2014</ondown>
 						<onleft>1013</onleft>
@@ -498,8 +500,8 @@
 						<posx>689</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
-						<texturefocus>osd/osd_button_dvd_fo.png</texturefocus>
+						<texturenofocus>OSD/DVD.png</texturenofocus>
+						<texturefocus>OSD/DVDFocused.png</texturefocus>
 						<onup>2015</onup>
 						<ondown>2015</ondown>
 						<onleft>1014</onleft>
@@ -508,12 +510,12 @@
 						<visible>VideoPlayer.HasMenu</visible>
 					</control>
 					<control type="button" id="1016">
-						<posx>941</posx>
+						<posx>943</posx>
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_audio.png</texturenofocus>
-						<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
+						<texturenofocus>OSD/AudioSettings.png</texturenofocus>
+						<texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
 						<onup>2016</onup>
 						<ondown>2016</ondown>
 						<onleft>1015</onleft>
@@ -521,12 +523,12 @@
 						<onclick>XBMC.ActivateWindow(124)</onclick>
 					</control>
 					<control type="button" id="1017">
-						<posx>991</posx>
+						<posx>993</posx>
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_video.png</texturenofocus>
-						<texturefocus>osd/osd_button_video_fo.png</texturefocus>
+						<texturenofocus>OSD/VideoSettings.png</texturenofocus>
+						<texturefocus>OSD/VideoSettingsFocused.png</texturefocus>
 						<onup>2017</onup>
 						<ondown>2017</ondown>
 						<onleft>1016</onleft>
@@ -545,8 +547,8 @@
 						<posx>317</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_stop.png</texturenofocus>
-						<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
+						<texturenofocus>OSD/Stop.png</texturenofocus>
+						<texturefocus>OSD/StopFocused.png</texturefocus>
 						<onup>1009</onup>
 						<ondown>1009</ondown>
 						<onleft>2017</onleft>
@@ -557,8 +559,8 @@
 						<posx>379</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipbwd_fo.png</texturefocus>
+						<texturenofocus>OSD/SkipBack.png</texturenofocus>
+						<texturefocus>OSD/SkipBackFocused.png</texturefocus>
 						<onup>1010</onup>
 						<ondown>1010</ondown>
 						<onleft>2009</onleft>
@@ -569,8 +571,8 @@
 						<posx>441</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_rew.png</texturenofocus>
-						<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
+						<texturenofocus>OSD/Rewind.png</texturenofocus>
+						<texturefocus>OSD/RewindFocused.png</texturefocus>
 						<onup>1011</onup>
 						<ondown>1011</ondown>
 						<onleft>2010</onleft>
@@ -581,11 +583,11 @@
 						<posx>503</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_play.png</texturenofocus>
-						<texturefocus>osd/osd_button_play_fo.png</texturefocus>
+						<texturenofocus>OSD/Play.png</texturenofocus>
+						<texturefocus>OSD/PlayFocused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>osd/osd_button_pause.png</alttexturenofocus>
-						<alttexturefocus>osd/osd_button_pause_fo.png</alttexturefocus>
+						<alttexturenofocus>OSD/Pause.png</alttexturenofocus>
+						<alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
 						<onup>1012</onup>
 						<ondown>1012</ondown>
 						<onleft>2011</onleft>
@@ -596,8 +598,8 @@
 						<posx>565</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_ff.png</texturenofocus>
-						<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
+						<texturenofocus>OSD/FastForward.png</texturenofocus>
+						<texturefocus>OSD/FastForwardFocused.png</texturefocus>
 						<onup>1013</onup>
 						<ondown>1013</ondown>
 						<onleft>2012</onleft>
@@ -608,8 +610,8 @@
 						<posx>627</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_skipfwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipfwd_fo.png</texturefocus>
+						<texturenofocus>OSD/SkipForward.png</texturenofocus>
+						<texturefocus>OSD/SkipForwardFocused.png</texturefocus>
 						<onup>1014</onup>
 						<ondown>1014</ondown>
 						<onleft>2013</onleft>
@@ -620,8 +622,8 @@
 						<posx>689</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_dvd.png</texturenofocus>
-						<texturefocus>osd/osd_button_dvd_fo.png</texturefocus>
+						<texturenofocus>OSD/DVD.png</texturenofocus>
+						<texturefocus>OSD/DVDFocused.png</texturefocus>
 						<onup>1015</onup>
 						<ondown>1015</ondown>
 						<onleft>2014</onleft>
@@ -630,12 +632,12 @@
 						<visible>VideoPlayer.HasMenu</visible>
 					</control>
 					<control type="button" id="2016">
-						<posx>941</posx>
+						<posx>943</posx>
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_audio.png</texturenofocus>
-						<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
+						<texturenofocus>OSD/AudioSettings.png</texturenofocus>
+						<texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
 						<onup>1016</onup>
 						<ondown>1016</ondown>
 						<onleft>2015</onleft>
@@ -643,12 +645,12 @@
 						<onclick>XBMC.ActivateWindow(124)</onclick>
 					</control>
 					<control type="button" id="2017">
-						<posx>991</posx>
+						<posx>993</posx>
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>osd/osd_button_video.png</texturenofocus>
-						<texturefocus>osd/osd_button_video_fo.png</texturefocus>
+						<texturenofocus>OSD/VideoSettings.png</texturenofocus>
+						<texturefocus>OSD/VideoSettingsFocused.png</texturefocus>
 						<onup>1017</onup>
 						<ondown>1017</ondown>
 						<onleft>2016</onleft>
@@ -659,7 +661,7 @@
 				<control type="image">
 					<posx>689</posx>
 					<posy>16</posy>
-					<texture>osd/osd_button_dvd_dis.png</texture>
+					<texture>OSD/DVDDisabled.png</texture>
 					<width>62</width>
 					<height>38</height>
 					<visible>!VideoPlayer.HasMenu</visible>
@@ -679,7 +681,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>2X</label>
 						<visible>player.forwarding2x</visible>
@@ -687,7 +689,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>2X</label>
 						<visible>player.rewinding2x</visible>
@@ -695,7 +697,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>4X</label>
 						<visible>player.forwarding4x</visible>
@@ -703,7 +705,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>4X</label>
 						<visible>player.rewinding4x</visible>
@@ -711,7 +713,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>8X</label>
 						<visible>player.forwarding8x</visible>
@@ -719,7 +721,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>8X</label>
 						<visible>player.rewinding8x</visible>
@@ -727,7 +729,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>16X</label>
 						<visible>player.forwarding16x</visible>
@@ -735,7 +737,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>16X</label>
 						<visible>player.rewinding16x</visible>
@@ -743,7 +745,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>32X</label>
 						<visible>player.forwarding32x</visible>
@@ -751,7 +753,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Shadow</textcolor>
 						<label>32X</label>
 						<visible>player.rewinding32x</visible>
@@ -770,7 +772,7 @@
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<texture flipx="true">osd/osd_speed.png</texture>
+						<texture flipx="true">OSD/PlayerSpeed.png</texture>
 						<width>26</width>
 						<height>16</height>
 						<visible>player.rewinding</visible>
@@ -778,7 +780,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>2X</label>
 						<visible>player.forwarding2x</visible>
@@ -786,7 +788,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>2X</label>
 						<visible>player.rewinding2x</visible>
@@ -794,7 +796,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>4X</label>
 						<visible>player.forwarding4x</visible>
@@ -802,7 +804,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>4X</label>
 						<visible>player.rewinding4x</visible>
@@ -810,7 +812,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>8X</label>
 						<visible>player.forwarding8x</visible>
@@ -818,7 +820,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>8X</label>
 						<visible>player.rewinding8x</visible>
@@ -826,7 +828,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>16X</label>
 						<visible>player.forwarding16x</visible>
@@ -834,7 +836,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>16X</label>
 						<visible>player.rewinding16x</visible>
@@ -842,7 +844,7 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>32X</label>
 						<visible>player.forwarding32x</visible>
@@ -850,13 +852,13 @@
 					<control type="label">
 						<width min="0" max="40">auto</width>
 						<height>12</height>
-						<font>osd2</font>
+						<font>osd</font>
 						<textcolor>Gray</textcolor>
 						<label>32X</label>
 						<visible>player.rewinding32x</visible>
 					</control>
 					<control type="image">
-						<texture>osd/osd_speed.png</texture>
+						<texture>OSD/PlayerSpeed.png</texture>
 						<width>26</width>
 						<height>16</height>
 						<visible>player.forwarding</visible>
@@ -864,9 +866,9 @@
 				</control>
 				<control type="progress" id="23">
 					<description>Progressbar</description>
-					<posx>132</posx>
+					<posx>133</posx>
 					<posy>66</posy>
-					<width>808</width>
+					<width>802</width>
 					<height>16</height>
 					<info>Player.Progress</info>
 					<visible>true</visible>
@@ -892,24 +894,26 @@
 					<label>$INFO[VideoPlayer.Time]</label>
 				</control>
 				<control type="label">
-					<posx>918</posx>
+					<posx>916</posx>
 					<posy>66</posy>
 					<width>160</width>
 					<height>16</height>
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>Shadow</textcolor>
-					<label>$INFO[VideoPlayer.TimeRemaining]</label>
+					<label>-$INFO[VideoPlayer.TimeRemaining]</label>
+					<visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
 				</control>
 				<control type="label">
-					<posx>918</posx>
+					<posx>916</posx>
 					<posy>64</posy>
 					<width>160</width>
 					<height>16</height>
 					<font>info1</font>
 					<align>center</align>
 					<textcolor>White</textcolor>
-					<label>$INFO[VideoPlayer.TimeRemaining]</label>
+					<label>-$INFO[VideoPlayer.TimeRemaining]</label>
+					<visible>!IsEmpty(VideoPlayer.TimeRemaining)</visible>
 				</control>
 			</control>
 		</control>

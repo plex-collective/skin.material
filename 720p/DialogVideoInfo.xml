@@ -464,15 +464,6 @@
 					<bordertexture>border_episode.png</bordertexture>
 				</control>
 			</control>
-			<control type="image">
-				<posx>1094</posx>
-				<posy>237</posy>
-				<width>128</width>
-				<height>50</height>
-				<aspectratio align="right">keep</aspectratio>
-				<texture>$INFO[Listitem.Property(mediaTag::studio)</texture>
-				<colordiffuse>Grey</colordiffuse>
-			</control>
 			<control type="grouplist">
 				<posx>521</posx>
 				<orientation>vertical</orientation>

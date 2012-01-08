@@ -1,6 +1,11 @@
 <?xml version="1.0"?>
 <window id="106">
 	<defaultcontrol>1000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
 	<include>dialogOpen</include>
 	<controls>
 		<control type="image">
@@ -18,8 +23,7 @@
 		</control>
 		<control type="button" id="1000">
 			<posx>120</posx>
-			<description>button template</description>
-			<include>contextMenuButton</include>
+			<include>dialogButton</include>
 		</control>
 	</controls>
 </window>

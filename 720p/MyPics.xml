@@ -6,7 +6,7 @@
 		<include>Background</include>
 		<include>Header</include>
 		<include>HeaderPictures</include>
-		<include>Time</include>
 		<include>List</include>
+		<include>Time</include>
 	</controls>
 </window>

@@ -1,48 +1,8 @@
 <?xml version="1.0"?>
 <window id="104">
-	<animation effect="fade" time="300">WindowClose</animation>
-	<defaultcontrol>1</defaultcontrol>
-	<coordinates>
-		<system>1</system>
-		<posx>0</posx>
-		<posy>0</posy>
-	</coordinates>
 	<controls>
-		<control type="image">
-			<posx>534</posx>
-			<posy>258</posy>
-			<width>212</width>
-			<height>204</height>
-			<texture>dialogs/overlay.png</texture>
-		</control>
-		<control type="progress" id="1">
-			<description>progress control</description>
-			<posx>554</posx>
-			<posy>418</posy>
-			<width>172</width>
-			<height>18</height>
-			<reveal>true</reveal>
-			<texturebg>dialogs/volumebarbg.png</texturebg>
-			<lefttexture>-</lefttexture>
-			<midtexture>dialogs/volumebar.png</midtexture>
-			<righttexture>-</righttexture>
-			<info>Player.Volume</info>
-		</control>
-		<control type="image" id="2">
-			<posx>592</posx>
-			<posy>306</posy>
-			<width>96</width>
-			<height>90</height>
-			<texture>dialogs/volumeicon.png</texture>
-			<visible>!Player.Muted</visible>
-		</control>
-		<control type="image" id="2">
-			<posx>592</posx>
-			<posy>306</posy>
-			<width>96</width>
-			<height>90</height>
-			<texture>dialogs/volumeiconmuted.png</texture>
-			<visible>Player.Muted</visible>
+		<control type="group">
+			<include>VolumeHUD</include>
 		</control>
 	</controls>
 </window>

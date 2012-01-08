@@ -47,7 +47,7 @@
 		<width>16</width>
 		<height>30</height>
 		<font>list2</font>
-		<textcolor>WhiteTrans</textcolor>
+		<textcolor>White</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
 		<alttexturefocus>dialogs/buttonkb-focus.png</alttexturefocus>
@@ -66,7 +66,7 @@
 		<textoffsetx>30</textoffsetx>
 		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureradiofocus>dialogs/Radio.png</textureradiofocus>
+		<textureradiofocus>Controls/Radio.png</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 		<radiowidth>20</radiowidth>
 		<radioheight>20</radioheight>
@@ -88,10 +88,10 @@
 		<textoffsetx>70</textoffsetx>
 		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureup>ArrowUpNF.png</textureup>
-		<textureupfocus>ArrowUpFO.png</textureupfocus>
-		<texturedown>ArrowDownNF.png</texturedown>
-		<texturedownfocus>ArrowDownFO.png</texturedownfocus>
+		<textureup>Controls/SpinUp.png</textureup>
+		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
+		<texturedown>Controls/SpinDown.png</texturedown>
+		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
@@ -108,10 +108,10 @@
 		<aligny>center</aligny>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
-		<textureup>ArrowUpNF.png</textureup>
-		<textureupfocus>ArrowUpFO.png</textureupfocus>
-		<texturedown>ArrowDownNF.png</texturedown>
-		<texturedownfocus>ArrowDownFO.png</texturedownfocus>
+		<textureup>Controls/SpinUp.png</textureup>
+		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
+		<texturedown>Controls/SpinDown.png</texturedown>
+		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
 		<spinwidth>14</spinwidth>
 		<spinheight>12</spinheight>
 		<reverse>yes</reverse>
@@ -124,18 +124,18 @@
 	<default type="progress">
 		<description>Default Progress Bar</description>
 		<visible>true</visible>
-		<texturebg>osd/osd_progress_back.png</texturebg>
-		<lefttexture>osd/osd_progress_left.png</lefttexture>
-		<midtexture>osd/osd_progress_mid.png</midtexture>
-		<righttexture>osd/osd_progress_right.png</righttexture>
+		<texturebg>OSD/ProgressBackground.png</texturebg>
+		<lefttexture>Controls/ProgressLeft.png</lefttexture>
+		<midtexture>Controls/ProgressMid.png</midtexture>
+		<righttexture>Controls/ProgressRight.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="sliderex">
 		<sliderwidth>100</sliderwidth>
 		<sliderheight>16</sliderheight>
-		<texturesliderbar>dialogs/sliderbackground.png</texturesliderbar>
-		<textureslidernib>dialogs/slidernib.png</textureslidernib>
-		<textureslidernibfocus>dialogs/slidernibfocus.png</textureslidernibfocus>
+		<texturesliderbar>Controls/Slider.png</texturesliderbar>
+		<textureslidernib>Controls/SliderNib.png</textureslidernib>
+		<textureslidernibfocus>Controls/SliderNibFocused.png</textureslidernibfocus>
 		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>
