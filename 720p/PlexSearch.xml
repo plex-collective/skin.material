@@ -17,7 +17,7 @@
 			<control type="multiimage">
 				<width>140</width>
 				<height>134</height>
-				<imagepath background="true">loading</imagepath>
+				<imagepath background="true">HUD/Loading</imagepath>
 				<timeperimage>50</timeperimage>
 				<fadetime>1</fadetime>
 				<loop>yes</loop>
