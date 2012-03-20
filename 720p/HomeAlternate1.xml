@@ -21,9 +21,8 @@
 					</control-->
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,media)</visible>
-						<onfocus>Control.Move(300,0)</onfocus>
-						<onfocus>SetFocus(300,0)</onfocus>
-					
+						<onfocus>SetFocus(300)</onfocus>
+						<!--onfocus>Control.Move(300,0)</onfocus-->
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,help)</visible>
@@ -468,13 +467,13 @@
 						<!-- XXX: Need these 2 so it wont crash on reload of skin otherwise its fine -->
 						<!----------------------------------------------------------------------------->
 						<!-- Comment this one out when not debugging -->
-						<item>
+						<!--item>
 							<description>Debug Mode Only (don't forget to comment out)</description>
 							<label> </label>
 							<label2>pref</label2>
 							<onclick>SetFocus(299)</onclick>
 							<visible>!Control.HasFocus(299) + !Control.HasFocus(300)</visible>
-						</item>
+						</item-->
 						<item>
 							<description>Search</description>
 							<label>$LOCALIZE[31400]</label>
@@ -909,7 +908,7 @@
 					<posy>379</posy>
 					<height>330</height>
 					<itemgap>0</itemgap>
-					<onup>299</onup>
+					<onup>300</onup>
 					
 					<include>OnDeckFirst</include>
 					<animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
@@ -924,7 +923,7 @@
 					<posy>379</posy>
 					<height>330</height>
 					<itemgap>0</itemgap>
-					<onup>299</onup>
+					<onup>300</onup>
 					
 					<animation effect="slide" end="-797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
 					<include>RecentlyAddedFirst</include>

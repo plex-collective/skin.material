@@ -4,7 +4,7 @@
 	<!------------------------------------------------------------------------------------->
 	<include name="ListItemLabel">
 		<control type="group">
-			<visible>IsEmpty(Container.Property(mixedParents))</visible>
+			<!--visible>IsEmpty(Container.Property(mixedParents))</visible-->
 			<control type="group" id="33">
 				<visible>!Container.Content(episodes)</visible>
 				<control type="label">
@@ -35,7 +35,7 @@
 				</control>
 			</control>
 			<!-- EPISODES -->
-			<control type="group">
+			<!--control type="group">
 				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
 					<width>395</width>
@@ -48,7 +48,7 @@
 					<font>list1</font>
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 				</control>
-			</control>
+			</control-->
 		</control>
 		<!------------------------------------------------------------------------------------->
 		<!-- EPISODES, MIXED PARENTS -->
@@ -104,7 +104,7 @@
 	<!--========================================================================================================================================================================================-->
 	<include name="ListFocusedLabel">
 		<control type="group">
-			<visible>IsEmpty(Container.Property(mixedParents))</visible>
+			<!--visible>IsEmpty(Container.Property(mixedParents))</visible-->
 			<control type="group">
 				<visible>!Container.Content(episodes)</visible>
 				<control type="label">
@@ -159,7 +159,7 @@
 				</control>
 			</control>
 			<!-- EPISODES -->
-			<control type="group">
+			<!--control type="group">
 				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
 				<control type="label">
 					<width>395</width>
@@ -184,7 +184,7 @@
 					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 				</control>
-			</control>
+			</control-->
 		</control>
 		<!------------------------------------------------------------------------------------->
 		<control type="group">
@@ -355,12 +355,12 @@
 	<!-- (<text rating / image>) Overlay                                                        -->
 	<!------------------------------------------------------------------------------------->
 	<include name="ListItemTextRatingOverlay">
-		<control type="image">
+		<!--control type="image">
 			<width>51</width>
 			<height>24</height>
 			<texture>unwatchedlabel.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-		</control>
+		</control-->
 		<control type="label">
 			<posy>-4</posy>
 			<posx>+24</posx>
@@ -378,13 +378,13 @@
 	<!--========================================================================================================================================================================================-->
 	<include name="ListFocusedTextRatingOverlay">
 		<include>ListItemTextRatingOverlay</include>
-		<control type="image">
+		<!--control type="image">
 			<width>51</width>
 			<height>24</height>
 			<texture>unwatchedlabelfocus.png</texture>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
-		</control>
+		</control-->
 		<control type="label">
 			<posy>-4</posy>
 			<posx>+24</posx>

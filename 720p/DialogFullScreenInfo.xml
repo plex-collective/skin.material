@@ -195,7 +195,7 @@
 								<posy>3</posy>
 								<width min="1" max="600">auto</width>
 								<align>left</align>
-								<label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, &#xB7; ]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
+								<label>$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,, &#xB7; ]$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, &#xB7; ]$INFO[VideoPlayer.Genre, &#xB7; ]$INFO[VideoPlayer.mpaa, &#xB7; ]</label>
 								<textcolor>White</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
 								<font>heading3</font>
