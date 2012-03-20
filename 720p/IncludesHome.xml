@@ -140,6 +140,17 @@
 					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>border_poster_home.png</bordertexture>
 				</control>
+				<control type="label">
+					<posx>86</posx>
+					<posy>223</posy>
+					<width>162</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<font>homelabel</font>
+					<align>center</align>
+				</control>
 			</control>
 		</itemlayout>
 		<itemlayout width="169" height="280" condition="Container(11001).ListItem(0).Type(episode)">
@@ -166,7 +177,7 @@
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
+					<label>$INFO[ListItem.TVShowTitle]</label>
 					<textcolor>Gray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
@@ -177,7 +188,7 @@
 					<posy>241</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
+					<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 					<textcolor>DarkGray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
@@ -258,7 +269,7 @@
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
+				<label>$INFO[ListItem.TVShowTitle]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>Orange</textcolor>
 				<shadowcolor>Shadow</shadowcolor>
@@ -270,7 +281,7 @@
 				<posy>241</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11001)</visible>
 				<textcolor>White</textcolor>
 				<shadowcolor>Shadow</shadowcolor>
@@ -447,6 +458,17 @@
 					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>border_poster_home.png</bordertexture>
 				</control>
+				<control type="label">
+					<posx>86</posx>
+					<posy>223</posy>
+					<width>162</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<font>homelabel</font>
+					<align>center</align>
+				</control>
 			</control>
 		</itemlayout>
 		<itemlayout width="169" height="280" condition="Container(11000).ListItem(0).Type(episode)">
@@ -473,7 +495,7 @@
 					<posy>223</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
+					<label>$INFO[ListItem.TVShowTitle]</label>
 					<textcolor>Gray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
@@ -484,7 +506,7 @@
 					<posy>241</posy>
 					<width>162</width>
 					<height>30</height>
-					<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
+					<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 					<textcolor>DarkGray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
 					<font>homelabel</font>
@@ -565,7 +587,7 @@
 				<posy>223</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>$LOCALIZE[31001] $INFO[ListItem.Episode]</label>
+				<label>$INFO[ListItem.TVShowTitle]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>Orange</textcolor>
 				<shadowcolor>Shadow</shadowcolor>
@@ -577,7 +599,7 @@
 				<posy>241</posy>
 				<width>162</width>
 				<height>30</height>
-				<label>$LOCALIZE[31003] $INFO[ListItem.Season]</label>
+				<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode]</label>
 				<visible>Control.HasFocus(11000)</visible>
 				<textcolor>White</textcolor>
 				<shadowcolor>Shadow</shadowcolor>
