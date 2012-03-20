@@ -379,7 +379,7 @@
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<control type="list" id="300">
 					<description>Media Menu</description>
-					<visible allowhiddenfocus="false">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + [!Control.HasFocus(11000) + !Control.HasFocus(11001)]</visible>
+					<visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + [!Control.HasFocus(11000) + !Control.HasFocus(11001)]</visible>
 					<animation effect="fade" delay="300" time="200">Visible</animation>
 					<posx>496</posx>
 					<posy>364</posy>
