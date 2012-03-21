@@ -1038,12 +1038,27 @@
 							<height>18</height>
 							<!-- Title -->
 							<control type="label">
+								<visible>[Container(11001).ListItem(0).Type(movie)]</visible>
 								<description>Title</description>
 								<posx>0</posx>
 								<posy>0</posy>
 								<height>18</height>
 								<width min="1" max="798">auto</width>
 								<label>$INFO[Container(11001).ListItem(0).Title]</label>
+								<aligny>center</aligny>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<shadowcolor>ff000000</shadowcolor>
+								<font>osd1</font>
+							</control>
+							<control type="label">
+								<visible>[Container(11001).ListItem(0).Type(episode)]</visible>
+								<description>Title</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>18</height>
+								<width min="1" max="798">auto</width>
+								<label>$INFO[Container(11001).ListItem(0).TVShowTitle]</label>
 								<aligny>center</aligny>
 								<textcolor>Orange</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
@@ -1089,7 +1104,7 @@
 									<posy>3</posy>
 									<width min="1" max="600">auto</width>
 									<align>left</align>
-									<label>$INFO[Container(11001).ListItem(0).TVShowTitle]$INFO[Container(11001).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11001).ListItem(0).Episode]$INFO[Container(11001).ListItem(0).Date, &#xB7; ]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).mpaa, &#xB7; ]</label>
+									<label>$INFO[Container(11001).ListItem(0).Title]$INFO[Container(11001).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11001).ListItem(0).Episode]$INFO[Container(11001).ListItem(0).Date, &#xB7; ]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).mpaa, &#xB7; ]</label>
 									<textcolor>White</textcolor>
 									<shadowcolor>Shadow</shadowcolor>
 									<font>heading3</font>
@@ -1345,12 +1360,27 @@
 							<height>18</height>
 							<!-- Title -->
 							<control type="label">
+								<visible>[Container(11000).ListItem(0).Type(movie)]</visible>
 								<description>Title</description>
 								<posx>0</posx>
 								<posy>0</posy>
 								<height>18</height>
 								<width min="1" max="798">auto</width>
 								<label>$INFO[Container(11000).ListItem(0).Title]</label>
+								<aligny>center</aligny>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<shadowcolor>ff000000</shadowcolor>
+								<font>osd1</font>
+							</control>
+							<control type="label">
+								<visible>[Container(11000).ListItem(0).Type(episode)]</visible>
+								<description>Title</description>
+								<posx>0</posx>
+								<posy>0</posy>
+								<height>18</height>
+								<width min="1" max="798">auto</width>
+								<label>$INFO[Container(11000).ListItem(0).TVShowTitle]</label>
 								<aligny>center</aligny>
 								<textcolor>Orange</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
@@ -1396,7 +1426,7 @@
 									<posy>3</posy>
 									<width min="1" max="600">auto</width>
 									<align>left</align>
-									<label>$INFO[Container(11000).ListItem(0).TVShowTitle]$INFO[Container(11000).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11000).ListItem(0).Episode]$INFO[Container(11000).ListItem(0).Date, &#xB7; ]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).mpaa, &#xB7; ]</label>
+									<label>$INFO[Container(11000).ListItem(0).Title]$INFO[Container(11000).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11000).ListItem(0).Episode]$INFO[Container(11000).ListItem(0).Date, &#xB7; ]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).mpaa, &#xB7; ]</label>
 									<textcolor>White</textcolor>
 									<shadowcolor>Shadow</shadowcolor>
 									<font>heading3</font>
