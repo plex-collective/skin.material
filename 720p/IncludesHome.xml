@@ -1,5 +1,67 @@
 <?xml version="1.0"?>
 <includes>
+	<include name="OnDeck">
+		<control type="group" id="7003">
+			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
+			<height>291</height>
+			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<label>$LOCALIZE[31502]</label>
+				<posx>18</posx>
+			</control>
+			<control type="list" id="11001">
+				<visible allowhiddenfocus="false">false</visible>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<ondown>300</ondown>
+				<onup>300</onup>
+				<width>1190</width>
+				<height>340</height>
+				<posy>21</posy>
+				<posx>0</posx>
+				<include>OnDeckLayout</include>
+			</control>
+		</control>
+	</include>
+	<include name="RecentlyAdded">
+		<control type="group" id="7001">
+			<visible>Control.IsVisible(11000) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
+			<height>330</height>
+			<animation effect="fade" start="0" end="100" time="400" delay="100">Visible</animation>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<label>$LOCALIZE[31501]</label>
+				<posx>18</posx>
+				<visible>[!Control.HasFocus(300) + Control.IsVisible(11001)] | !Control.IsVisible(11001)</visible>
+				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+			</control>
+			<control type="list" id="11000">
+				<visible allowhiddenfocus="false">false</visible>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<ondown>300</ondown>
+				<onup>300</onup>
+				<width>1190</width>
+				<height>340</height>
+				<posy>21</posy>
+				<posx>0</posx>
+				<include>RecentlyAddedLayout</include>
+			</control>
+		</control>
+	</include>
 	<include name="OnDeckFirst">
 		<control type="group" id="7003">
 			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
