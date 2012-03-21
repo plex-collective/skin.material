@@ -39,6 +39,22 @@
 					<onfocus>SetFocus(300)</onfocus>
 				</control>
 			</control>
+			<control type="button" id="351">
+				<posy>900</posy>
+				<onfocus>Control.SetFocus(301,0)</onfocus>
+				<onfocus>Control.SetFocus(302,0)</onfocus>
+				<onfocus>Control.SetFocus(303,0)</onfocus>
+				<onfocus>Control.SetFocus(300)</onfocus>
+				<onfocus>Control.Move(300,1)</onfocus>
+			</control>
+			<control type="button" id="352">
+				<posy>900</posy>
+				<onfocus>Control.SetFocus(301,0)</onfocus>
+				<onfocus>Control.SetFocus(302,0)</onfocus>
+				<onfocus>Control.SetFocus(303,0)</onfocus>
+				<onfocus>Control.SetFocus(300)</onfocus>
+				<onfocus>Control.Move(300,-1)</onfocus>
+			</control>
 			<!-- Fanart from PMS -->
 			<control type="multiimage">
 				<posx>0</posx>
@@ -203,13 +219,13 @@
 						<label>$LOCALIZE[31105]</label>
 						<onclick>Plex.Suspend()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
-					</item>			
+					</item>
 					<item>
 						<description>Shutdown</description>
 						<label>$LOCALIZE[31106]</label>
 						<onclick>Plex.Powerdown()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
-					</item>			
+					</item>
 					<item>
 						<description>DVD Button</description>
 						<label>DVD</label>
@@ -321,8 +337,8 @@
 				<height>324</height>
 				<onup>300</onup>
 				<ondown>-</ondown>
-				<onleft>300</onleft>
-				<onright>300</onright>
+				<onleft>352</onleft>
+				<onright>351</onright>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
@@ -458,8 +474,8 @@
 				<height>324</height>
 				<onup>300</onup>
 				<ondown>-</ondown>
-				<onleft>300</onleft>
-				<onright>300</onright>
+				<onleft>352</onleft>
+				<onright>351</onright>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
@@ -585,6 +601,8 @@
 				<height>324</height>
 				<onup>300</onup>
 				<ondown>-</ondown>
+				<onleft>352</onleft>
+				<onright>351</onright>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="54">
 					<control type="group">
