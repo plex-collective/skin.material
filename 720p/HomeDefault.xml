@@ -162,6 +162,7 @@
 				</control>
 				<!-- Menubar focus/unfocus -->
 				<control type="image">
+					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
 					<texture>homemenu_shadow.png</texture>
 					<posx>0</posx>
 					<posy>294</posy>
@@ -169,6 +170,7 @@
 					<height>76</height>
 				</control>
 				<control type="image">
+					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
 					<texture>homemenu.png</texture>
 					<posx>0</posx>
 					<posy>304</posy>
@@ -186,6 +188,7 @@
 				</control>
 				<!-- The main menu. Label2 is used for tracking focus -->
 				<control type="wraplist" id="300">
+					<visible allowhiddenfocus="true">![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
 					<description>Home Main Menu</description>
 					<posx>0</posx>
 					<posy>289</posy>
@@ -706,7 +709,7 @@
 					<font>HomeMenuItem</font>
 					<textcolor>Gray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
-					<visible>!Control.HasFocus(300)</visible>
+					<visible>!Control.HasFocus(300) + ![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
 				</control>
 				<control type="image">
 					<texture background="true">homemenu_diffuse.png</texture>
@@ -851,6 +854,8 @@
 						</control>
 					</control>
 				</control>
+				<include>OnDeckInfo</include>
+				<include>RecentlyAddedInfo</include>
 			</control>
 			<control type="image">
 				<texture>home_fade_bottom.png</texture>
