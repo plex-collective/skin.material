@@ -13,8 +13,6 @@ TODO
 
 Requests TODO
 -------------
-- Time clock on home screen would be great! 
-- An optional OSD that pops up while in Recently Added/On Deck that tells plot and video details...it would be great to go to a poster and get the info on that video without going into your library 
 - add tagline to Movies view. Possibly replace year or length.
 - disable recently added/on deck. 
 
@@ -42,3 +40,5 @@ Completed
 - Hide Notes; Add Notes (this)
 - Mode code from ViewFanart to Info OSD
 - Merge Simplex 1.0.6 changes
+- Time clock on home screen would be great! 
+- An optional OSD that pops up while in Recently Added/On Deck that tells plot and video details...it would be great to go to a poster and get the info on that video without going into your library 

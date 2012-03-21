@@ -1611,6 +1611,7 @@
 				<visible>Control.IsVisible(11000) + Control.IsVisible(11001)</visible>
 			</control>
 			<include>GlobalIncludes</include>
+			<include>Time</include>
 		</controls>
 	</include>
 </includes>

@@ -70,7 +70,11 @@
 	
 <!--  HELP -->
 <!-- 32 = Help String + 00 = Window ID + XXX -->
-	<string id="3200001">To access skin options, navigate left or right to 'Preferences', then navigate down to 'Skin' and press 'OK' or &lt;Enter&gt;.  
+	<string id="3200001">Brought to you by Jason Mehring.
+
+To access recently added or on deck, click left or right when a category is focused.  Click up or down or prev to return to home screen.
+
+To access skin options, navigate left or right to 'Preferences', then navigate down to 'Skin' and press 'OK' or &lt;Enter&gt;.  
 
 Added sections to this skin from the original one are 'Mods', 'Developer', and 'Experimental'.  Here is a brief explaination of each item you can change:
 
@@ -80,6 +84,7 @@ Hide Extra Show Details: Will remove the line that lists Year, Duration, Genre a
 Hide Episode Totals: Will remove the total number of episodes listed above the poster
 Hide Text Rating on Movie List:  Will remove the Text Rating of the movie that is on the list itself in a circle type border
 Hide Media Flags in Info Area: Will Remove all the media flags (720p, etc) in the area that the video is detailed
+Hide On-Deck Info:  Will hide the OSD type style info box when browsing the ondeck / recently added area
 Hide Help:  Remove this help from the home page menu
 
 The Developer section is for developers mostly.
