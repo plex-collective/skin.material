@@ -187,7 +187,7 @@
 					<width>1280</width>
 					<height>414</height>
 					<!--visible>!Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible-->
-					<visible>[ControlGroup(5100).HasFocus() | ControlGroup(5101).HasFocus()] + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+					<visible>[ControlGroup(5100).HasFocus() | ControlGroup(5101).HasFocus()] + [Control.IsVisible(11000) | Control.IsVisible(11001)]</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<control type="image">
@@ -196,7 +196,7 @@
 					<posy>265</posy>
 					<width>498</width>
 					<height>414</height>
-					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11001)]</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<control type="image">
@@ -206,12 +206,12 @@
 					<posy>265</posy>
 					<width>498</width>
 					<height>414</height>
-					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11001)]</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<!-- Menubar focus/unfocus -->
 				<control type="image">
-					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
+					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002)]</visible>
 					<texture>homemenu_shadow.png</texture>
 					<posx>0</posx>
 					<posy>294</posy>
@@ -219,7 +219,7 @@
 					<height>76</height>
 				</control>
 				<control type="image">
-					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
+					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002)]</visible>
 					<texture>homemenu.png</texture>
 					<posx>0</posx>
 					<posy>304</posy>
@@ -241,7 +241,7 @@
 				<!-- The main menu. Label2 is used for tracking focus -->
 				<control type="wraplist" id="299">
 					<!--visible allowhiddenfocus="true">true</visible-->
-					<visible allowhiddenfocus="true">![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
+					<visible allowhiddenfocus="true">![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002)]</visible>
 					<description>Home Main Menu</description>
 					<posx>0</posx>
 					<posy>289</posy>
@@ -382,7 +382,7 @@
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<control type="list" id="300">
 					<description>Media Menu</description>
-					<visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + [!Control.HasFocus(11000) + !Control.HasFocus(11001)]</visible>
+					<visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002)]</visible>
 					<animation effect="fade" delay="300" time="200">Visible</animation>
 					<posx>496</posx>
 					<posy>364</posy>
@@ -515,12 +515,6 @@
 							<onclick>Plex.Powerdown()</onclick>
 							<visible>false</visible>
 						</item>
-						<item id="2">
-							<description>My Music Button</description>
-							<label>-</label>
-							<visible>false</visible>
-							<onclick>XBMC.ActivateWindow(5)</onclick>
-						</item>
 						<item id="13">
 							<description>Help Menu</description>
 							<label>-</label>
@@ -535,20 +529,26 @@
 						</item>
 						<item id="1">
 							<description>My Videos Button</description>
-							<label>-</label>
-							<visible>false</visible>
+							<label>Video Channels</label>
+							<visible>true</visible>
 							<onclick>XBMC.ActivateWindow(24)</onclick>
+						</item>
+						<item id="2">
+							<description>My Music Button</description>
+							<label>Music Channels</label>
+							<visible>true</visible>
+							<onclick>XBMC.ActivateWindow(5)</onclick>
 						</item>
 						<item id="3">
 							<description>My Pics Button</description>
-							<label>-</label>
-							<visible>false</visible>
+							<label>Picture Channels</label>
+							<visible>true</visible>
 							<onclick>XBMC.ActivateWindow(2)</onclick>
 						</item>
 						<item id="4">
 							<description>My Programs Menu</description>
-							<label>-</label>
-							<visible>false</visible>
+							<label>Application Channels</label>
+							<visible>true</visible>
 							<onclick>XBMC.ActivateWindow(1)</onclick>
 						</item>
 						<item id="10">
@@ -642,37 +642,37 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item id="1">
+						<item>
 							<description>Skin</description>
 							<label>$LOCALIZE[31201]</label>
 							<onclick>activatewindow(56)</onclick>
 						</item>
-						<item id="2">
+						<item>
 							<description>Appearance</description>
 							<label>$LOCALIZE[31202]</label>
 							<onclick>activatewindow(AppearanceSettings)</onclick>
 						</item>
-						<item id="3">
+						<item>
 							<description>Videos</description>
 							<label>$LOCALIZE[31203]</label>
 							<onclick>activatewindow(MyVideosSettings)</onclick>
 						</item>
-						<item id="4">
+						<item>
 							<description>Music</description>
 							<label>$LOCALIZE[31204]</label>
 							<onclick>activatewindow(MyMusicSettings)</onclick>
 						</item>
-						<item id="5">
+						<item>
 							<description>Pictures</description>
 							<label>$LOCALIZE[31205]</label>
 							<onclick>activatewindow(MyPicturesSettings)</onclick>
 						</item>
-						<item id="6">
+						<item>
 							<description>Network</description>
 							<label>$LOCALIZE[31206]</label>
 							<onclick>activatewindow(18)</onclick>
 						</item>
-						<item id="7">
+						<item>
 							<description>System</description>
 							<label>$LOCALIZE[31207]</label>
 							<onclick>activatewindow(SystemSettings)</onclick>
@@ -781,7 +781,7 @@
 							<label>$LOCALIZE[31304]</label>
 							<onclick>xbmc.activatewindow(1)</onclick>
 						</item>
-						<item id="5">
+						<item id="12">
 							<description>Channel Directory</description>
 							<label>$LOCALIZE[31306]</label>
 							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
@@ -868,12 +868,12 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<item id="1">
+						<item>
 							<description>Play</description>
 							<label>$LOCALIZE[31600]</label>
 							<onclick>XBMC.PlayDVD</onclick>
 						</item>
-						<item id="2">
+						<item>
 							<description>Eject</description>
 							<label>$LOCALIZE[31601]</label>
 							<onclick>XBMC.EjectTray()</onclick>
@@ -893,7 +893,7 @@
 					<font>HomeMenuItem</font>
 					<textcolor>Gray</textcolor>
 					<shadowcolor>Shadow</shadowcolor>
-					<visible>!Control.HasFocus(299) + ![Control.HasFocus(11000) | Control.HasFocus(11001)]</visible>
+					<visible>!Control.HasFocus(299) + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002)]</visible>
 				</control>
 				<control type="image">
 					<texture background="true">homemenu_diffuse.png</texture>
@@ -903,25 +903,29 @@
 					<height>50</height>
 				</control>
 				<!-- On Deck -->
+				<!-- Recently Used Channels -->
 				<control type="grouplist" id="5100">
-					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5101).HasFocus() + !ControlGroup(5101).HasFocus()]] + !Control.HasFocus(299)</visible-->
-					<visible>Control.HasFocus(300) | ControlGroup(5100).HasFocus()</visible>
-					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ControlGroup(5100).HasFocus()]</visible-->
 					<posx>47</posx>
 					<posy>390</posy>
 					<height>330</height>
 					<itemgap>0</itemgap>
 					<onup>300</onup>
-					
-					<include>OnDeck</include>
-					<animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
-					<include>Queue</include>
+					<!-- On Deck -->
+					<control type="group">
+						<visible>[Control.HasFocus(300) | ControlGroup(5100).HasFocus()] + Control.IsVisible(11000)</visible>
+						<include>OnDeck</include>
+						<animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
+					</control>
+					<!-- Recently Used Channels -->
+					<control type="group">
+						<visible>[Control.HasFocus(300) | ControlGroup(5100).HasFocus()] + Control.IsVisible(11002)</visible>
+						<include>RecentlyUsed</include>
+						<animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
+					</control>
 				</control>
 				<!-- Recently Added -->
 				<control type="grouplist" id="5101">
-					<!--visible>[Control.HasFocus(300) | [!ControlGroup(5100).HasFocus() + !ControlGroup(5100).HasFocus()]] + !Control.HasFocus(299)</visible-->
 					<visible>Control.HasFocus(300) | ControlGroup(5101).HasFocus()</visible>
-					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ControlGroup(5101).HasFocus()]</visible-->
 					<posx>47</posx>
 					<posy>390</posy>
 					<height>330</height>
@@ -930,7 +934,7 @@
 					
 					<animation effect="slide" end="-797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
 					<include>RecentlyAdded</include>
-					<include>Queue</include>
+					<!--include>Queue</include-->
 				</control>
 			</control>
 			<include>OnDeckInfo</include>

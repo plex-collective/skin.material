@@ -1,35 +1,5 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="OnDeck">
-		<control type="group" id="7003">
-			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
-			<height>291</height>
-			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
-			<control type="label" id="8002">
-				<font>info1</font>
-				<textcolor>Gray</textcolor>
-				<shadowcolor>Shadow</shadowcolor>
-				<width>350</width>
-				<height>30</height>
-				<align>left</align>
-				<label>$LOCALIZE[31502]</label>
-				<posx>18</posx>
-			</control>
-			<control type="list" id="11001">
-				<visible allowhiddenfocus="false">false</visible>
-				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
-				<ondown>300</ondown>
-				<onup>300</onup>
-				<width>1190</width>
-				<height>340</height>
-				<posy>21</posy>
-				<posx>0</posx>
-				<include>OnDeckLayout</include>
-			</control>
-		</control>
-	</include>
 	<include name="RecentlyAdded">
 		<control type="group" id="7001">
 			<visible>Control.IsVisible(11000) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
@@ -62,6 +32,69 @@
 			</control>
 		</control>
 	</include>
+	<include name="RecentlyUsed">
+		<control type="group" id="7002">
+			<visible>Control.IsVisible(11002) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
+			<!--visible>Control.IsVisible(11002)</visible-->
+			<height>291</height>
+			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<!--label>$LOCALIZE[31502]</label-->
+				<label>Recently Used</label>
+				<posx>18</posx>
+			</control>
+			<control type="list" id="11002">
+				<visible allowhiddenfocus="false">false</visible>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<ondown>300</ondown>
+				<onup>300</onup>
+				<width>1190</width>
+				<height>340</height>
+				<posy>21</posy>
+				<posx>0</posx>
+				<include>RecentlyUsedLayout</include>
+			</control>
+		</control>
+	</include>
+	<include name="OnDeck">
+		<control type="group" id="7003">
+			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
+			<height>291</height>
+			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+			<control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>left</align>
+				<label>$LOCALIZE[31502]</label>
+				<posx>18</posx>
+			</control>
+			<control type="list" id="11001">
+				<visible allowhiddenfocus="false">false</visible>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<ondown>300</ondown>
+				<onup>300</onup>
+				<width>1190</width>
+				<height>340</height>
+				<posy>21</posy>
+				<posx>0</posx>
+				<include>OnDeckLayout</include>
+			</control>
+		</control>
+	</include>
+	
 	<include name="OnDeckFirst">
 		<control type="group" id="7003">
 			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
@@ -181,6 +214,86 @@
 				<include>OnDeckLayout</include>
 			</control>
 		</control>
+	</include>
+	<!----------------------------------------------------------------------------------------------------------------------------------------------->
+	<include name="RecentlyUsedLayout">
+	<!----------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--itemlayout width="238" height="280" condition="Container(11001).ListItem(0).Type(album)"-->
+		<itemlayout width="238" height="280">
+			<control type="group">
+				<control type="image">
+					<posx>19</posx>
+					<posy>219</posy>
+					<width>200</width>
+					<height>200</height>
+					<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>19</posx>
+					<posy>19</posy>
+					<width>200</width>
+					<height>200</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>border_square_home.png</bordertexture>
+				</control>
+				<control type="label">
+					<posx>119</posx>
+					<posy>223</posy>
+					<width>200</width>
+					<height>30</height>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<font>homelabel</font>
+					<align>center</align>
+				</control>
+			</control>
+		</itemlayout>
+		<!--focusedlayout width="238" height="280" condition="Container(11001).ListItem(0).Type(album)"-->
+		<focusedlayout width="238" height="280">
+			<control type="image">
+				<posx>19</posx>
+				<posy>219</posy>
+				<width>200</width>
+				<height>200</height>
+				<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			</control>
+			<control type="image">
+				<posx>19</posx>
+				<posy>19</posy>
+				<width>200</width>
+				<height>200</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>border_square_home.png</bordertexture>
+			</control>
+			<control type="image">
+				<posx>1</posx>
+				<posy>1</posy>
+				<width>236</width>
+				<height>236</height>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture>focus_square_home.png</texture>
+			</control>
+			<control type="label">
+				<posx>119</posx>
+				<posy>223</posy>
+				<width>200</width>
+				<height>30</height>
+				<label>$INFO[ListItem.Title]</label>
+				<visible>Control.HasFocus(11002)</visible>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<scroll>true</scroll>
+				<scrollspeed>30</scrollspeed>
+				<font>homelabel</font>
+				<scrollsuffix> | </scrollsuffix>
+				<align>center</align>
+			</control>
+		</focusedlayout>
 	</include>
 	<include name="OnDeckLayout">
 		<itemlayout width="169" height="280" condition="Container(11001).ListItem(0).Type(movie)">
