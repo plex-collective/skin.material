@@ -33,7 +33,7 @@
 		</control>
 	</include>
 	<include name="RecentlyUsed">
-		<control type="group" id="7002">
+		<control type="group" id="7004">
 			<visible>Control.IsVisible(11002) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
 			<!--visible>Control.IsVisible(11002)</visible-->
 			<height>291</height>
@@ -933,8 +933,8 @@
 	</include>
 	<include name="Queue">
 		<!-- "Queue" -->
-		<control type="group" id="7002">
-			<visible>Control.IsVisible(11003) + !Container(299).OnNext + !Container(299).OnPrevious</visible>
+		<control type="group" id="7003">
+			<visible>Control.IsVisible(11003) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
 			<animation effect="fade" start="0" end="100" time="400">Visible</animation>
 			<control type="label" id="8002">
 				<font>info1</font>
@@ -951,8 +951,8 @@
 				<orientation>horizontal</orientation>
 				<onright>-</onright>
 				<onleft>-</onleft>
-				<ondown>-</ondown>
-				<onup>299</onup>
+				<ondown>300</ondown>
+				<onup>300</onup>
 				<width>1190</width>
 				<height>340</height>
 				<posy>21</posy>
