@@ -1293,15 +1293,14 @@
 					<control type="group">
 						<!-- Total Episodes -->
 						<!--control type="label">
-							<visible>[Container(11001).ListItem(0).Type(tvshows) | Container(11001).ListItem(0).Type(seasons)]</visible>
-							<visible>false</visible>
+							<visible>Container(11001).ListItem(0).Type(episode)</visible>
 							<description>Total Watched / Unwatched Episodes</description>
 							<posx>0</posx>
 							<posy>0</posy>
 							<width min="1" max="300">auto</width>
 							<align>Left</align>
 							<aligny>bottom</aligny>
-							<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
+							<label>$INFO[Container(11001).ListItem(0).Episode] $LOCALIZE[31002] ($INFO[Container(11001).ListItem(0).Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
 							<font>heading3</font>
 							<textcolor>DarkGray</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
@@ -1617,15 +1616,14 @@
 					<control type="group">
 						<!-- Total Episodes -->
 						<!--control type="label">
-							<visible>[Container(11000).ListItem(0).Type(tvshows) | Container(11000).ListItem(0).Type(seasons)]</visible>
-							<visible>false</visible>
+							<visible>Container(11000).ListItem(0).Type(episode)</visible>
 							<description>Total Watched / Unwatched Episodes</description>
 							<posx>0</posx>
 							<posy>0</posy>
 							<width min="1" max="300">auto</width>
 							<align>Left</align>
 							<aligny>bottom</aligny>
-							<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
+							<label>$INFO[Container(11000).ListItem(0).Episode] $LOCALIZE[31002] ($INFO[Container(11000).ListItem(0).Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
 							<font>heading3</font>
 							<textcolor>DarkGray</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
