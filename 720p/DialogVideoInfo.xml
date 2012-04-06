@@ -83,10 +83,18 @@
 						<width>830</width>
 						<height>76</height>
 						<font>info1</font>
-						<scroll>true</scroll>
-						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+					<control type="textbox" id="4">
+						<description>Plot</description>
+						<width>830</width>
+						<height>480</height>
+						<font>info1</font>
+						<align>justify</align>
+						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(2)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -95,43 +103,13 @@
 					<label/>
 				</control>
 				<control type="group">
+					<visible>Control.HasFocus(1)</visible>
 					<control type="label">
-						<width>206</width>
-						<height>23</height>
 						<font>info2</font>
 						<align>left</align>
 						<aligny>bottom</aligny>
 						<textcolor>DarkGray</textcolor>
 						<label>$LOCALIZE[31004]</label>
-					</control>
-					<control type="label">
-						<posx>206</posx>
-						<height>23</height>
-						<font>info2</font>
-						<align>left</align>
-						<aligny>bottom</aligny>
-						<textcolor>DarkGray</textcolor>
-						<label>$LOCALIZE[31005]</label>
-					</control>
-					<control type="label">
-						<posy>72</posy>
-						<posx>206</posx>
-						<height>20</height>
-						<font>info2</font>
-						<align>left</align>
-						<aligny>bottom</aligny>
-						<textcolor>DarkGray</textcolor>
-						<label>$LOCALIZE[31006]</label>
-					</control>
-					<control type="label">
-						<posy>72</posy>
-						<posx>506</posx>
-						<height>20</height>
-						<font>info2</font>
-						<align>left</align>
-						<aligny>bottom</aligny>
-						<textcolor>DarkGray</textcolor>
-						<label>$LOCALIZE[31007]</label>
 					</control>
 					<control type="grouplist">
 						<orientation>vertical</orientation>
@@ -186,50 +164,62 @@
 							<aspectratio aligny="bottom" align="left">keep</aspectratio>
 						</control>
 					</control>
-					<control type="grouplist">
-						<orientation>vertical</orientation>
+					<control type="label">
+						<posx>206</posx>
+						<font>info2</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>DarkGray</textcolor>
+						<label>$LOCALIZE[31005]</label>
+					</control>
+					<control type="label">
+						<posx>206</posx>
 						<posy>24</posy>
-						<posx>206</posx>
-						<control type="label">
-							<width>650</width>
-							<height>19</height>
-							<font>info1</font>
-							<align>left</align>
-							<aligny>bottom</aligny>
-							<textcolor>Gray</textcolor>
-							<label>$INFO[ListItem.Cast]</label>
-							<wrapmultiline>true</wrapmultiline>
-						</control>
+						<width>190</width>
+						<font>info1</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>Gray</textcolor>
+						<label>$INFO[ListItem.Cast]</label>
+						<wrapmultiline>true</wrapmultiline>
 					</control>
-					<control type="grouplist">
-						<orientation>vertical</orientation>
-						<posy>96</posy>
-						<posx>206</posx>
-						<control type="label">
-							<width>280</width>
-							<height>19</height>
-							<font>info1</font>
-							<align>left</align>
-							<aligny>bottom</aligny>
-							<textcolor>Gray</textcolor>
-							<label>$INFO[ListItem.Director]</label>
-							<wrapmultiline>true</wrapmultiline>
-						</control>
+					<control type="label">
+						<posx>414</posx>
+						<font>info2</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>DarkGray</textcolor>
+						<label>$LOCALIZE[31006]</label>
 					</control>
-					<control type="grouplist">
-						<orientation>vertical</orientation>
-						<posy>96</posy>
-						<posx>506</posx>
-						<control type="label">
-							<width>280</width>
-							<height>19</height>
-							<font>info1</font>
-							<align>left</align>
-							<aligny>bottom</aligny>
-							<textcolor>Gray</textcolor>
-							<label>$INFO[ListItem.Writer]</label>
-							<wrapmultiline>true</wrapmultiline>
-						</control>
+					<control type="label">
+						<posx>414</posx>
+						<posy>24</posy>
+						<width>190</width>
+						<font>info1</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>Gray</textcolor>
+						<label>$INFO[ListItem.Director]</label>
+						<wrapmultiline>true</wrapmultiline>
+					</control>
+					<control type="label">
+						<posx>621</posx>
+						<font>info2</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>DarkGray</textcolor>
+						<label>$LOCALIZE[31007]</label>
+					</control>
+					<control type="label">
+						<posx>621</posx>
+						<posy>24</posy>
+						<width>190</width>
+						<font>info1</font>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<textcolor>Gray</textcolor>
+						<label>$INFO[ListItem.Writer]</label>
+						<wrapmultiline>true</wrapmultiline>
 					</control>
 				</control>
 			</control>
@@ -357,12 +347,20 @@
 					<control type="textbox" id="4">
 						<description>Plot</description>
 						<width>830</width>
-						<height>99</height>
+						<height>100</height>
 						<font>info1</font>
-						<scroll>true</scroll>
-						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+					<control type="textbox" id="4">
+						<description>Plot</description>
+						<width>830</width>
+						<height>480</height>
+						<font>info1</font>
+						<align>justify</align>
+						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(2)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -371,6 +369,7 @@
 					<label/>
 				</control>
 				<control type="group">
+					<visible>Control.HasFocus(1)</visible>
 					<control type="label">
 						<width>206</width>
 						<height>23</height>
@@ -503,12 +502,20 @@
 					<control type="textbox" id="4">
 						<description>Plot</description>
 						<width>690</width>
-						<height>99</height>
+						<height>100</height>
 						<font>info1</font>
-						<scroll>true</scroll>
-						<autoscroll delay="6000" time="2000" repeat="10000"/>
 						<align>justify</align>
 						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(1)</visible>
+					</control>
+					<control type="textbox" id="4">
+						<description>Plot</description>
+						<width>690</width>
+						<height>480</height>
+						<font>info1</font>
+						<align>justify</align>
+						<textcolor>Gray</textcolor>
+						<visible>Control.HasFocus(2)</visible>
 					</control>
 				</control>
 				<control type="label">
@@ -517,6 +524,7 @@
 					<label/>
 				</control>
 				<control type="group">
+					<visible>Control.HasFocus(1)</visible>
 					<control type="label">
 						<width>206</width>
 						<height>23</height>
@@ -678,19 +686,18 @@
 			</control>
 		</control>
 		<control type="button" id="1">
-			<onup>activatewindow(57)</onup>
+			<onup>2</onup>
 			<ondown>activatewindow(57)</ondown>
 			<onclick>SendClick(2003,8)</onclick>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>Container.Content(Movies) | Container.Content(episodes)</visible>
 		</control>
-		<control type="button" id="1">
-			<onup>activatewindow(57)</onup>
+		<control type="button" id="2">
+			<onup>1</onup>
 			<ondown>activatewindow(57)</ondown>
+			<onclick>SendClick(2003,8)</onclick>
 			<texturenofocus>-</texturenofocus>
 			<texturefocus>-</texturefocus>
-			<visible>![Container.Content(Movies) | Container.Content(episodes)]</visible>
 		</control>
 	</controls>
 </window>
