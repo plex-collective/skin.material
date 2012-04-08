@@ -55,8 +55,8 @@
 				<onfocus>Control.SetFocus(300)</onfocus>
 				<onfocus>Control.Move(300,-1)</onfocus>
 			</control>
-			<!-- Fanart from PMS -->
-			<control type="multiimage">
+			<!-- PMS Slideshow -->
+			<control type="multiimage" id="10101">
 				<posx>0</posx>
 				<posy>-20</posy>
 				<width>1280</width>
@@ -68,7 +68,23 @@
 				<fadetime>1500</fadetime>
 				<randomize>true</randomize>
 				<loop>yes</loop>
-				<visible>!Skin.HasSetting(HideHomeSlideshow)</visible>
+				<visible>!Skin.HasSetting(HideHomeSlideshow) + Skin.HasSetting(CustomSlideshow)</visible>		
+			</control>
+			<!-- Custom Slideshow  -->
+			<control type="multiimage">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>scale</aspectratio>
+				<aligny>top</aligny>
+				<imagepath background="true">-</imagepath>
+				<timeperimage>8000</timeperimage>
+				<fadetime>1500</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<info>Skin.String(CustomSlideshowFolder)</info>
+				<visible>!Skin.HasSetting(HideHomeSlideshow) + !Skin.HasSetting(CustomSlideshow)</visible>		
 			</control>
 			<control type="largeimage">
 				<texture>background_overlay_diffuse.png</texture>
@@ -210,19 +226,19 @@
 				<content>
 					<item>
 						<description>Quit</description>
-						<label>$LOCALIZE[31104]</label>
+						<label>$LOCALIZE[31106]</label>
 						<onclick>Plex.Quit()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
 					</item>
 					<item>
 						<description>Sleep</description>
-						<label>$LOCALIZE[31105]</label>
+						<label>$LOCALIZE[31107]</label>
 						<onclick>Plex.Suspend()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
 					</item>
 					<item>
 						<description>Shutdown</description>
-						<label>$LOCALIZE[31106]</label>
+						<label>$LOCALIZE[31108]</label>
 						<onclick>Plex.Powerdown()</onclick>
 						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
 					</item>

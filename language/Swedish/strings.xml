@@ -28,12 +28,16 @@
 
 <!--  Skin Preferences  -->
 	<string id="31101">Visa bildspel</string>
-	<string id="31102">Visa "On Deck" före</string>
-	<string id="31103">Visa Power meny</string>
-	<string id="31104">Avsluta</string>
-	<string id="31105">Vila</string>
-	<string id="31106">Stäng av</string>
-	<string id="31107">Visa</string>
+	<string id="31102">Anpassad bildspel</string>
+	<string id="31103">Bildspel bilder</string>
+	<string id="31104">Visa "On Deck" före</string>
+	<string id="31105">Visa Power meny</string>
+	<string id="31106">Avsluta</string>
+	<string id="31107">Vila</string>
+	<string id="31108">Stäng av</string>
+	<string id="31109">Visa</string>
+	<string id="31110">Hem</string>
+	<string id="31111">Bildspel</string>
 
 <!--  Preferences  -->
 	<string id="31200">Inställningar</string>

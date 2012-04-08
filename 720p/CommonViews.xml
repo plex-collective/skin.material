@@ -481,6 +481,8 @@
 			<posy>253</posy>
 			<width>551</width>
 			<height>426</height>
+			<onup>50</onup>
+			<ondown>50</ondown>
 			<onleft>PageUp</onleft>
 			<onright>PageDown</onright>
 			<scrolltime>200</scrolltime>
@@ -1048,7 +1050,7 @@
 						</control>
 						<control type="image">
 							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png)</visible>
-							<posy>22</posy>
+							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
@@ -1056,7 +1058,7 @@
 						</control>
 						<control type="image">
 							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
-							<posy>22</posy>
+							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
@@ -1163,7 +1165,7 @@
 						</control>
 						<control type="image">
 							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
-							<posy>22</posy>
+							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>

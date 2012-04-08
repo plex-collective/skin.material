@@ -17,7 +17,7 @@
 			<control type="multiimage">
 				<width>140</width>
 				<height>134</height>
-				<imagepath background="true">loading</imagepath>
+				<imagepath background="true">HUD/Loading</imagepath>
 				<timeperimage>50</timeperimage>
 				<fadetime>1</fadetime>
 				<loop>yes</loop>
@@ -581,7 +581,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31404]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -708,7 +708,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31405]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -835,7 +835,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31002]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -908,7 +908,7 @@
 									<width>140</width>
 									<height>30</height>
 									<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
-									<textcolor>DarkGray</textcolor>
+									<textcolor>Gray</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
 									<align>center</align>
@@ -1009,7 +1009,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31406]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -1136,7 +1136,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31407]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -1210,7 +1210,7 @@
 									<width>140</width>
 									<height>30</height>
 									<label>$INFO[ListItem.Artist]</label>
-									<textcolor>DarkGray</textcolor>
+									<textcolor>Gray</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
 									<align>center</align>
@@ -1311,7 +1311,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31408]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -1385,7 +1385,7 @@
 									<width>140</width>
 									<height>30</height>
 									<label>$INFO[ListItem.Artist]</label>
-									<textcolor>DarkGray</textcolor>
+									<textcolor>Gray</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
 									<align>center</align>
@@ -1486,7 +1486,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31005]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -1613,7 +1613,7 @@
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31203]</label>
 							<font>searchresultheader</font>
-							<textcolor>DarkGray</textcolor>
+							<textcolor>Gray</textcolor>
 							<posx>63</posx>
 							<posy>20</posy>
 						</control>
@@ -1687,7 +1687,7 @@
 									<width>140</width>
 									<height>30</height>
 									<label>$INFO[ListItem.Property(sourceTitle)]</label>
-									<textcolor>DarkGray</textcolor>
+									<textcolor>Gray</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
 									<align>center</align>
