@@ -165,7 +165,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
+			<label>$LOCALIZE[31307]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
@@ -177,7 +177,7 @@
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31301] $LOCALIZE[31300]</label>
+			<label>$LOCALIZE[31307]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
 			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>

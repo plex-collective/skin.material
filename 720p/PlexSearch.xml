@@ -896,7 +896,7 @@
 									<posy>161</posy>
 									<width>140</width>
 									<height>30</height>
-									<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
 									<textcolor>Shadow</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
@@ -907,7 +907,7 @@
 									<posy>163</posy>
 									<width>140</width>
 									<height>30</height>
-									<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
 									<textcolor>Gray</textcolor>
 									<scroll>false</scroll>
 									<font>homelabel</font>
@@ -971,7 +971,7 @@
 									<posy>161</posy>
 									<width>140</width>
 									<height>30</height>
-									<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
 									<textcolor>Shadow</textcolor>
 									<scrollsuffix>  |  </scrollsuffix>
 									<scroll>true</scroll>
@@ -984,7 +984,7 @@
 									<posy>163</posy>
 									<width>140</width>
 									<height>30</height>
-									<label>$INFO[ListItem.TVShowTitle], Season $INFO[ListItem.Season]</label>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
 									<textcolor>White</textcolor>
 									<scrollsuffix>  |  </scrollsuffix>
 									<scroll>true</scroll>

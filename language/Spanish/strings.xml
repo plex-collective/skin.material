@@ -30,14 +30,15 @@
 	<string id="31101">Mostrar pase de diapositivos</string>
 	<string id="31102">Presentación personalizada</string>
 	<string id="31103">Imágenes de la presentación</string>
-	<string id="31104">Mostar 'En curso' antes de</string>
-	<string id="31105">Mostar menú de apagado</string>
+	<string id="31104">Mostrar 'En curso' antes de</string>
+	<string id="31105">Mostrar menú de apagado</string>
 	<string id="31106">Salir de Plex</string>
 	<string id="31107">Reposo</string>
 	<string id="31108">Apagar</string>
 	<string id="31109">Mostrar</string>
-	<string id="31110">Casa</string>
-	<string id="31111">Presentación de diapositivos</string>
+	<string id="31110">General</string>
+	<string id="31111">Pase de diapos.</string>
+	<string id="31112">Sistema</string>
 
 <!--  Preferences  -->
 	<string id="31200">Preferencias</string>

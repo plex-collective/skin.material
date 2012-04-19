@@ -31,13 +31,14 @@
 	<string id="31102">Custom Slideshow</string>
 	<string id="31103">Slideshow Images</string>
 	<string id="31104">Show On Deck before</string>
-	<string id="31105">Show Power Menu</string>
+	<string id="31105">Show System Menu</string>
 	<string id="31106">Quit</string>
 	<string id="31107">Sleep</string>
 	<string id="31108">Shut Down</string>
 	<string id="31109">Show</string>
 	<string id="31110">Home</string>
 	<string id="31111">Slideshow</string>
+	<string id="31112">System</string>
 
 <!--  Preferences  -->
 	<string id="31200">Preferences</string>

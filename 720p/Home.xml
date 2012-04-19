@@ -31,6 +31,10 @@
 					<onfocus>SetFocus(303,0)</onfocus>
 				</control>
 				<control type="button">
+					<visible>Stringcompare(Container(300).ListItem(0).Label2,system)</visible>
+					<onfocus>SetFocus(304,0)</onfocus>
+				</control>
+				<control type="button">
 					<visible>Control.IsVisible(11003)</visible>
 					<onfocus>SetFocus(11003)</onfocus>
 				</control>
@@ -44,6 +48,7 @@
 				<onfocus>Control.SetFocus(301,0)</onfocus>
 				<onfocus>Control.SetFocus(302,0)</onfocus>
 				<onfocus>Control.SetFocus(303,0)</onfocus>
+				<onfocus>Control.SetFocus(304,0)</onfocus>
 				<onfocus>Control.SetFocus(300)</onfocus>
 				<onfocus>Control.Move(300,1)</onfocus>
 			</control>
@@ -52,6 +57,7 @@
 				<onfocus>Control.SetFocus(301,0)</onfocus>
 				<onfocus>Control.SetFocus(302,0)</onfocus>
 				<onfocus>Control.SetFocus(303,0)</onfocus>
+				<onfocus>Control.SetFocus(304,0)</onfocus>
 				<onfocus>Control.SetFocus(300)</onfocus>
 				<onfocus>Control.Move(300,-1)</onfocus>
 			</control>
@@ -181,8 +187,7 @@
 						<aligny>center</aligny>
 						<font>HomeMenuItem</font>
 						<textcolor>White</textcolor>
-						<visible>![Control.HasFocus(350) | Control.HasFocus(352) | Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303)] + Control.HasFocus(300)</visible>
-						<animation effect="fade" start="0" end="100" time="0" delay="70">Hidden</animation>
+						<visible>![Control.HasFocus(350) | Control.HasFocus(352) | Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003) | Control.HasFocus(301) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)] + Control.HasFocus(300)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="250" height="76">
@@ -225,22 +230,11 @@
 				</focusedlayout>
 				<content>
 					<item>
-						<description>Quit</description>
-						<label>$LOCALIZE[31106]</label>
-						<onclick>Plex.Quit()</onclick>
-						<visible>!Skin.HasSetting(HidePower) + !Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</visible>
-					</item>
-					<item>
-						<description>Sleep</description>
-						<label>$LOCALIZE[31107]</label>
-						<onclick>Plex.Suspend()</onclick>
-						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowSleep)</visible>
-					</item>
-					<item>
-						<description>Shutdown</description>
-						<label>$LOCALIZE[31108]</label>
-						<onclick>Plex.Powerdown()</onclick>
-						<visible>!Skin.HasSetting(HidePower) + Skin.HasSetting(ShowShutDown)</visible>
+						<description>System</description>
+						<label>$LOCALIZE[31112]</label>
+						<label2>System</label2>
+						<onclick>SetFocus(304)</onclick>
+						<visible>!Skin.HasSetting(HideSystem)</visible>
 					</item>
 					<item>
 						<description>DVD Button</description>
@@ -282,21 +276,9 @@
 						<visible>false</visible>
 					</item>
 					<item id="111">
-						<description>Quit Button</description>
+						<description>System Button</description>
 						<label>$LOCALIZE[31104]</label>
-						<onclick>Plex.ShutDown</onclick>
-						<visible>false</visible>
-					</item>
-					<item id="112">
-						<description>Sleep Button</description>
-						<label>$LOCALIZE[31105]</label>
-						<onclick>Plex.SleepSystem</onclick>
-						<visible>false</visible>
-					</item>
-					<item id="113">
-						<description>Shut Down Button</description>
-						<label>$LOCALIZE[31106]</label>
-						<onclick>Plex.ShutDownSystem</onclick>
+						<onclick>SetFocus(304)</onclick>
 						<visible>false</visible>
 					</item>
 					<item id="2">
@@ -717,6 +699,123 @@
 						<label>$LOCALIZE[31601]</label>
 						<onclick>XBMC.EjectTray()</onclick>
 						<onclick>Control.SetFocus(300,3)</onclick>
+					</item>
+				</content>
+			</control>
+			<!-- The submenu for System -->
+			<control type="list" id="304">
+				<visible allowhiddenfocus="true">Control.HasFocus(304) | Stringcompare(Container(300).ListItem(0).Label2,system)</visible>
+				<animation effect="fade" delay="300" time="200">Visible</animation>
+				<posx>496</posx>
+				<posy>364</posy>
+				<width>422</width>
+				<height>324</height>
+				<onup>300</onup>
+				<ondown>-</ondown>
+				<onleft>352</onleft>
+				<onright>351</onright>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="54">
+					<control type="group">
+						<posx>144</posx>
+						<control type="label">
+							<posy>2</posy>
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>Shadow</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>Gray</textcolor>
+							<scroll>false</scroll>
+							<visible>!Control.HasFocus(304)</visible>
+						</control>
+						<control type="label">
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>White</textcolor>
+							<scroll>false</scroll>
+							<visible>Control.HasFocus(304)</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="54">
+					<control type="image">
+						<width>288</width>
+						<height>54</height>
+						<texture>button_home.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnPrevious">Focus</animation>
+					</control>
+					<control type="group">
+						<posx>144</posx>
+						<control type="label">
+							<posy>2</posy>
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>Shadow</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posy>0</posy>
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>White</textcolor>
+							<scroll>true</scroll>
+							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
+						</control>
+						<control type="label">
+							<width>288</width>
+							<height>50</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<info>ListItem.Label</info>
+							<font>list1</font>
+							<textcolor>Orange</textcolor>
+							<scroll>true</scroll>
+							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(304).OnNext">Focus</animation>
+							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(304).OnPrevious">Focus</animation>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Quit</description>
+						<label>$LOCALIZE[31106]</label>
+						<onclick>Plex.Quit()</onclick>
+					</item>
+					<item id="2">
+						<description>Suspend</description>
+						<label>$LOCALIZE[31107]</label>
+						<onclick>Plex.Suspend()</onclick>
+					</item>
+					<item id="3">
+						<description>Shut Down</description>
+						<label>$LOCALIZE[31108]</label>
+						<onclick>Plex.Powerdown()</onclick>
 					</item>
 				</content>
 			</control>

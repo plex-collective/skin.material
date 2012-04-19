@@ -126,7 +126,7 @@
 					<onclick>Skin.ToggleSetting(HideSearch)</onclick>
 				</control>
 				<control type="radiobutton" id="1007">
-					<description>Show Power Menu</description>
+					<description>Show System Menu</description>
 					<width>770</width>
 					<font>list1</font>
 					<textcolor>White</textcolor>
@@ -141,73 +141,8 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<label>$LOCALIZE[31105]</label>
-					<onclick>Skin.ToggleSetting(HidePower)</onclick>
-					<onclick>Skin.Reset(ShowShutDown)</onclick>
-					<onclick>Skin.Reset(ShowSleep)</onclick>
-					<selected>!Skin.HasSetting(HidePower)</selected>
-				</control>
-				<control type="radiobutton" id="309">
-					<description>Show Quit</description>
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<label>- $LOCALIZE[31106]</label>
-					<onclick>Skin.Reset(ShowShutDown)</onclick>
-					<onclick>Skin.Reset(ShowSleep)</onclick>
-					<enable>!Skin.HasSetting(HidePower)</enable>
-					<selected>!Skin.HasSetting(ShowSleep) + !Skin.HasSetting(ShowShutDown)</selected>
-				</control>
-				<control type="radiobutton" id="310">
-					<description>Show Sleep</description>
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<label>- $LOCALIZE[31107]</label>
-					<onclick>Skin.Reset(ShowShutDown)</onclick>
-					<onclick>Skin.SetBool(ShowSleep)</onclick>
-					<enable>!Skin.HasSetting(HidePower)</enable>
-					<selected>Skin.HasSetting(ShowSleep)</selected>
-				</control>
-				<control type="radiobutton" id="311">
-					<description>Show Shutdown</description>
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<label>- $LOCALIZE[31108]</label>
-					<onclick>Skin.SetBool(ShowShutDown)</onclick>
-					<onclick>Skin.Reset(ShowSleep)</onclick>
-					<enable>!Skin.HasSetting(HidePower)</enable>
-					<selected>Skin.HasSetting(ShowShutDown)</selected>
+					<onclick>Skin.ToggleSetting(HideSystem)</onclick>
+					<selected>!Skin.HasSetting(HideSystem)</selected>
 				</control>
 			</control>
 			<control type="grouplist" id="5">
