@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<includes>
+	<include file="HomeDefault.xml"/>
+	<include file="nrgCustomSettings.xml"/>
+	<include file="nrgHome.xml"/>
+	<include file="nrgIncludesHome.xml"/>
+	
+	<!-- Common Stuff (IncludeDims.xml)-->
+	<!-- ============ -->
+	<!-- Backgrounds -->
+	<include name="FullScreenBGImageDims">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	
+	<include name="DevMode">
+		<control type="label">
+			<posx>0</posx>
+			<posy>25r</posy>
+			<width>1280</width>
+			<align>left</align>
+			<label>$INFO[Window.Property(xmlfile)]$INFO[Container.FolderName, &#xB7; ]$INFO[System.BuildVersion, &#xB7; ]$INFO[System.BuildDate, &#xB7; ]$INFO[System.ScreenResolution, &#xB7; ]</label>
+			<font>homelabel</font>
+			<textcolor>White</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
+			<visible>Skin.HasSetting(dev.enable)</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>overlays/debuggrid720.png</texture>
+			<colordiffuse>Orange</colordiffuse>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<animation effect="fade" end="40" condition="true">Conditional</animation>
+			<visible>Skin.HasSetting(dev.enable)</visible>
+		</control>
+	</include>
+	
+	<include name="GlobalIncludes">
+		<include>DevMode</include>
+	</include>
+	
+	<!-- Override default -->
+	<include name="Time">
+		<control type="label">
+			<posx>1189</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>46</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<info>System.Time</info>
+			<font>title1</font>
+			<textcolor>Gray</textcolor>
+			<shadowcolor>Shadow</shadowcolor>
+		</control>
+	</include>
+	
+	<!-- Backgrounds -->
+	<include name="FullScreenBGImage">
+		<include>FullScreenBGImageDims</include>
+	</include>
+	
+	<include name="BackgroundFanart">
+		<control type="largeimage">
+			<visible>![Container.Content(episodes)| Container.Content(photo) | Container.Content(album)] | !IsEmpty(Container.Property(mixedParents))</visible>
+			<info background="true">ListItem.Property(fanart_image)</info>
+			<include>FullScreenBGImageDims</include>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="largeimage">
+			<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+			<info background="true">ListItem.Icon</info>
+			<include>FullScreenBGImageDims</include>
+			<fadetime>300</fadetime>
+		</control>
+		<control type="group">
+			<visible>Container.Content(photo) | Container.Content(album)</visible>
+			<control type="image">
+				<texture>background.png</texture>
+				<include>FullScreenBGImageDims</include>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<info background="true">ListItem.Icon</info>
+				<aspectratio>keep</aspectratio>
+				<include>FullScreenBGImageDims</include>
+				<fadetime>300</fadetime>
+			</control>
+		</control>
+		
+		<control type="image">
+			<include>FullScreenBGImageDims</include>
+			<include>fadeinout</include>
+			<texture>mods/menuBackground.png</texture>
+			<colordiffuse>Red</colordiffuse>
+		</control>
+		<control type="image">
+			<texture diffuse="bottom_home.png">background_overlay_diffuse.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>48</height>
+			<visible>true</visible>
+		</control>
+	</include>
+	<include name="AudioPlayingIndicator">
+		<control type="image">
+			<visible>Player.HasAudio + Player.Playing</visible>
+			<posx>1065</posx>
+			<posy>17</posy>
+			<width>16</width>
+			<height>16</height>
+			<texture>audio_playing.png</texture>
+		</control>
+	</include>
+</includes>

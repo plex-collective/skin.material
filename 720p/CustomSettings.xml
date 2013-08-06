@@ -53,6 +53,7 @@
 				<pulseonselect>false</pulseonselect>
 				<label>$LOCALIZE[31111]</label>
 			</control>
+			<include>nrgCustomSettings-menu</include>		
 		</control>
 		<control type="group" id="200">
 			<control type="grouplist" id="5">
@@ -193,7 +194,7 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<label>- $LOCALIZE[31102]</label>
-					<selected>!Skin.HasSetting(CustomSlideshow)</selected>
+					<selected>Skin.HasSetting(CustomSlideshow)</selected>
 					<onclick>Skin.ToggleSetting(CustomSlideshow)</onclick>
 					<enable>!Skin.HasSetting(HideHomeSlideshow)</enable>
 				</control>
@@ -204,9 +205,10 @@
 					<label>- $LOCALIZE[31103]</label>
 					<label2>$INFO[Skin.String(CustomSlideshowFolder)]</label2>
 					<onclick>Skin.SetPath(CustomSlideshowFolder)</onclick>
-					<enable>!Skin.HasSetting(HideHomeSlideshow) + !Skin.HasSetting(CustomSlideshow)</enable>
+					<enable>!Skin.HasSetting(HideHomeSlideshow) + Skin.HasSetting(CustomSlideshow)</enable>
 				</control>
 			</control>
+			<include>nrgCustomSettings-radiobuttons</include>		
 		</control>
 	</controls>
 </window>

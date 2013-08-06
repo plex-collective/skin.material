@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <includes>
+	<include file="nrgIncludes.xml"/>
 	<include file="CommonViews.xml"/>
 	<include file="Defaults.xml"/>
 	<include file="IncludesDialogs.xml"/>
@@ -52,6 +53,7 @@
 		</control>
 	</include>
 	<include name="Header">
+		<include>GlobalIncludes</include>
 		<control type="grouplist">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -132,6 +134,7 @@
 		</control>
 	</include>
 	<include name="HeaderAudio">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -158,6 +161,7 @@
 		</control>
 	</include>
 	<include name="HeaderVideo">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -184,6 +188,7 @@
 		</control>
 	</include>
 	<include name="HeaderShared">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -210,6 +215,7 @@
 		</control>
 	</include>
 	<include name="HeaderPictures">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -236,6 +242,7 @@
 		</control>
 	</include>
 	<include name="HeaderApplications">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posx>90</posx>
 			<posy>6</posy>
@@ -262,6 +269,7 @@
 		</control>
 	</include>
 	<include name="HeaderSettings">
+		<include>GlobalIncludes</include>
 		<control type="label">
 			<posy>26</posy>
 			<width>366</width>
