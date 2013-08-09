@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <includes>
 	<include file="HomeDefault.xml"/>
+	<include file="nrgIncludesOSD.xml"/>  <!-- Override original OSD -->
 	<include file="nrgCustomSettings.xml"/>
 	<include file="nrgHome.xml"/>
 	<include file="nrgIncludesHome.xml"/>
