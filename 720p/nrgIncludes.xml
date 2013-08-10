@@ -5,6 +5,7 @@
 	<include file="nrgCustomSettings.xml"/>
 	<include file="nrgHome.xml"/>
 	<include file="nrgIncludesHome.xml"/>
+	<include file="nrgIncludesDevMode.xml"/>
 	
 	<!-- Common Stuff (IncludeDims.xml)-->
 	<!-- ============ -->
