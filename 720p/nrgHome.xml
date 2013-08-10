@@ -21,9 +21,7 @@
 					</control-->
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,media)</visible>
-						<!--onfocus>SetFocus(300)</onfocus-->
 						<onfocus>SetFocus(300,0)</onfocus>
-						<!--onfocus>Control.Move(300,0)</onfocus-->
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,pref)</visible>
@@ -354,14 +352,14 @@
 							<label>$LOCALIZE[31400]</label>
 							<label2>search</label2>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
-							<visible>!Skin.HasSetting(HideSearch)</visible>
+							<!--visible>!Skin.HasSetting(HideSearch)</visible-->
 						</item>
 						<item id="29902">
 							<description>Channels</description>
 							<label>$LOCALIZE[31300]</label>
 							<label2>chan</label2>
 							<onclick>SetFocus(302)</onclick>
-							<visible>!Skin.HasSetting(HideChannels)</visible>
+							<!--visible>!Skin.HasSetting(HideChannels)</visible-->
 						</item>
 						<item id="29901">
 							<!-- TODO: Localize -->
@@ -539,25 +537,29 @@
 							<description>My Videos Button</description>
 							<label>Video Channels</label>
 							<visible>true</visible>
-							<onclick>XBMC.ActivateWindow(24)</onclick>
+							<!--onclick>XBMC.ActivateWindow(24)</onclick-->
+							<onclick>Plex.ActivateWindow(24, Root)</onclick>
 						</item>
 						<item id="2">
 							<description>My Music Button</description>
 							<label>Music Channels</label>
 							<visible>true</visible>
-							<onclick>XBMC.ActivateWindow(5)</onclick>
+							<!--onclick>XBMC.ActivateWindow(5)</onclick-->
+							<onclick>Plex.ActivateWindow(5, Root)</onclick>
 						</item>
 						<item id="3">
 							<description>My Pics Button</description>
 							<label>Picture Channels</label>
 							<visible>true</visible>
-							<onclick>XBMC.ActivateWindow(2)</onclick>
+							<!--onclick>XBMC.ActivateWindow(2)</onclick-->
+							<onclick>Plex.ActivateWindow(2, Root)</onclick>
 						</item>
 						<item id="4">
 							<description>My Programs Menu</description>
 							<label>Application Channels</label>
 							<visible>true</visible>
-							<onclick>XBMC.ActivateWindow(1)</onclick>
+							<!--onclick>XBMC.ActivateWindow(1)</onclick-->
+							<onclick>Plex.ActivateWindow(1, Root)</onclick>
 						</item>
 						<item id="10">
 							<description>DVD Button</description>
@@ -772,17 +774,20 @@
 						<item id="1">
 							<description>Video Channels</description>
 							<label>$LOCALIZE[31301]</label>
-							<onclick>xbmc.activatewindow(6)</onclick>
+							<!--onclick>xbmc.activatewindow(6)</onclick-->
+							<onclick>Plex.ActivateWindow(24, Root)</onclick>
 						</item>
 						<item id="2">
 							<description>Audio Channels</description>
 							<label>$LOCALIZE[31302]</label>
-							<onclick>xbmc.activatewindow(5)</onclick>
+							<!--onclick>xbmc.activatewindow(5)</onclick-->
+							<onclick>Plex.ActivateWindow(5, Root)</onclick>
 						</item>
 						<item id="3">
 							<description>Picture Channels</description>
 							<label>$LOCALIZE[31303]</label>
-							<onclick>xbmc.activatewindow(2)</onclick>
+							<!--onclick>xbmc.activatewindow(2)</onclick-->
+							<onclick>Plex.ActivateWindow(2, Root)</onclick>
 						</item>
 						<item id="4">
 							<description>Applications</description>
