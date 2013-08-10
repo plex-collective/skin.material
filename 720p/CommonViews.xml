@@ -643,7 +643,7 @@
 							<height>20</height>
 							<texture>Badges/NowPlaying.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
-							<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
 						<control type="label">
 							<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>

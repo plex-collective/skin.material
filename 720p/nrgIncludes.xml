@@ -6,6 +6,9 @@
 	<include file="nrgHome.xml"/>
 	<include file="nrgIncludesHome.xml"/>
 	<include file="nrgIncludesDevMode.xml"/>
+	<include file="nrgViewsListIncludes.xml"/>
+	<include file="nrgViewsFanart.xml"/>
+	<include file="nrgCommonViews.xml"/>
 	
 	<!-- Common Stuff (IncludeDims.xml)-->
 	<!-- ============ -->
