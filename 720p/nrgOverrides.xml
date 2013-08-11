@@ -10,17 +10,6 @@
 	<include file="nrgViewsFanart.xml"/>
 	<include file="nrgCommonViews.xml"/>
 	
-	<!-- Common Stuff (IncludeDims.xml)-->
-	<!-- ============ -->
-	<!-- Backgrounds -->
-	<include name="FullScreenBGImageDims">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>scale</aspectratio>
-	</include>
-	
 	<include name="DevMode">
 		<control type="label">
 			<posx>0</posx>
@@ -38,7 +27,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>overlays/debuggrid720.png</texture>
+			<texture>nrg/debuggrid720.png</texture>
 			<colordiffuse>Orange</colordiffuse>
 			<aspectratio>scale</aspectratio>
 			<aligny>top</aligny>
@@ -67,6 +56,17 @@
 		</control>
 	</include>
 	
+	<!-- Common Stuff (IncludeDims.xml)-->
+	<!-- ============ -->
+	<!-- Backgrounds -->
+	<include name="FullScreenBGImageDims">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<aspectratio>scale</aspectratio>
+	</include>
+	
 	<!-- Backgrounds -->
 	<include name="FullScreenBGImage">
 		<include>FullScreenBGImageDims</include>
@@ -88,7 +88,7 @@
 		<control type="group">
 			<visible>Container.Content(photo) | Container.Content(album)</visible>
 			<control type="image">
-				<texture>background.png</texture>
+				<texture>background_home.png</texture> <!-- MISSING from both versions, was background.png -->
 				<include>FullScreenBGImageDims</include>
 				<visible>true</visible>
 			</control>
@@ -99,15 +99,14 @@
 				<fadetime>300</fadetime>
 			</control>
 		</control>
-		
 		<control type="image">
 			<include>FullScreenBGImageDims</include>
 			<include>fadeinout</include>
-			<texture>mods/menuBackground.png</texture>
-			<colordiffuse>Red</colordiffuse>
+			<texture>nrg/menuBackground.png</texture>
+			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">
-			<texture diffuse="bottom_home.png">background_overlay_diffuse.png</texture>
+			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -122,7 +121,7 @@
 			<posy>17</posy>
 			<width>16</width>
 			<height>16</height>
-			<texture>audio_playing.png</texture>
+			<texture>BackgroundAudio.png</texture>
 		</control>
 	</include>
 </includes>

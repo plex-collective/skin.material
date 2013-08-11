@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <includes>
-	<include file="nrgIncludes.xml"/>
+	<!--ENERGIZED-->
+	<!-- Include energized overrides and improvements -->
+	<include file="nrgOverrides.xml"/>
+	
 	<include file="CommonViews.xml"/>
 	<include file="Defaults.xml"/>
 	<include file="IncludesDialogs.xml"/>

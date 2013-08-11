@@ -26,7 +26,6 @@
 		
 			<!-- MPAA / TV Rating -->
 			<control type="image">
-				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
 				<posx>70r</posx>
 				<posy>53</posy>
 				<width>60</width>
@@ -35,7 +34,6 @@
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
-				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
 				<posx>72r</posx>
 				<posy>53</posy>
 				<width>60</width>
@@ -44,7 +42,6 @@
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
-				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
 				<posx>71r</posx>
 				<posy>52</posy>
 				<width>60</width>
@@ -53,7 +50,6 @@
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
-				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
 				<posx>71r</posx>
 				<posy>54</posy>
 				<width>60</width>
@@ -62,7 +58,6 @@
 				<colordiffuse>DarkGray</colordiffuse>
 			</control>
 			<control type="image">
-				<visible>!Skin.HasSetting(HideMPAARatingOverlay)</visible>
 				<posx>71r</posx>
 				<posy>53</posy>
 				<width>60</width>
@@ -73,30 +68,8 @@
 			
 			<control type="group" id="52000">
 				<posx>78</posx>
-				<!--posy>480</posy-->
 				<posy>534</posy>
 				<width>1125</width>
-				<!--itemgap>0</itemgap-->
-				
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-				<!-- Finish Time -->
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-				<!--control type="group" id="52002">
-					<height>15</height>
-					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-					<control type="label">
-						<posx>1095</posx>
-						<posy>0</posy>
-						<width>800</width>
-						<align>right</align>
-						<aligny>center</aligny>
-						<!-- TODO: Localize -- >
-						<label>Finish Time: $INFO[Player.FinishTime]</label>
-						<font>title1</font>
-						<textcolor>Gray</textcolor>
-						<shadowcolor>Shadow</shadowcolor>
-					</control>
-				</control-->
 				
 				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!-- Thumbs -->
@@ -110,7 +83,7 @@
 						<description>Title</description>
 						<width>1125</width>
 						<height>201</height>
-						<texture border="0,1,0,11">osd/osd_back.png</texture>
+						<texture border="0,1,0,11">OSD/OSDBackground.png</texture>
 					</control>
 					<!-- Episode Thumb -->
 					<control type="group">
@@ -207,7 +180,7 @@
 							<textcolor>Orange</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<shadowcolor>ff000000</shadowcolor>
-							<font>osd1</font>
+							<font>osd</font>
 						</control>
 						<!-- Image Rating -->
 						<control type="image">
@@ -239,7 +212,7 @@
 								<label>$INFO[ListItem.Year]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label>
 								<textcolor>White</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
-								<font>heading3</font>
+								<font>list3</font>
 							</control>
 							<!-- Episode Details -->
 							<control type="label">
@@ -251,7 +224,7 @@
 								<label>$INFO[ListItem.TVShowTitle]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label>
 								<textcolor>White</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
-								<font>heading3</font>
+								<font>list3</font>
 							</control>
 						</control>
 						<!-- Text Rating -->
@@ -263,7 +236,7 @@
 							<width min="1" max="300">auto</width>
 							<align>right</align>
 							<label>$INFO[ListItem.Rating]</label>
-							<font>heading3</font>
+							<font>list3</font>
 							<textcolor>Gray</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
@@ -317,14 +290,13 @@
 								<aligny>bottom</aligny>
 								<!-- TODO: Localize -->
 								<label>$INFO[ListItem.Episode] $LOCALIZE[31002] ($INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[31012])</label>
-								<font>heading3</font>
+								<font>list3</font>
 								<textcolor>DarkGray</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
 								<wrapmultiline>false</wrapmultiline>
 							</control>
 							<!-- Media flags -->
 							<control type="grouplist">
-								<visible>Skin.HasSetting(EnableMediaFlags)</visible>
 								<orientation>horizontal</orientation>
 								<height>18</height>
 								<align>left</align>
@@ -390,7 +362,7 @@
 							<aligny>bottom</aligny>
 							<!-- TODO: Localize -->
 							<label>Duration: $INFO[ListItem.DurationStr]</label>
-							<font>heading3</font>
+							<font>list3</font>
 							<textcolor>DarkGray</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<wrapmultiline>false</wrapmultiline>
@@ -517,13 +489,12 @@
 					
 					<!-- LIST BUTTON -->
 					<control type="image">
-						<!--visible>!!Skin.HasSetting(HideMovieListTextRatings) | [!Skin.HasSetting(HideMovieListTextRatings) + !Container.Content(movies)]</visible-->
-						<visible>!!Skin.HasSetting(HideMovieListTextRatings)</visible>
+						<visible>!Skin.HasSetting(HideMovieListTextRatings)</visible>
 						<posy>1</posy>
 						<width>512</width>
 						<height>54</height>
 						<texture>button_media.png</texture>
-						<!--texture>mods/list-focus.png</texture>
+						<!--texture>nrg/list-focus.png</texture>
 						<colordiffuse>11B5B5B5</colordiffuse-->
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
@@ -803,7 +774,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>overlay.png</texture>
+				<texture>HUD/HUDBackground.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>
