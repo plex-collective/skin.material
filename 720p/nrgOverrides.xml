@@ -9,6 +9,7 @@
 	<include file="nrgViewsListIncludes.xml"/>
 	<include file="nrgViewsFanart.xml"/>
 	<include file="nrgCommonViews.xml"/>
+	<include file="nrgIncludesMediaFlags.xml"/>
 	
 	<include name="DevMode">
 		<control type="label">

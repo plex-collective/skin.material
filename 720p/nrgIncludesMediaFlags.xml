@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<includes>
+	<!-- Available Media Flags
+		Listitem.Art(mediaTag::videoResolution)
+		Listitem.Art(mediaTag::audioCodec)
+		Listitem.Art(mediaTag::videoCodec)
+		Listitem.Art(mediaTag::aspectRatio)
+		Listitem.Art(mediaTag::videoFrameRate)
+		Listitem.Art(mediaTag::audioChannels)
+		Listitem.Art(mediaTag::contentRating)
+		Listitem.Art(mediaTag::Studio)
+	-->
+	<include name="LargeContentRatingMediaFlags">
+		<!-- MPAA / TV Rating -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>1</posy>
+			<width>50</width>
+			<height>50</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>2</posx>
+			<posy>1</posy>
+			<width>50</width>
+			<height>50</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>1</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>50</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>1</posx>
+			<posy>2</posy>
+			<width>50</width>
+			<height>50</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>1</posx>
+			<posy>1</posy>
+			<width>50</width>
+			<height>50</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<colordiffuse>White</colordiffuse>
+		</control>
+	</include>
+	
+	<!-- MPAA / TV Rating -->
+	<include name="contentRatingMediaFlag">
+		<control type="image">
+			<width>598</width>
+			<height>20</height>
+			<info>Listitem.Art(mediaTag::contentRating)</info>
+			<aspectratio aligny="bottom" align="right">keep</aspectratio>
+			<colordiffuse>Gray</colordiffuse>
+		</control>
+	</include>
+	
+	<!-- Info Media Flags -->
+	<include name="infoMediaFlags">
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::videoResolution)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::aspectRatio))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::aspectRatio)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::videoCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::videoCodec)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::videoFrameRate))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::videoFrameRate)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::audioCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::audioCodec)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Listitem.Art(mediaTag::audioChannels)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+	</include>
+	
+	<!-- Ondeck Media Flags -->
+	<include name="ondeckMediaFlags">
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoResolution))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::videoResolution)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::aspectRatio))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::aspectRatio)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::videoCodec)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoFrameRate))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::videoFrameRate)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::audioCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::audioCodec)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::audioChannels))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11001).ListItem(0).Art(mediaTag::audioChannels)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+	</include>
+	
+	<!-- Recently Added Media Flags -->
+	<include name="recentlyAddedMediaFlags">
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoResolution))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::videoResolution)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::aspectRatio))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::aspectRatio)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::videoCodec)</info>
+			<colordiffuse>DarkGray</colordiffuse>
+			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoFrameRate))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::videoFrameRate)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::audioCodec))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::audioCodec)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+		<control type="image">
+			<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::audioChannels))</visible>
+			<height>18</height>
+			<width min="1" max="95">auto</width>
+			<info>Container(11000).ListItem(0).Art(mediaTag::audioChannels)</info>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>DarkGray</colordiffuse>
+		</control>
+	</include>
+</includes>

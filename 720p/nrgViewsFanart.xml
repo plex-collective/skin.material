@@ -24,46 +24,11 @@
 				<include>Time</include>
 			</control-->
 		
-			<!-- MPAA / TV Rating -->
-			<control type="image">
-				<posx>70r</posx>
+			<control type="group">
+				<!-- MPAA / TV Rating -->
+				<posx>77r</posx>
 				<posy>53</posy>
-				<width>60</width>
-				<height>60</height>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
-				<colordiffuse>DarkGray</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>72r</posx>
-				<posy>53</posy>
-				<width>60</width>
-				<height>60</height>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
-				<colordiffuse>DarkGray</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>71r</posx>
-				<posy>52</posy>
-				<width>60</width>
-				<height>60</height>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
-				<colordiffuse>DarkGray</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>71r</posx>
-				<posy>54</posy>
-				<width>60</width>
-				<height>60</height>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
-				<colordiffuse>DarkGray</colordiffuse>
-			</control>
-			<control type="image">
-				<posx>71r</posx>
-				<posy>53</posy>
-				<width>60</width>
-				<height>60</height>
-				<info>Listitem.Art(mediaTag::contentRating)</info>
-				<colordiffuse>White</colordiffuse>
+				<include>LargeContentRatingMediaFlags</include>
 			</control>
 			
 			<control type="group" id="52000">
@@ -301,54 +266,7 @@
 								<height>18</height>
 								<align>left</align>
 								<itemgap>15</itemgap>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::videoResolution)</info>
-									<aspectratio>keep</aspectratio>
-									<colordiffuse>DarkGray</colordiffuse>
-								</control>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::aspectRatio))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::aspectRatio)</info>
-									<aspectratio>keep</aspectratio>
-									<colordiffuse>DarkGray</colordiffuse>
-								</control>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::videoCodec))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::videoCodec)</info>
-									<colordiffuse>DarkGray</colordiffuse>
-									<aspectratio>keep</aspectratio>
-								</control>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::videoFrameRate))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::videoFrameRate)</info>
-									<aspectratio>keep</aspectratio>
-									<colordiffuse>DarkGray</colordiffuse>
-								</control>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::audioCodec))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::audioCodec)</info>
-									<aspectratio>keep</aspectratio>
-									<colordiffuse>DarkGray</colordiffuse>
-								</control>
-								<control type="image">
-									<visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
-									<height>18</height>
-									<width min="1" max="95">auto</width>
-									<info>Listitem.Art(mediaTag::audioChannels)</info>
-									<aspectratio>keep</aspectratio>
-									<colordiffuse>DarkGray</colordiffuse>
-								</control>
+								<include>infoMediaFlags</include>
 							</control>
 						</control>
 						<!-- Duration -->

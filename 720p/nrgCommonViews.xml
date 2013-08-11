@@ -9,46 +9,9 @@
 				<control type="group">
 					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
 					<!-- MPAA / TV Rating -->
-					<control type="image">
-						<posx>77</posx>
-						<posy>78</posy>
-						<width>40</width>
-						<height>40</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>79</posx>
-						<posy>78</posy>
-						<width>40</width>
-						<height>40</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>78</posx>
-						<posy>77</posy>
-						<width>40</width>
-						<height>40</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>78</posx>
-						<posy>79</posy>
-						<width>40</width>
-						<height>40</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>78</posx>
-						<posy>78</posy>
-						<width>40</width>
-						<height>40</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<colordiffuse>White</colordiffuse>
-					</control>
+					<posx>77</posx>
+					<posy>77</posy>
+					<include>LargeContentRatingMediaFlags</include>
 				</control>
 					
 				<control type="group">
@@ -197,14 +160,10 @@
 					</control>
 					<!-- /Current Thumb reflection-->
 					<!-- MPAA / TV Rating -->
-					<control type="image">
+					<control type="group">
 						<posx>-4</posx>
 						<posy>514</posy>
-						<width>598</width>
-						<height>20</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<aspectratio aligny="bottom" align="right">keep</aspectratio>
-						<colordiffuse>Gray</colordiffuse>
+						<include>contentRatingMediaFlag</include>
 					</control>
 					<!-- Current Thumb -->
 					<control type="image">
@@ -241,13 +200,10 @@
 					</control>
 					<!-- /Current Thumb reflection-->
 					<!-- MPAA / TV Rating -->
-					<control type="image">
+					<control type="group">
 						<posx>-4</posx>
 						<posy>470</posy>
-						<width>598</width>
-						<height>20</height>
-						<info>Listitem.Art(mediaTag::contentRating)</info>
-						<aspectratio aligny="bottom" align="right">keep</aspectratio>
+						<include>contentRatingMediaFlag</include>
 					</control>
 					<!-- Current Thumb -->
 					<control type="image">
@@ -804,54 +760,7 @@
 					<orientation>horizontal</orientation>
 					<itemgap>15</itemgap>
 					<align>right</align>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::videoResolution))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::videoResolution)</info>
-						<aspectratio>keep</aspectratio>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::aspectRatio))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::aspectRatio)</info>
-						<aspectratio>keep</aspectratio>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::videoCodec))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::videoCodec)</info>
-						<colordiffuse>DarkGray</colordiffuse>
-						<aspectratio>keep</aspectratio>
-					</control>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::videoFrameRate))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::videoFrameRate)</info>
-						<aspectratio>keep</aspectratio>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::audioCodec))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::audioCodec)</info>
-						<aspectratio>keep</aspectratio>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
-					<control type="image">
-						<visible>!IsEmpty(Listitem.Art(mediaTag::audioChannels))</visible>
-						<height>18</height>
-						<width min="1" max="95">auto</width>
-						<info>Listitem.Art(mediaTag::audioChannels)</info>
-						<aspectratio>keep</aspectratio>
-						<colordiffuse>DarkGray</colordiffuse>
-					</control>
+					<include>infoMediaFlags</include>
 				</control>
 			</control>
 		</control>

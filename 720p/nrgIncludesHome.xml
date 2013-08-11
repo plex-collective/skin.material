@@ -1500,54 +1500,7 @@
 							<height>18</height>
 							<align>left</align>
 							<itemgap>15</itemgap>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoResolution))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::videoResolution)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::aspectRatio))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::aspectRatio)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoCodec))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::videoCodec)</info>
-								<colordiffuse>DarkGray</colordiffuse>
-								<aspectratio>keep</aspectratio>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::videoFrameRate))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::videoFrameRate)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::audioCodec))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::audioCodec)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11001).ListItem(0).Art(mediaTag::audioChannels))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11001).ListItem(0).Art(mediaTag::audioChannels)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
+							<include>ondeckMediaFlags</include>
 						</control>
 					</control>
 					<!-- Duration -->
@@ -1822,54 +1775,7 @@
 							<height>18</height>
 							<align>left</align>
 							<itemgap>15</itemgap>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoResolution))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::videoResolution)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::aspectRatio))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::aspectRatio)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoCodec))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::videoCodec)</info>
-								<colordiffuse>DarkGray</colordiffuse>
-								<aspectratio>keep</aspectratio>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::videoFrameRate))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::videoFrameRate)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::audioCodec))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::audioCodec)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
-							<control type="image">
-								<visible>!IsEmpty(Container(11000).ListItem(0).Art(mediaTag::audioChannels))</visible>
-								<height>18</height>
-								<width min="1" max="95">auto</width>
-								<info>Container(11000).ListItem(0).Art(mediaTag::audioChannels)</info>
-								<aspectratio>keep</aspectratio>
-								<colordiffuse>DarkGray</colordiffuse>
-							</control>
+							<include>recentlyAddedMediaFlags</include>
 						</control>
 					</control>
 					<!-- Duration -->
