@@ -863,8 +863,7 @@
 			<onfocus>SetFocus(50)</onfocus>
 		</control>
 		<control type="button" id="41">
-			<visible>Skin.HasSetting(ExperimentalFanartView + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
-			<onright>PageDown</onright>
+			<visible>Skin.HasSetting(ExperimentalFanartView) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
 			<onfocus>Container.SetViewMode(555)</onfocus>
 			<onfocus>SetFocus(555)</onfocus>
 		</control>

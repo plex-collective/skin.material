@@ -374,13 +374,13 @@
 			
 			
 		<!-- View Switcher (only if enabled in skin options) -->
-		<control type="button" id="42">
+		<!--control type="button" id="42">
 			<visible>Skin.HasSetting(!ExperimentalFanartView)</visible>
 			<onfocus>SetFocus(555)</onfocus>
-		</control>
+		</control-->
 		<control type="button" id="42">
-			<visible>Skin.HasSetting(ExperimentalFanartView)</visible>
-			<onright>PageDown</onright>
+			<!--visible>Skin.HasSetting(ExperimentalFanartView)</visible-->
+			<visible>true</visible>
 			<onfocus>Container.SetViewMode(50)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
 		</control>
