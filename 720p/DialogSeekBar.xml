@@ -3,7 +3,6 @@
 	<!--visible>[Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + [Window.IsActive(2005) + !Window.IsActive(2901)] | Window.IsActive(142)</visible-->
 	<!--ENERGIZED-->
 	<!-- Don't want OSDSeekBar when OSDMediaInfo is dispayed -->
-	<!--visible>[[!Skin.HasSetting(HideSeekBarOnPause) + Player.Paused] | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + [Window.IsActive(2005) + !Window.IsActive(2901)] | !Window.IsActive(142)</visible-->
 	<visible>[[!Skin.HasSetting(HideSeekBarOnPause) + Player.Paused] | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + [Window.IsActive(2005) + !Window.IsActive(2901) + !Window.IsActive(142)]</visible>
 	<controls>
 		<include>OSDSeekBar</include>
