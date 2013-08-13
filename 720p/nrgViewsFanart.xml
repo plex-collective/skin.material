@@ -73,6 +73,9 @@
 							<fadetime>1</fadetime>
 						</control>
 						<control type="image">
+							<!--
+							http://wiki.xbmc.org/index.php?title=InfoLabels
+							-->
 							<description>Episode Thumb</description>
 							<posx>27</posx>
 							<posy>24</posy>
