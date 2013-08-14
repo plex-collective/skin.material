@@ -1,5 +1,22 @@
 <?xml version="1.0"?>
+
 <includes>
+	<include name="FrodoSupportDetected">
+		<onfocus>Skin.SetBool(frodoSupport)</onfocus>
+	</include>
+	
+	<include name="FrodoSupportNotDetected">
+		<onfocus>Skin.Reset(frodoSupport)</onfocus>
+	</include>
+	
+	<!-- CHECK FOR PLEX HOME THEATER ------------------------------------------------------------------------->
+	<!-- 0.9.10.1-20130809-f227ss6b (0.9.*) -->
+	<include name="checkForFrodoSupport">
+		<include condition="SubString(System.BuildVersion,0.9.,Left)">FrodoSupportDetected</include>
+		<include condition="!SubString(System.BuildVersion,0.9.,Left)">FrodoSupportNotDetected</include>
+	</include>
+	<!-------------------------------------------------------------------------------------------------------->
+	
 	<include file="HomeDefault.xml"/>
 	<include file="nrgIncludesOSD.xml"/>  <!-- Override original OSD -->
 	<include file="nrgCustomSettings.xml"/>
