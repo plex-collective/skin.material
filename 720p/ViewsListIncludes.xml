@@ -22,7 +22,8 @@
 			</control>
 			<!-- EPISODES -->
 			<control type="group">
-				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+				<!--visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible-->
+				<visible>Container.Content(episodes)</visible>
 				<control type="label">
 					<width>395</width>
 					<aligny>center</aligny>
@@ -35,25 +36,11 @@
 					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 				</control>
 			</control>
-			<!-- EPISODES -->
-			<!--control type="group">
-				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-				<control type="label">
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<scroll>false</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-			</control-->
 		</control>
 		<!------------------------------------------------------------------------------------->
 		<!-- EPISODES, MIXED PARENTS -->
 		<control type="group">
+			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
 			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
@@ -64,7 +51,6 @@
 				<font>list2</font>
 				<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 			</control>
-			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)</visible>
 			<control type="label">
 				<posy>+29</posy>
 				<width>395</width>
@@ -79,7 +65,7 @@
 		<!------------------------------------------------------------------------------------->
 		<!-- SONGS, MIXED PARENTS -->
 		<control type="group">
-			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
+			<visible>!IsEmpty(Container.Property(mixedParents)) + !Container.Content(episodes)</visible>
 			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
@@ -135,7 +121,8 @@
 			</control>
 			<!-- EPISODES -->
 			<control type="group">
-				<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+				<!--visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible-->
+				<visible>Container.Content(episodes)</visible>
 				<control type="label">
 					<width>395</width>
 					<aligny>center</aligny>
@@ -160,33 +147,6 @@
 					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 				</control>
 			</control>
-			<!-- EPISODES -->
-			<!--control type="group">
-				<visible>Container.Content(episodes) + !IsEmpty(Container.Property(mixedParents))</visible>
-				<control type="label">
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<scroll>true</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-				</control>
-				<control type="label">
-					<width>395</width>
-					<aligny>center</aligny>
-					<height>50</height>
-					<label>$INFO[ListItem.Label]</label>
-					<textcolor>White</textcolor>
-					<shadowcolor>Shadow</shadowcolor>
-					<scroll>false</scroll>
-					<font>list1</font>
-					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
-					<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
-				</control>
-			</control-->
 		</control>
 		<!------------------------------------------------------------------------------------->
 		<control type="group">
@@ -236,7 +196,8 @@
 		</control>
 		<!------------------------------------------------------------------------------------->
 		<control type="group">
-			<visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible>
+			<!--visible>!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)</visible-->
+			<visible>!IsEmpty(Container.Property(mixedParents)) + !Container.Content(episodes)</visible>
 			<control type="label">
 				<posy>+3</posy>
 				<width>395</width>
