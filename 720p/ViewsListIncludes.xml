@@ -4,7 +4,7 @@
 	<!------------------------------------------------------------------------------------->
 	<include name="ListItemLabel">
 		<control type="group">
-			<!--visible>IsEmpty(Container.Property(mixedParents))</visible-->
+			<visible>IsEmpty(Container.Property(mixedParents))</visible>
 			<control type="group" id="33">
 				<!--visible>!Container.Content(episodes) + !Container.Content(songs)</visible-->
 				<visible>!Container.Content(episodes)</visible>
@@ -105,7 +105,7 @@
 	<!--========================================================================================================================================================================================-->
 	<include name="ListFocusedLabel">
 		<control type="group">
-			<!--visible>IsEmpty(Container.Property(mixedParents))</visible-->
+			<visible>IsEmpty(Container.Property(mixedParents))</visible>
 			<control type="group">
 				<!--visible>!Container.Content(episodes) + !Container.Content(songs)</visible-->
 				<visible>!Container.Content(episodes)</visible>
@@ -281,7 +281,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<# of unwatched episodes text / image>)                                        -->
 	<!------------------------------------------------------------------------------------->
@@ -296,7 +296,7 @@
 		</control>
 		<control type="label">
 			<posx>+18</posx>
-			<posy>-5</posy>
+			<posy>-3</posy>
 			<width>42</width>
 			<height>31</height>
 			<align>center</align>
@@ -321,7 +321,7 @@
 		</control>
 		<control type="label">
 			<posx>+18</posx>
-			<posy>-5</posy>
+			<posy>-3</posy>
 			<width>42</width>
 			<height>31</height>
 			<align>center</align>
@@ -334,7 +334,7 @@
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control>
 	</include>
-	
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<unwatched indicator>)                                                         -->
 	<!------------------------------------------------------------------------------------->
@@ -351,8 +351,8 @@
 	<include name="ListFocusedUnwatchedOverlay">
 		<include>ListItemUnwatchedOverlay</include>
 	</include>
-	
-	
+
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<text rating / image>) Overlay                                                        -->
 	<!------------------------------------------------------------------------------------->
@@ -402,7 +402,7 @@
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control>
 	</include>
-	
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<HD overlay>)                                                                -->
 	<!------------------------------------------------------------------------------------->
@@ -426,7 +426,7 @@
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control>
 	</include>
-	
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<now playing overlay>)                                                         -->
 	<!------------------------------------------------------------------------------------->
@@ -451,7 +451,7 @@
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control>
 	</include>
-	
+
 	<!------------------------------------------------------------------------------------->
 	<!-- (<duration>)                                                                    -->
 	<!------------------------------------------------------------------------------------->

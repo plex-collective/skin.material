@@ -358,7 +358,7 @@
 			<label>$LOCALIZE[31201]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
-			<visible>Window.IsActive(CustomSettings.xml)</visible>
+			<visible>Window.IsActive(SkinSettings.xml)</visible>
 		</control>
 	</include>
 	<include name="Background">

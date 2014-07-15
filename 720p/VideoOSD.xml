@@ -4,7 +4,8 @@
 	<controls>
 		<control type="group">
 			<include>OSDMenu</include>
-			<visible>![Window.IsActive(123) | Window.IsActive(124)]</visible>
+			<!-- Don't show OSDMenu if HideSeekBarOnPause is enabled -->
+			<visible>![Skin.HasSetting(HideSeekBarOnPause) + Player.Paused] + ![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings)]</visible>
 		</control>
 		<control type="group">
 			<include>OSDMediaInfo</include>

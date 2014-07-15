@@ -2,7 +2,8 @@
 <window id="0">
 	<!--ENERGIZED-->
 	<!-- Moved original Simplex home into homeDefault so we can access the Energized look as well -->
-	<include condition="Skin.HasSetting(nrgHome)">homeDefault</include>
-	<include condition="!Skin.HasSetting(nrgHome)">nrgHome</include>
+	<include condition="Skin.HasSetting(HomeSimplex)">HomeSimplex</include>
+	<include condition="!Skin.HasSetting(HomeSimplex)">HomeEnergized</include>
+	<!--include>HomeEnergized</include-->
 </window>
-	
+

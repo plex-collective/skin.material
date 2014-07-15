@@ -53,7 +53,7 @@
 				<pulseonselect>false</pulseonselect>
 				<label>$LOCALIZE[31111]</label>
 			</control>
-			<include>nrgCustomSettings-menu</include>		
+			<include>SkinSettingsMenu</include>
 		</control>
 		<control type="group" id="200">
 			<control type="grouplist" id="5">
@@ -87,44 +87,6 @@
 					<label>$LOCALIZE[31104] $LOCALIZE[31501]</label>
 					<selected>!Skin.HasSetting(RecentlyAddedFirst)</selected>
 					<onclick>Skin.ToggleSetting(RecentlyAddedFirst)</onclick>
-				</control>
-				<control type="radiobutton" id="1005">
-					<description>Show Channels</description>
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<label>$LOCALIZE[31109] $LOCALIZE[31300]</label>
-					<selected>!Skin.HasSetting(HideChannels)</selected>
-					<onclick>Skin.ToggleSetting(HideChannels)</onclick>
-				</control>
-				<control type="radiobutton" id="1006">
-					<description>Show Search</description>
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<label>$LOCALIZE[31109] $LOCALIZE[31400]</label>
-					<selected>!Skin.HasSetting(HideSearch)</selected>
-					<onclick>Skin.ToggleSetting(HideSearch)</onclick>
 				</control>
 				<control type="radiobutton" id="1007">
 					<description>Show System Menu</description>
@@ -208,7 +170,7 @@
 					<enable>!Skin.HasSetting(HideHomeSlideshow) + Skin.HasSetting(CustomSlideshow)</enable>
 				</control>
 			</control>
-			<include>nrgCustomSettings-radiobuttons</include>		
+			<include>SkinSettingsRadioButtons</include>
 		</control>
 	</controls>
 </window>

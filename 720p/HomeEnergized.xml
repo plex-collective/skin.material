@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="nrgHome">
+	<include name="HomeEnergized">
 		<defaultcontrol always="false">350</defaultcontrol>
 		<allowoverlay>yes</allowoverlay>
 		<controls>
@@ -21,19 +21,18 @@
 					</control-->
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,media)</visible>
-						<include>checkForFrodoSupport</include>
 						<onfocus>SetFocus(300,0)</onfocus>
 					</control>
 					<control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,pref)</visible>
 						<onfocus>SetFocus(301,0)</onfocus>
 					</control>
-					<control type="button">
+					<!--control type="button">
 						<visible>Stringcompare(Container(299).ListItem(0).Label2,chan)</visible>
 						<onfocus>SetFocus(302,0)</onfocus>
-					</control>
+					</control-->
 					<control type="button">
-						<visible>Stringcompare(Container(299).ListItem(0).Label2,System)</visible>
+						<visible>Stringcompare(Container(299).ListItem(0).Label2,system)</visible>
 						<onfocus>SetFocus(304,0)</onfocus>
 					</control>
 					<control type="button">
@@ -49,7 +48,7 @@
 						<onfocus>SetFocus(11003)</onfocus>
 					</control>
 					<!-- TODO: FIX -->
-						<!--visible>!Stringcompare(Container(300).ListItem(0).Label2,pref) + !Stringcompare(Container(300).ListItem(0).Label2,chan) + !Stringcompare(Container(300).ListItem(0).Label2,dvd) + !Stringcompare(Container(300).ListItem(0).Label2,System) + !Control.IsVisible(11000) + !Control.IsVisible(11001) + !Control.IsVisible(11003)</visible-->
+						<!--visible>!Stringcompare(Container(300).ListItem(0).Label2,pref) + !Stringcompare(Container(300).ListItem(0).Label2,chan) + !Stringcompare(Container(300).ListItem(0).Label2,dvd) + !Stringcompare(Container(300).ListItem(0).Label2,system) + !Control.IsVisible(11000) + !Control.IsVisible(11001) + !Control.IsVisible(11003)</visible-->
 					<!--control type="button">
 						<visible>!Control.IsVisible(300)</visible>
 						<onfocus>SetFocus(299)</onfocus>
@@ -58,7 +57,7 @@
 				<control type="button" id="351">
 					<posy>900</posy>
 					<onfocus>Control.SetFocus(301,0)</onfocus>
-					<onfocus>Control.SetFocus(302,0)</onfocus>
+					<!--onfocus>Control.SetFocus(302,0)</onfocus-->
 					<onfocus>Control.SetFocus(303,0)</onfocus>
 					<onfocus>Control.SetFocus(304,0)</onfocus>
 					<onfocus>Control.SetFocus(299)</onfocus>
@@ -67,129 +66,17 @@
 				<control type="button" id="352">
 					<posy>900</posy>
 					<onfocus>Control.SetFocus(301,0)</onfocus>
-					<onfocus>Control.SetFocus(302,0)</onfocus>
+					<!--onfocus>Control.SetFocus(302,0)</onfocus-->
 					<onfocus>Control.SetFocus(303,0)</onfocus>
 					<onfocus>Control.SetFocus(304,0)</onfocus>
 					<onfocus>Control.SetFocus(299)</onfocus>
 					<onfocus>Control.Move(299,-1)</onfocus>
 				</control>
-				
-				<!-- THE FANART BACKGROUNDS -->
-				<control type="image">
-					<texture>background.png</texture>
-					<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
-					<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
-					<include>FullScreenBGImage</include>
-				</control>
-				
-				<!-- PMS Slideshow -->
-				<control type="group">
-					<visible>!Skin.HasSetting(HideHomeSlideshow) + !Skin.HasSetting(CustomSlideshow)</visible>		
-					<control type="multiimage" id="10101">
-						<posx>0</posx>
-						<posy>-20</posy>
-						<width>1280</width>
-						<height>720</height>
-						<aspectratio>scale</aspectratio>
-						<aligny>top</aligny>
-						<imagepath background="true">http://127.0.0.1:32400/library/arts</imagepath>
-						<timeperimage>8000</timeperimage>
-						<fadetime>1500</fadetime>
-						<randomize>true</randomize>
-						<loop>yes</loop>
-						<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
-					</control>
-					<!-- "new list" focused item fanart while using inside the list -->
-					<!-- on deck -->
-					<control type="multiimage">
-						<visible>ControlGroup(7003).HasFocus</visible>
-						<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-						<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-						<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
-						<aspectratio>scale</aspectratio>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1280</width>
-						<height>720</height>
-						<fadetime>400</fadetime>
-					</control>
-					<!-- recently added -->
-					<control type="multiimage">
-						<visible>ControlGroup(7001).HasFocus</visible>
-						<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-						<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-						<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
-						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1280</width>
-						<height>720</height>
-						<fadetime>400</fadetime>
-					</control>
-					<!-- recently used -->
-					<control type="multiimage">
-						<visible>ControlGroup(7004).HasFocus</visible>
-						<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-						<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-						<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
-						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1280</width>
-						<height>720</height>
-						<fadetime>400</fadetime>
-					</control>
-					<!-- queue (placeholder, to see if something funny could be done) -->
-					<!--control type="multiimage">
-						<visible>ControlGroup(7003).HasFocus</visible>
-						<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-						<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-						<info background="true">Container(11003).ListItem.Property(fanart_image)</info>
-						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1280</width>
-						<height>720</height>
-						<fadetime>400</fadetime>
-					</control-->
-				</control>
-				
-				<!-- Custom Slideshow  -->
-				<control type="multiimage">
-					<visible>!Skin.HasSetting(HideHomeSlideshow) + Skin.HasSetting(CustomSlideshow)</visible>		
-					<posx>0</posx>
-					<posy>-20</posy>
-					<width>1280</width>
-					<height>720</height>
-					<aspectratio>scale</aspectratio>
-					<aligny>top</aligny>
-					<imagepath background="true">-</imagepath>
-					<timeperimage>8000</timeperimage>
-					<fadetime>1500</fadetime>
-					<randomize>true</randomize>
-					<loop>yes</loop>
-					<info>Skin.String(CustomSlideshowFolder)</info>
-				</control>
-				
-				<!-- Fanart Dimming overlay -->
-				<control type="largeimage">
-					<texture>background_overlay_diffuse.png</texture>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-					<visible>true</visible>
-				</control>
-				<control type="image">
-					<texture>background_home.png</texture>
-					<posx>0</posx>
-					<posy>304</posy>
-					<width>1280</width>
-					<height>416</height>
-					<visible>true</visible>
-				</control>
-				
-				<!-- Background behind Ondeck -->
+
+				<!-- Include Fanart Backgrounds -->
+				<include>BGFanart</include>
+
+				<!-- Background behind OnDeck -->
 				<control type="image">
 					<texture background="true">thumb_background_home.png</texture>
 					<posx>0</posx>
@@ -218,7 +105,7 @@
 					<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11001)]</visible>
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
-				
+
 				<!-- Menubar focus/unfocus -->
 				<control type="image">
 					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible>
@@ -245,7 +132,7 @@
 					<visible>Control.HasFocus(299) + ![Window.IsVisible(4567) | Window.IsVisible(5678) | Window.IsVisible(6789)]</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
-				
+
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -335,14 +222,13 @@
 							<label>$LOCALIZE[31400]</label>
 							<label2>search</label2>
 							<onclick>Plex.ActivateWindow(10051)</onclick>
-							<!--visible>!Skin.HasSetting(HideSearch)</visible-->
 						</item>
-						<item id="29902">
-							<description>Channels</description>
-							<label>$LOCALIZE[31300]</label>
-							<label2>chan</label2>
-							<onclick>SetFocus(302)</onclick>
-							<!--visible>!Skin.HasSetting(HideChannels)</visible-->
+						<item id="29906">
+							<description>System</description>
+							<label>$LOCALIZE[31112]</label>
+							<label2>system</label2>
+							<onclick>SetFocus(304)</onclick>
+							<visible>!Skin.HasSetting(HideSystem)</visible>
 						</item>
 						<item id="29901">
 							<!-- TODO: Localize -->
@@ -358,13 +244,6 @@
 							<label2>dvd</label2>
 							<visible>System.HasMediadvd</visible>
 							<onclick>SetFocus(303)</onclick>
-						</item>
-						<item id="29906">
-							<description>System</description>
-							<label>$LOCALIZE[31112]</label>
-							<label2>System</label2>
-							<onclick>SetFocus(304)</onclick>
-							<visible>!Skin.HasSetting(HideSystem)</visible>
 						</item>
 					</content>
 				</control>
@@ -412,11 +291,6 @@
 						</control>
 					</itemlayout>
 					<focusedlayout height="54">
-						<control type="button">
-							<width>288</width>
-							<onfocus>Play</onfocus>
-							<onfocus>Play</onfocus>
-						</control>
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
@@ -456,100 +330,6 @@
 						</control>
 					</focusedlayout>
 					<content>
-						<!-- XXX: Need these 2 so it wont crash on reload of skin otherwise its fine -->
-						<!----------------------------------------------------------------------------->
-						<!-- Comment this one out when not debugging -->
-						<!--item>
-							<description>Debug Mode Only (don't forget to comment out)</description>
-							<label> </label>
-							<label2>pref</label2>
-							<onclick>SetFocus(299)</onclick>
-							<visible>!Control.HasFocus(299) + !Control.HasFocus(300)</visible>
-						</item-->
-						<item>
-							<description>Search</description>
-							<label>$LOCALIZE[31400]</label>
-							<onclick>Plex.ActivateWindow(10051)</onclick>
-							<visible>false</visible>
-						</item>
-						<!----------------------------------------------------------------------------->
-						<!-- The following code might fix a crash issue with Plex -->
-						<item id="6">
-							<description>Preferences Menu</description>
-							<label>$LOCALIZE[31200]</label>
-							<onclick>SetFocus(506)</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="7">
-							<description>Search Menu</description>
-							<label>$LOCALIZE[31400]</label>
-							<onclick>Plex.ActivateWindow(10051)</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="111">
-							<description>Quit Button</description>
-							<label>$LOCALIZE[31104]</label>
-							<onclick>Plex.Quit()</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="112">
-							<description>Sleep Button</description>
-							<label>$LOCALIZE[31105]</label>
-							<onclick>Plex.Suspend()</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="113">
-							<description>Shut Down Button</description>
-							<label>$LOCALIZE[31106]</label>
-							<onclick>Plex.Powerdown()</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="13">
-							<description>Help Menu</description>
-							<label>-</label>
-							<visible>false</visible>
-							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/help,return)</onclick>
-						</item>
-						<item id="12">
-							<description>Plex Online Menu</description>
-							<label>$LOCALIZE[31306]</label>
-							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
-							<visible>false</visible>
-						</item>
-						<item id="1">
-							<description>My Videos Button</description>
-							<label>Video Channels</label>
-							<visible>true</visible>
-							<onclick>Plex.ActivateWindow(24, Root)</onclick>
-							<visible>!Skin.HasSetting(frodoSupport)</visible>		
-						</item>
-						<item id="2">
-							<description>My Music Button</description>
-							<label>Music Channels</label>
-							<visible>true</visible>
-							<onclick>Plex.ActivateWindow(5, Root)</onclick>
-							<visible>!Skin.HasSetting(frodoSupport)</visible>		
-						</item>
-						<item id="3">
-							<description>My Pics Button</description>
-							<label>Picture Channels</label>
-							<visible>true</visible>
-							<onclick>Plex.ActivateWindow(2, Root)</onclick>
-							<visible>!Skin.HasSetting(frodoSupport)</visible>		
-						</item>
-						<item id="4">
-							<description>My Programs Menu</description>
-							<label>Application Channels</label>
-							<visible>true</visible>
-							<onclick>Plex.ActivateWindow(1, Root)</onclick>
-							<visible>!Skin.HasSetting(frodoSupport)</visible>		
-						</item>
-						<item id="10">
-							<description>DVD Button</description>
-							<label>DVD</label>
-							<visible>false</visible>
-							<onclick>XBMC.PlayDVD</onclick>
-						</item>
 					</content>
 				</control>
 				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -635,10 +415,16 @@
 						</control>
 					</focusedlayout>
 					<content>
+						<!-- Playback, Appearance, System, Network -->
 						<item>
 							<description>Skin</description>
 							<label>$LOCALIZE[31201]</label>
 							<onclick>activatewindow(56)</onclick>
+						</item>
+						<item>
+							<description>Channel Directory</description>
+							<label>$LOCALIZE[31306]</label>
+							<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
 						</item>
 						<item>
 							<description>Appearance</description>
@@ -646,19 +432,10 @@
 							<onclick>activatewindow(AppearanceSettings)</onclick>
 						</item>
 						<item>
-							<description>Videos</description>
-							<label>$LOCALIZE[31203]</label>
-							<onclick>activatewindow(MyVideosSettings)</onclick>
-						</item>
-						<item>
-							<description>Music</description>
-							<label>$LOCALIZE[31204]</label>
-							<onclick>activatewindow(MyMusicSettings)</onclick>
-						</item>
-						<item>
-							<description>Pictures</description>
-							<label>$LOCALIZE[31205]</label>
-							<onclick>activatewindow(MyPicturesSettings)</onclick>
+							<description>Playback Settings</description>
+							<!-- TODO: Localize -->
+							<label>Playback</label>
+							<onclick>activatewindow(17)</onclick>
 						</item>
 						<item>
 							<description>Network</description>
@@ -669,118 +446,6 @@
 							<description>System</description>
 							<label>$LOCALIZE[31207]</label>
 							<onclick>activatewindow(SystemSettings)</onclick>
-						</item>
-					</content>
-				</control>
-				<!-- The submenu for Channels -->
-				<control type="list" id="302">
-					<visible allowhiddenfocus="true">Control.HasFocus(302) | Stringcompare(Container(299).ListItem(0).Label2,chan)</visible>
-					<animation effect="fade" delay="300" time="200">Visible</animation>
-					<posx>496</posx>
-					<posy>364</posy>
-					<width>422</width>
-					<height>324</height>
-					<onup>299</onup>
-					<ondown>-</ondown>
-					<onleft>352</onleft>
-					<onright>351</onright>
-					<scrolltime>200</scrolltime>
-					<itemlayout height="54">
-						<control type="group">
-							<posx>144</posx>
-							<control type="label">
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Gray</textcolor>
-								<shadowcolor>Shadow</shadowcolor>
-								<scroll>false</scroll>
-								<visible>!Control.HasFocus(302)</visible>
-							</control>
-							<control type="label">
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>Shadow</shadowcolor>
-								<scroll>false</scroll>
-								<visible>Control.HasFocus(302)</visible>
-							</control>
-						</control>
-					</itemlayout>
-					<focusedlayout height="54">
-						<control type="image">
-							<width>288</width>
-							<height>54</height>
-							<texture>button_home.png</texture>
-							<aspectratio>keep</aspectratio>
-							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(302).OnNext">Focus</animation>
-							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(302).OnPrevious">Focus</animation>
-						</control>
-						<control type="group">
-							<posx>144</posx>
-							<control type="label">
-								<posy>0</posy>
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>White</textcolor>
-								<shadowcolor>Shadow</shadowcolor>
-								<scroll>true</scroll>
-								<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
-							</control>
-							<control type="label">
-								<width>288</width>
-								<height>50</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<info>ListItem.Label</info>
-								<font>list1</font>
-								<textcolor>Orange</textcolor>
-								<shadowcolor>Shadow</shadowcolor>
-								<scroll>true</scroll>
-								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(302).OnNext">Focus</animation>
-								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(302).OnPrevious">Focus</animation>
-							</control>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<description>Video Channels</description>
-							<label>$LOCALIZE[31301]</label>
-							<!--onclick>xbmc.activatewindow(6)</onclick-->
-							<onclick>Plex.ActivateWindow(24, Root)</onclick>
-						</item>
-						<item id="2">
-							<description>Audio Channels</description>
-							<label>$LOCALIZE[31302]</label>
-							<!--onclick>xbmc.activatewindow(5)</onclick-->
-							<onclick>Plex.ActivateWindow(5, Root)</onclick>
-						</item>
-						<item id="3">
-							<description>Picture Channels</description>
-							<label>$LOCALIZE[31303]</label>
-							<!--onclick>xbmc.activatewindow(2)</onclick-->
-							<onclick>Plex.ActivateWindow(2, Root)</onclick>
-						</item>
-						<item id="4">
-							<description>Applications</description>
-							<label>$LOCALIZE[31304]</label>
-							<onclick>xbmc.activatewindow(1)</onclick>
-						</item>
-						<item id="12">
-							<description>Channel Directory</description>
-							<label>$LOCALIZE[31306]</label>
-							<onclick>Plex.ActivateWindow(1,plex://127.0.0.1/system/plexonline,return)</onclick>
 						</item>
 					</content>
 				</control>
@@ -1087,7 +752,7 @@
 				<width>1280</width>
 				<height>330</height>
 			</control>
-			<control type="image">	
+			<control type="image">
 				<texture>home_fade_bottom.png</texture>
 				<posx>0</posx>
 				<posy>675</posy>

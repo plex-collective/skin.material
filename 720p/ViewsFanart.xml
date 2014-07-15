@@ -3,7 +3,7 @@
 	<include name="FanartList">
 		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!-- ### INFO/METADATA ### -->
-		
+
 		<!--======================================================================================================================================================================================================-->
 		<!-- THUMBNAILS WITH INFO -->
 		<!--======================================================================================================================================================================================================-->
@@ -23,19 +23,19 @@
 				</control>
 				<include>Time</include>
 			</control-->
-		
+
 			<control type="group">
 				<!-- MPAA / TV Rating -->
 				<posx>77r</posx>
 				<posy>53</posy>
 				<include>LargeContentRatingMediaFlags</include>
 			</control>
-			
+
 			<control type="group" id="52000">
 				<posx>78</posx>
 				<posy>534</posy>
 				<width>1125</width>
-				
+
 				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!-- Thumbs -->
 				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -189,7 +189,8 @@
 								<posy>3</posy>
 								<width min="1" max="600">auto</width>
 								<align>left</align>
-								<label>$INFO[ListItem.TVShowTitle]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label>
+								<!--label>$INFO[ListItem.Property(title)]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.mpaa, &#xB7; ]</label-->
+								<label>$INFO[ListItem.Date]$INFO[ListItem.Genre, &#xB7; ]$INFO[Listitem.Property(mediaTag-contentRating), &#xB7; ]</label>
 								<textcolor>White</textcolor>
 								<shadowcolor>Shadow</shadowcolor>
 								<font>list3</font>
@@ -292,11 +293,11 @@
 				</control>
 			</control>
 		</control>
-			
-			
+
+
 		<!-- View Switcher (only if enabled in skin options) -->
 		<!--control type="button" id="42">
-			<visible>Skin.HasSetting(!ExperimentalFanartView)</visible>
+			<visible>!Skin.HasSetting(ExperimentalFanartView)</visible>
 			<onfocus>SetFocus(555)</onfocus>
 		</control-->
 		<control type="button" id="42">
@@ -305,8 +306,8 @@
 			<onfocus>Container.SetViewMode(50)</onfocus>
 			<onfocus>SetFocus(50)</onfocus>
 		</control>
-		
-		
+
+
 		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 		<!-- ### LIST VIEW ITSELF ### -->
 		<control type="list" id="555">
@@ -318,8 +319,8 @@
 			<onright>-</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
-			
-			<!-- (<unwatched indicator>) + <label> + (<# unwatched episodes> | <hd>) + (text rating) -->   
+
+			<!-- (<unwatched indicator>) + <label> + (<# unwatched episodes> | <hd>) + (text rating) -->
 			<!-- TVSHOWS : SEASONS : MOVIES : EPISODES : CLIPS -->
 			<itemlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
 				<control type="group">
@@ -328,7 +329,7 @@
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
+
 					<!-- (<unwatched indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -338,7 +339,7 @@
 						<height>52</height>
 						<include>ListItemUnwatchedOverlay</include>
 					</control>
-					
+
 					<!-- (Episode #) + Label -->
 					<control type="group">
 						<posx>81</posx>
@@ -347,7 +348,7 @@
 						<height>50</height>
 						<include>ListItemLabel</include>
 					</control>
-					
+
 					<!-- (<# of unwatched episodes text / image>) -->
 					<control type="group">
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
@@ -357,7 +358,7 @@
 						<height>31</height>
 						<include>ListItemUnwatchedCountOverlay</include>
 					</control>
-					
+
 					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -367,7 +368,7 @@
 						<height>54</height>
 						<include>ListItemVideoResolutionOverlay</include>
 					</control>
-					
+
 					<!-- (<text rating / image>) -->
 					<!--control type="group">
 						<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
@@ -377,7 +378,7 @@
 						<height>24</height>
 						<include>ListItemTextRatingOverlay</include>
 					</control-->
-					
+
 					<!-- (<now playing overlay>) -->
 					<control type="group">
 						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
@@ -387,7 +388,7 @@
 						<height>20</height>
 						<include>ListItemNowPlayingOverlay</include>
 					</control>
-					
+
 					<!-- (<duration>) -->
 					<control type="group">
 						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
@@ -398,7 +399,7 @@
 						<include>ListItemDuration</include>
 					</control>
 				</control>
-				
+
 			</itemlayout>
 			<focusedlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]">
 				<control type="group">
@@ -407,7 +408,7 @@
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
+
 					<!-- LIST BUTTON -->
 					<control type="image">
 						<visible>!Skin.HasSetting(HideMovieListTextRatings)</visible>
@@ -432,7 +433,7 @@
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
 					</control-->
-					
+
 					<!-- (<unwatched indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -442,7 +443,7 @@
 						<height>52</height>
 						<include>ListFocusedUnwatchedOverlay</include>
 					</control>
-					
+
 					<!-- (Episode #) + Label -->
 					<control type="group" id="121212">
 						<posx>81</posx>
@@ -451,7 +452,7 @@
 						<height>50</height>
 						<include>ListFocusedLabel</include>
 					</control>
-					
+
 					<!-- (<# of unwatched episodes text / image>) -->
 					<control type="group">
 						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
@@ -461,7 +462,7 @@
 						<height>31</height>
 						<include>ListFocusedUnwatchedCountOverlay</include>
 					</control>
-					
+
 					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -471,7 +472,7 @@
 						<height>54</height>
 						<include>ListFocusedVideoResolutionOverlay</include>
 					</control>
-					
+
 					<!-- (<text rating / image>) -->
 					<!--control type="group">
 						<visible>!Skin.HasSetting(HideMovieListTextRatings) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
@@ -481,7 +482,7 @@
 						<height>24</height>
 						<include>ListFocusedTextRatingOverlay</include>
 					</control-->
-					
+
 					<!-- (<now playing overlay>) -->
 					<control type="group">
 						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
@@ -491,7 +492,7 @@
 						<height>20</height>
 						<include>ListFocusedNowPlayingOverlay</include>
 					</control>
-					
+
 					<!-- (<duration>) -->
 					<control type="group">
 						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
@@ -503,7 +504,7 @@
 					</control>
 				</control>
 			</focusedlayout>
-			
+
 			<!-- MIXED PARENTS EPISODES (Recently Added, etc) -->
 			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
 				<control type="group">
@@ -512,7 +513,7 @@
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
+
 					<!-- (<unwatched indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -522,8 +523,8 @@
 						<height>72</height>
 						<include>ListItemUnwatchedOverlay</include>
 					</control>
-					
-					<!-- (Episode #) + Label 
+
+					<!-- (Episode #) + Label
 					      Showname, Season -->
 					<control type="group">
 						<posx>81</posx>
@@ -532,7 +533,7 @@
 						<height>50</height>
 						<include>ListItemLabel</include>
 					</control>
-					
+
 					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -543,7 +544,7 @@
 						<include>ListItemVideoResolutionOverlay</include>
 					</control>
 				</control>
-				
+
 			</itemlayout>
 			<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
 				<control type="image">
@@ -555,14 +556,14 @@
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
 				</control>
-				
+
 				<control type="group">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
+
 					<!-- (<unwatched indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -572,8 +573,8 @@
 						<height>72</height>
 						<include>ListFocusedUnwatchedOverlay</include>
 					</control>
-					
-					<!-- (Episode #) + Label 
+
+					<!-- (Episode #) + Label
 					      Showname, Season -->
 					<control type="group">
 						<posx>81</posx>
@@ -582,7 +583,7 @@
 						<height>50</height>
 						<include>ListFocusedLabel</include>
 					</control>
-					
+
 					<!-- (<HD indicator>) -->
 					<control type="group">
 						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
@@ -594,7 +595,7 @@
 					</control>
 				</control>
 			</focusedlayout>
-			
+
 			<!-- MIXED PARENTS SONGS (All Tracks) -->
 			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)">
 				<control type="group">
@@ -603,8 +604,8 @@
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
-					<!-- (Episode #) + Label 
+
+					<!-- (Episode #) + Label
 					      Showname, Season -->
 					<control type="group">
 						<posx>81</posx>
@@ -613,7 +614,7 @@
 						<height>50</height>
 						<include>ListItemLabel</include>
 					</control>
-					
+
 					<!-- (<now playing overlay>) -->
 					<control type="group">
 						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
@@ -623,7 +624,7 @@
 						<height>20</height>
 						<include>ListItemNowPlayingOverlay</include>
 					</control>
-					
+
 					<!-- (<duration>) -->
 					<control type="group">
 						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
@@ -645,15 +646,15 @@
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
 				</control>
-				
+
 				<control type="group">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>551</width>
 					<height>50</height>
 					<itemgap>15</itemgap>
-					
-					<!-- (Episode #) + Label 
+
+					<!-- (Episode #) + Label
 					      Showname, Season -->
 					<control type="group">
 						<posx>81</posx>
@@ -662,7 +663,7 @@
 						<height>50</height>
 						<include>ListFocusedLabel</include>
 					</control>
-					
+
 					<!-- (<now playing overlay>) -->
 					<control type="group">
 						<visible>Container.Content(Songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
@@ -672,7 +673,7 @@
 						<height>20</height>
 						<include>ListFocusedNowPlayingOverlay</include>
 					</control>
-					
+
 					<!-- (<duration>) -->
 					<control type="group">
 						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
@@ -685,7 +686,7 @@
 				</control>
 			</focusedlayout>
 		</control>
-		
+
 		<!-- /Scroll Letter -->
 		<control type="group">
 			<visible>Container.Scrolling + !Control.IsVisible(53)</visible>

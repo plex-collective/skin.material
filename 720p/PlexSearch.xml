@@ -48,7 +48,7 @@
 				<texture>search_input.png</texture>
 			</control>
 			<!-- text field -->
-			<control type="label" id="310">
+			<control type="edit" id="310">
 				<posx>61</posx>
 				<posy>73</posy>
 				<font>keyboardentry</font>
@@ -524,7 +524,7 @@
 							<font>keyboardbuttonsmall</font>
 							<posx>224</posx>
 							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
-							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>							
+							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>
 							<onup>100</onup>
 							<ondown>-</ondown>
 							<onleft>32</onleft>
@@ -567,7 +567,7 @@
 					<onright>350</onright>
 					<onleft>350</onleft>
 					<orientation>vertical</orientation>
-					<itemgap>-30</itemgap>					
+					<itemgap>-30</itemgap>
 					<!-- Movies -->
 					<control type="group" id="7001">
 						<height>260</height>

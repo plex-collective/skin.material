@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <includes>
-	<include name="nrgCustomSettings-menu">		
+	<include name="SkinSettingsMenu">
 			<control type="button" id="103">
 				<width>272</width>
 				<font>list1</font>
@@ -50,7 +50,7 @@
 				<label>Experimental</label>
 			</control>
 	</include>
-	<include name="nrgCustomSettings-radiobuttons">		
+	<include name="SkinSettingsRadioButtons">
 			<control type="grouplist" id="5">
 				<visible>ControlGroup(3).Hasfocus(103)</visible>
 				<description>Control Area</description>
@@ -64,25 +64,6 @@
 				<onup>5</onup>
 				<ondown>5</ondown>
 				<orientation>vertical</orientation>
-				<control type="radiobutton" id="1030">
-					<width>770</width>
-					<font>list1</font>
-					<textcolor>White</textcolor>
-					<focusedcolor>Orange</focusedcolor>
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
-					<height>54</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<textoffsety>0</textoffsety>
-					<textoffsetx>30</textoffsetx>
-					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
-					<!-- TODO: Localize -->
-					<label>Add Plex Home Theater Support</label>
-					<onclick>Skin.ToggleSetting(frodoSupport)</onclick>
-					<selected>Skin.HasSetting(frodoSupport)</selected>
-				</control>
 				<control type="radiobutton" id="1031">
 					<width>770</width>
 					<font>list1</font>
@@ -98,9 +79,9 @@
 					<pulseonselect>false</pulseonselect>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
-					<label>Hide Alternate Home Page</label>
-					<onclick>Skin.ToggleSetting(nrgHome)</onclick>
-					<selected>Skin.HasSetting(nrgHome)</selected>
+					<label>Use Original Simplex Home Page</label>
+					<onclick>Skin.ToggleSetting(HomeSimplex)</onclick>
+					<selected>Skin.HasSetting(HomeSimplex)</selected>
 				</control>
 				<control type="radiobutton" id="1032">
 					<width>770</width>
@@ -249,7 +230,7 @@
 					<onclick>Skin.ResetSettings</onclick>
 					<onclick>XBMC.ReloadSkin()</onclick>
 					<onclick>Control.Move(3,101)</onclick>
-					
+
 				</control>
 				<control type="button" id="1042">
 					<width>770</width>

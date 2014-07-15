@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="BGFanart">
+		<!-- THE FANART BACKGROUNDS -->
+		<control type="image">
+			<texture>background.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+			<include>FullScreenBGImage</include>
+		</control>
+
+		<!-- PMS Slideshow -->
+		<control type="group">
+			<visible>!Skin.HasSetting(HideHomeSlideshow) + !Skin.HasSetting(CustomSlideshow)</visible>
+			<control type="multiimage" id="10101">
+				<posx>0</posx>
+				<posy>-20</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>scale</aspectratio>
+				<aligny>top</aligny>
+				<imagepath background="true">plexserver://best:32400/library/arts</imagepath>
+				<timeperimage>8000</timeperimage>
+				<fadetime>1500</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
+			</control>
+			<!-- "new list" focused item fanart while using inside the list -->
+			<!-- on deck -->
+			<control type="multiimage">
+				<visible>ControlGroup(7003).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
+				<aspectratio>scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+			</control>
+			<!-- recently added -->
+			<control type="multiimage">
+				<visible>ControlGroup(7001).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+			</control>
+			<!-- recently used -->
+			<control type="multiimage">
+				<visible>ControlGroup(7004).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+			</control>
+			<!-- queue (placeholder, to see if something funny could be done) -->
+			<!--control type="multiimage">
+				<visible>ControlGroup(7003).HasFocus</visible>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
+				<info background="true">Container(11003).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<fadetime>400</fadetime>
+			</control-->
+		</control>
+
+		<!-- Custom Slideshow  -->
+		<control type="multiimage">
+			<visible>!Skin.HasSetting(HideHomeSlideshow) + Skin.HasSetting(CustomSlideshow)</visible>
+			<posx>0</posx>
+			<posy>-20</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<aligny>top</aligny>
+			<imagepath background="true">-</imagepath>
+			<timeperimage>8000</timeperimage>
+			<fadetime>1500</fadetime>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<info>Skin.String(CustomSlideshowFolder)</info>
+		</control>
+
+		<!-- Fanart Dimming overlay -->
+		<control type="largeimage">
+			<texture>background_overlay_diffuse.png</texture>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<visible>true</visible>
+		</control>
+		<control type="image">
+			<texture>background_home.png</texture>
+			<posx>0</posx>
+			<posy>304</posy>
+			<width>1280</width>
+			<height>416</height>
+			<visible>true</visible>
+		</control>
+	</include>
+</includes>

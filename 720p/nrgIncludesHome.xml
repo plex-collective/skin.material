@@ -94,7 +94,7 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<include name="OnDeckFirst">
 		<control type="group" id="7003">
 			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
@@ -545,7 +545,7 @@
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>border_square_home.png</bordertexture>
-					<colordiffuse>FFAAAAAA</colordiffuse>	
+					<colordiffuse>FFAAAAAA</colordiffuse>
 				</control>
 				<control type="image">
 					<visible>[Control.HasFocus(300)]</visible>
@@ -1384,7 +1384,7 @@
 					</control>
 					<!-- Image Rating -->
 					<control type="image">
-						<visible>!IsEmpty(Container(11001).ListItem(0).Rating)</visible>
+						<visible>!IsEmpty(Container(11001).ListItem(0).Property(rating))</visible>
 						<description>Rating (5 Star) Image</description>
 						<posx>102r</posx>
 						<posy>0</posy>
@@ -1409,7 +1409,7 @@
 							<posy>3</posy>
 							<width min="1" max="600">auto</width>
 							<align>left</align>
-							<label>$INFO[Container(11001).ListItem(0).Year]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).mpaa, &#xB7; ]</label>
+							<label>$INFO[Container(11001).ListItem(0).Year]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).Property(mediaTag-contentRating), &#xB7; ]</label>
 							<textcolor>White</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<font>list3</font>
@@ -1421,26 +1421,26 @@
 							<posy>3</posy>
 							<width min="1" max="600">auto</width>
 							<align>left</align>
-							<label>$INFO[Container(11001).ListItem(0).Title]$INFO[Container(11001).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11001).ListItem(0).Episode]$INFO[Container(11001).ListItem(0).Date, &#xB7; ]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).mpaa, &#xB7; ]</label>
+							<label>$INFO[Container(11001).ListItem(0).Title]$INFO[Container(11001).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11001).ListItem(0).Episode]$INFO[Container(11001).ListItem(0).Date, &#xB7; ]$INFO[Container(11001).ListItem(0).Genre, &#xB7; ]$INFO[Container(11001).ListItem(0).Property(mediaTag-contentRating), &#xB7; ]</label>
 							<textcolor>White</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<font>list3</font>
 						</control>
 					</control>
 					<!-- Text Rating -->
-					<control type="label">
-						<visible>!IsEmpty(Container(11001).ListItem(0).Rating)</visible>
+					<!--control type="label">
+						<visible>!IsEmpty(Container(11001).ListItem(0).Property(rating))</visible>
 						<description>Text Rating</description>
 						<posx>0r</posx>
 						<posy>3</posy>
 						<width min="1" max="300">auto</width>
 						<align>right</align>
-						<label>$INFO[Container(11001).ListItem(0).Rating]</label>
+						<label>$INFO[Container(11001).Listitem(0).Property(rating)]</label>
 						<font>list3</font>
 						<textcolor>Gray</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
 						<wrapmultiline>false</wrapmultiline>
-					</control>
+					</control-->
 				</control>
 				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!-- Plot outline -->
@@ -1659,7 +1659,7 @@
 					</control>
 					<!-- Image Rating -->
 					<control type="image">
-						<visible>!IsEmpty(Container(11000).ListItem(0).Rating)</visible>
+						<visible>!IsEmpty(Container(11000).ListItem(0).Property(rating))</visible>
 						<description>Rating (5 Star) Image</description>
 						<posx>102r</posx>
 						<posy>0</posy>
@@ -1684,7 +1684,7 @@
 							<posy>3</posy>
 							<width min="1" max="600">auto</width>
 							<align>left</align>
-							<label>$INFO[Container(11000).ListItem(0).Year]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).mpaa, &#xB7; ]</label>
+							<label>$INFO[Container(11000).ListItem(0).Year]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).Property(mediaTag-contentRating), &#xB7; ]</label>
 							<textcolor>White</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<font>list3</font>
@@ -1696,26 +1696,26 @@
 							<posy>3</posy>
 							<width min="1" max="600">auto</width>
 							<align>left</align>
-							<label>$INFO[Container(11000).ListItem(0).Title]$INFO[Container(11000).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11000).ListItem(0).Episode]$INFO[Container(11000).ListItem(0).Date, &#xB7; ]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).mpaa, &#xB7; ]</label>
+							<label>$INFO[Container(11000).ListItem(0).Title]$INFO[Container(11000).ListItem(0).Season, &#xB7; ,x]$INFO[Container(11000).ListItem(0).Episode]$INFO[Container(11000).ListItem(0).Date, &#xB7; ]$INFO[Container(11000).ListItem(0).Genre, &#xB7; ]$INFO[Container(11000).ListItem(0).Property(mediaTag-contentRating), &#xB7; ]</label>
 							<textcolor>White</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
 							<font>list3</font>
 						</control>
 					</control>
 					<!-- Text Rating -->
-					<control type="label">
-						<visible>!IsEmpty(Container(11000).ListItem(0).Rating)</visible>
+					<!--control type="label">
+						<visible>!IsEmpty(Container(11000).ListItem(0).Property(rating))</visible>
 						<description>Text Rating</description>
 						<posx>0r</posx>
 						<posy>3</posy>
 						<width min="1" max="300">auto</width>
 						<align>right</align>
-						<label>$INFO[Container(11000).ListItem(0).Rating]</label>
+						<label>$NUMBER[$INFO[Container(11000).ListItem(0).Property(rating)]</label>
 						<font>list3</font>
 						<textcolor>Gray</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
 						<wrapmultiline>false</wrapmultiline>
-					</control>
+					</control-->
 				</control>
 				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<!-- Plot outline -->
