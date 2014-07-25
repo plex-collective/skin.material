@@ -7,8 +7,8 @@
 		<include>BGDimmingOverlay</include>
 		<include>Header</include>
 
-		<include condition="Skin.String(HOME,Material) | IsEmpty(Skin.String(HOME))">HomeMenu</include>
-		<include condition="Skin.String(HOME,Urban)">HomeUrbanMenu</include>
+		<include condition="Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String(HOME_VIEW))">HomeMenu</include>
+		<include condition="Skin.String(HOME_VIEW,Urban)">HomeUrbanMenu</include>
 
 		<include>GlobalIncludes</include>
 		<include>Clock</include>

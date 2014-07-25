@@ -23,12 +23,60 @@
 				<colordiffuse>FFFF0000</colordiffuse>
 			</control>
 			-->
+
+			<!-- Move to Deck -->
+			<control type="image">
+				<posx>15</posx>
+				<posy>70</posy>
+				<height>222</height>
+				<width>70</width>
+				<texture>white.png</texture>
+				<colordiffuse>Orange</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>45</posx>
+				<posy>222</posy>
+				<width>222</width>
+				<height>70</height>
+				<angle>90</angle>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>title2</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>Black</shadowcolor>
+				<label>Placeholder</label>
+				<scroll>false</scroll>
+			</control>
+
+			<!-- Library Content Label -->
+			<control type="image">
+				<posx>460</posx>
+				<posy>355</posy>
+				<width>360</width>
+				<height>80</height>
+				<texture>white.png</texture>
+				<colordiffuse>Orange</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>460</posx>
+				<posy>355</posy>
+				<width>360</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>title2</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>Black</shadowcolor>
+				<label>Content Libraries</label>
+				<scroll>false</scroll>
+			</control>
 			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 			<control type="panel" id="300">
 				<description>Media Menu</description>
 				<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible-->
 				<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11001)]</visible-->
-				<visible allowhiddenfocus="true">Control.HasFocus(300) + !Control.HasFocus(11001)</visible>
+				<!--visible allowhiddenfocus="true">Control.HasFocus(300) + !Control.HasFocus(11001)</visible-->
+				<visible allowhiddenfocus="true">[Control.HasFocus(300) + !Control.HasFocus(11001)] | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
 				<posx>40</posx>
 				<posy>450</posy>
 				<width>1200</width>
@@ -38,7 +86,7 @@
 				<focusposition>2</focusposition>
 
 				<onup>5999</onup>
-				<ondown>-</ondown>
+				<ondown>5999</ondown>
 				<onleft>301</onleft>
 				<onright>-</onright>
 

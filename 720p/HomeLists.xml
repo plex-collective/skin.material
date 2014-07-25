@@ -2,10 +2,10 @@
 <includes>
 	<include name="OnDeckDefaults">
 		<posx>0</posx>
-		<width>900</width>
+		<width>1080</width>
 		<onup>310</onup>
 		<ondown>300</ondown>
-		<include>OnDeckLayout</include>
+		<!--include>OnDeckLayout</include-->
 	</include>
 
 	<variable name="on_deck_position">
@@ -17,7 +17,7 @@
 		<control type="image">
 			<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
 			<posx>0</posx>
-			<width>1274</width>
+			<width>1090</width>
 			<height>3</height>
 			<texture>white.png</texture>
 			<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
@@ -29,7 +29,7 @@
 			<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1274</width>
+			<width>1090</width>
 			<height>223</height>
 			<texture>background_overlay.png</texture>
 		</control>
@@ -87,8 +87,8 @@
 
 			<!-- Second row background and boundry indicators -->
 			<control type="group">
-				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + [StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)]</visible>
-				<posy>-222</posy>
+				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + [StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)] + !Control.IsVisible(300)</visible>
+				<posy>+222</posy>
 				<include>ListItemPosterLayoutBackground</include>
 				<control type="group">
 					<visible>!Container(11001).HasPrevious + StringCompare(Window(0).Property(_on_deck),2)</visible>
@@ -103,8 +103,8 @@
 
 			<!-- Third row background and boundry indicators -->
 			<control type="group">
-				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3)</visible>
-				<posy>-444</posy>
+				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3) + !Control.IsVisible(300)</visible>
+				<posy>+444</posy>
 				<include>ListItemPosterLayoutBackground</include>
 				<control type="group">
 					<visible>!Container(11001).HasPrevious + StringCompare(Window(0).Property(_on_deck),3)</visible>
@@ -119,45 +119,66 @@
 
 			<!-- Single row fixedlist -->
 			<control type="fixedlist" id="11001">
-				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
+				<!--
+				<visible allowhiddenfocus="false">true</visible>
+				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] | Control.IsVisible(300)</visible>
+				<visible allowhiddenfocus="false">true</visible>
+				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] | Control.HasFocus(300)</visible>
+				-->
+				<visible allowhiddenfocus="false">false</visible>
 				<posy>0</posy>
 				<height>222</height>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
 				<onleft>-</onleft>
+				<onright>-</onright>
 				<focusposition>1</focusposition>
+
 				<include>OnDeckDefaults</include>
+				<include>OnDeckLayout</include>
 			</control>
 			<!-- Single row panel -->
 			<!--
 			<control type="panel" id="11001">
-				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
+				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] | Control.IsVisible(300)</visible>
 				<include>OnDeckDefaults</include>
 				<posy>0</posy>
 				<height>222</height>
 				<orientation>vertical</orientation>
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<onleft>-</onleft>
+				<onright>-</onright>
 			</control>
 			-->
 			<!--------------------------------------------------------------------------------------------------------->
 			<!-- Second row panel -->
-			<control type="panel" id="11001">
-				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) +  StringCompare(Window(0).Property(_on_deck),2)</visible>
-				<include>OnDeckDefaults</include>
-				<posy>-222</posy>
+			<control type="panel" id="110012222">
+				<!--
+				<visible>false</visible>
+				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + [StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)] + !Control.IsVisible(300)</visible>
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) +  StringCompare(Window(0).Property(_on_deck),2) + !Control.IsVisible(300)</visible>
+				-->
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) +  StringCompare(Window(0).Property(_on_deck),2) + !Control.IsVisible(300)</visible>
+				<posy>0</posy>
 				<height>444</height>
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<orientation>vertical</orientation>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<include>OnDeckDefaults</include>
+				<include>OnDeckLayout</include>
 			</control>
 			<!-- Third row panel -->
-			<control type="panel" id="11001">
-				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3)</visible>
-				<include>OnDeckDefaults</include>
-				<posy>-444</posy>
+			<control type="panel" id="110012222">
+				<!--
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3) + !Control.IsVisible(300)</visible>
+				<visible allowhiddenfocus="false">false</visible>
+				-->
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3) + !Control.IsVisible(300)</visible>
+				<posy>0</posy>
 				<height>666</height>
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<orientation>vertical</orientation>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<include>OnDeckDefaults</include>
+				<include>OnDeckLayout</include>
 			</control>
 		</control>
 	</include>
@@ -180,6 +201,32 @@
 			<height>1280</height>
 			<orientation>vertical</orientation>
 			<itemgap>5</itemgap>
+			<control type="label">
+				<visible>ControlGroup(310).HasFocus</visible>
+				<posx>-1100</posx>
+				<posy>0</posy>
+				<width>1100</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list2</font>
+				<textcolor>Black</textcolor>
+				<label>Deck Options Enabled: LEFT: Collapse -- RIGHT: Expand -- UP: Toggle Info Cards</label>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<visible>!ControlGroup(310).HasFocus</visible>
+				<posx>-1100</posx>
+				<posy>0</posy>
+				<width>1100</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list2</font>
+				<textcolor>Orange</textcolor>
+				<label>Deck Options Enabled: LEFT: Collapse -- RIGHT: Expand -- UP: Toggle Info Cards</label>
+				<scroll>false</scroll>
+			</control>
 			<control type="button" id="110017002">
 				<description>Menu Item Next Button</description>
 				<visible allowhiddenfocus="true">false</visible>
@@ -193,31 +240,31 @@
 				<texturefocus/>
 
 				<!-- Middle Row -->
-				<onup condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,3,0)</onup>
-				<onup condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onup>
-				<ondown condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,1,0)</ondown>
-				<ondown condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</ondown>
+				<onright condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,3,0)</onright>
+				<onright condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onright>
+				<onleft condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,1,0)</onleft>
+				<onleft condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onleft>
 
 				<!-- Bottom Row -->
-				<onup condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onup>
-				<onup condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</onup>
+				<onright condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onright>
+				<onright condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</onright>
 
 				<!-- Top Row -->
-				<ondown condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</ondown>
-				<ondown condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</ondown>
+				<onleft condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</onleft>
+				<onleft condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onleft>
 
 				<!-- XXX: Seems like we setting focus position, but never focusing;
 				     Also, SHOW_FULL_INFO_CARDS is not setting or using it at all
 				-->
 
 				<!-- Toggle displaying on info card / poster only -->
-				<onright>Skin.ToggleSetting(SHOW_FULL_INFO_CARDS)</onright>
+				<onup>Skin.ToggleSetting(SHOW_FULL_INFO_CARDS)</onup>
 
 				<!-- Defaults -->
 				<onup>-</onup>
-				<ondown>-</ondown>
+				<ondown>7002</ondown>
 				<onright>-</onright>
-				<onleft>7002</onleft>
+				<onleft>-</onleft>
 			</control>
 		</control>
 	</include>
