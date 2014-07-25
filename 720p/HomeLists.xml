@@ -2,9 +2,9 @@
 <includes>
 	<include name="OnDeckDefaults">
 		<posx>0</posx>
-		<width>1280</width>
-		<onright>310</onright>
-		<onleft>300</onleft>
+		<width>900</width>
+		<onup>310</onup>
+		<ondown>300</ondown>
 		<include>OnDeckLayout</include>
 	</include>
 
@@ -47,7 +47,7 @@
 			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
 
 			<!-- First row background and boundry indicators -->
-			<!-- Code for fixedlist
+			<!-- Code for fixedlist -->
 			<control type="group">
 				<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
 				<posy>0</posy>
@@ -67,7 +67,8 @@
 					<include>ListItemPosterLayoutBoundry</include>
 				</control>
 			</control>
-			-->
+			<!-- Code for panel -->
+			<!--
 			<control type="group">
 				<visible>StringCompare(Window(0).Property(_on_deck),1) | ![StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)]</visible>
 				<posy>0</posy>
@@ -82,6 +83,7 @@
 					<include>ListItemPosterLayoutBoundry</include>
 				</control>
 			</control>
+			-->
 
 			<!-- Second row background and boundry indicators -->
 			<control type="group">
@@ -115,39 +117,47 @@
 				</control>
 			</control>
 
+			<!-- Single row fixedlist -->
+			<control type="fixedlist" id="11001">
+				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
+				<posy>0</posy>
+				<height>222</height>
+				<orientation>horizontal</orientation>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<focusposition>1</focusposition>
+				<include>OnDeckDefaults</include>
+			</control>
 			<!-- Single row panel -->
 			<!--
-			<control type="fixedlist" id="11001">
-				<orientation>horizontal</orientation>
-				<focusposition>1</focusposition>
-			-->
 			<control type="panel" id="11001">
 				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
+				<include>OnDeckDefaults</include>
 				<posy>0</posy>
 				<height>222</height>
 				<orientation>vertical</orientation>
 				<onup>-</onup>
 				<ondown>-</ondown>
-				<include>OnDeckDefaults</include>
 			</control>
+			-->
 			<!--------------------------------------------------------------------------------------------------------->
 			<!-- Second row panel -->
 			<control type="panel" id="11001">
 				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) +  StringCompare(Window(0).Property(_on_deck),2)</visible>
+				<include>OnDeckDefaults</include>
 				<posy>-222</posy>
 				<height>444</height>
 				<onup>-</onup>
 				<ondown>-</ondown>
-				<include>OnDeckDefaults</include>
 			</control>
 			<!-- Third row panel -->
 			<control type="panel" id="11001">
 				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3)</visible>
+				<include>OnDeckDefaults</include>
 				<posy>-444</posy>
 				<height>666</height>
 				<onup>-</onup>
 				<ondown>-</ondown>
-				<include>OnDeckDefaults</include>
 			</control>
 		</control>
 	</include>
