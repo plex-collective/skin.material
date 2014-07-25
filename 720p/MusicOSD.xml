@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+﻿﻿<?xml version="1.0"?>
 <window id="120">
 	<defaultcontrol>1012</defaultcontrol>
 	<controls>
@@ -15,7 +15,7 @@
 					<posy>0</posy>
 					<height>118</height>
 					<width>1072</width>
-					<texture>osd/osd_back.png</texture>
+					<texture>OSD/osd_back.png</texture>
 				</control>
 				<control type="grouplist" id="213">
 					<width>790</width>
@@ -29,22 +29,22 @@
 					<onleft>19</onleft>
 					<orientation>horizontal</orientation>
 					<control type="button" id="1009">
-						<texturenofocus>osd/osd_button_stop.png</texturenofocus>
-						<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
+						<texturenofocus>OSD/osd_button_stop.png</texturenofocus>
+						<texturefocus>OSD/osd_button_stop_fo.png</texturefocus>
 						<onclick>XBMC.PlayerControl(Stop)</onclick>
 						<width>62</width>
 						<height>38</height>
 					</control>
 					<control type="button" id="1010">
-						<texturenofocus>osd/osd_button_skipbwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipbwd_fo.png</texturefocus>
+						<texturenofocus>OSD/osd_button_skipbwd.png</texturenofocus>
+						<texturefocus>OSD/osd_button_skipbwd_fo.png</texturefocus>
 						<onclick>XBMC.PlayerControl(Previous)</onclick>
 						<width>62</width>
 						<height>38</height>
 					</control>
 					<control type="button" id="1011">
-						<texturenofocus>osd/osd_button_rew.png</texturenofocus>
-						<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
+						<texturenofocus>OSD/osd_button_rew.png</texturenofocus>
+						<texturefocus>OSD/osd_button_rew_fo.png</texturefocus>
 						<onclick>XBMC.PlayerControl(Rewind)</onclick>
 						<width>62</width>
 						<height>38</height>
@@ -57,15 +57,15 @@
 						<height>38</height>
 					</control>
 					<control type="button" id="1013">
-						<texturenofocus>osd/osd_button_ff.png</texturenofocus>
-						<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
+						<texturenofocus>OSD/osd_button_ff.png</texturenofocus>
+						<texturefocus>OSD/osd_button_ff_fo.png</texturefocus>
 						<onclick>XBMC.PlayerControl(Forward)</onclick>
 						<width>62</width>
 						<height>38</height>
 					</control>
 					<control type="button" id="1014">
-						<texturenofocus>osd/osd_button_skipfwd.png</texturenofocus>
-						<texturefocus>osd/osd_button_skipfwd_fo.png</texturefocus>
+						<texturenofocus>OSD/osd_button_skipfwd.png</texturenofocus>
+						<texturefocus>OSD/osd_button_skipfwd_fo.png</texturefocus>
 						<onclick>XBMC.PlayerControl(Next)</onclick>
 						<width>62</width>
 						<height>38</height>
@@ -75,25 +75,25 @@
 					<posx>505</posx>
 					<posy>16</posy>
 					<control type="image">
-						<texture>osd/osd_button_pause.png</texture>
+						<texture>OSD/osd_button_pause.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>!Player.Paused + !Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
-						<texture>osd/osd_button_play.png</texture>
+						<texture>OSD/osd_button_play.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>Player.Paused + !Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
-						<texture>osd/osd_button_pause_fo.png</texture>
+						<texture>OSD/osd_button_pause_fo.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>!Player.Paused + Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
-						<texture>osd/osd_button_play_fo.png</texture>
+						<texture>OSD/osd_button_play_fo.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>Player.Paused + Control.HasFocus(1012)</visible>

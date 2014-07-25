@@ -523,8 +523,8 @@
 						<control type="button" id="10">
 							<font>keyboardbuttonsmall</font>
 							<posx>224</posx>
-							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
-							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>
+							<texturenofocus>Dialogs/buttonkb-delete.png</texturenofocus>
+							<texturefocus>Dialogs/buttonkb-delete_fo.png</texturefocus>
 							<onup>100</onup>
 							<ondown>-</ondown>
 							<onleft>32</onleft>
@@ -541,7 +541,7 @@
 							<ondown>-</ondown>
 							<onleft>8</onleft>
 							<onright>10</onright>
-							<texturefocus>dialogs/buttonkb-spacesearch.png</texturefocus>
+							<texturefocus>Dialogs/buttonkb-spacesearch.png</texturefocus>
 							<label>$LOCALIZE[31402]</label>
 							<include>keyboardWideButton</include>
 							<textoffsetx>-16</textoffsetx>
