@@ -6,7 +6,7 @@
 		<font>Regular-12</font>
 		<textcolor>white</textcolor>
 		<align>left</align>
-		<scroll>true</scroll>
+		<scroll>false</scroll>
 		<wrapmultiline>false</wrapmultiline>
 	</include>
 	<variable name="ContainerContent">
@@ -155,10 +155,10 @@
 			<visible>Skin.HasSetting(SHOW_DEBUG_INFO)</visible>
 			<control type="group">
 				<animation effect="fade" start="0" end="85" condition="true">Conditional</animation>
-				<control type="image">
+				<!--control type="image">
 					<include>FullScreenScaled</include>
 					<texture>black.png</texture>
-				</control>
+				</control-->
 				<control type="image">
 					<include>FullScreenScaled</include>
 					<texture>bg-overlay-grainy.png</texture>

@@ -4,10 +4,10 @@
 		<control type="group">
 			<visible>![Window.IsActive(2901)]</visible>
 
-			<!-- Time -->
+			<!-- Clock -->
 			<!-- Missing page heading (well, its greyed out)-->
 			<control type="group">
-				<description>Header (Time)</description>
+				<description>Header (Clock)</description>
 				<control type="image">
 					<texture>background_overlay_header.png</texture>
 					<posx>0</posx>
@@ -16,7 +16,7 @@
 					<height>48</height>
 					<visible>true</visible>
 				</control>
-				<include>Time</include>
+				<include>Clock</include>
 			</control>
 
 			<control type="group" id="52000">

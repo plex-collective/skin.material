@@ -1,29 +1,29 @@
 <?xml version="1.0"?>
 <includes>
 	<include name="DevMode">
+		<include condidtion="Skin.HasSetting(SHOW_DEBUG_INFO)">debugInfos</include>
 		<control type="label">
+			<visible>Skin.HasSetting(SHOW_GRID)</visible>
 			<posx>0</posx>
 			<posy>25r</posy>
 			<width>1280</width>
 			<align>left</align>
-			<label>$INFO[Window.Property(xmlfile)]$INFO[Container.FolderName, &#xB7; ]$INFO[System.BuildVersion, &#xB7; ]$INFO[System.BuildDate, &#xB7; ]$INFO[System.ScreenResolution, &#xB7; ]</label>
 			<font>homelabel</font>
 			<textcolor>White</textcolor>
 			<shadowcolor>Shadow</shadowcolor>
-			<visible>Skin.HasSetting(SHOW_GRID)</visible>
+			<label>$INFO[Window.Property(xmlfile)]$INFO[Container.FolderName, &#xB7; ]$INFO[System.BuildVersion, &#xB7; ]$INFO[System.BuildDate, &#xB7; ]$INFO[System.ScreenResolution, &#xB7; ]</label>
 		</control>
 		<control type="image">
+			<visible>Skin.HasSetting(SHOW_GRID)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<aligny>top</aligny>
 			<texture>nrg/debuggrid720.png</texture>
 			<colordiffuse>Orange</colordiffuse>
 			<aspectratio>scale</aspectratio>
-			<aligny>top</aligny>
 			<animation effect="fade" end="40" condition="true">Conditional</animation>
-			<visible>Skin.HasSetting(SHOW_GRID)</visible>
 		</control>
-		<include condidtion="Skin.HasSetting(SHOW_DEBUG_INFO)">debugInfos</include>
 	</include>
 </includes>

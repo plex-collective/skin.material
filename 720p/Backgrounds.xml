@@ -2,45 +2,30 @@
 <includes>
 	<!-- Common Stuff (IncludeDims.xml)-->
 	<!-- ============ -->
-	<!-- Backgrounds -->
-	<include name="FullScreenBGImageDims">
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>scale</aspectratio>
-	</include>
 
-	<!-- Backgrounds -->
-	<include name="FullScreenBGImage">
-		<include>FullScreenBGImageDims</include>
-	</include>
-
-	<!-- Override Default Time Formatting -->
-	<include name="TimeTop">
+	<!-- Override Default Clock Formatting -->
+	<include name="ClockTop">
 			<posx>1189</posx>
 			<posy>0</posy>
-			<aligny>center</aligny>
 			<height>46</height>
+			<aligny>center</aligny>
 	</include>
-	<include name="TimeBottom">
+	<include name="ClockBottom">
 			<posx>15r</posx>
 			<posy>36r</posy>
-			<aligny>center</aligny>
 			<height>36</height>
+			<aligny>center</aligny>
 	</include>
-	<include name="Time">
+	<include name="Clock">
 		<control type="label">
-			<!--posx>1189</posx>
-			<posy>0</posy-->
-			<include condition="!Skin.String(HOME_VIEW,Urban)">TimeTop</include>
-			<include condition="Skin.String(HOME_VIEW,Urban)">TimeBottom</include>
+			<include condition="!Skin.String(HOME_VIEW,Urban)">ClockTop</include>
+			<include condition="Skin.String(HOME_VIEW,Urban)">ClockBottom</include>
 			<width>1280</width>
 			<align>right</align>
-			<info>System.Time</info>
 			<font>title1</font>
 			<textcolor>Gray</textcolor>
 			<shadowcolor>Shadow</shadowcolor>
+			<info>System.Time</info>
 		</control>
 	</include>
 
@@ -50,83 +35,82 @@
 			<texture>background.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
-			<include>FullScreenBGImage</include>
+			<include>FullScreenScaled</include>
 		</control>
-		<include>BGSlideshow</include>
+		<!--include>SlideShowHome</include-->
 		<include>BGDimmingOverlay</include>
 	</include>
 
-	<include name="BGSlideshow">
+	<include name="SlideShowHome">
 		<!-- PMS Slideshow -->
 		<control type="group">
 			<visible>!Skin.HasSetting(HIDE_HOME_SLIDESHOW) + !Skin.HasSetting(CUSTOM_SLIDESHOW)</visible>
 			<control type="multiimage" id="10101">
+				<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
 				<posx>0</posx>
-				<!--posy>-20</posy-->
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
-				<aspectratio>scale</aspectratio>
 				<aligny>top</aligny>
+				<aspectratio>scale</aspectratio>
 				<imagepath background="true">plexserver://best:32400/library/arts</imagepath>
 				<timeperimage>8000</timeperimage>
 				<fadetime>1500</fadetime>
 				<randomize>true</randomize>
 				<loop>yes</loop>
-				<visible>![ControlGroup(7001).HasFocus | ControlGroup(7002).HasFocus | ControlGroup(7003).HasFocus | ControlGroup(7004).HasFocus]</visible>
 			</control>
 			<!-- "new list" focused item fanart while using inside the list -->
 			<!-- on deck -->
 			<control type="multiimage">
 				<visible>ControlGroup(7002).HasFocus</visible>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
-				<aspectratio>scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
+				<info background="true">Container(11001).ListItem.Property(fanart_image)</info>
+				<aspectratio>scale</aspectratio>
 				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			</control>
 			<!-- recently added -->
 			<control type="multiimage">
 				<visible>ControlGroup(7001).HasFocus</visible>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
+				<info background="true">Container(11000).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			</control>
 			<!-- recently used -->
 			<control type="multiimage">
 				<visible>ControlGroup(7004).HasFocus</visible>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
+				<info background="true">Container(11002).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			</control>
 			<!-- queue (placeholder, to see if something funny could be done) -->
 			<!--control type="multiimage">
 				<visible>ControlGroup(7002).HasFocus</visible>
-				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
-				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
-				<info background="true">Container(11003).ListItem.Property(fanart_image)</info>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
+				<info background="true">Container(11003).ListItem.Property(fanart_image)</info>
+				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<fadetime>400</fadetime>
+				<animation effect="fade" end="100" time="300" delay="0">Visible</animation>
+				<animation effect="fade" end="0" time="300" delay="0">Hidden</animation>
 			</control-->
 		</control>
 
@@ -137,113 +121,108 @@
 			<posy>-20</posy>
 			<width>1280</width>
 			<height>720</height>
-			<aspectratio>scale</aspectratio>
 			<aligny>top</aligny>
+			<info>Skin.String(CUSTOM_SLIDESHOW_FOLDER)</info>
+			<aspectratio>scale</aspectratio>
 			<imagepath background="true">-</imagepath>
 			<timeperimage>8000</timeperimage>
 			<fadetime>1500</fadetime>
 			<randomize>true</randomize>
 			<loop>yes</loop>
-			<info>Skin.String(CUSTOM_SLIDESHOW_FOLDER)</info>
 		</control>
 	</include>
 
 	<include name="BGDimmingOverlay">
 		<!-- Fanart Dimming overlay -->
 		<control type="largeimage">
-			<texture>background_overlay_diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>true</visible>
+			<texture>background_overlay_diffuse.png</texture>
 		</control>
 		<control type="image">
-			<texture>background_home.png</texture>
 			<posx>0</posx>
-			<posy>304</posy>
+			<posy>0</posy>
 			<width>1280</width>
-			<height>416</height>
-			<visible>true</visible>
+			<height>46</height>
+			<texture>white.png</texture>
+			<colordiffuse>Orange</colordiffuse>
 		</control>
 	</include>
 
 	<!-- Default Background -->
 	<include name="BGDefault">
 		<control type="largeimage">
-			<info background="true">ListItem.Property(fanart_image)</info>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
+			<info background="true">ListItem.Property(fanart_image)</info>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="image">
-			<texture>background_overlay_diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<visible>true</visible>
+			<texture>background_overlay_diffuse.png</texture>
 		</control>
 		<control type="image">
-			<texture>background_overlay_header.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>48</height>
-			<visible>true</visible>
+			<texture>background_overlay_header.png</texture>
 		</control>
 		<control type="image">
-			<texture>background_overlay.png</texture>
 			<posx>0</posx>
 			<posy>212</posy>
 			<width>1280</width>
 			<height>508</height>
-			<visible>true</visible>
+			<texture>background_overlay.png</texture>
 		</control>
 	</include>
 
 	<include name="BGLibraryFanart">
 		<control type="largeimage">
 			<visible>![Container.Content(episodes)| Container.Content(photo) | Container.Content(album)] | !IsEmpty(Container.Property(mixedParents))</visible>
+			<include>FullScreenScaled</include>
 			<info background="true">ListItem.Property(fanart_image)</info>
-			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="largeimage">
 			<visible>Container.Content(episodes) + IsEmpty(Container.Property(mixedParents))</visible>
+			<include>FullScreenScaled</include>
 			<info background="true">ListItem.Icon</info>
-			<include>FullScreenBGImageDims</include>
 			<fadetime>300</fadetime>
 		</control>
 		<control type="group">
 			<visible>Container.Content(photo) | Container.Content(album)</visible>
 			<control type="image">
+				<include>FullScreenScaled</include>
 				<texture>background_home.png</texture> <!-- MISSING from both versions, was background.png -->
-				<include>FullScreenBGImageDims</include>
 				<visible>true</visible>
 			</control>
 			<control type="largeimage">
+				<include>FullScreenScaled</include>
 				<info background="true">ListItem.Icon</info>
 				<aspectratio>keep</aspectratio>
-				<include>FullScreenBGImageDims</include>
 				<fadetime>300</fadetime>
 			</control>
 		</control>
 		<control type="image">
-			<include>FullScreenBGImageDims</include>
+			<include>FullScreenScaled</include>
 			<include>fadeinout</include>
 			<texture>nrg/menuBackground.png</texture>
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">
-			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>48</height>
-			<visible>true</visible>
+			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
 		</control>
 	</include>
 
@@ -253,215 +232,215 @@
 		<control type="grouplist">
 			<posx>90</posx>
 			<posy>6</posy>
-			<orientation>horizontal</orientation>
 			<width>800</width>
 			<align>left</align>
+			<orientation>horizontal</orientation>
 			<itemgap>13</itemgap>
 			<control type="label">
 				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<label>$INFO[Container.SecondTitle]</label>
 				<font>list2</font>
 				<textcolor>Shadow</textcolor>
+				<label>$INFO[Container.SecondTitle]</label>
 			</control>
 			<control type="label">
+				<visible>IsEmpty(Container.SecondTitle)</visible>
 				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsetx>-14</textoffsetx>
-				<label>$INFO[Container.FirstTitle]</label>
 				<font>list2</font>
 				<textcolor>Shadow</textcolor>
-				<visible>IsEmpty(Container.SecondTitle)</visible>
+				<textoffsetx>-14</textoffsetx>
+				<label>$INFO[Container.FirstTitle]</label>
 			</control>
 			<control type="label">
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
 				<width min="1" max="400">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsety>5</textoffsety>
-				<label>$INFO[Container.FirstTitle]</label>
 				<font>info1</font>
 				<textcolor>Shadow</textcolor>
-				<visible>!IsEmpty(Container.SecondTitle)</visible>
+				<textoffsety>5</textoffsety>
+				<label>$INFO[Container.FirstTitle]</label>
 			</control>
 		</control>
 		<control type="grouplist">
 			<posx>90</posx>
 			<posy>4</posy>
-			<orientation>horizontal</orientation>
 			<width>800</width>
 			<align>left</align>
+			<orientation>horizontal</orientation>
 			<itemgap>13</itemgap>
 			<control type="label">
 				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<label>$INFO[Container.SecondTitle]</label>
 				<font>list2</font>
 				<textcolor>Gray</textcolor>
+				<label>$INFO[Container.SecondTitle]</label>
 			</control>
 			<control type="label">
+				<visible>IsEmpty(Container.SecondTitle)</visible>
 				<width min="1" max="500">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsetx>-14</textoffsetx>
-				<label>$INFO[Container.FirstTitle]</label>
 				<font>list2</font>
 				<textcolor>Gray</textcolor>
-				<visible>IsEmpty(Container.SecondTitle)</visible>
+				<textoffsetx>-14</textoffsetx>
+				<label>$INFO[Container.FirstTitle]</label>
 			</control>
 			<control type="label">
+				<visible>!IsEmpty(Container.SecondTitle)</visible>
 				<width min="1" max="400">auto</width>
 				<height>46</height>
 				<align>left</align>
 				<aligny>top</aligny>
-				<textoffsety>5</textoffsety>
-				<label>$INFO[Container.FirstTitle]</label>
 				<font>info1</font>
 				<textcolor>DarkGray</textcolor>
-				<visible>!IsEmpty(Container.SecondTitle)</visible>
+				<textoffsety>5</textoffsety>
+				<label>$INFO[Container.FirstTitle]</label>
 			</control>
 		</control>
 	</include>
 	<include name="HeaderAudio">
 		<include>GlobalIncludes</include>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 		</control>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31302] $LOCALIZE[31300]</label>
 		</control>
 	</include>
 	<include name="HeaderVideo">
 		<include>GlobalIncludes</include>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31307]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31307]</label>
 		</control>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31307]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31307]</label>
 		</control>
 	</include>
 	<include name="HeaderShared">
 		<include>GlobalIncludes</include>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31504]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31504]</label>
 		</control>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31504]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31504]</label>
 		</control>
 	</include>
 	<include name="HeaderPictures">
 		<include>GlobalIncludes</include>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 		</control>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31303] $LOCALIZE[31300]</label>
 		</control>
 	</include>
 	<include name="HeaderApplications">
 		<include>GlobalIncludes</include>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>6</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31304]</label>
 			<font>list2</font>
 			<textcolor>Shadow</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31304]</label>
 		</control>
 		<control type="label">
+			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
 			<posx>90</posx>
 			<posy>4</posy>
 			<width>800</width>
 			<height>46</height>
 			<align>left</align>
 			<aligny>top</aligny>
-			<label>$LOCALIZE[31304]</label>
 			<font>list2</font>
 			<textcolor>Gray</textcolor>
-			<visible>IsEmpty(Container.FirstTitle) + IsEmpty(Container.SecondTitle)</visible>
+			<label>$LOCALIZE[31304]</label>
 		</control>
 	</include>
 	<include name="HeaderSettings">
@@ -472,86 +451,86 @@
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31200]</label>
 			<font>list1</font>
 			<textcolor>Gray</textcolor>
+			<label>$LOCALIZE[31200]</label>
 		</control>
 		<control type="label">
-			<posy>55</posy>
-			<width>366</width>
-			<height>46</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<label>$LOCALIZE[31202]</label>
-			<font>plot1</font>
-			<textcolor>DarkGray</textcolor>
 			<visible>Window.IsActive(appearancesettings)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31203]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31202]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(videossettings)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31204]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31203]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(musicsettings)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31205]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31204]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(picturessettings)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31206]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31205]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(18)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31207]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31206]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(systemsettings)</visible>
-		</control>
-		<control type="label">
 			<posy>55</posy>
 			<width>366</width>
 			<height>46</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$LOCALIZE[31201]</label>
 			<font>plot1</font>
 			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31207]</label>
+		</control>
+		<control type="label">
 			<visible>Window.IsActive(SkinSettings.xml)</visible>
+			<posy>55</posy>
+			<width>366</width>
+			<height>46</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>plot1</font>
+			<textcolor>DarkGray</textcolor>
+			<label>$LOCALIZE[31201]</label>
 		</control>
 	</include>
 </includes>
