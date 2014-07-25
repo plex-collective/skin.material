@@ -17,14 +17,14 @@
 			<control type="image">
 				<width>732</width>
 				<height>636</height>
-				<texture>dialogs/dialog_filebrowser.png</texture>
+				<texture>Dialogs/dialog_filebrowser.png</texture>
 			</control>
 			<control type="image">
 				<posx>120</posx>
 				<posy>175</posy>
 				<width>490</width>
-				<height>294</height> 
-				<texture>dialogs/browse.png</texture>
+				<height>294</height>
+				<texture>Dialogs/browse.png</texture>
 			</control>
 			<control type="label" id="411">
 				<description>heading label</description>
@@ -123,7 +123,7 @@
 				<textcolor>Gray</textcolor>
 				<label>$LOCALIZE[31023]</label>
 				<visible>Window.IsVisible(2003) + container.content(tvshows) + stringcompare(Control.GetLabel(411),$LOCALIZE[20437])</visible>
-			</control>		
+			</control>
 			<control type="label">
 				<description>path label control</description>
 				<posx>120</posx>
@@ -164,7 +164,7 @@
 							<posy>5</posy>
 							<width>450</width>
 							<height>38</height>
-							<texture>dialogs/button_browse.png</texture>
+							<texture>Dialogs/button_browse.png</texture>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -215,7 +215,7 @@
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<label>OK</label>
-				<texturefocus>dialogs/button_filebrowser.png</texturefocus>
+				<texturefocus>Dialogs/button_filebrowser.png</texturefocus>
 				<include>dialogButton</include>
 			</control>
 		</control>
