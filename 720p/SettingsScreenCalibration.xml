@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<window id="11">
+	<defaultcontrol always="true">8</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="videowindow">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+		</control>
+		<control type="mover" id="8">
+			<posx>20</posx>
+			<posy>20</posy>
+			<texturefocus>Calibrate/TopLeftFocused.png</texturefocus>
+			<texturenofocus>Calibrate/TopLeft.png</texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<posx>699</posx>
+			<posy>499</posy>
+			<texturefocus>Calibrate/BottomRightFocused.png</texturefocus>
+			<texturenofocus>Calibrate/BottomRight.png</texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<posx>200</posx>
+			<posy>500</posy>
+			<texturefocus>Calibrate/SubTitlesFocused.png</texturefocus>
+			<texturenofocus>Calibrate/SubTitles.png</texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<posx>0</posx>
+			<posy>270</posy>
+			<width>360</width>
+			<height>360</height>
+			<texturefocus>Calibrate/PixelRatioFocused.png</texturefocus>
+			<texturenofocus>Calibrate/PixelRatio.png</texturenofocus>
+		</control>
+		<control type="label" id="2">
+			<posx>0</posx>
+			<posy>40</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>list1</font>
+			<textcolor>White</textcolor>
+		</control>
+		<control type="label" id="3">
+			<posx>0</posx>
+			<posy>68</posy>
+			<width>1280</width>
+			<align>center</align>
+			<font>info1</font>
+			<textcolor>Gray</textcolor>
+		</control>
+	</controls>
+</window>

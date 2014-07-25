@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<window id="57" type="dialog">
+	<defaultcontrol always="true">8</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<visible>!Windows.IsVisible</visible>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>185</posy>
+			<visible>Window.IsVisible(2003) + Container.Content(Movies)</visible>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>162</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>256</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<posy>94</posy>
+				<control type="button" id="8">
+					<label>$LOCALIZE[31600]</label>
+					<onup>12</onup>
+					<ondown>10</ondown>
+					<onclick>SendClick(2003,8)</onclick>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="10">
+					<posy>54</posy>
+					<label>$LOCALIZE[31013] $LOCALIZE[31015]</label>
+					<onup>8</onup>
+					<ondown>12</ondown>
+					<onclick>Dialog.Close(57)</onclick>
+					<onclick>SendClick(2003,10)</onclick>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="12">
+					<posy>108</posy>
+					<label>$LOCALIZE[31013] $LOCALIZE[31016]</label>
+					<onup>10</onup>
+					<ondown>8</ondown>
+					<onclick>Dialog.Close(57)</onclick>
+					<onclick>SendClick(2003,12)</onclick>
+					<include>dialogButton</include>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>212</posy>
+			<visible>Window.IsVisible(2003) + Container.Content(TVShows)</visible>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>108</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>202</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<posy>94</posy>
+				<control type="button" id="8">
+					<label>$LOCALIZE[31013] $LOCALIZE[31015]</label>
+					<onup>12</onup>
+					<ondown>12</ondown>
+					<onclick>Dialog.Close(57)</onclick>
+					<onclick>SendClick(2003,10)</onclick>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="12">
+					<posy>54</posy>
+					<label>$LOCALIZE[31013] $LOCALIZE[31016]</label>
+					<onup>8</onup>
+					<ondown>8</ondown>
+					<onclick>Dialog.Close(57)</onclick>
+					<onclick>SendClick(2003,12)</onclick>
+					<include>dialogButton</include>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>212</posy>
+			<visible>Window.IsVisible(2003) + Container.Content(Episodes)</visible>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>108</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>202</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<posy>94</posy>
+				<control type="button" id="8">
+					<label>$LOCALIZE[31600]</label>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					<onclick>SendClick(2003,8)</onclick>
+					<include>dialogButton</include>
+				</control>
+				<control type="button" id="10">
+					<posy>54</posy>
+					<label>$LOCALIZE[31013] $LOCALIZE[31017]</label>
+					<onup>8</onup>
+					<ondown>8</ondown>
+					<onclick>Dialog.Close(57)</onclick>
+					<onclick>SendClick(2003,10)</onclick>
+					<include>dialogButton</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

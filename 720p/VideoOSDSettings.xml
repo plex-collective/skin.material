@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<window id="123">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<posx>44</posx>
+			<posy>20</posy>
+			<width>1192</width>
+			<height>680</height>
+			<texture>Dialogs/SettingsDialog.png</texture>
+		</control>
+		<control type="group">
+			<posy>123</posy>
+			<control type="label" id="2">
+				<width>1280</width>
+				<textcolor>Gray</textcolor>
+				<include>dialogHeading</include>
+			</control>
+			<control type="grouplist" id="5">
+				<posx>165</posx>
+				<posy>49</posy>
+				<width>950</width>
+				<height>440</height>
+				<itemgap>0</itemgap>
+			</control>
+			<control type="sliderex" id="10">
+				<description>Default Sliderex</description>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default SpinControlex</description>
+			</control>
+		</control>
+	</controls>
+</window>

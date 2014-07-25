@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<window id="100">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>148</posy>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>236</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>330</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>91</posx>
+				<control type="label" id="1">
+					<posy>102</posy>
+					<width>480</width>
+					<include>dialogHeading</include>
+				</control>
+				<control type="label" id="2">
+					<posy>130</posy>
+					<width>480</width>
+					<include>dialogLine</include>
+				</control>
+				<control type="label" id="3">
+					<posy>153</posy>
+					<width>480</width>
+					<include>dialogLine</include>
+				</control>
+				<control type="label" id="4">
+					<posy>176</posy>
+					<width>480</width>
+					<include>dialogLine</include>
+				</control>
+				<control type="group">
+					<posx>29</posx>
+					<posy>222</posy>
+					<control type="button" id="11">
+						<description>Yes button</description>
+						<label>107</label>
+						<onup>10</onup>
+						<ondown>10</ondown>
+						<include>dialogButton</include>
+					</control>
+					<control type="button" id="10">
+						<description>No button</description>
+						<posy>54</posy>
+						<label>106</label>
+						<ondown>11</ondown>
+						<onup>11</onup>
+						<include>dialogButton</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

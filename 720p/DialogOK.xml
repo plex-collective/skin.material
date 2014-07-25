@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<window id="2002">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>198</posy>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>136</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>230</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<control type="label" id="1">
+					<posy>102</posy>
+					<width>422</width>
+					<label>$LOCALIZE[13406]</label>
+					<include>dialogHeading</include>
+				</control>
+				<control type="label" id="2">
+					<posy>130</posy>
+					<width>422</width>
+					<include>dialogLine</include>
+				</control>
+				<control type="button" id="10">
+					<description>OK button</description>
+					<posy>176</posy>
+					<label>186</label>
+					<include>dialogButton</include>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

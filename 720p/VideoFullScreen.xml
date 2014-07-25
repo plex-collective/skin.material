@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<window id="2005">
+	<controls>
+		<control type="group">
+			<posx>222</posx>
+			<posy>42</posy>
+			<control type="label" id="10">
+				<width>1280</width>
+				<align>left</align>
+				<font>plot1</font>
+				<textcolor>White</textcolor>
+			</control>
+			<control type="label" id="11">
+				<posy>27</posy>
+				<width>1280</width>
+				<align>left</align>
+				<aligny>top</aligny>
+				<font>plot1</font>
+				<textcolor>White</textcolor>
+			</control>
+			<control type="label" id="12">
+				<posy>58</posy>
+				<width>1280</width>
+				<align>left</align>
+				<font>plot1</font>
+				<textcolor>White</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

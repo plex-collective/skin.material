@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+
+<strings>
+
+<!--  Video  -->
+	<string id="31001">Episode</string>
+	<string id="31002">Episodes</string>
+	<string id="31003">Season</string>
+	<string id="31004">Details</string>
+	<string id="31005">Actors</string>
+	<string id="31006">Director</string>
+	<string id="31007">Writer</string>
+	<string id="31008">Released</string>
+	<string id="31009">First</string>
+	<string id="31010">Aired</string>
+	<string id="31011">Length</string>
+	<string id="31012">Unwatched</string>
+	<string id="31013">Change</string>
+	<string id="31014">Artwork</string>
+	<string id="31015">Poster</string>
+	<string id="31016">Background Art</string>
+	<string id="31017">Episode Art</string>
+	<string id="31020">Choose a poster for this movie</string>
+	<string id="31021">Choose a poster for this TV Show</string>
+	<string id="31022">Choose a background for this movie</string>
+	<string id="31023">Choose a background for this TV Show</string>
+	<string id="31024">Choose an image for this episode</string>
+
+<!--  Skin Preferences  -->
+	<string id="31101">Show Slideshow</string>
+	<string id="31102">Custom Slideshow</string>
+	<string id="31103">Slideshow Images</string>
+	<string id="31104">Show On Deck before</string>
+	<string id="31105">Show System Menu</string>
+	<string id="31106">Quit</string>
+	<string id="31107">Sleep</string>
+	<string id="31108">Shut Down</string>
+	<string id="31109">Show</string>
+	<string id="31110">Home</string>
+	<string id="31111">Slideshow</string>
+	<string id="31112">System</string>
+
+<!--  Preferences  -->
+	<string id="31200">Preferences</string>
+	<string id="31201">Skin</string>
+	<string id="31202">Appearance</string>
+	<string id="31203">Videos</string>
+	<string id="31204">Music</string>
+	<string id="31205">Pictures</string>
+	<string id="31206">Network</string>
+	<string id="31207">System</string>
+
+<!--  Channels  -->
+	<string id="31300">Channels</string>
+	<string id="31301">Video</string>
+	<string id="31302">Audio</string>
+	<string id="31303">Picture</string>
+	<string id="31304">Applications</string>
+	<string id="31305">Channel</string>
+	<string id="31306">Channel Directory</string>	
+	<string id="31307">Video Channels</string>
+	<string id="31308">Audio Channels</string>
+	<string id="31309">Picture Channels</string>
+
+<!--  Search  -->
+	<string id="31400">Search</string>
+	<string id="31401">Delete</string>
+	<string id="31402">Space</string>
+	<string id="31403">Clear</string>
+	<string id="31404">Movies</string>
+	<string id="31405">TV Shows</string>
+	<string id="31406">Artists</string>
+	<string id="31407">Albums</string>
+	<string id="31408">Songs</string>
+	
+<!--  Home  -->
+	<string id="31500">Home</string>
+	<string id="31501">Recently Added</string>
+	<string id="31502">On Deck</string>
+	<string id="31504">Shared Content</string>
+
+<!--  DVD  -->
+	<string id="31600">Play</string>
+	<string id="31601">Eject Disc</string>
+
+<!--  Music  -->
+	<string id="31700">of</string>
+
+</strings>

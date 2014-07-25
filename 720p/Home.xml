@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<window id="0">
+	<include condition="Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String())">HomeMenu</include>
+	<include condition="Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String(HOME_VIEW))">HomeMenu</include>
+</window>

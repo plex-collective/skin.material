@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<colors>
+	<color name="Orange">FFFF9900</color>
+	<color name="White">FFFFFFFF</color>
+	<color name="Gray">FFBEBEBE</color>
+	<color name="DarkGray">FF5B5B5B</color>
+	<color name="Shadow">65000000</color>
+	<color name="Black">FF000000</color>
+
+	<!-- Plex Colors -->
+	<color name="orange">FFD1801C</color>
+	<color name="orangeLight">FFF8A339</color>
+	<color name="greyLight">FFA5A4A4</color>
+	<color name="greyLighter">FFBFBDBD</color>
+	<!-- default colors -->
+	<color name="Focused">FFF8A339</color>
+	<color name="Unfocused">FF909090</color>
+	<color name="Selected">white</color>
+	<color name="Highlighted">FFD1801C</color>
+	<color name="Disabled">FF505050</color>
+</colors>

@@ -1,0 +1,1018 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="OnDeckDefaults">
+		<posx>0</posx>
+		<width>1280</width>
+		<onright>310</onright>
+		<onleft>300</onleft>
+		<include>OnDeckLayout</include>
+	</include>
+
+	<variable name="on_deck_position">
+		<value>$INFO[Window(0).Property(_on_deck_position_property)]</value>
+		<value>0</value>
+	</variable>
+
+	<include name="ListItemPosterLayoutBoundry">
+		<control type="image">
+			<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
+			<posx>0</posx>
+			<width>1274</width>
+			<height>3</height>
+			<texture>white.png</texture>
+			<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
+		</control>
+	</include>
+
+	<include name="ListItemPosterLayoutBackground">
+		<control type="image">
+			<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1274</width>
+			<height>223</height>
+			<texture>background_overlay.png</texture>
+		</control>
+	</include>
+
+	<include name="OnDeck">
+		<!--
+		<control type="button" id="7000">
+			<posy>900</posy>
+			<onfocus>Control.SetFocus(11001,$VAR[on_deck_position])</onfocus>
+		</control>
+		-->
+		<control type="group" id="7002">
+			<visible>Control.IsVisible(11001) + !Container(300).OnNext + !Container(300).OnPrevious</visible>
+			<animation effect="fade" start="0" end="100" time="400" delay="300">Visible</animation>
+
+			<!-- First row background and boundry indicators -->
+			<!-- Code for fixedlist
+			<control type="group">
+				<visible>IntegerGreaterThan(Container(11001).NumItems,0)</visible>
+				<posy>0</posy>
+				<include>ListItemPosterLayoutBackground</include>
+				<control type="group">
+					<visible>!Container(11001).HasPrevious + !IntegerGreaterThan(Container(11001).Position,0) + [StringCompare(Window(0).Property(_on_deck),1) | Skin.HasSetting(DISABLE_EXPANDING_DECK)]</visible>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+				<control type="group">
+					<visible>[ !Container(11001).HasNext +
+						   IntegerGreaterThan(Container(11001).Position,5) +
+						   [StringCompare(Window(0).Property(_on_deck),1) | Skin.HasSetting(DISABLE_EXPANDING_DECK)]
+						 ] |
+						 !IntegerGreaterThan(Container(11001).NumItems,6)
+					 </visible>
+					<posy>222</posy>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+			</control>
+			-->
+			<control type="group">
+				<visible>StringCompare(Window(0).Property(_on_deck),1) | ![StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)]</visible>
+				<posy>0</posy>
+				<include>ListItemPosterLayoutBackground</include>
+				<control type="group">
+					<visible>!Container(11001).HasPrevious + [StringCompare(Window(0).Property(_on_deck),1) | Skin.HasSetting(DISABLE_EXPANDING_DECK)]</visible>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+				<control type="group">
+					<visible>!Container(11001).HasNext + [StringCompare(Window(0).Property(_on_deck),1) | Skin.HasSetting(DISABLE_EXPANDING_DECK)]</visible>
+					<posy>222</posy>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+			</control>
+
+			<!-- Second row background and boundry indicators -->
+			<control type="group">
+				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + [StringCompare(Window(0).Property(_on_deck),2) | StringCompare(Window(0).Property(_on_deck),3)]</visible>
+				<posy>-222</posy>
+				<include>ListItemPosterLayoutBackground</include>
+				<control type="group">
+					<visible>!Container(11001).HasPrevious + StringCompare(Window(0).Property(_on_deck),2)</visible>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+				<control type="group">
+					<visible>!Container(11001).HasNext + StringCompare(Window(0).Property(_on_deck),2)</visible>
+					<posy>444</posy>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+			</control>
+
+			<!-- Third row background and boundry indicators -->
+			<control type="group">
+				<visible>!Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3)</visible>
+				<posy>-444</posy>
+				<include>ListItemPosterLayoutBackground</include>
+				<control type="group">
+					<visible>!Container(11001).HasPrevious + StringCompare(Window(0).Property(_on_deck),3)</visible>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+				<control type="group">
+					<visible>!Container(11001).HasNext + StringCompare(Window(0).Property(_on_deck),3)</visible>
+					<posy>666</posy>
+					<include>ListItemPosterLayoutBoundry</include>
+				</control>
+			</control>
+
+			<!-- Single row panel -->
+			<!--
+			<control type="fixedlist" id="11001">
+				<orientation>horizontal</orientation>
+				<focusposition>1</focusposition>
+			-->
+			<control type="panel" id="11001">
+				<visible allowhiddenfocus="false">Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]</visible>
+				<posy>0</posy>
+				<height>222</height>
+				<orientation>vertical</orientation>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<include>OnDeckDefaults</include>
+			</control>
+			<!--------------------------------------------------------------------------------------------------------->
+			<!-- Second row panel -->
+			<control type="panel" id="11001">
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) +  StringCompare(Window(0).Property(_on_deck),2)</visible>
+				<posy>-222</posy>
+				<height>444</height>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<include>OnDeckDefaults</include>
+			</control>
+			<!-- Third row panel -->
+			<control type="panel" id="11001">
+				<visible allowhiddenfocus="false">Control.IsVisible(7002) + !Skin.HasSetting(DISABLE_EXPANDING_DECK) + StringCompare(Window(0).Property(_on_deck),3)</visible>
+				<posy>-444</posy>
+				<height>666</height>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<include>OnDeckDefaults</include>
+			</control>
+		</control>
+	</include>
+	<include name="ExpandingDeckControl">
+		<!--
+		<control type="image">
+			<posx>100r</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>1280</height>
+			<texture>black.png</texture>
+		</control>
+		-->
+		<control type="group" id="310">
+			<visible allowhiddenfocus="true">!Skin.HasSetting(DISABLE_EXPANDING_DECK)</visible>
+			<description>Used to expand and collapse on-deck</description>
+			<posx>100r</posx>
+			<posy>0</posy>
+			<width>100</width>
+			<height>1280</height>
+			<orientation>vertical</orientation>
+			<itemgap>5</itemgap>
+			<control type="button" id="110017002">
+				<description>Menu Item Next Button</description>
+				<visible allowhiddenfocus="true">false</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>22</height>
+				<label>-</label>
+				<font>-</font>
+				<texturenofocus/>
+				<texturefocus/>
+
+				<!-- Middle Row -->
+				<onup condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,3,0)</onup>
+				<onup condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onup>
+				<ondown condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck,1,0)</ondown>
+				<ondown condition="StringCompare(Window(0).Property(_on_deck),2) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</ondown>
+
+				<!-- Bottom Row -->
+				<onup condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</onup>
+				<onup condition="[StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))] + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</onup>
+
+				<!-- Top Row -->
+				<ondown condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck,2,0)</ondown>
+				<ondown condition="StringCompare(Window(0).Property(_on_deck),3) + Control.IsVisible(7002)">SetProperty(_on_deck_position_property,$INFO[Container(11001).Position],0)</ondown>
+
+				<!-- XXX: Seems like we setting focus position, but never focusing;
+				     Also, SHOW_FULL_INFO_CARDS is not setting or using it at all
+				-->
+
+				<!-- Toggle displaying on info card / poster only -->
+				<onright>Skin.ToggleSetting(SHOW_FULL_INFO_CARDS)</onright>
+
+				<!-- Defaults -->
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<onright>-</onright>
+				<onleft>7002</onleft>
+			</control>
+		</control>
+	</include>
+
+	<!-- Variables ------------------------------------------------------------------------------------------------------------>
+
+	<!-- Diffuse poster when list is focused, but not focused poster -->
+	<variable name="listitem_diffuse_color">
+		<value condition="ControlGroup(7002).HasFocus">FF999999</value>
+		<value>FFFFFFFF</value>
+	</variable>
+
+	<!-- Diffuse color to use when dimmimg artwork -->
+	<variable name="color_primary">
+		<value>Gray</value>
+	</variable>
+	<variable name="color_primary_focused">
+		<value>Orange</value>
+	</variable>
+	<variable name="color_secondary">
+		<value>DarkGray</value>
+	</variable>
+	<variable name="color_secondary_focused">
+		<value>White</value>
+	</variable>
+
+	<variable name="listitem_poster_art">
+		<value condition="!ListItem.Type(episode)">$INFO[ListItem.Art(smallThumb)]</value>
+		<value condition="ListItem.Type(episode)">$INFO[ListItem.Art(smallGrandparentThumb)]</value>
+	</variable>
+
+	<!-- XXX: Might not be useful; not used yet -->
+	<variable name="is_listitem_focused">
+		<value condition="StringCompare(Container(11001).Position,0) + StringCompare(Container(11001).ListItemPosition(0).Property(id),ListItem.Property(id)) + Container(11001).HasFocus">true</value>
+		<value condition="StringCompare(Container(11001).Position,1) + StringCompare(Container(11001).ListItemPosition(1).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,2) + StringCompare(Container(11001).ListItemPosition(2).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,3) + StringCompare(Container(11001).ListItemPosition(3).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,4) + StringCompare(Container(11001).ListItemPosition(4).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,5) + StringCompare(Container(11001).ListItemPosition(5).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,6) + StringCompare(Container(11001).ListItemPosition(6).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,7) + StringCompare(Container(11001).ListItemPosition(7).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,8) + StringCompare(Container(11001).ListItemPosition(8).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,9) + StringCompare(Container(11001).ListItemPosition(9).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,10) + StringCompare(Container(11001).ListItemPosition(10).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,11) + StringCompare(Container(11001).ListItemPosition(11).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,12) + StringCompare(Container(11001).ListItemPosition(12).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,13) + StringCompare(Container(11001).ListItemPosition(13).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,14) + StringCompare(Container(11001).ListItemPosition(14).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,15) + StringCompare(Container(11001).ListItemPosition(15).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,16) + StringCompare(Container(11001).ListItemPosition(16).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,17) + StringCompare(Container(11001).ListItemPosition(17).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,18) + StringCompare(Container(11001).ListItemPosition(18).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,19) + StringCompare(Container(11001).ListItemPosition(19).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,20) + StringCompare(Container(11001).ListItemPosition(20).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,21) + StringCompare(Container(11001).ListItemPosition(21).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,22) + StringCompare(Container(11001).ListItemPosition(22).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,23) + StringCompare(Container(11001).ListItemPosition(23).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,24) + StringCompare(Container(11001).ListItemPosition(24).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,25) + StringCompare(Container(11001).ListItemPosition(25).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,26) + StringCompare(Container(11001).ListItemPosition(26).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,27) + StringCompare(Container(11001).ListItemPosition(27).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,28) + StringCompare(Container(11001).ListItemPosition(28).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,29) + StringCompare(Container(11001).ListItemPosition(29).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,30) + StringCompare(Container(11001).ListItemPosition(30).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,31) + StringCompare(Container(11001).ListItemPosition(31).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,32) + StringCompare(Container(11001).ListItemPosition(32).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,33) + StringCompare(Container(11001).ListItemPosition(33).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,34) + StringCompare(Container(11001).ListItemPosition(34).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,35) + StringCompare(Container(11001).ListItemPosition(35).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,36) + StringCompare(Container(11001).ListItemPosition(36).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,37) + StringCompare(Container(11001).ListItemPosition(37).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,38) + StringCompare(Container(11001).ListItemPosition(38).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,39) + StringCompare(Container(11001).ListItemPosition(39).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,40) + StringCompare(Container(11001).ListItemPosition(40).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,41) + StringCompare(Container(11001).ListItemPosition(41).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,42) + StringCompare(Container(11001).ListItemPosition(42).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,43) + StringCompare(Container(11001).ListItemPosition(43).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,44) + StringCompare(Container(11001).ListItemPosition(44).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,45) + StringCompare(Container(11001).ListItemPosition(45).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,46) + StringCompare(Container(11001).ListItemPosition(46).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,47) + StringCompare(Container(11001).ListItemPosition(47).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,48) + StringCompare(Container(11001).ListItemPosition(48).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value condition="StringCompare(Container(11001).Position,49) + StringCompare(Container(11001).ListItemPosition(49).Property(id),ListItem.Property(id)) + Container(11001).HasFocu">true</value>s
+		<value>false</value>
+	</variable>
+
+	<include name="NotVisibleStatementFor11001ListitemFocusedItem">
+		<!-- Add the following to a nested group container to make sure its 'Really' on the listitem
+		     StringCompare(System.CurrentControl,ListItem.Label)
+			StringCompare(Container(11001).Position,0) + StringCompare(Container(11001).ListItemPosition(0).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		-->
+		<visible>
+		![
+		StringCompare(Container(11001).Position,0) + StringCompare(Container(11001).ListItemPosition(0).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,1) + StringCompare(Container(11001).ListItemPosition(1).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,2) + StringCompare(Container(11001).ListItemPosition(2).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,3) + StringCompare(Container(11001).ListItemPosition(3).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,4) + StringCompare(Container(11001).ListItemPosition(4).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,5) + StringCompare(Container(11001).ListItemPosition(5).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,6) + StringCompare(Container(11001).ListItemPosition(6).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,7) + StringCompare(Container(11001).ListItemPosition(7).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,8) + StringCompare(Container(11001).ListItemPosition(8).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,9) + StringCompare(Container(11001).ListItemPosition(9).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,10) + StringCompare(Container(11001).ListItemPosition(10).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,11) + StringCompare(Container(11001).ListItemPosition(11).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,12) + StringCompare(Container(11001).ListItemPosition(12).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,13) + StringCompare(Container(11001).ListItemPosition(13).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,14) + StringCompare(Container(11001).ListItemPosition(14).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,15) + StringCompare(Container(11001).ListItemPosition(15).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,16) + StringCompare(Container(11001).ListItemPosition(16).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,17) + StringCompare(Container(11001).ListItemPosition(17).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,18) + StringCompare(Container(11001).ListItemPosition(18).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,19) + StringCompare(Container(11001).ListItemPosition(19).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,20) + StringCompare(Container(11001).ListItemPosition(20).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,21) + StringCompare(Container(11001).ListItemPosition(21).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,22) + StringCompare(Container(11001).ListItemPosition(22).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,23) + StringCompare(Container(11001).ListItemPosition(23).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,24) + StringCompare(Container(11001).ListItemPosition(24).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,25) + StringCompare(Container(11001).ListItemPosition(25).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,26) + StringCompare(Container(11001).ListItemPosition(26).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,27) + StringCompare(Container(11001).ListItemPosition(27).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,28) + StringCompare(Container(11001).ListItemPosition(28).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,29) + StringCompare(Container(11001).ListItemPosition(29).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,30) + StringCompare(Container(11001).ListItemPosition(30).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,31) + StringCompare(Container(11001).ListItemPosition(31).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,32) + StringCompare(Container(11001).ListItemPosition(32).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,33) + StringCompare(Container(11001).ListItemPosition(33).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,34) + StringCompare(Container(11001).ListItemPosition(34).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,35) + StringCompare(Container(11001).ListItemPosition(35).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,36) + StringCompare(Container(11001).ListItemPosition(36).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,37) + StringCompare(Container(11001).ListItemPosition(37).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,38) + StringCompare(Container(11001).ListItemPosition(38).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,39) + StringCompare(Container(11001).ListItemPosition(39).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,40) + StringCompare(Container(11001).ListItemPosition(40).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,41) + StringCompare(Container(11001).ListItemPosition(41).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,42) + StringCompare(Container(11001).ListItemPosition(42).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,43) + StringCompare(Container(11001).ListItemPosition(43).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,44) + StringCompare(Container(11001).ListItemPosition(44).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,45) + StringCompare(Container(11001).ListItemPosition(45).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,46) + StringCompare(Container(11001).ListItemPosition(46).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,47) + StringCompare(Container(11001).ListItemPosition(47).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,48) + StringCompare(Container(11001).ListItemPosition(48).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,49) + StringCompare(Container(11001).ListItemPosition(49).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		false]
+		</visible>
+	</include>
+	<include name="VisibleStatementFor11001ListitemFocusedItem">
+		<!-- Add the following to a nested group container to make sure its 'Really' on the listitem
+		     StringCompare(System.CurrentControl,ListItem.Label)
+			StringCompare(Container(11001).Position,0) + StringCompare(Container(11001).ListItemPosition(0).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		-->
+		<visible>
+		StringCompare(Container(11001).Position,0) + StringCompare(Container(11001).ListItemPosition(0).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,1) + StringCompare(Container(11001).ListItemPosition(1).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,2) + StringCompare(Container(11001).ListItemPosition(2).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,3) + StringCompare(Container(11001).ListItemPosition(3).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,4) + StringCompare(Container(11001).ListItemPosition(4).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,5) + StringCompare(Container(11001).ListItemPosition(5).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,6) + StringCompare(Container(11001).ListItemPosition(6).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,7) + StringCompare(Container(11001).ListItemPosition(7).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,8) + StringCompare(Container(11001).ListItemPosition(8).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,9) + StringCompare(Container(11001).ListItemPosition(9).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,10) + StringCompare(Container(11001).ListItemPosition(10).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,11) + StringCompare(Container(11001).ListItemPosition(11).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,12) + StringCompare(Container(11001).ListItemPosition(12).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,13) + StringCompare(Container(11001).ListItemPosition(13).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,14) + StringCompare(Container(11001).ListItemPosition(14).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,15) + StringCompare(Container(11001).ListItemPosition(15).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,16) + StringCompare(Container(11001).ListItemPosition(16).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,17) + StringCompare(Container(11001).ListItemPosition(17).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,18) + StringCompare(Container(11001).ListItemPosition(18).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,19) + StringCompare(Container(11001).ListItemPosition(19).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,20) + StringCompare(Container(11001).ListItemPosition(20).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,21) + StringCompare(Container(11001).ListItemPosition(21).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,22) + StringCompare(Container(11001).ListItemPosition(22).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,23) + StringCompare(Container(11001).ListItemPosition(23).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,24) + StringCompare(Container(11001).ListItemPosition(24).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,25) + StringCompare(Container(11001).ListItemPosition(25).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,26) + StringCompare(Container(11001).ListItemPosition(26).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,27) + StringCompare(Container(11001).ListItemPosition(27).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,28) + StringCompare(Container(11001).ListItemPosition(28).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,29) + StringCompare(Container(11001).ListItemPosition(29).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,30) + StringCompare(Container(11001).ListItemPosition(30).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,31) + StringCompare(Container(11001).ListItemPosition(31).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,32) + StringCompare(Container(11001).ListItemPosition(32).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,33) + StringCompare(Container(11001).ListItemPosition(33).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,34) + StringCompare(Container(11001).ListItemPosition(34).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,35) + StringCompare(Container(11001).ListItemPosition(35).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,36) + StringCompare(Container(11001).ListItemPosition(36).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,37) + StringCompare(Container(11001).ListItemPosition(37).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,38) + StringCompare(Container(11001).ListItemPosition(38).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,39) + StringCompare(Container(11001).ListItemPosition(39).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,40) + StringCompare(Container(11001).ListItemPosition(40).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,41) + StringCompare(Container(11001).ListItemPosition(41).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,42) + StringCompare(Container(11001).ListItemPosition(42).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,43) + StringCompare(Container(11001).ListItemPosition(43).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,44) + StringCompare(Container(11001).ListItemPosition(44).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,45) + StringCompare(Container(11001).ListItemPosition(45).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,46) + StringCompare(Container(11001).ListItemPosition(46).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,47) + StringCompare(Container(11001).ListItemPosition(47).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,48) + StringCompare(Container(11001).ListItemPosition(48).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		StringCompare(Container(11001).Position,49) + StringCompare(Container(11001).ListItemPosition(49).Property(id),ListItem.Property(id)) + Container(11001).HasFocus |
+		false
+		</visible>
+	</include>
+
+	<!-- Layouts -------------------------------------------------------------------------------------------------------------->
+	<!--
+	  -- We do not want ANY specific conditionals in here; make them external
+	  -- within another include or variable if at all possible to help keep
+	  -- the actual layouts clean so they can be easily modified
+	  -->
+	<include name="Card">
+		<texture border="10">base-rounded-half.png</texture>
+		<colordiffuse>FF000000</colordiffuse>
+	</include>
+	<include name="ListItemPosterCard">
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>165</posy>
+				<width>117</width>
+				<height>27</height>
+				<include>Card</include>
+				<animation effect="fade" start="0" end="80" time="400" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+
+	<include name="ListItemPosterLayout">
+		<!-- Watched status (progress) overlay icon -->
+		<control type="image">
+			<visible>ListItem.Status(InProgress)</visible>
+			<posx>39</posx>
+			<posy>3</posy>
+			<width>36</width>
+			<height>36</height>
+			<info>ListItem.Overlay</info>
+		</control>
+
+		<!-- Media poster 'reflection' image -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>189</posy>
+			<width>117</width>
+			<height>174</height>
+			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+			<texture diffuse="reflection_poster.png" flipy="true" background="true">$VAR[listitem_poster_art]</texture>
+		</control>
+
+		<!-- Poster border and diffuse color -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>18</posy>
+			<width>117</width>
+			<height>174</height>
+			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
+			<colordiffuse>$VAR[listitem_diffuse_color]</colordiffuse>
+			<!--disabledcolordiffuse>Orange</disabledcolordiffuse-->
+			<texture diffuse="mask-poster-small.png" background="true">$VAR[listitem_poster_art]</texture>
+			<!--bordertexture>border_poster_home.png</bordertexture-->
+		</control>
+	</include>
+	<include name="ListItemPosterFocusedLayout">
+		<include>ListItemPosterLayout</include>
+		<!-- Focused border -->
+		<control type="image">
+			<posx>-2</posx>
+			<posy>16</posy>
+			<width>121</width>
+			<height>178</height>
+			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
+			<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
+			<texture>mask-poster-small.png</texture>
+		</control>
+
+		<!-- Focused item non-diffused -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>18</posy>
+			<width>117</width>
+			<height>174</height>
+			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
+			<texture diffuse="mask-poster-small.png" background="true">$VAR[listitem_poster_art]</texture>
+			<!--bordertexture>mask-poster-small.png</bordertexture-->
+		</control>
+	</include>
+
+	<!-- Titles --------------------------------------------------------------------------------------------------------------->
+	<variable name="listitem_poster_title_1">
+		<value condition="ControlGroup(7002).HasFocus + StringCompare(ListItem.Property(id),Container(11001).ListItem(Container(11001).Position).Property(id)) + ListItem.Type(episode)">[COLOR=$VAR[color_primary_focused]]$INFO[ListItem.TVShowTitle][/COLOR]</value>
+		<value condition="ControlGroup(7002).HasFocus + StringCompare(ListItem.Property(id),Container(11001).ListItem(Container(11001).Position).Property(id)) + ListItem.Type(movie)">[COLOR=$VAR[color_primary_focused]]$INFO[ListItem.Label][/COLOR]</value>
+		<value condition="ControlGroup(7002).HasFocus + Container(11001).ListItem(0).Type(episode) + !IsEmpty($INFO[Container(11001).ListItem(0).TVShowTitle])">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="ControlGroup(7002).HasFocus + Container(11001).ListItem(0).Type(movie) + !IsEmpty($INFO[Container(11001).ListItem(0).TVShowTitle])">$INFO[ListItem.Label]</value>
+		<value condition="ListItem.Type(episode)">[COLOR=$VAR[color_primary]]$INFO[ListItem.TVShowTitle][/COLOR]</value>
+		<value>[COLOR=$VAR[color_primary]]$INFO[ListItem.Label][/COLOR]</value>
+	</variable>
+	<variable name="listitem_poster_title_2">
+		<value condition="ListItem.Type(episode) + ![IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]">S$INFO[ListItem.Season] [COLOR=$VAR[color_primary]]&#xB7;[/COLOR] E$INFO[ListItem.Episode]</value>
+		<value condition="ListItem.Type(episode) + [IsEmpty(ListItem.Season) | IsEmpty(ListItem.Episode)]">$INFO[ListItem.Date]</value>
+		<value></value>
+	</variable>
+
+	<include name="ListItemPosterTitle1">
+		<control type="label">
+			<posx>59</posx>
+			<posy>192</posy>
+			<width>117</width>
+			<height>30</height>
+			<align>center</align>
+			<font>homelabel</font>
+			<shadowcolor>Black</shadowcolor>
+			<label>$VAR[listitem_poster_title_1]</label>
+		</control>
+	</include>
+	<include name="ListItemPosterTitle2">
+		<include>ListItemPosterCard</include>
+		<control type="label">
+			<posx>59</posx>
+			<posy>165</posy>
+			<width>111</width>
+			<height>27</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>homelabel</font>
+			<shadowcolor>Black</shadowcolor>
+			<label>$VAR[listitem_poster_title_2]</label>
+		</control>
+	</include>
+
+	<variable name="listitem_property_id">
+		<!--value>$INFO[ListItem.Property(id)]</value-->
+		<value>$INFO[Container(11001).ListItem.Property(id)]</value>
+	</variable>
+	<include name="ListItemPropertyIdButton">
+		<control type="button">
+			<visible>false</visible>
+			<description>Used to determine which ListItem is focused</description>
+			<onfocus>SetProperty(_listitem_property_id,$VAR[listitem_property_id],0)</onfocus>
+		</control>
+	</include>
+
+	<!-- OnDeckLayout ---------------------------------------------------------------------------------------------------->
+	<!-- TODO
+	  -
+		-  Change Focus to (0) when card info are present on deck 1
+		-  Add control to right side; <up> expand, <down> collapse, and <right> toggle deck info
+		-  have a animation slide out a info card to tell use what to do (grouplist formatted)
+		-  Consider a panel for deck 1 as well; try it out
+		-  Obvious, relayout stuff so it fits; maybe we can still increase size from 126 to 127/8
+		-    and background is off center; Titles not showing,
+		-  Need a way to see which card is focused better
+		-  See if we can lay out mediatags better now that we grouped panel properly with size infos
+
+		- Consider only displaying one row when 300 in focus?
+		- Consider chainging to vertical list when 300 in focus since wont be able to see some items
+		- How bout adding recently added preview as a single poster / info card that rotates
+	  -
+	  -->
+	<include name="OnDeckLayout">
+		<!--
+		-->
+		<itemlayout width="126" height="222" condition="Skin.HasSetting(HIDE_DECK_INFO) | !Skin.HasSetting(SHOW_FULL_INFO_CARDS)">
+			<control type="group">
+				<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11001)</visible>
+				<posx>9</posx>
+				<control type="group">
+					<include>ListItemPosterLayout</include>
+					<include>ListItemPosterTitle1</include>
+				</control>
+				<control type="group">
+					<visible>ListItem.Type(episode)</visible>
+					<include>ListItemPosterTitle2</include>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout width="126" height="222" condition="Skin.HasSetting(HIDE_DECK_INFO) | !Skin.HasSetting(SHOW_FULL_INFO_CARDS)">
+			<include>ListItemPropertyIdButton</include>
+			<control type="group">
+				<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11001)</visible>
+				<posx>9</posx>
+				<control type="group">
+					<include>ListItemPosterFocusedLayout</include>
+					<include>ListItemPosterTitle1</include>
+				</control>
+			</control>
+		</focusedlayout>
+
+		<itemlayout width="636" height="222" condition="Skin.HasSetting(SHOW_FULL_INFO_CARDS) + !Skin.HasSetting(HIDE_DECK_INFO)">
+			<control type="group">
+				<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11001)</visible>
+				<posx>0</posx>
+				<control type="group">
+					<control type="group">
+						<posx>9</posx>
+						<width>126</width>
+						<height>222</height>
+						<align>left</align>
+						<include>ListItemPosterLayout</include>
+						<include>ListItemPosterTitle1</include>
+					</control>
+					<control type="group">
+						<posx>9</posx>
+						<width>501</width>
+						<height>222</height>
+						<align>right</align>
+						<include>OnDeckInfo-501x222</include>
+					</control>
+				</control>
+			</control>
+		</itemlayout>
+		<!--focusedlayout width="636" height="222" condition="Skin.HasSetting(SHOW_FULL_INFO_CARDS) + !Skin.HasSetting(HIDE_DECK_INFO) + [!Skin.HasSetting(DISABLE_EXPANDING_DECK) | StringCompare(Window(0).Property(_on_deck),1)]"-->
+		<focusedlayout width="636" height="222" condition="Skin.HasSetting(SHOW_FULL_INFO_CARDS) + !Skin.HasSetting(HIDE_DECK_INFO)">
+			<include>ListItemPropertyIdButton</include>
+			<control type="group">
+				<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11001)</visible>
+				<posx>0</posx>
+				<control type="group">
+					<control type="group">
+						<posx>9</posx>
+						<width>126</width>
+						<height>222</height>
+						<align>left</align>
+						<include>ListItemPosterFocusedLayout</include>
+						<include>ListItemPosterTitle1</include>
+					</control>
+					<control type="group">
+						<posx>9</posx>
+						<width>501</width>
+						<height>222</height>
+						<align>right</align>
+						<include>OnDeckInfo-501x222</include>
+					</control>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+
+		<!--
+		# Original Layout
+		<focusedlayout width="129" height="222">
+			<include>ListItemPropertyIdButton</include>
+			<control type="group">
+				<visible>[ListItem.Type(episode) | ListItem.Type(movie)] + Control.IsVisible(11001)</visible>
+				<posx>3</posx>
+				<control type="group">
+					<include>ListItemPosterFocusedLayout</include>
+					<include>ListItemPosterTitle1</include>
+				</control>
+			</control>
+		</focusedlayout>
+		-->
+
+	<!-- Format text ratings -->
+	<variable name="text_rating">
+		<value condition="SubString(Listitem.Property(rating),0,Left)">0$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),1,Left)">1$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),2,Left)">2$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),3,Left)">3$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),4,Left)">4$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),5,Left)">5$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),6,Left)">6$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),7,Left)">7$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),8,Left)">8$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),9,Left)">9$VAR[text_rating_decimal,.]</value>
+		<value condition="SubString(Listitem.Property(rating),9,Left)">10$VAR[text_rating_decimal,.]</value>
+		<value></value>
+	</variable>
+	<variable name="text_rating_decimal">
+		<value condition="SubString(Listitem.Property(rating),.0)">0</value>
+		<value condition="SubString(Listitem.Property(rating),.1)">1</value>
+		<value condition="SubString(Listitem.Property(rating),.2)">2</value>
+		<value condition="SubString(Listitem.Property(rating),.3)">3</value>
+		<value condition="SubString(Listitem.Property(rating),.4)">4</value>
+		<value condition="SubString(Listitem.Property(rating),.5)">5</value>
+		<value condition="SubString(Listitem.Property(rating),.6)">6</value>
+		<value condition="SubString(Listitem.Property(rating),.7)">7</value>
+		<value condition="SubString(Listitem.Property(rating),.8)">8</value>
+		<value condition="SubString(Listitem.Property(rating),.9)">9</value>
+		<value>0</value>
+	</variable>
+
+	<variable name="info_information">
+		<value condition="ListItem.Type(movie)]">$INFO[ListItem.Year]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.Property(mediaTag-contentRating), &#xB7; ]</value>
+		<value condition="ListItem.Type(episode)">$INFO[ListItem.Title]$INFO[ListItem.Season, &#xB7; ,x]$INFO[ListItem.Episode]$INFO[ListItem.Date, &#xB7; ]$INFO[ListItem.Genre, &#xB7; ]$INFO[ListItem.Property(mediaTag-contentRating), &#xB7; ]</value>
+	</variable>
+
+	<include name="InfoArt">
+		<control type="group">
+			<height>201</height>
+			<!-- Episode Thumb -->
+			<control type="group">
+				<visible>[Container(11001).ListItem(0).Type(episode)]</visible>
+				<description>Episode Thumb and Background</description>
+				<control type="image">
+					<description>Episode Thumb Background</description>
+					<posx>27</posx>
+					<posy>24</posy>
+					<width>150</width>
+					<height>99</height>
+					<texture>thumb_background.png</texture>
+				</control>
+				<control type="image">
+					<description>Poster Thumb Reflection</description>
+					<posx>27</posx>
+					<posy>122</posy>
+					<width>150</width>
+					<height>99</height>
+					<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<fadetime>1</fadetime>
+				</control>
+				<control type="image">
+					<description>Episode Thumb</description>
+					<posx>27</posx>
+					<posy>24</posy>
+					<width>150</width>
+					<height>99</height>
+					<texture background="true" diffuse="diffuse_episode.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture>border_episode.png</bordertexture>
+					<fadetime>1</fadetime>
+				</control>
+			</control>
+			<!-- Movie, TVShows or Seasons Thumb -->
+			<control type="group">
+				<visible>[Container(11001).ListItem(0).Type(movie)]</visible>
+				<description>Poster Thumb and Background</description>
+				<control type="image">
+					<description>Poster Background</description>
+					<posx>45</posx>
+					<posy>-15</posy>
+					<width>114</width>
+					<height>171</height>
+					<texture>thumb_background.png</texture>
+				</control>
+				<control type="image">
+					<description>Poster Thumb Reflection</description>
+					<posx>45</posx>
+					<posy>155</posy>
+					<width>114</width>
+					<height>171</height>
+					<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<fadetime>1</fadetime>
+				</control>
+				<control type="image">
+					<description>Poster Thumb</description>
+					<posx>45</posx>
+					<posy>-15</posy>
+					<width>114</width>
+					<height>171</height>
+					<texture background="true" diffuse="diffuse_poster.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordertexture>border_episode.png</bordertexture>
+					<fadetime>1</fadetime>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="OnDeckInfo-501x222">
+		<!-- Ondeck Info -->
+		<control type="group">
+			<!--visible>[!Control.HasFocus(300) + Control.HasFocus(11001) + !Skin.HasSetting(HIDE_DECK_INFO)] + [Skin.HasSetting(DISABLE_EXPANDING_DECK) | [StringCompare(Window(0).Property(_on_deck),1) | IsEmpty(Window(0).Property(_on_deck))]]</visible-->
+
+			<!-- Info dimensions -->
+			<posx>129</posx>
+			<posy>0</posy>
+			<width>501</width>
+			<height>222</height>
+
+			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- Info -->
+			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- Movies, TvShow, Seasons or Episodes Info -->
+			<control type="group">
+				<visible>[ListItem.Type(movie) | ListItem.Type(episode)]</visible>
+				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<description>Title and Image Ratings</description>
+					<posx>0</posx>  <!--      186 orig          -->
+					<posy>18</posy>  <!--       24 orig          -->
+					<width>501</width>
+					<height>18</height>
+
+					<control type="group">
+						<!-- Title -->
+						<control type="label">
+							<description>Title</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width min="1" max="402">auto</width>
+							<height>18</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<font>osd</font>
+							<textcolor>$VAR[color_primary_focused]</textcolor>
+							<shadowcolor>Black</shadowcolor>
+							<label>$VAR[listitem_poster_title_1]</label>
+						</control>
+					</control>
+
+					<!-- Image rating -->
+					<control type="image">
+						<visible>!IsEmpty(ListItem.Property(rating))</visible>
+						<description>Text Rating</description>
+						<posx>99r</posx>
+						<posy>0</posy>
+						<width>99</width>
+						<height>18</height>
+						<align>right</align>
+						<aligny>center</aligny>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<info>ListItem.StarRating</info>
+					</control>
+				</control>
+				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<posx>0</posx>
+					<posy>24</posy>
+					<width>501</width>
+					<height>18</height>
+					<!-- Movie, TVShows, Seasons & Episodes Details -->
+					<control type="label">
+						<description>Movie Details</description>
+						<posy>3</posy>
+						<width min="1" max="473">auto</width>
+						<align>left</align>
+						<font>list3</font>
+						<textcolor>$VAR[color_secondary_focused]</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<label>$VAR[info_information]</label>
+						<scroll>true</scroll>
+					</control>
+					<!-- Text Rating -->
+					<control type="label">
+						<visible>!IsEmpty(ListItem.Property(rating))</visible>
+						<description>Text Rating</description>
+						<posx>0r</posx>
+						<posy>3</posy>
+						<width min="1" max="28">auto</width>
+						<align>right</align>
+						<font>list3</font>
+						<textcolor>$VAR[color_primary]</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<label>$VAR[text_rating]</label>
+					</control>
+				</control>
+				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Under-rule -->
+				<control type="image">
+					<posx>0</posx>
+					<posy>54</posy>
+					<width>501</width>
+					<height>1</height>
+					<texture>white.png</texture>
+					<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
+				</control>
+				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Plot outline -->
+				<control type="group">
+					<include>VisibleStatementFor11001ListitemFocusedItem</include>
+					<control type="textbox" id="8">
+						<visible>!IsEmpty(ListItem.PlotOutline)</visible>
+						<posx>0</posx>
+						<posy>57</posy>
+						<width>501</width>
+						<height>117</height>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<font>plot1</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<autoscroll delay="10000" time="3000" repeat="10000"/>
+						<label>$INFO[ListItem.Plot]</label>
+					</control>
+				</control>
+				<control type="group">
+					<include>NotVisibleStatementFor11001ListitemFocusedItem</include>
+					<control type="textbox" id="8">
+						<visible>!IsEmpty(ListItem.PlotOutline)</visible>
+						<posx>0</posx>
+						<posy>57</posy>
+						<width>501</width>
+						<height>117</height>
+						<align>justify</align>
+						<aligny>top</aligny>
+						<font>plot1</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<scroll>false</scroll>
+						<label>$INFO[ListItem.Plot]</label>
+					</control>
+				</control>
+				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Media Flags & duration-->
+				<control type="group">
+					<posx>0</posx>
+					<posy>174</posy>
+					<height>18</height>
+					<width>501</width>
+					<control type="group">
+						<!-- Media flags -->
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>303</width>
+						<height>18</height>
+						<aligny>center</aligny>
+						<include>InfoMediaFlags</include>
+					</control>
+					<!-- Duration -->
+					<control type="label">
+						<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						<description>Duration</description>
+						<posx>0r</posx>
+						<posy>0</posy>
+						<width min="1" max="198">auto</width>
+						<height>18</height>
+						<align>right</align>
+						<aligny>bottom</aligny>
+						<font>list3</font>
+						<textcolor>DarkGray</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<!-- TODO: Localize -->
+						<label>Duration: $INFO[ListItem.DurationStr]</label>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<!--
+		Some Properties that exist but not using yet
+		--------------------------------------------
+		<value>View Offset: $INFO[Container(11001).ListItem(0).Property(viewOffset)]</value>
+		<value>ratingKey: $INFO[Container(11001).ListItem(0).Property(ratingKey)]</value>
+
+		<value>plexserver: $INFO[Container(11001).ListItem(0).Property(plexserver)]</value>
+		<value>sectionPath: $INFO[Container(300).ListItem(0).Property(sectionPath)]</value>
+		<value>plex: $INFO[Container(300).ListItem(0).Property(plex)]</value>
+		<value condition="Container(11001).ListItem(0).Type(movie)">PC: movies</value>
+
+		<value>sectionPath: $INFO[Container(300).ListItem(0).Property(sectionPath)]</value>
+
+		Dunno if they exist or how to access since they are boolean
+		-----------------------------------------------------------
+		<value condition="Container(11001).ListItem(0).Property(HasWatchedState)">HasWatchedState: True</value>
+
+		Don't Seem to exist
+		-------------------
+		<value condition="Container(300).ListItem(0).DirectoryType(Movie)">PlexDirectoryType: movie</value>
+		<value condition="Container(300).ListItem(0).Type(episode)">episode</value>
+		<value condition="Container(300).ListItem(0).Type(movie)">movie</value>
+		<value condition="Container(300).ListItem(0).PlexDirectoryType(episode)">PlexDirectoryType: episode</value>
+		<value condition="Container(300).ListItem(0).PlexDirectoryType(movie)">PlexDirectoryType: movie</value>
+	-->
+
+	<variable name="conditional_tests">
+		<value>sectionPath: $INFO[Container(300).ListItem(0).Property(sectionPath)]</value>
+		<value condition="Container(11001).PlexContentType(Movie)">PC: movies</value>
+
+		<value>PlexDirectoryType: $INFO[Container(300).ListItem(0).Property(PlexContent)]</value>
+		<value>View Offset: $INFO[Container(11001).ListItem(0).Property(viewOffset)]</value>
+
+		<value>1: Empty 2: $INFO[Container(11001).ListItem.Property(id)] 3: $INFO[Container(11001).ListItemPosition().Property(id)] 4: $INFO[Container(11001).Position]</value>
+		<value>1:$INFO[ListItem.Property(id)] 2: $INFO[Container(11001).ListItem.Property(id)] 3: $INFO[Container(11001).ListItemPosition(Container(11001).Position).Property(id)] 4: $INFO[Container(11001).Position]</value>
+		<value>$INFO[Container(11001).ListItem.Property(id)] : $INFO[Container(11001).ListItemPosition(Container(11001).Position).Property(id)]</value>
+]		<value>$INFO[Window(0).Property(_on_deck)]</value>
+		<value condition="StringCompare(Container(11001).ListItem(0).Property(id),Container(11001).ListItem(Container(11001).Position).Property(id)))">*$INFO[Container(11001).ListItem(0).Property(id)]*==*$INFO[Container(11001).ListItem(Container(11001).Position).Property(id)]*</value>
+
+		<!--
+		<value condition="StringCompare(Container(11001).ListItem(0).Property(id),Container(11001).ListItem(Container(11001).Position).Property(id))">$INFO[Container(11001).ListItem(0).Property(id)] == $INFO[Container(11001).ListItem(Container(11001).Position).Property(id)]</value>
+
+		<value>$INFO[Container(11001).ListItem(0).Property(id)] == $INFO[Container(11001).ListItem(Container(11001).Position).Property(id)]</value>
+		<value>$INFO[Container(11001).ListItem(-1).Label]</value>
+		<value>$INFO[Control.GetLabel(11001)]</value>
+
+		# STATEMENT IS INVALID
+		<value>$INFO[Container(11001).Position(2).ListItem.Label]</value>
+		-->
+
+		<!-- Condition works -->
+		<!--
+		<value condition="StringCompare(System.CurrentControl,Container(11001).ListItem.Label)">$INFO[System.CurrentControl] == $INFO[Container(11001).ListItem.Label]</value>
+		-->
+		<value condition="Container(11001).HasFocus(0)">1 Container(11001).HasFocus(0)</value>
+		<value condition="Control.HasFocus(11001)">0 Control.HasFocus(11001)</value>
+		<value condition="Container(11001).HasNext">0 Container(11001).HasNext</value>
+		<value condition="ControlGroup(7002).HasFocus">2 ControlGroup(7002).HasFocus</value>
+
+		<!-- Condition DOES NOT work -->
+		<value condition="Container(11001).ListItem(0).HasFocus">0 Focused</value>
+		<value condition="Container(11001).ListItem(30472).Type(movie)">$INFO[Container(11001).ListItem(30472).Label]</value>
+		<value condition="Container(11001).HasFocus(30472)">1 Container(11001).HasFocus(30472)</value>
+		<value condition="Container(11001).HasFocus(5555)">1 Container(11001).HasFocus(5555)</value>
+		<value condition="ControlGroup.HasFocus(30472)">0 ControlGroup.HasFocus(30472)</value>
+		<value condition="ControlGroup.HasFocus(5555)">0 ControlGroup.HasFocus(5555)</value>
+		<value condition="ControlGroup(7002).HasFocus(30472)">0 ControlGroup(7002).HasFocus(30472)</value>
+		<value condition="ControlGroup(7002).HasFocus(5555)">0 ControlGroup(7002).HasFocus(5555)</value>
+		<value condition="Control.HasFocus(30472)">0 Control.HasFocus(30472)</value>
+		<value condition="Control.HasFocus(5555)">0 Control.HasFocus(5555)</value>
+
+		<value>Not focused on anything special</value>
+	</variable>
+</includes>

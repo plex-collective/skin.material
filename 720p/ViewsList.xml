@@ -1,0 +1,1240 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="List">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<control type="group">
+				<description>List View</description>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
+					<!-- MPAA / TV Rating -->
+					<posx>77</posx>
+					<posy>77</posy>
+					<include>LargeContentRatingMediaFlags</include>
+				</control>
+
+				<control type="group">
+					<visible>![Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Control.IsVisible(53)]</visible>
+					<control type="image">
+						<posx>44</posx>
+						<posy>266</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+						<visible>IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="image">
+						<posx>44</posx>
+						<posy>159</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+						<visible>!IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
+					</control>
+					<control type="group">
+						<visible>!Window.IsActive(MyPics.xml)</visible>
+						<control type="image">
+							<posx>111</posx>
+							<posy>630</posy>
+							<width>464</width>
+							<height>330</height>
+							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="top" align="center">keep</aspectratio>
+							<fadetime>1</fadetime>
+							<visible>IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>111</posx>
+							<posy>519</posy>
+							<width>464</width>
+							<height>280</height>
+							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="top" align="center">keep</aspectratio>
+							<fadetime>1</fadetime>
+							<visible>!IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>111</posx>
+							<posy>300</posy>
+							<width>464</width>
+							<height>330</height>
+							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="bottom" align="center">keep</aspectratio>
+							<bordertexture>border_square.png</bordertexture>
+							<fadetime>1</fadetime>
+							<visible>IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>111</posx>
+							<posy>239</posy>
+							<width>464</width>
+							<height>280</height>
+							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="bottom" align="center">keep</aspectratio>
+							<bordertexture>border_square.png</bordertexture>
+							<fadetime>1</fadetime>
+							<visible>!IsEmpty(ListItem.Plot)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Window.IsActive(MyPics.xml)</visible>
+						<control type="image">
+							<posx>178</posx>
+							<posy>630</posy>
+							<width>330</width>
+							<height>330</height>
+							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
+							<fadetime>1</fadetime>
+							<visible>IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>203</posx>
+							<posy>519</posy>
+							<width>280</width>
+							<height>280</height>
+							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
+							<fadetime>1</fadetime>
+							<visible>!IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>178</posx>
+							<posy>300</posy>
+							<width>330</width>
+							<height>330</height>
+							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
+							<bordertexture>border_square.png</bordertexture>
+							<fadetime>1</fadetime>
+							<visible>IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="image">
+							<posx>203</posx>
+							<posy>239</posy>
+							<width>280</width>
+							<height>280</height>
+							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
+							<bordertexture>border_square.png</bordertexture>
+							<fadetime>1</fadetime>
+							<visible>!IsEmpty(ListItem.Plot)</visible>
+						</control>
+					</control>
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+					<!-- Total Episodes Overlay -->
+					<control type="label">
+						<posx>44</posx>
+						<posy>222</posy>
+						<width>598</width>
+						<height>12</height>
+						<description>Total Episodes</description>
+						<label>$INFO[ListItem.Episode] $LOCALIZE[31002]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>list3</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<visible>!IsEmpty(ListItem.Episode) + !Skin.HasSetting(HIDE_EPISODE_DETAILS) + !Container.Content(Movies)</visible>
+					</control>
+					<control type="image">
+						<posx>44</posx>
+						<posy>159</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+					</control>
+					<!-- Current Thumb reflection-->
+					<control type="image">
+						<posx>248</posx>
+						<posy>519</posy>
+						<width>188</width>
+						<height>280</height>
+						<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb reflection-->
+					<!-- MPAA / TV Rating -->
+					<control type="group">
+						<posx>-4</posx>
+						<posy>514</posy>
+						<include>contentRatingMediaFlag</include>
+					</control>
+					<!-- Current Thumb -->
+					<control type="image">
+						<posx>248</posx>
+						<posy>239</posy>
+						<width>188</width>
+						<height>280</height>
+						<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture>border_poster.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb -->
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>Container.Content(episodes)</visible>
+					<control type="image">
+						<posx>44</posx>
+						<posy>114</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+					</control>
+					<!-- Current Thumb reflection-->
+					<control type="image">
+						<posx>142</posx>
+						<posy>474</posy>
+						<width>400</width>
+						<height>224</height>
+						<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb reflection-->
+					<!-- MPAA / TV Rating -->
+					<control type="group">
+						<posx>-4</posx>
+						<posy>470</posy>
+						<include>contentRatingMediaFlag</include>
+					</control>
+					<!-- Current Thumb -->
+					<control type="image">
+						<posx>142</posx>
+						<posy>250</posy>
+						<width>400</width>
+						<height>224</height>
+						<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<bordertexture>border_episode.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb -->
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>Container.Content(artists) + !SubString(Container.FirstTitle,iTunes,Left)</visible>
+					<control type="image">
+						<posx>44</posx>
+						<posy>159</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+					</control>
+					<!-- Current Thumb reflection-->
+					<control type="image">
+						<posx>203</posx>
+						<posy>519</posy>
+						<width>280</width>
+						<height>280</height>
+						<texture background="true" diffuse="reflection_artist.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb reflection-->
+					<!-- Current Thumb -->
+					<control type="image">
+						<posx>203</posx>
+						<posy>239</posy>
+						<width>280</width>
+						<height>280</height>
+						<texture background="true" diffuse="diffuse_artist.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
+						<bordertexture>border_artist.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb -->
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>Container.Content(albums) | Container.Content(songs) | [Container.Content(artists) + SubString(Container.FirstTitle,iTunes,Left)]</visible>
+					<control type="image">
+						<posx>44</posx>
+						<posy>266</posy>
+						<width>598</width>
+						<height>415</height>
+						<texture>thumb_background.png</texture>
+					</control>
+					<!-- Current Thumb reflection-->
+					<control type="image">
+						<posx>178</posx>
+						<posy>630</posy>
+						<width>330</width>
+						<height>330</height>
+						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb reflection-->
+					<!-- Current Thumb -->
+					<control type="image">
+						<posx>178</posx>
+						<posy>300</posy>
+						<width>330</width>
+						<height>330</height>
+						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
+						<bordertexture>border_square.png</bordertexture>
+						<fadetime>1</fadetime>
+					</control>
+					<!-- /Current Thumb -->
+				</control>
+			</control>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- ### INFO/METADATA ### -->
+			<!-- movies list -->
+			<control type="grouplist">
+				<posx>91</posx>
+				<posy>534</posy>
+				<visible>Container.Content(Movies)</visible>
+				<control type="group">
+					<height>31</height>
+					<visible>!IsEmpty(ListItem.Rating)</visible>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<control type="label">
+							<width>385</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+					<control type="image">
+						<posx>399</posx>
+						<posy>4</posy>
+						<width>106</width>
+						<height>18</height>
+						<align>left</align>
+						<info>ListItem.StarRating</info>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
+					</control>
+				</control>
+				<control type="group">
+					<height>31</height>
+					<visible>IsEmpty(ListItem.Rating)</visible>
+					<control type="grouplist">
+						<aligny>bottom</aligny>
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<orientation>vertical</orientation>
+						<control type="label">
+							<width>505</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+					<height>-12</height>
+					<width>534</width>
+					<control type="grouplist">
+						<posy>-9</posy>
+						<width>495</width>
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>Year</description>
+							<label>$INFO[ListItem.Year]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="100">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+							<visible>!IsEmpty(ListItem.Year)</visible>
+						</control>
+						<control type="label">
+							<description>Duration</description>
+							<label> &#xB7; $INFO[ListItem.DurationStr]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="100">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+							<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+						<control type="label">
+							<description>Genre</description>
+							<label> &#xB7; $INFO[ListItem.Genre]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="300">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+							<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>-9</posy>
+						<label>$INFO[ListItem.Rating]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<width>39</width>
+						<height>12</height>
+						<font>list3</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<wrapmultiline>false</wrapmultiline>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+				</control>
+				<!-- Just a spacer since we moved the detais up 12 -->
+				<control type="label">
+					<height>12</height>
+					<width>534</width>
+					<label/>
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>504</width>
+					<height>95</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>plot1</font>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<autoscroll delay="10000" time="3000" repeat="10000"/>
+				</control>
+			</control>
+			<!-- tvshows list -->
+			<control type="grouplist">
+				<posx>91</posx>
+				<posy>534</posy>
+				<visible>Container.Content(tvshows)</visible>
+				<!-- Title and Rating -->
+				<control type="group">
+					<height>31</height>
+					<visible>!IsEmpty(ListItem.Rating)</visible>
+					<control type="label">
+						<width>385</width>
+						<height>28</height>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>title1</font>
+						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+					</control>
+					<control type="image">
+						<posx>399</posx>
+						<posy>4</posy>
+						<width>106</width>
+						<height>18</height>
+						<align>left</align>
+						<info>ListItem.StarRating</info>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
+					</control>
+				</control>
+				<!-- Title only since there is no rating -->
+				<control type="group">
+					<height>31</height>
+					<visible>IsEmpty(ListItem.Rating)</visible>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<control type="label">
+							<width>505</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="group">
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+					<height>-12</height>
+					<width>534</width>
+					<control type="grouplist">
+						<posy>-9</posy>
+						<width>495</width>
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>Year</description>
+							<label>$INFO[ListItem.Year]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="100">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.Year)</visible>
+						</control>
+						<control type="label">
+							<description>Duration</description>
+							<label> &#xB7; $INFO[ListItem.DurationStr]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="100">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+						<control type="label">
+							<description>Genre</description>
+							<label> &#xB7; $INFO[ListItem.Genre]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="300">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<wrapmultiline>false</wrapmultiline>
+							<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>-9</posy>
+						<label>$INFO[ListItem.Rating]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<width>39</width>
+						<height>12</height>
+						<font>list3</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+				</control>
+				<!-- Just a spacer since we moved the detais up 12 -->
+				<control type="label">
+					<height>12</height>
+					<width>534</width>
+					<label/>
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+				</control>
+				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- Show Description -->
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>504</width>
+					<height>96</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<font>plot1</font>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<autoscroll delay="10000" time="3000" repeat="10000"/>
+				</control>
+			</control>
+			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- seasons list -->
+			<control type="grouplist">
+				<visible>Container.Content(seasons)</visible>
+				<posx>91</posx>
+				<posy>534</posy>
+				<control type="group">
+					<height>31</height>
+					<control type="grouplist">
+						<aligny>bottom</aligny>
+						<control type="label">
+							<width>505</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+				</control>
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>504</width>
+					<height>98</height>
+					<align>justify</align>
+					<label>$INFO[Container.Property(description)]</label>
+					<font>plot1</font>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+				</control>
+			</control>
+			<!-- episodes list -->
+			<control type="grouplist">
+				<posx>91</posx>
+				<posy>489</posy>
+				<visible>Container.Content(episodes)</visible>
+				<control type="group">
+					<height>31</height>
+					<control type="label">
+						<width>385</width>
+						<height>28</height>
+						<align>left</align>
+						<aligny>bottom</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<font>title1</font>
+						<textcolor>Orange</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+					</control>
+					<control type="image">
+						<posx>399</posx>
+						<posy>4</posy>
+						<width>106</width>
+						<height>18</height>
+						<align>left</align>
+						<info>ListItem.StarRating</info>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+					<height>-12</height>
+					<width>534</width>
+					<control type="grouplist">
+						<posy>-9</posy>
+						<width>495</width>
+						<orientation>horizontal</orientation>
+						<itemgap>0</itemgap>
+						<control type="label">
+							<description>Date</description>
+							<label>$INFO[ListItem.Date]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="200">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.Date)</visible>
+						</control>
+						<control type="label">
+							<description>Bullet</description>
+							<label> &#xB7; </label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="50">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.Date) + !IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+						<control type="label">
+							<description>Duration</description>
+							<label>$INFO[ListItem.DurationStr]</label>
+							<align>left</align>
+							<aligny>center</aligny>
+							<width min="1" max="200">auto</width>
+							<height>12</height>
+							<font>list3</font>
+							<textcolor>Gray</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+							<visible>!IsEmpty(ListItem.DurationStr)</visible>
+						</control>
+					</control>
+					<control type="label">
+						<posx>30r</posx>
+						<posy>-9</posy>
+						<label>$INFO[ListItem.Rating]</label>
+						<align>right</align>
+						<aligny>center</aligny>
+						<width>39</width>
+						<height>12</height>
+						<font>list3</font>
+						<textcolor>Gray</textcolor>
+						<shadowcolor>Shadow</shadowcolor>
+						<visible>!IsEmpty(ListItem.Rating)</visible>
+					</control>
+				</control>
+				<!-- Just a spacer since we moved the detais up 12 -->
+				<control type="label">
+					<height>12</height>
+					<width>534</width>
+					<label/>
+					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>504</width>
+					<height>139</height>
+					<align>justify</align>
+					<label>$INFO[ListItem.Plot]</label>
+					<font>plot1</font>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<autoscroll delay="10000" time="3000" repeat="10000"/>
+				</control>
+			</control>
+			<!-- looks like a generic (fallback) list -->
+			<control type="grouplist">
+				<posx>91</posx>
+				<posy>534</posy>
+				<visible>!Container.Content(movies) + !Container.Content(episodes) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs) + !Control.IsVisible(53) + !IsEmpty(ListItem.Plot)</visible>
+				<control type="group">
+					<height>31</height>
+					<visible>!IsEmpty(ListItem.Rating)</visible>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<control type="label">
+							<width>385</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+					<control type="image">
+						<posx>399</posx>
+						<posy>4</posy>
+						<width>106</width>
+						<height>18</height>
+						<align>left</align>
+						<info>ListItem.StarRating</info>
+						<aspectratio aligny="bottom" align="left">keep</aspectratio>
+					</control>
+				</control>
+				<control type="group">
+					<height>31</height>
+					<visible>IsEmpty(ListItem.Rating)</visible>
+					<control type="grouplist">
+						<visible>!Skin.HasSetting(Flags)</visible>
+						<aligny>bottom</aligny>
+						<control type="label">
+							<width>505</width>
+							<height>28</height>
+							<align>left</align>
+							<aligny>bottom</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<font>title1</font>
+							<textcolor>Orange</textcolor>
+							<shadowcolor>Shadow</shadowcolor>
+						</control>
+					</control>
+				</control>
+				<control type="textbox">
+					<description>Plot/Details</description>
+					<width>504</width>
+					<height>95</height>
+					<align>justify</align>
+					<info>ListItem.Plot</info>
+					<textcolor>Gray</textcolor>
+					<shadowcolor>Shadow</shadowcolor>
+					<font>plot1</font>
+					<autoscroll delay="10000" time="3000" repeat="10000"/>
+				</control>
+			</control>
+			<!-- Media flags -->
+			<control type="group">
+				<posx>-687</posx>
+				<posy>681</posy>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<itemgap>15</itemgap>
+					<align>right</align>
+					<include>InfoMediaFlags</include>
+				</control>
+			</control>
+		</control>
+		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+		<!-- View Switcher (only if enabled in skin options) -->
+		<control type="button" id="41">
+			<visible>!Skin.HasSetting(EXPERIMENTAL_FANART_VIEW)</visible>
+			<onfocus>SetFocus(50)</onfocus>
+		</control>
+		<control type="button" id="41">
+			<visible>Skin.HasSetting(EXPERIMENTAL_FANART_VIEW) + [Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
+			<onfocus>Container.SetViewMode(555)</onfocus>
+			<onfocus>SetFocus(555)</onfocus>
+		</control>
+
+		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!-- ### LIST VIEW ITSELF ### -->
+		<control type="list" id="50">
+			<posx>664</posx>
+			<posy>253</posy>
+			<width>551</width>
+			<height>426</height>
+			<onleft>41</onleft>
+			<onright>-</onright>
+			<scrolltime>200</scrolltime>
+			<preloaditems>2</preloaditems>
+
+			<!-- (<unwatched indicator>) + <label> + (<# unwatched episodes> | <hd>) + (text rating) -->
+			<!-- TVSHOWS : SEASONS : MOVIES : EPISODES : CLIPS -->
+			<!--itemlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]"-->
+			<itemlayout height="52" condition="IsEmpty(Container.Property(mixedParents))">
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>1</posy>
+						<width>12</width>
+						<height>52</height>
+						<include>ListItemUnwatchedOverlay</include>
+					</control>
+
+					<!-- (Episode #) + Label -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+
+					<!-- (<# of unwatched episodes text / image>) -->
+					<control type="group">
+						<!--visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible-->
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
+						<posx>450</posx>
+						<posy>17</posy>
+						<width>42</width>
+						<height>31</height>
+						<include>ListItemUnwatchedCountOverlay</include>
+					</control>
+
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>2</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListItemVideoResolutionOverlay</include>
+					</control>
+
+					<!-- (<text rating / image>) -->
+					<control type="group">
+						<visible>!Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
+						<posx>489</posx>
+						<posy>17</posy>
+						<width>51</width>
+						<height>24</height>
+						<include>ListItemTextRatingOverlay</include>
+					</control>
+
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>18</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListItemNowPlayingOverlay</include>
+					</control>
+
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>13</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListItemDuration</include>
+					</control>
+				</control>
+
+			</itemlayout>
+			<!--focusedlayout height="52" condition="![!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)] + ![!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)]"-->
+			<focusedlayout height="52" condition="IsEmpty(Container.Property(mixedParents))">
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- LIST BUTTON -->
+					<control type="image">
+						<visible>!!Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS) | [!Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS) + !Container.Content(movies)]</visible>
+						<posy>1</posy>
+						<width>512</width>
+						<height>54</height>
+						<texture>button_media.png</texture>
+						<aspectratio>keep</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					</control>
+					<!-- For extended menu button for Movie text ratings -->
+					<control type="image">
+						<visible>!Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS) + Container.Content(movies)</visible>
+						<posy>1</posy>
+						<width>549</width>
+						<height>54</height>
+						<texture>button_media.png</texture>
+						<aspectratio>strech</aspectratio>
+						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
+						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
+					</control>
+
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>1</posy>
+						<width>12</width>
+						<height>52</height>
+						<include>ListFocusedUnwatchedOverlay</include>
+					</control>
+
+					<!-- (Episode #) + Label -->
+					<control type="group" id="121212">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+
+					<!-- (<# of unwatched episodes text / image>) -->
+					<control type="group">
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + IsEmpty(ListItem.Property(ZeroEpisodeCount))</visible>
+						<posx>450</posx>
+						<posy>17</posy>
+						<width>42</width>
+						<height>31</height>
+						<include>ListFocusedUnwatchedCountOverlay</include>
+					</control>
+
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>2</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListFocusedVideoResolutionOverlay</include>
+					</control>
+
+					<!-- (<text rating / image>) -->
+					<control type="group">
+						<visible>!Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS) + Container.Content(movies) + !IsEmpty(ListItem.Rating)</visible>
+						<posx>489</posx>
+						<posy>17</posy>
+						<width>51</width>
+						<height>24</height>
+						<include>ListFocusedTextRatingOverlay</include>
+					</control>
+
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>18</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListFocusedNowPlayingOverlay</include>
+					</control>
+
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>13</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListFocusedDuration</include>
+					</control>
+				</control>
+			</focusedlayout>
+
+			<!-- MIXED PARENTS EPISODES (Recently Added, etc) -->
+			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>12</width>
+						<height>72</height>
+						<include>ListItemUnwatchedOverlay</include>
+					</control>
+
+					<!-- (Episode #) + Label
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>10</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListItemVideoResolutionOverlay</include>
+					</control>
+				</control>
+
+			</itemlayout>
+			<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(episodes)">
+				<control type="image">
+					<posy>1</posy>
+					<width>512</width>
+					<height>70</height>
+					<texture>button_media_info.png</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
+				</control>
+
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- (<unwatched indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>10</posx>
+						<posy>9</posy>
+						<width>12</width>
+						<height>72</height>
+						<include>ListFocusedUnwatchedOverlay</include>
+					</control>
+
+					<!-- (Episode #) + Label
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+
+					<!-- (<HD indicator>) -->
+					<control type="group">
+						<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(clips)</visible>
+						<posx>450</posx>
+						<posy>10</posy>
+						<width>36</width>
+						<height>54</height>
+						<include>ListFocusedVideoResolutionOverlay</include>
+					</control>
+				</control>
+			</focusedlayout>
+
+			<!-- MIXED PARENTS SONGS (All Tracks) -->
+			<!--itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)"-->
+			<itemlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + !Container.Content(episodes)">
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- (Episode #) + Label
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListItemLabel</include>
+					</control>
+
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListItemNowPlayingOverlay</include>
+					</control>
+
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>18</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListItemDuration</include>
+					</control>
+				</control>
+			</itemlayout>
+			<!--focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + Container.Content(songs)"-->
+			<focusedlayout height="70" condition="!IsEmpty(Container.Property(mixedParents)) + !Container.Content(episodes)">
+				<control type="image">
+					<posy>1</posy>
+					<width>512</width>
+					<height>70</height>
+					<texture>button_media_info.png</texture>
+					<aspectratio>keep</aspectratio>
+					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
+					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
+				</control>
+
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>551</width>
+					<height>50</height>
+					<itemgap>15</itemgap>
+
+					<!-- (Episode #) + Label
+					      Showname, Season -->
+					<control type="group">
+						<posx>30</posx>
+						<posy>1</posy>
+						<width>395</width>
+						<height>50</height>
+						<include>ListFocusedLabel</include>
+					</control>
+
+					<!-- (<now playing overlay>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
+						<posx>457</posx>
+						<posy>26</posy>
+						<width>22</width>
+						<height>20</height>
+						<include>ListFocusedNowPlayingOverlay</include>
+					</control>
+
+					<!-- (<duration>) -->
+					<control type="group">
+						<visible>Container.Content(songs) + ![StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)]</visible>
+						<posx>468</posx>
+						<posy>18</posy>
+						<width>50</width>
+						<height>31</height>
+						<include>ListFocusedDuration</include>
+					</control>
+				</control>
+			</focusedlayout>
+		</control>
+
+		<control type="panel" id="53">
+			<posx>47</posx>
+			<posy>237</posy>
+			<width>1200</width>
+			<height>440</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<scrolltime>200</scrolltime>
+			<visible>Window.IsActive(2) + Container.HasFiles</visible>
+			<preloaditems>2</preloaditems>
+			<itemlayout height="146" width="146">
+				<control type="image">
+					<posx>18</posx>
+					<posy>18</posy>
+					<width>128</width>
+					<height>128</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>border_photo.png</bordertexture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="164" width="164">
+				<control type="image">
+					<posx>18</posx>
+					<posy>18</posy>
+					<width>128</width>
+					<height>128</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>border_photo.png</bordertexture>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>164</width>
+					<height>164</height>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture>focus_photo.png</texture>
+				</control>
+			</focusedlayout>
+		</control>
+		<!-- /Scroll Letter -->
+		<control type="group">
+			<visible>Container.Scrolling + !Control.IsVisible(53)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+			<control type="image">
+				<posx>850</posx>
+				<posy>396</posy>
+				<width>140</width>
+				<height>134</height>
+				<texture>HUD/HUDBackground.png</texture>
+			</control>
+			<control type="label">
+				<posx>850</posx>
+				<posy>392</posy>
+				<width>140</width>
+				<height>134</height>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<font>sortletter</font>
+				<textcolor>Shadow</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<aligny>center</aligny>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<posx>850</posx>
+				<posy>390</posy>
+				<width>140</width>
+				<height>134</height>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<font>sortletter</font>
+				<textcolor>White</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<aligny>center</aligny>
+				<align>center</align>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="ScrollLetterHUD">
+		<control type="group">
+			<visible>Container.Scrolling + !Control.IsVisible(53)</visible>
+			<animation effect="fade" start="0" end="100" time="200" delay="200">Visible</animation>
+			<control type="image">
+				<posx>850</posx>
+				<posy>396</posy>
+				<width>140</width>
+				<height>134</height>
+				<texture>HUD/HUDBackground.png</texture>
+			</control>
+			<control type="label">
+				<posx>850</posx>
+				<posy>392</posy>
+				<width>140</width>
+				<height>134</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<font>sortletter</font>
+				<textcolor>Shadow</textcolor>
+			</control>
+			<control type="label">
+				<posx>850</posx>
+				<posy>390</posy>
+				<width>140</width>
+				<height>134</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<font>sortletter</font>
+				<textcolor>White</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="LoadingHUD">
+		<control type="group">
+			<control type="image">	
+				<width>140</width>
+				<height>134</height>
+				<texture>HUD/HUDBackground.png</texture>
+			</control>
+			<control type="multiimage">
+				<width>140</width>
+				<height>134</height>
+				<imagepath>HUD/Loading</imagepath>
+				<timeperimage>50</timeperimage>
+				<fadetime>1</fadetime>
+				<loop>yes</loop>
+			</control>
+		</control>
+	</include>
+	<include name="VolumeHUD">
+		<animation effect="fade" time="200">WindowClose</animation>
+		<defaultcontrol always="true">1</defaultcontrol>
+		<control type="image">
+			<posx>534</posx>
+			<posy>258</posy>
+			<width>212</width>
+			<height>204</height>
+			<texture>HUD/PlayerHUDBackground.png</texture>
+		</control>
+		<control type="image">
+			<posx>534</posx>
+			<posy>258</posy>
+			<width>212</width>
+			<height>204</height>
+			<texture>HUD/Volume.png</texture>
+			<visible>!Player.Muted</visible>
+		</control>
+		<control type="image">
+			<posx>534</posx>
+			<posy>258</posy>
+			<width>212</width>
+			<height>204</height>
+			<texture>HUD/VolumeMuted.png</texture>
+			<visible>Player.Muted</visible>
+		</control>
+		<control type="progress" id="1">
+			<posx>554</posx>
+			<posy>418</posy>
+			<width>172</width>
+			<height>18</height>
+			<reveal>true</reveal>
+			<texturebg>HUD/VolumeBarBackground.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>HUD/VolumeBar.png</midtexture>
+			<righttexture>-</righttexture>
+			<info>Player.Volume</info>
+		</control>
+	</include>
+	<include name="PauseHUD">
+		<control type="group">
+			<visible>Player.Paused</visible>
+			<control type="image">
+				<width>140</width>
+				<height>134</height>
+				<texture>HUD/HUDBackground.png</texture>
+			</control>
+			<control type="image">
+				<width>140</width>
+				<height>134</height>
+				<texture>HUD/Pause.png</texture>
+			</control>
+		</control>
+	</include>
+</includes>

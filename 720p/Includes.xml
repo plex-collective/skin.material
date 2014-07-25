@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<includes>
+	<include file="Backgrounds.xml"/>
+	<include file="VideoOSDIncludes.xml"/>  <!-- Override original OSD -->
+	<include file="HomeMenu.xml"/>
+	<include file="HomeLists.xml"/>
+	<include file="HomeUrbanMenu.xml"/>
+	<include file="HomeUrbanLists.xml"/>
+	<include file="IncludesDevMode.xml"/>
+	<include file="Debug.xml"/>
+	<include file="ViewsListIncludes.xml"/>
+	<include file="ViewsFanart.xml"/>
+	<include file="ViewsList.xml"/>
+	<include file="IncludesMediaFlags.xml"/>
+
+	<include file="CommonViews.xml"/>
+	<include file="Defaults.xml"/>
+	<include file="IncludesDialogs.xml"/>
+	<include file="IncludesOSD.xml"/>
+	<include file="IncludesHUD.xml"/>
+
+	<include name="GlobalIncludes">
+		<include>DevMode</include>
+	</include>
+
+	<include name="AudioPlayingIndicator">
+		<control type="image">
+			<visible>Player.HasAudio + Player.Playing</visible>
+			<posx>1065</posx>
+			<posy>17</posy>
+			<width>16</width>
+			<height>16</height>
+			<texture>BackgroundAudio.png</texture>
+		</control>
+	</include>
+
+</includes>

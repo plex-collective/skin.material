@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<window id="2901">
+	<defaultcontrol always="true">1012</defaultcontrol>
+	<controls>
+		<control type="group">
+			<include>OSDMenu</include>
+			<!-- Don't show OSDMenu if HIDE_SEEK_BAR_ON_PAUSE is enabled -->
+			<visible>![Skin.HasSetting(HIDE_SEEK_BAR_ON_PAUSE) + Player.Paused] + ![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings)]</visible>
+		</control>
+		<control type="group">
+			<include>OSDMediaInfo</include>
+			<visible>ControlGroup(214).Hasfocus + ![Window.IsActive(123) | Window.IsActive(124)]</visible>
+		</control>
+	</controls>
+</window>

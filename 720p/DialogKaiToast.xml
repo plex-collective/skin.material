@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<window id="107">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,-100" end="0,0" time="400" easing="inout">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-100" time="400" easing="inout">WindowClose</animation>
+			<visible>!stringcompare(Control.GetLabel(401),$LOCALIZE[287])</visible>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>64</height>
+				<texture>HUD/Notification.png</texture>
+			</control>
+			<control type="grouplist">
+				<posy>4</posy>
+				<width>1280</width>
+				<align>center</align>
+     			<itemgap>13</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label" id="401">
+					<width min="1" max="900">auto</width>
+					<font>info1</font>
+					<textcolor>White</textcolor>
+				</control>
+				<control type="label" id="402">
+					<width min="1" max="900">auto</width>
+					<font>info1</font>
+					<textcolor>Gray</textcolor>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="fade" time="200">WindowClose</animation>
+			<visible>stringcompare(Control.GetLabel(401),$LOCALIZE[287])</visible>
+			<control type="image">
+				<posx>534</posx>
+				<posy>258</posy>
+				<width>212</width>
+				<height>204</height>
+				<texture>HUD/PlayerHUDBackground.png</texture>
+			</control>
+			<control type="image">
+				<posx>534</posx>
+				<posy>258</posy>
+				<width>212</width>
+				<height>204</height>
+				<texture>HUD/Subtitles.png</texture>
+			</control>
+			<control type="label" id="402">
+				<posx>534</posx>
+				<posy>408</posy>
+				<width>212</width>
+				<align>center</align>
+				<font>osd</font>
+				<textcolor>White</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

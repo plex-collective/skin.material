@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<window type="dialog" id="400">
+	<defaultcontrol always="true">15</defaultcontrol>
+	<include>dialogOpen</include>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>195</posy>
+				<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>144</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>238</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<posy>102</posy>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>422</width>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<font>list1</font>
+					<textcolor>Orange</textcolor>
+					<align>center</align>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>28</posy>
+					<width>422</width>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<font>plot1</font>
+					<textcolor>White</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>51</posy>
+					<width>422</width>
+					<label>$INFO[MusicPlayer.Album]</label>
+					<font>plot1</font>
+					<textcolor>Gray</textcolor>
+					<align>center</align>
+				</control>
+			</control>
+			<control type="group">
+				<posx>127</posx>
+				<posy>179</posy>
+				<control type="image">
+					<texture>dialogs/button_repeat.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_repeat_fo.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_repeatonce.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>Playlist.IsRepeatOne + !Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_repeatonce_fo.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>Playlist.IsRepeatOne + Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_repeatall.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>Playlist.IsRepeat + !Control.HasFocus(12)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_repeatall_fo.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>Playlist.IsRepeat + Control.HasFocus(12)</visible>
+				</control>			
+			</control>
+			<control type="grouplist">
+				<width>392</width>
+				<posx>127</posx>
+				<posy>179</posy>
+				<height>96</height>
+				<itemgap>-36</itemgap>
+				<onleft>17</onleft>
+				<onright>17</onright>
+				<orientation>horizontal</orientation>
+				<control type="button" id="12">
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<onclick>XBMC.PlayerControl(Repeat)</onclick>
+					<width>98</width>
+					<height>66</height>
+				</control>
+				<control type="button" id="13">
+					<texturenofocus>dialogs/button_skipbwd.png</texturenofocus>
+					<texturefocus>dialogs/button_skipbwd_fo.png</texturefocus>
+					<onclick>XBMC.PlayerControl(Previous)</onclick>
+					<width>98</width>
+					<height>66</height>
+				</control>
+				<control type="button" id="14">
+					<texturenofocus>dialogs/button_stop.png</texturenofocus>
+					<texturefocus>dialogs/button_stop_fo.png</texturefocus>
+					<onclick>XBMC.PlayerControl(Stop)</onclick>
+					<onclick>XBMC.Action(previousmenu)</onclick>
+					<width>98</width>
+					<height>66</height>
+				</control>
+				<control type="button" id="15">
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>-</texturefocus>
+					<onclick>XBMC.PlayerControl(Play)</onclick>
+					<width>98</width>
+					<height>66</height>
+				</control>
+				<control type="button" id="16">
+					<texturenofocus>dialogs/button_skipfwd.png</texturenofocus>
+					<texturefocus>dialogs/button_skipfwd_fo.png</texturefocus>
+					<onclick>XBMC.PlayerControl(Next)</onclick>
+					<width>98</width>
+					<height>66</height>
+				</control>
+			</control>
+			<control type="group">
+				<posx>308</posx>
+				<posy>179</posy>
+				<control type="image">
+					<texture>dialogs/button_pause.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(15)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_play.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(15)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_pause_fo.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(15)</visible>
+				</control>
+				<control type="image">
+					<texture>dialogs/button_play_fo.png</texture>
+					<width>98</width>
+					<height>66</height>
+					<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(15)</visible>
+				</control>
+			</control>
+			<control type="togglebutton" id="17">
+				<posx>437</posx>
+				<posy>179</posy>
+				<onleft>16</onleft>
+				<onright>12</onright>
+				<width>98</width>
+				<height>66</height>
+				<texturefocus>dialogs/button_shuffle_fo.png</texturefocus>
+				<texturenofocus>dialogs/button_shuffle.png</texturenofocus>
+				<usealttexture>Playlist.IsRandom</usealttexture>
+				<alttexturefocus>dialogs/button_shuffleon_fo.png</alttexturefocus>
+				<alttexturenofocus>dialogs/button_shuffleon.png</alttexturenofocus>
+				<onclick>PlayerControl(random)</onclick>
+			</control>
+		</control>
+	</controls>
+</window>

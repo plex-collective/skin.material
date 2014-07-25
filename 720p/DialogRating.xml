@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<window id="200">
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogOpen</include>
+	<controls>
+		<control type="image">
+			<include>dialogDiffuse</include>
+		</control>
+		<control type="group">
+			<posx>309</posx>
+			<posy>191</posy>
+			<control type="image">
+				<include>dialogWindowTop</include>
+			</control>
+			<control type="image">
+				<posy>94</posy>
+				<height>151</height>
+				<include>dialogWindowCenter</include>
+			</control>		
+			<control type="image">
+				<posy>245</posy>
+				<include>dialogWindowBottom</include>
+			</control>
+			<control type="group">
+				<posx>120</posx>
+				<control type="label" id="2">
+					<posy>103</posy>
+					<width>422</width>
+					<include>dialogHeading</include>
+				</control>
+				<control type="label" id="1">
+					<posy>131</posy>
+					<width>422</width>
+					<include>dialogLine</include>
+				</control>
+				<control type="image" id="10">
+					<posx>70</posx>
+					<posy>181</posy>
+					<width>282</width>
+					<height>50</height>
+					<texture>rating0-big.png</texture>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

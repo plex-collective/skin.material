@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<includes>
+	<include name="HomeMenu">
+		<!--defaultcontrol always="false">350</defaultcontrol-->
+		<defaultcontrol always="true">300</defaultcontrol>
+		<allowoverlay>yes</allowoverlay>
+		<controls>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+
+				<!-- THE FANART BACKGROUNDS -->
+				<include condition="!Skin.HasSetting(SHOW_GRID)">BGSlideshow</include>
+				<control type="image">
+					<include>FullScreenBGImageDims</include>
+					<include>fadeinout</include>
+					<texture>nrg/menuBackground.png</texture>
+					<colordiffuse>FFFF0000</colordiffuse>
+				</control>
+				<control type="image">
+					<include>FullScreenBGImageDims</include>
+					<include>fadeinout</include>
+					<texture>nrg/bg-gradient-blue-bottom.png</texture>
+					<colordiffuse>FFFF0000</colordiffuse>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(SHOW_GRID)</visible>
+					<include>FullScreenBGImageDims</include>
+					<texture>white.png</texture>
+				</control>
+				<!--control type="image">
+					<texture>background_home.png</texture>
+					<animation effect="fade" start="0" end="100" time="600">WindowOpen</animation>
+					<animation effect="fade" start="100" end="0" time="600">WindowClose</animation>
+					<include>FullScreenBGImage</include>
+				</control-->
+				<!--texture>background_overlay_header.png</texture-->
+				<control type="image">
+					<visible>!Skin.HasSetting(SHOW_GRID)</visible>
+					<posx>0</posx>
+					<posy>36r</posy>
+					<width>1280</width>
+					<height>36</height>
+					<texture>black.png</texture>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(SHOW_GRID)</visible>
+					<posx>0</posx>
+					<posy>36r</posy>
+					<width>1280</width>
+					<height>1</height>
+					<texture>black.png</texture>
+				</control>
+				<!-- Top Header Background -->
+				<!--control type="image">
+					<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture>
+					<posx>0</posx>
+					<posy>0r</posy>
+					<width>1280</width>
+					<height>58</height>
+				</control-->
+				<control type="image">
+					<visible>Skin.HasSetting(SHOW_GRID)</visible>
+					<posx>0</posx>
+					<posy>360</posy>
+					<width>348</width>
+					<height>324</height>
+					<texture>background_overlay.png</texture>
+				</control>
+				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<control type="wraplist" id="300">
+					<description>Media Menu</description>
+					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible-->
+					<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11001)]</visible-->
+					<visible allowhiddenfocus="true">Control.HasFocus(300) + !Control.HasFocus(11001)</visible>
+					<animation effect="fade" delay="300" time="200">Visible</animation>
+					<posx>30</posx>
+					<posy>360</posy>
+					<width>348</width>
+					<height>324</height>
+					<align>center</align>
+
+					<onup>300</onup>
+					<ondown>300</ondown>
+					<onleft>301</onleft>
+					<onright>5999</onright>
+
+					<focusposition>2</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="54">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<width>288</width>
+								<height>50</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list1</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="108">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<posy>52</posy>
+								<width>288</width>
+								<height>0</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list0</font>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>true</scroll>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
+							</control>
+							<control type="label">
+								<visible>!IsEmpty(ListItem.Property(SectionNameCollision))</visible>
+								<posy>24</posy>
+								<width>288</width>
+								<height>0</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label2]</label>
+								<font>list3</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>false</scroll>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="7">
+							<description>Search</description>
+							<label>$LOCALIZE[137]</label>
+							<onclick>Plex.ActivateWindow(10051)</onclick>
+						</item>
+						<item id="114">
+							<description>Update and Restart</description>
+							<label>$LOCALIZE[40018]</label>
+							<onclick>Plex.UpdateAndRestart</onclick>
+							<visible>System.UpdateIsAvailable</visible>
+						</item>
+					</content>
+				</control>
+				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- The submenu for System -->
+				<control type="wraplist" id="301">
+					<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
+					<animation effect="fade" delay="300" time="200">Visible</animation>
+					<posx>30</posx>
+					<posy>360</posy>
+					<width>348</width>
+					<height>324</height>
+					<align>right</align>
+
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>-</onleft>
+					<onright>300</onright>
+
+					<focusposition>2</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="54">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<width>288</width>
+								<height>50</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list1</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="108">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<posy>52</posy>
+								<width>288</width>
+								<height>0</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list0</font>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>true</scroll>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<description>Skin</description>
+							<label>$LOCALIZE[31201]</label>
+							<onclick>activatewindow(56)</onclick>
+						</item>
+						<item>
+							<description>Preferences</description>
+							<label>$LOCALIZE[31200]</label>
+							<label2>pref</label2>
+							<onclick>SetFocus(302)</onclick>
+						</item>
+						<item>
+							<description>Channel Directory</description>
+							<label>$LOCALIZE[31306]</label>
+							<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
+						</item>
+						<item>
+							<description>DVD Button</description>
+							<label>DVD</label>
+							<label2>dvd</label2>
+							<visible>System.HasMediadvd</visible>
+							<onclick>SetFocus(303)</onclick>
+						</item>
+						<item>
+							<description>Quit</description>
+							<label>$LOCALIZE[31106]</label>
+							<onclick>Plex.Quit()</onclick>
+						</item>
+						<item>
+							<description>Suspend</description>
+							<label>$LOCALIZE[31107]</label>
+							<onclick>Plex.Suspend()</onclick>
+						</item>
+						<item>
+							<description>Shut Down</description>
+							<label>$LOCALIZE[31108]</label>
+							<onclick>Plex.Powerdown()</onclick>
+						</item>
+					</content>
+				</control>
+				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- The submenu for Preferences -->
+				<control type="wraplist" id="302">
+					<!--visible allowhiddenfocus="true">Control.HasFocus(302) | Stringcompare(Container(299).ListItem(0).Label2,pref)</visible-->
+					<visible allowhiddenfocus="true">Control.HasFocus(302)</visible>
+					<animation effect="fade" delay="300" time="200">Visible</animation>
+					<posx>30</posx>
+					<posy>360</posy>
+					<width>348</width>
+					<height>324</height>
+
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>301</onleft>
+					<onright>300</onright>
+
+					<focusposition>2</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="54">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<width>288</width>
+								<height>50</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list1</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="108">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<posy>52</posy>
+								<width>288</width>
+								<height>0</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list0</font>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>true</scroll>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<!-- Playback, Appearance, System, Network -->
+						<item>
+							<description>Skin</description>
+							<label>$LOCALIZE[31201]</label>
+							<onclick>activatewindow(56)</onclick>
+						</item>
+						<item>
+							<description>Channel Directory</description>
+							<label>$LOCALIZE[31306]</label>
+							<onclick>Plex.ActivateWindow(1,plexserver://channeldirectory,return)</onclick>
+						</item>
+						<item>
+							<description>Appearance</description>
+							<label>$LOCALIZE[31202]</label>
+							<onclick>activatewindow(AppearanceSettings)</onclick>
+						</item>
+						<item>
+							<description>Playback Settings</description>
+							<!-- TODO: Localize -->
+							<label>Playback</label>
+							<onclick>activatewindow(17)</onclick>
+						</item>
+						<item>
+							<description>Network</description>
+							<label>$LOCALIZE[31206]</label>
+							<onclick>activatewindow(18)</onclick>
+						</item>
+						<item>
+							<description>System</description>
+							<label>$LOCALIZE[31207]</label>
+							<onclick>activatewindow(SystemSettings)</onclick>
+						</item>
+					</content>
+				</control>
+				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- The submenu for DVD -->
+				<control type="fixedlist" id="303">
+					<!--visible allowhiddenfocus="true">Control.HasFocus(303) + System.HasMediadvd | Stringcompare(Container(299).ListItem(0).Label2,dvd)</visible-->
+					<visible allowhiddenfocus="true">Control.HasFocus(303) + System.HasMediadvd</visible>
+					<animation effect="fade" delay="300" time="200">Visible</animation>
+					<posx>30</posx>
+					<posy>360</posy>
+					<width>348</width>
+					<height>324</height>
+
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>301</onleft>
+					<onright>300</onright>
+
+					<focusposition>2</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="54">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<width>288</width>
+								<height>50</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list1</font>
+								<textcolor>White</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="108">
+						<control type="group">
+							<posx>288</posx>
+							<control type="label">
+								<posy>52</posy>
+								<width>288</width>
+								<height>0</height>
+								<align>right</align>
+								<aligny>center</aligny>
+								<info>ListItem.Label</info>
+								<font>list0</font>
+								<textcolor>Orange</textcolor>
+								<shadowcolor>Shadow</shadowcolor>
+								<scroll>true</scroll>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnNext">Focus</animation>
+								<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(300).OnPrevious">Focus</animation>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item>
+							<description>Play</description>
+							<label>$LOCALIZE[31600]</label>
+							<onclick>XBMC.PlayDVD</onclick>
+						</item>
+						<item>
+							<description>Eject</description>
+							<label>$LOCALIZE[31601]</label>
+							<onclick>XBMC.EjectTray()</onclick>
+							<onclick>Control.SetFocus(299,3)</onclick>
+						</item>
+					</content>
+				</control>
+				<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- On Deck & Recently Used Channels -->
+
+				<!--control type="grouplist" id="5999"-->
+				<include>ExpandingDeckControl</include>
+				<control type="group" id="5999">
+					<!--
+					-->
+					<posx>369</posx>
+					<posy>452</posy>
+					<height>222</height>
+					<width>1274</width>
+
+					<!-- Background Overlay -->
+					<!--control type="image">
+						<texture>background_overlay.png</texture>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>930</width>
+						<height>330</height>
+						<visible>true</visible>
+					</control-->
+
+					<!-- On Deck -->
+					<control type="group">
+						<posx>0</posx>
+						<posy>0</posy>
+						<!--visible>[Control.HasFocus(300) | ControlGroup(5999).HasFocus()] + Control.IsVisible(11001)</visible-->
+						<visible>[Control.HasFocus(300) | Control.HasFocus(301)| Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304) | Control.IsVisible(310) | ControlGroup(5999).HasFocus()] + Control.IsVisible(11001)</visible>
+						<include>OnDeck</include>
+						<animation effect="slide" end="-366,0" time="400" condition="!Control.HasFocus(300) + !Control.HasFocus(301) + !Control.HasFocus(302) + !Control.HasFocus(303) + !Control.HasFocus(304)">Conditional</animation>
+
+
+						<!--include>HomeLists</include-->
+						<!--animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation-->
+						<!--animation effect="slide" end="300,0" time="400" condition="Control.HasFocus(300)">Conditional</animation-->
+					</control>
+					<!-- Recently Used Channels -->
+					<!--control type="group">
+						<visible>[Control.HasFocus(300) | ControlGroup(5999).HasFocus()] + Control.IsVisible(11002)</visible>
+						<include>RecentlyUsed</include>
+						<animation effect="slide" end="797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
+					</control-->
+				</control>
+				<!-- Recently Added -->
+				<!-- Queue -->
+				<control type="grouplist" id="5101">
+					<!--posx>47</posx>
+					<posy>390</posy-->
+					<!--height>330</height-->
+					<itemgap>0</itemgap>
+					<onup>300</onup>
+					<!-- Recently Added -->
+					<control type="group">
+						<!--visible>[Control.HasFocus(300) | ControlGroup(5101).HasFocus()] + Control.IsVisible(11000)</visible-->
+						<!--include>RecentlyAdded</include-->
+						<!--animation effect="slide" end="-797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation-->
+					</control>
+					<!-- Queue -->
+					<!--control type="group">
+						<visible>[Control.HasFocus(300) | ControlGroup(5101).HasFocus()] + Control.IsVisible(11003)</visible>
+						<include>Queue</include>
+						<animation effect="slide" end="-797,0" time="400" condition="Control.HasFocus(300)">Conditional</animation>
+					</control-->
+				</control>
+			</control>
+
+			<!--include>OnDeckInfo-516x222</include-->
+			<!--include>OnDeckInfo-898x201</include-->
+			<!--include>RecentlyAddedInfo</include-->
+
+			<!-- Recently Added Label -->
+			<!--control type="label" id="8002">
+				<font>info1</font>
+				<textcolor>Gray</textcolor>
+				<shadowcolor>Shadow</shadowcolor>
+				<width>350</width>
+				<height>30</height>
+				<align>right</align>
+				<label>$LOCALIZE[31501]</label>
+				<posx>418</posx>
+				<posy>390</posy>
+				<visible>Control.HasFocus(300) + [Control.IsVisible(11000) | Control.IsVisible(11003)]</visible>
+				<visible>true</visible>
+				<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+			</control-->
+
+			<!-- Difuse Recently Added and OnDeck mini list -->
+			<!-- TODO: create specific graphic for this -->
+			<!--control type="image">
+				<visible>Control.HasFocus(300)</visible>
+				<texture background="true">homemenu_diffuse.png</texture>
+				<posx>0</posx>
+				<posy>379</posy>
+				<width>1280</width>
+				<height>330</height>
+			</control>
+			<control type="image">
+				<texture>home_fade_bottom.png</texture>
+				<posx>0</posx>
+				<posy>675</posy>
+				<width>1280</width>
+				<height>45</height>
+				<visible>Control.IsVisible(11001)</visible>
+			</control-->
+
+			<include>GlobalIncludes</include>
+			<include>Time</include>
+		</controls>
+	</include>
+</includes>

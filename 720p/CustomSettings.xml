@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<window id="56">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<posx>-36</posx>
+			<posy>0</posy>
+			<width>404</width>
+			<height>720</height>
+			<texture>background_sidebar.png</texture>
+		</control>
+		<include>HeaderSettings</include>
+		<control type="grouplist" id="3">
+			<description>Button Area</description>
+			<posx>47</posx>
+			<posy>106</posy>
+			<width>272</width>
+			<height>480</height>
+			<orientation>vertical</orientation>
+			<itemgap>1</itemgap>
+			<onleft>200</onleft>
+			<onright>200</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<!-- Home -->
+			<control type="button" id="1000">
+				<description>Home</description>
+				<width>272</width>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<label>$LOCALIZE[31110]</label>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<!-- Slideshow -->
+			<control type="button" id="1100">
+				<description>Slideshow</description>
+				<width>272</width>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<label>$LOCALIZE[31111]</label>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<!-- Options -->
+			<control type="button" id="1200">
+				<description>Options</description>
+				<width>272</width>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<!-- TODO: Localize -->
+				<label>Options</label>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<!-- Developer -->
+			<control type="button" id="1300">
+				<description>Developer</description>
+				<width>272</width>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<!-- TODO: Localize -->
+				<label>Developer</label>
+				<pulseonselect>false</pulseonselect>
+			</control>
+			<!-- Experimental -->
+			<control type="button" id="1400">
+				<description>Experimental</description>
+				<width>272</width>
+				<height>54</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>list1</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Orange</focusedcolor>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button_settings.png</texturefocus>
+				<textoffsety>0</textoffsety>
+				<textoffsetx>30</textoffsetx>
+				<!-- TODO: Localize -->
+				<label>Experimental</label>
+				<pulseonselect>false</pulseonselect>
+			</control>
+		</control>
+		<control type="group" id="200">
+			<!-- Home list -->
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1000)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<control type="label">
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<label>Choose Home Page Design:</label>
+				</control>
+				<!-- Material Home -->
+				<control type="radiobutton" id="1001">
+					<description>Material Home</description>
+					<width>710</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>90</textoffsetx>
+					<radioposx>726</radioposx>
+					<label>Material</label>
+					<pulseonselect>false</pulseonselect>
+					<selected>Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String(HOME_VIEW))</selected>
+					<onclick>Skin.SetString(HOME_VIEW,Material)</onclick>
+				</control>
+				<!-- Urban Home -->
+				<control type="radiobutton" id="1002">
+					<description>Urban Home</description>
+					<width>710</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>90</textoffsetx>
+					<radioposx>726</radioposx>
+					<label>Urban</label>
+					<pulseonselect>false</pulseonselect>
+					<selected>Skin.String(HOME_VIEW,Urban)</selected>
+					<onclick>Skin.SetString(HOME_VIEW,Urban)</onclick>
+				</control>
+			</control>
+			<!-- Slideshow list -->
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1100)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<!-- Show Slideshow -->
+				<control type="radiobutton" id="1101">
+					<description>Show Slideshow</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<label>$LOCALIZE[31101]</label>
+					<pulseonselect>false</pulseonselect>
+					<selected>!Skin.HasSetting(HIDE_HOME_SLIDESHOW)</selected>
+					<onclick>Skin.ToggleSetting(HIDE_HOME_SLIDESHOW)</onclick>
+				</control>
+				<!-- Custom Slideshow -->
+				<control type="radiobutton" id="1102">
+					<description>Custom Slideshow</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<label>- $LOCALIZE[31102]</label>
+					<pulseonselect>false</pulseonselect>
+					<selected>Skin.HasSetting(CUSTOM_SLIDESHOW)</selected>
+					<onclick>Skin.ToggleSetting(CUSTOM_SLIDESHOW)</onclick>
+					<enable>!Skin.HasSetting(HIDE_HOME_SLIDESHOW)</enable>
+				</control>
+				<!-- Slideshow Folder -->
+				<control type="button" id="1103">
+					<description>Slideshow Folder</description>
+					<width>770</width>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<label>- $LOCALIZE[31103]</label>
+					<label2>$INFO[Skin.String(CUSTOM_SLIDESHOW_FOLDER)]</label2>
+					<onclick>Skin.SetPath(CUSTOM_SLIDESHOW_FOLDER)</onclick>
+					<enable>!Skin.HasSetting(HIDE_HOME_SLIDESHOW) + Skin.HasSetting(CUSTOM_SLIDESHOW)</enable>
+				</control>
+			</control>
+			<!-- Options list -->
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1200)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<!-- Hide Extra Details -->
+				<control type="radiobutton" id="1201">
+					<description>Hide Extra Details</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Hide Extra Show/Movie Details</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(HIDE_EXTRA_DETAILS)</onclick>
+					<selected>Skin.HasSetting(HIDE_EXTRA_DETAILS)</selected>
+				</control>
+				<!-- Hide Episode Totals -->
+				<control type="radiobutton" id="1202">
+					<description>Hide Episode Totals</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Hide Episode Totals Overlay</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(HIDE_EPISODE_DETAILS)</onclick>
+					<selected>Skin.HasSetting(HIDE_EPISODE_DETAILS)</selected>
+				</control>
+				<!-- Hide Movie List Text Ratings -->
+				<control type="radiobutton" id="1203">
+					<description>Hide Movie List Text Ratings</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Hide Text Ratings on Movie List</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(HIDE_MOVIE_LIST_TEXT_RATINGS)</onclick>
+					<selected>Skin.HasSetting(HIDE_MOVIE_LIST_TEXT_RATINGS)</selected>
+				</control>
+				<!-- Hide Deck Info -->
+				<control type="radiobutton" id="1204">
+					<description>Hide Deck Info</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Hide OnDeck Info</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(HIDE_DECK_INFO)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<selected>Skin.HasSetting(HIDE_DECK_INFO)</selected>
+				</control>
+				<!-- Hide Seek Bar on Pause -->
+				<control type="radiobutton" id="1205">
+					<description>Hide Seek Bar on Pause</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Hide Seek Bar on Pause</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(HIDE_SEEK_BAR_ON_PAUSE)</onclick>
+					<selected>Skin.HasSetting(HIDE_SEEK_BAR_ON_PAUSE)</selected>
+				</control>
+				<!-- Disable Expanding Deck -->
+				<control type="radiobutton" id="1206">
+					<description>Disable Expanding Deck</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Disable Expanding Deck</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(DISABLE_EXPANDING_DECK)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<selected>Skin.HasSetting(DISABLE_EXPANDING_DECK)</selected>
+				</control>
+				<!-- Show Full Info Cards -->
+				<control type="radiobutton" id="1207">
+					<description>Show Full Info Cards</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Show Full Info Cards on Deck</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(SHOW_FULL_INFO_CARDS)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<selected>Skin.HasSetting(SHOW_FULL_INFO_CARDS)</selected>
+				</control>
+			</control>
+			<!-- Developer list -->
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1300)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<!-- Show Grid -->
+				<control type="radiobutton" id="1301">
+					<description>Show Grid</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Show Layout Grid</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(SHOW_GRID)</onclick>
+					<selected>Skin.HasSetting(SHOW_GRID)</selected>
+				</control>
+				<!-- Show Debug Info -->
+				<control type="radiobutton" id="1302">
+					<description>Show Debug Info</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Show Debug Info Overlay</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(SHOW_DEBUG_INFO)</onclick>
+					<selected>Skin.HasSetting(SHOW_DEBUG_INFO)</selected>
+				</control>
+				<!-- Reset Settings -->
+				<control type="button" id="1303">
+					<description>Reset Settings</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textoffsetx>30</textoffsetx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<radioposx>726</radioposx>
+					<!-- TODO: Localize -->
+					<label>Reset Settings</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ResetSettings</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>Control.Move(3,101)</onclick>
+				</control>
+				<!-- Reload Skin -->
+				<control type="button" id="1304">
+					<description>Reload Skin</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Reload Skin</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>XBMC.ReloadSkin()</onclick>
+				</control>
+			</control>
+			<!-- Experimental list -->
+			<control type="grouplist" id="5">
+				<visible>ControlGroup(3).Hasfocus(1400)</visible>
+				<description>Control Area</description>
+				<posx>418</posx>
+				<posy>106</posy>
+				<width>770</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>1</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<!-- Enable Unfinsihed Fanart View -->
+				<control type="radiobutton" id="1401">
+					<description>Enable Unfinsihed Fanart View</description>
+					<width>770</width>
+					<height>54</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<radioposx>726</radioposx>
+					<font>list1</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Orange</focusedcolor>
+					<texturenofocus>-</texturenofocus>
+					<texturefocus>button_settings_wide.png</texturefocus>
+					<textoffsety>0</textoffsety>
+					<textoffsetx>30</textoffsetx>
+					<!-- TODO: Localize -->
+					<label>Enable Unfinished Fanart View</label>
+					<pulseonselect>false</pulseonselect>
+					<onclick>Skin.ToggleSetting(EXPERIMENTAL_FANART_VIEW)</onclick>
+					<selected>Skin.HasSetting(EXPERIMENTAL_FANART_VIEW)</selected>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

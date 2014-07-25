@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<window type="dialog" id="142">
+	<controls>
+		<include>OSDMediaInfo</include>
+	</controls>
+</window>

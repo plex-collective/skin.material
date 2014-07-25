@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<includes>
+	<default type="label">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>-</label>
+		<height>35</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>plot1</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+	</default>
+	<default type="textbox">
+		<posx>0</posx>
+		<posy>0</posy>
+		<label>-</label>
+		<align>left</align>
+		<aligny>top</aligny>
+		<font>info1</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+	</default>
+	<default type="button">
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>54</height>
+		<width>512</width>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>30</textoffsetx>
+		<font>list1</font>
+		<label>-</label>
+		<textcolor>White</textcolor>
+		<focusedcolor>Orange</focusedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="togglebutton">
+		<description>Default Togglebutton</description>
+		<width>16</width>
+		<height>30</height>
+		<font>list2</font>
+		<textcolor>White</textcolor>
+		<align>center</align>
+		<aligny>center</aligny>
+		<alttexturefocus>dialogs/buttonkb-focus.png</alttexturefocus>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="radiobutton">
+		<description>Default Radiobutton</description>
+		<height>54</height>
+		<width>512</width>
+		<font>list1</font>
+		<textcolor>White</textcolor>
+		<align>left</align>
+		<textoffsetx>30</textoffsetx>
+		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradiofocus>Controls/Radio.png</textureradiofocus>
+		<textureradionofocus>-</textureradionofocus>
+		<radiowidth>20</radiowidth>
+		<radioheight>20</radioheight>
+		<focusedcolor>Orange</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+		<aligny>center</aligny>
+		<radioposx>900</radioposx>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="spincontrol">
+		<description>Default Spin Control</description>
+		<align>left</align>
+		<width>16</width>
+		<height>54</height>
+		<align>center</align>
+		<font>list2</font>
+		<textcolor>White</textcolor>
+		<textoffsetx>70</textoffsetx>
+		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureup>Controls/SpinUp.png</textureup>
+		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
+		<texturedown>Controls/SpinDown.png</texturedown>
+		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<reverse>yes</reverse>
+		<focusedcolor>White</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="spincontrolex">
+		<height>54</height>
+		<width>512</width>
+		<font>list1</font>
+		<textcolor>White</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<textureup>Controls/SpinUp.png</textureup>
+		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
+		<texturedown>Controls/SpinDown.png</texturedown>
+		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<spinwidth>14</spinwidth>
+		<spinheight>12</spinheight>
+		<reverse>yes</reverse>
+		<focusedcolor>Orange</focusedcolor>
+		<selectedcolor>White</selectedcolor>
+		<disabledcolor>DarkGray</disabledcolor>
+		<textoffsetx>30</textoffsetx>
+		<pulseonselect>false</pulseonselect>
+	</default>
+	<default type="progress">
+		<description>Default Progress Bar</description>
+		<visible>true</visible>
+		<texturebg>OSD/ProgressBackground.png</texturebg>
+		<lefttexture>Controls/ProgressLeft.png</lefttexture>
+		<midtexture>Controls/ProgressMid.png</midtexture>
+		<righttexture>Controls/ProgressRight.png</righttexture>
+		<overlaytexture>-</overlaytexture>
+	</default>
+	<default type="sliderex">
+		<sliderwidth>100</sliderwidth>
+		<sliderheight>16</sliderheight>
+		<texturesliderbar>Controls/Slider.png</texturesliderbar>
+		<textureslidernib>Controls/SliderNib.png</textureslidernib>
+		<textureslidernibfocus>Controls/SliderNibFocused.png</textureslidernibfocus>
+		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<font>list1</font>
+		<height>54</height>
+		<width>512</width>
+		<textcolor>White</textcolor>
+		<focusedcolor>Orange</focusedcolor>
+		<textoffsetx>30</textoffsetx>
+		<aligny>center</aligny>
+		<pulseonselect>false</pulseonselect>
+	</default>
+</includes>

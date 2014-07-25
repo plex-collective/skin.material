@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<window id="6">
+	<!--ENERGIZED-->
+	<!-- Add Fanart view option -->
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,555</views>
+	<controls>
+		<control type="group">
+			<visible>Control.HasFocus(50)</visible>
+			<include>BGDefault</include>
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(555)</visible>
+			<include>BGLibraryFanart</include>
+		</control>
+
+		<include>Header</include>
+		<include>HeaderVideo</include>
+		<include>AudioPlayingIndicator</include>
+		<include>Time</include>
+
+		<!-- Views -->
+		<include>List</include>
+		<include>FanartList</include>
+	</controls>
+</window>

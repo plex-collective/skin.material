@@ -1,0 +1,1789 @@
+<?xml version="1.0"?>
+<window id="51">
+	<defaultcontrol always="true">65</defaultcontrol>
+	<controls>
+		<control type="image" id="0">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>404</width>
+			<height>720</height>
+			<texture>background_sidebar.png</texture>
+		</control>
+		<!-- Loading indicator -->
+		<control type="group">
+			<visible>System.SearchInProgress</visible>
+			<posx>131</posx>
+			<posy>544</posy>
+			<control type="multiimage">
+				<width>140</width>
+				<height>134</height>
+				<imagepath background="true">HUD/Loading</imagepath>
+				<timeperimage>50</timeperimage>
+				<fadetime>1</fadetime>
+				<loop>yes</loop>
+			</control>
+		</control>
+		<!-- Keyboard & text field & results -->
+		<control type="group">
+			<animation effect="fade" start="0" end="100" time="30">WindowOpen</animation>
+			<posx>0</posx>
+			<posy>0</posy>
+			<control type="label">
+				<posx>0</posx>
+				<posy>19</posy>
+				<textcolor>Gray</textcolor>
+				<focusedcolor>Gray</focusedcolor>
+				<width>402</width>
+				<font>list1</font>
+				<label>$LOCALIZE[31400]</label>
+				<aligny>center</aligny>
+				<align>center</align>
+			</control>
+			<!-- text field bg -->
+			<control type="image">
+				<posx>58</posx>
+				<posy>74</posy>
+				<width>294</width>
+				<height>42</height>
+				<texture>search_input.png</texture>
+			</control>
+			<!-- text field -->
+			<control type="edit" id="310">
+				<posx>61</posx>
+				<posy>73</posy>
+				<font>keyboardentry</font>
+				<textcolor>Gray</textcolor>
+				<focusedcolor>Gray</focusedcolor>
+				<width>289</width>
+				<height>43</height>
+				<onleft>-</onleft>
+				<ondown>9001</ondown>
+				<onright>350</onright>
+				<emptylabel>-</emptylabel>
+				<emptycolor>opaquegrey</emptycolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textoffsetx>16</textoffsetx>
+				<label/>
+			</control>
+			<!-- keys -->
+			<control type="group" id="4000">
+				<posx>42</posx>
+				<posy>90</posy>
+				<control type="grouplist" id="350">
+					<visible>true</visible>
+					<posx>5</posx>
+					<posy>53</posy>
+					<width>348</width>
+					<height>420</height>
+					<itemgap>-1</itemgap>
+					<orientation>vertical</orientation>
+					<usecontrolcoords>false</usecontrolcoords>
+					<onup>-</onup>
+					<ondown>-</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<renderfocusedlast>false</renderfocusedlast>
+					<control type="group" id="351">
+						<width>339</width>
+						<height>54</height>
+						<control type="button" id="65">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'A' button</description>
+							<onleft>5100</onleft>
+							<onright>66</onright>
+							<onup>310</onup>
+							<ondown>71</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]A[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="66">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'B' button</description>
+							<onleft>65</onleft>
+							<onright>67</onright>
+							<onup>310</onup>
+							<ondown>72</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]B[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="67">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'C' button</description>
+							<onleft>66</onleft>
+							<onright>68</onright>
+							<onup>310</onup>
+							<ondown>73</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]C[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="68">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'D' button</description>
+							<onleft>67</onleft>
+							<onright>69</onright>
+							<onup>310</onup>
+							<ondown>74</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]D[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="69">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'E' button</description>
+							<onleft>68</onleft>
+							<onright>70</onright>
+							<onup>310</onup>
+							<ondown>75</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]E[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="70">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'F' button</description>
+							<onleft>69</onleft>
+							<onright>5100</onright>
+							<onup>310</onup>
+							<ondown>76</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]F[/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="352">
+						<width>348</width>
+						<height>54</height>
+						<control type="button" id="71">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'G' button</description>
+							<onleft>5100</onleft>
+							<onright>72</onright>
+							<onup>65</onup>
+							<ondown>77</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]G[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="72">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'H' button</description>
+							<onleft>71</onleft>
+							<onright>73</onright>
+							<onup>66</onup>
+							<ondown>78</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]H[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="73">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'I' button</description>
+							<onleft>72</onleft>
+							<onright>74</onright>
+							<onup>67</onup>
+							<ondown>79</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]I[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="74">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'J' button</description>
+							<onleft>73</onleft>
+							<onright>75</onright>
+							<onup>68</onup>
+							<ondown>80</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]J[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="75">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'K' button</description>
+							<onleft>74</onleft>
+							<onright>76</onright>
+							<onup>69</onup>
+							<ondown>81</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]K[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="76">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'L' button</description>
+							<onleft>75</onleft>
+							<onright>5100</onright>
+							<onup>70</onup>
+							<ondown>82</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]L[/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="353">
+						<width>348</width>
+						<height>54</height>
+						<control type="button" id="77">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'M' button</description>
+							<onleft>5100</onleft>
+							<onright>78</onright>
+							<onup>71</onup>
+							<ondown>83</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]M[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="78">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'N' button</description>
+							<onleft>77</onleft>
+							<onright>79</onright>
+							<onup>72</onup>
+							<ondown>84</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]N[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="79">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'O' button</description>
+							<onleft>78</onleft>
+							<onright>80</onright>
+							<onup>73</onup>
+							<ondown>85</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]O[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="80">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'P' button</description>
+							<onleft>79</onleft>
+							<onright>81</onright>
+							<onup>74</onup>
+							<ondown>86</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]P[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="81">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'Q' button</description>
+							<onleft>80</onleft>
+							<onright>82</onright>
+							<onup>75</onup>
+							<ondown>87</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]Q[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="82">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'R' button</description>
+							<onleft>81</onleft>
+							<onright>5100</onright>
+							<onup>76</onup>
+							<ondown>88</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]R[/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="354">
+						<width>348</width>
+						<height>54</height>
+						<control type="button" id="83">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'S' button</description>
+							<onleft>5100</onleft>
+							<onright>84</onright>
+							<onup>77</onup>
+							<ondown>89</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]S[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="84">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'T' button</description>
+							<onleft>83</onleft>
+							<onright>85</onright>
+							<onup>78</onup>
+							<ondown>90</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]T[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="85">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'U' button</description>
+							<onleft>84</onleft>
+							<onright>86</onright>
+							<onup>79</onup>
+							<ondown>91</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]U[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="86">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'V' button</description>
+							<onleft>85</onleft>
+							<onright>87</onright>
+							<onup>80</onup>
+							<ondown>92</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]V[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="87">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'W' button</description>
+							<onleft>86</onleft>
+							<onright>88</onright>
+							<onup>81</onup>
+							<ondown>93</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]W[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="88">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'X' button</description>
+							<onleft>87</onleft>
+							<onright>5100</onright>
+							<onup>82</onup>
+							<ondown>94</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]X[/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="355">
+						<width>348</width>
+						<height>54</height>
+						<control type="button" id="89">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'Y' button</description>
+							<onleft>5100</onleft>
+							<onright>90</onright>
+							<onup>83</onup>
+							<ondown>95</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]Y[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="90">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'Z' button</description>
+							<onleft>89</onleft>
+							<onright>91</onright>
+							<onup>84</onup>
+							<ondown>96</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]Z[/LOWERCASE]</label>
+						</control>
+						<control type="button" id="91">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'0' button</description>
+							<onleft>90</onleft>
+							<onright>92</onright>
+							<onup>85</onup>
+							<ondown>97</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]$LOCALIZE[12310][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="92">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'1' button</description>
+							<onleft>91</onleft>
+							<onright>93</onright>
+							<onup>86</onup>
+							<ondown>98</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]$LOCALIZE[12311][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="93">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'2' button</description>
+							<onleft>92</onleft>
+							<onright>94</onright>
+							<onup>87</onup>
+							<ondown>99</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]$LOCALIZE[12312][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="94">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'3' button</description>
+							<onleft>93</onleft>
+							<onright>5100</onright>
+							<onup>88</onup>
+							<ondown>100</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]$LOCALIZE[12313][/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="356">
+						<width>348</width>
+						<height>54</height>
+						<control type="button" id="95">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'4' button</description>
+							<onleft>5100</onleft>
+							<onright>96</onright>
+							<onup>89</onup>
+							<ondown>8</ondown>
+							<posx>0</posx>
+							<label>[LOWERCASE]$LOCALIZE[12314][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="96">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'5' button</description>
+							<onleft>95</onleft>
+							<onright>97</onright>
+							<onup>90</onup>
+							<ondown>8</ondown>
+							<posx>54</posx>
+							<label>[LOWERCASE]$LOCALIZE[12315][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="97">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'6' button</description>
+							<onleft>96</onleft>
+							<onright>98</onright>
+							<onup>91</onup>
+							<ondown>32</ondown>
+							<posx>108</posx>
+							<label>[LOWERCASE]$LOCALIZE[12316][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="98">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'7' button</description>
+							<onleft>97</onleft>
+							<onright>99</onright>
+							<onup>92</onup>
+							<ondown>32</ondown>
+							<posx>162</posx>
+							<label>[LOWERCASE]$LOCALIZE[12317][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="99">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'8' button</description>
+							<onleft>98</onleft>
+							<onright>100</onright>
+							<onup>93</onup>
+							<ondown>10</ondown>
+							<posx>216</posx>
+							<label>[LOWERCASE]$LOCALIZE[12318][/LOWERCASE]</label>
+						</control>
+						<control type="button" id="100">
+							<include>keyboardButton</include>
+							<textoffsetx>-16</textoffsetx>
+							<description>'9' button</description>
+							<onleft>99</onleft>
+							<onright>5100</onright>
+							<onup>94</onup>
+							<ondown>10</ondown>
+							<posx>270</posx>
+							<label>[LOWERCASE]$LOCALIZE[12319][/LOWERCASE]</label>
+						</control>
+					</control>
+					<control type="group" id="357">
+						<width>348</width>
+						<height>54</height>
+						<!-- Clear -->
+						<control type="button" id="8">
+							<font>keyboardbuttonsmall</font>
+							<posx>0</posx>
+							<onup>95</onup>
+							<ondown>-</ondown>
+							<onleft>5100</onleft>
+							<onright>32</onright>
+							<label>$LOCALIZE[31403]</label>
+							<include>keyboardWideButton</include>
+							<textoffsetx>-16</textoffsetx>
+						</control>
+						<!-- Delete button -->
+						<control type="button" id="10">
+							<font>keyboardbuttonsmall</font>
+							<posx>224</posx>
+							<texturenofocus>dialogs/buttonkb-delete.png</texturenofocus>
+							<texturefocus>dialogs/buttonkb-delete_fo.png</texturefocus>
+							<onup>100</onup>
+							<ondown>-</ondown>
+							<onleft>32</onleft>
+							<onright>9001</onright>
+							<include>keyboardWideButton</include>
+							<textoffsetx>-16</textoffsetx>
+						</control>
+						<!-- Space -->
+						<control type="button" id="32">
+							<font>keyboardbuttonsmall</font>
+							<posx>100</posx>
+							<width>116</width>
+							<onup>97</onup>
+							<ondown>-</ondown>
+							<onleft>8</onleft>
+							<onright>10</onright>
+							<texturefocus>dialogs/buttonkb-spacesearch.png</texturefocus>
+							<label>$LOCALIZE[31402]</label>
+							<include>keyboardWideButton</include>
+							<textoffsetx>-16</textoffsetx>
+						</control>
+					</control>
+				</control>
+			</control>
+			<!-- results -->
+			<control type="group" id="5000">
+				<visible>true</visible>
+				<posx>390</posx>
+				<width>780</width>
+				<height>720</height>
+				<!-- Container for the result categories -->
+				<control type="grouplist" id="5100">
+					<visible>true</visible>
+					<posx>0</posx>
+					<posy>-1</posy>
+					<width>856</width>
+					<height>720</height>
+					<ondown>5200</ondown>
+					<onup>310</onup>
+					<onright>350</onright>
+					<onleft>350</onleft>
+					<orientation>vertical</orientation>
+					<itemgap>-30</itemgap>
+					<!-- Movies -->
+					<control type="group" id="7001">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>28</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31404]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<visible allowhiddenfocus="false">true</visible>
+						<control type="list" id="9001">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>7003</ondown>
+							<onup>-</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<width>890</width>
+							<height>200</height>
+							<itemlayout width="134" height="172">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>163</posy>
+										<width>96</width>
+										<height>144</height>
+										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>96</width>
+										<height>144</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_poster_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="134" height="172">
+								<control type="image">
+									<posx>19</posx>
+									<posy>163</posy>
+									<width>96</width>
+									<height>144</height>
+									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>96</width>
+									<height>144</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_poster_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>132</width>
+									<height>180</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_poster_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- TV Shows -->
+					<control type="group" id="7003">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>28</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31405]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9002">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>7004</ondown>
+							<onup>7001</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>890</width>
+							<height>200</height>
+							<itemlayout width="134" height="172">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>163</posy>
+										<width>96</width>
+										<height>144</height>
+										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>96</width>
+										<height>144</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_poster_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="134" height="172">
+								<control type="image">
+									<posx>19</posx>
+									<posy>163</posy>
+									<width>96</width>
+									<height>144</height>
+									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>96</width>
+									<height>144</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_poster_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>132</width>
+									<height>180</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_poster_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+						</control>
+					</control>
+					<!-- Episodes -->
+					<control type="group" id="7004">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>8</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31002]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9004">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>9008</ondown>
+							<onup>9002</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<width>880</width>
+							<itemlayout width="160" height="280">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>143</posy>
+										<width>124</width>
+										<height>124</height>
+										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>124</width>
+										<height>124</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_square_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="160" height="280">
+								<control type="image">
+									<posx>19</posx>
+									<posy>143</posy>
+									<width>124</width>
+									<height>124</height>
+									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>124</width>
+									<height>124</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_square_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>160</width>
+									<height>160</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_square_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Episode]. $INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.TVShowTitle], $LOCALIZE[31003] $INFO[ListItem.Season]</label>
+									<textcolor>White</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>230</height>
+						</control>
+					</control>
+					<!-- Artists -->
+					<control type="group" id="7008">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>28</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31406]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9008">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>7009</ondown>
+							<onup>7004</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>880</width>
+							<itemlayout width="134" height="172">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>163</posy>
+										<width>96</width>
+										<height>144</height>
+										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>96</width>
+										<height>144</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_poster_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="134" height="172">
+								<control type="image">
+									<posx>19</posx>
+									<posy>163</posy>
+									<width>96</width>
+									<height>144</height>
+									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>96</width>
+									<height>144</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_poster_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>132</width>
+									<height>180</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_poster_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>200</height>
+						</control>
+					</control>
+					<!-- Albums -->
+					<control type="group" id="7009">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>8</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31407]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9009">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>7010</ondown>
+							<onup>7008</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>890</width>
+							<itemlayout width="160" height="280">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>143</posy>
+										<width>124</width>
+										<height>124</height>
+										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>124</width>
+										<height>124</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_square_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="160" height="280">
+								<control type="image">
+									<posx>19</posx>
+									<posy>143</posy>
+									<width>124</width>
+									<height>124</height>
+									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>124</width>
+									<height>124</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_square_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>160</width>
+									<height>160</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_square_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>White</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>230</height>
+						</control>
+					</control>
+					<!-- Songs -->
+					<control type="group" id="7010">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>8</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31408]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9010">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<onup>7009</onup>
+							<ondown>7013</ondown>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>890</width>
+							<itemlayout width="160" height="280">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>143</posy>
+										<width>124</width>
+										<height>124</height>
+										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>124</width>
+										<height>124</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_square_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="160" height="280">
+								<control type="image">
+									<posx>19</posx>
+									<posy>143</posy>
+									<width>124</width>
+									<height>124</height>
+									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>124</width>
+									<height>124</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_square_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>160</width>
+									<height>160</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_square_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Artist]</label>
+									<textcolor>White</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>230</height>
+						</control>
+					</control>
+					<!-- Actors -->
+					<control type="group" id="7013">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>28</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31005]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9013">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<onup>7010</onup>
+							<ondown>7012</ondown>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>880</width>
+							<itemlayout width="134" height="172">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>163</posy>
+										<width>96</width>
+										<height>144</height>
+										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>96</width>
+										<height>144</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_poster_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="134" height="172">
+								<control type="image">
+									<posx>19</posx>
+									<posy>163</posy>
+									<width>96</width>
+									<height>144</height>
+									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>96</width>
+									<height>144</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_poster_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>132</width>
+									<height>180</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_poster_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>162</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>67</posx>
+									<posy>164</posy>
+									<width>112</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>200</height>
+						</control>
+					</control>
+					<!-- Clips -->
+					<control type="group" id="7012">
+						<height>260</height>
+						<control type="image">
+							<posx>50</posx>
+							<posy>8</posy>
+							<width>806</width>
+							<height>207</height>
+							<texture>thumb_background_search.png</texture>
+						</control>
+						<control type="label" id="8001">
+							<label>$LOCALIZE[31203]</label>
+							<font>searchresultheader</font>
+							<textcolor>Gray</textcolor>
+							<posx>63</posx>
+							<posy>20</posy>
+						</control>
+						<control type="list" id="9012">
+							<posy>44</posy>
+							<visible allowhiddenfocus="false">true</visible>
+							<orientation>horizontal</orientation>
+							<ondown>-</ondown>
+							<onup>7013</onup>
+							<onright>-</onright>
+							<onleft>350</onleft>
+							<posx>45</posx>
+							<posy>0</posy>
+							<width>890</width>
+							<itemlayout width="160" height="280">
+								<control type="group">
+									<control type="image">
+										<posx>19</posx>
+										<posy>143</posy>
+										<width>124</width>
+										<height>124</height>
+										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>124</width>
+										<height>124</height>
+										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>border_square_search.png</bordertexture>
+									</control>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Property(sourceTitle)]</label>
+									<textcolor>Shadow</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Property(sourceTitle)]</label>
+									<textcolor>Gray</textcolor>
+									<scroll>false</scroll>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</itemlayout>
+							<focusedlayout width="160" height="280">
+								<control type="image">
+									<posx>19</posx>
+									<posy>143</posy>
+									<width>124</width>
+									<height>124</height>
+									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+								</control>
+								<control type="image">
+									<posx>19</posx>
+									<posy>19</posy>
+									<width>124</width>
+									<height>124</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>border_square_search.png</bordertexture>
+								</control>
+								<control type="image">
+									<posx>1</posx>
+									<posy>1</posy>
+									<width>160</width>
+									<height>160</height>
+									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+									<texture>focus_square_search.png</texture>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>142</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>144</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Orange</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>161</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Property(sourceTitle)]</label>
+									<textcolor>Shadow</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>81</posx>
+									<posy>163</posy>
+									<width>140</width>
+									<height>30</height>
+									<label>$INFO[ListItem.Property(sourceTitle)]</label>
+									<textcolor>White</textcolor>
+									<scrollsuffix>  |  </scrollsuffix>
+									<scroll>true</scroll>
+									<scrollspeed>30</scrollspeed>
+									<font>homelabel</font>
+									<align>center</align>
+								</control>
+							</focusedlayout>
+							<height>230</height>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="image" id="0">
+			<posx>404</posx>
+			<posy>0</posy>
+			<width>876</width>
+			<height>4</height>
+			<texture>background_search_top.png</texture>
+		</control>
+	</controls>
+</window>
