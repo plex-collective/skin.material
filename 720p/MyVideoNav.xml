@@ -18,10 +18,12 @@
 		<include>Header</include>
 		<include>HeaderVideo</include>
 		<include>AudioPlayingIndicator</include>
-		<include>Time</include>
+		<include>Clock</include>
 
 		<!-- Views -->
 		<include>List</include>
-		<include>FanartList</include>
+		<include>FanartList</include>-
+
+		<include>DevMode</include>
 	</controls>
 </window>

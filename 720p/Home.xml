@@ -1,5 +1,16 @@
 <?xml version="1.0"?>
 <window id="0">
-	<include condition="Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String())">HomeMenu</include>
-	<include condition="Skin.String(HOME_VIEW,Material) | IsEmpty(Skin.String(HOME_VIEW))">HomeMenu</include>
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include condition="!Skin.HasSetting(SHOW_GRID) + !Skin.HasSetting(SHOW_DEBUG_INFO)">SlideShowHome</include>
+		<include>BGDimmingOverlay</include>
+		<include>Header</include>
+
+		<include condition="Skin.String(HOME,Material) | IsEmpty(Skin.String(HOME))">HomeMenu</include>
+		<include condition="Skin.String(HOME,Urban)">HomeUrbanMenu</include>
+
+		<include>GlobalIncludes</include>
+		<include>Clock</include>
+	</controls>
 </window>

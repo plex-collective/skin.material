@@ -7,6 +7,7 @@
 		<include>Header</include>
 		<include>HeaderAudio</include>
 		<include>List</include>
-		<include>Time</include>
+		<include>Clock</include>
+		<include>DevMode</include>
 	</controls>
 </window>

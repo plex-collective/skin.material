@@ -6,7 +6,7 @@
 		<include>BGDefault</include>
 		<include>Header</include>
 		<include>HeaderShared</include>
-		<include>Time</include>
+		<include>Clock</include>
 		<control type="list" id="50">
 			<posx>664</posx>
 			<posy>253</posy>
