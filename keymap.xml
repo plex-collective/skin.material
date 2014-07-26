@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<keymap>
+    <global>
+        <keyboard>
+            <F5>Plex.ReloadSkin()</F5>
+            <F6>Skin.ToggleSetting(SHOW_GRID)</F6>
+            <F7>Skin.ToggleSetting(SHOW_DEBUG_INFO)</F7>
+            <F8>Notification(Testing 123,Hello world)</F8>
+        </keyboard>
+    </global>
+</keymap> 
