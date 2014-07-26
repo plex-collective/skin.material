@@ -50,7 +50,6 @@
 		<textcolor>White</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
-		<alttexturefocus>Dialogs/buttonkb-focus.png</alttexturefocus>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
 		<aligny>center</aligny>
