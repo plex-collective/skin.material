@@ -109,7 +109,7 @@
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">
-			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
+			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- XXX: MISSING bottom_home; maybe its button_home -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
