@@ -57,7 +57,7 @@
 							<control type="image">
 								<width>422</width>
 								<height>54</height>
-								<texture>dialogs/button.png</texture>
+								<texture>button.png</texture>
 								<aspectratio>keep</aspectratio>
 								<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(3).OnNext">Focus</animation>
 								<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(3).OnPrevious">Focus</animation>
