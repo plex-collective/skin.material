@@ -292,7 +292,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>button_home.png</texture>
+							<texture>b-home.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(300).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(300).OnPrevious">Focus</animation>
@@ -377,7 +377,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>button_home.png</texture>
+							<texture>b-home.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnPrevious">Focus</animation>
@@ -493,7 +493,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>button_home.png</texture>
+							<texture>b-home.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnPrevious">Focus</animation>
@@ -597,7 +597,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>button_home.png</texture>
+							<texture>b-home.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnPrevious">Focus</animation>

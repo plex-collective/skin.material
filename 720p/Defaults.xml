@@ -38,7 +38,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Orange</focusedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<texturefocus>Dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>b-settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -63,7 +63,7 @@
 		<textcolor>White</textcolor>
 		<align>left</align>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus>Dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>b-settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureradiofocus>Controls/Radio.png</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
@@ -85,7 +85,7 @@
 		<font>list2</font>
 		<textcolor>White</textcolor>
 		<textoffsetx>70</textoffsetx>
-		<texturefocus>Dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>b-settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<textureup>Controls/SpinUp.png</textureup>
 		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
@@ -106,7 +106,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus>Dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>b-settings_dialog.png</texturefocus>
 		<textureup>Controls/SpinUp.png</textureup>
 		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
 		<texturedown>Controls/SpinDown.png</texturedown>
@@ -135,7 +135,7 @@
 		<texturesliderbar>Controls/Slider.png</texturesliderbar>
 		<textureslidernib>Controls/SliderNib.png</textureslidernib>
 		<textureslidernibfocus>Controls/SliderNibFocused.png</textureslidernibfocus>
-		<texturefocus>Dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>b-settings_dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>
 		<height>54</height>

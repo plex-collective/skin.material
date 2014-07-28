@@ -12,7 +12,7 @@
 			<posy>20</posy>
 			<width>1192</width>
 			<height>680</height>
-			<texture>Dialogs/SettingsDialog.png</texture>
+			<texture>dialog-settings.png</texture>
 		</control>
 		<control type="group">
 			<posy>123</posy>

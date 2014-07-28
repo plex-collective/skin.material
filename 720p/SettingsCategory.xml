@@ -43,7 +43,7 @@
 			<textcolor>White</textcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>button_settings_wide.png</texturefocus>
+			<texturefocus>b-settings_wide.png</texturefocus>
 			<height>54</height>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -57,7 +57,7 @@
 			<textcolor>White</textcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>button_settings_wide.png</texturefocus>
+			<texturefocus>b-settings_wide.png</texturefocus>
 			<height>54</height>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -72,7 +72,7 @@
 			<textcolor>White</textcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>button_settings_wide.png</texturefocus>
+			<texturefocus>b-settings_wide.png</texturefocus>
 			<height>54</height>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -86,7 +86,7 @@
 			<textcolor>White</textcolor>
 			<focusedcolor>Orange</focusedcolor>
 			<texturenofocus>-</texturenofocus>
-			<texturefocus>button_settings.png</texturefocus>
+			<texturefocus>b-settings.png</texturefocus>
 			<height>54</height>
 			<align>left</align>
 			<aligny>center</aligny>

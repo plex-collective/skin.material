@@ -62,37 +62,37 @@
 				<posx>127</posx>
 				<posy>179</posy>
 				<control type="image">
-					<texture>Dialogs/button_repeat.png</texture>
+					<texture>b-repeat.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + !Control.HasFocus(12)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_repeat_fo.png</texture>
+					<texture>b-repeat_fo.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne + Control.HasFocus(12)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_repeatonce.png</texture>
+					<texture>b-repeatonce.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>Playlist.IsRepeatOne + !Control.HasFocus(12)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_repeatonce_fo.png</texture>
+					<texture>b-repeatonce_fo.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>Playlist.IsRepeatOne + Control.HasFocus(12)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_repeatall.png</texture>
+					<texture>b-repeatall.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>Playlist.IsRepeat + !Control.HasFocus(12)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_repeatall_fo.png</texture>
+					<texture>b-repeatall_fo.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>Playlist.IsRepeat + Control.HasFocus(12)</visible>
@@ -115,15 +115,15 @@
 					<height>66</height>
 				</control>
 				<control type="button" id="13">
-					<texturenofocus>Dialogs/button_skipbwd.png</texturenofocus>
-					<texturefocus>Dialogs/button_skipbwd_fo.png</texturefocus>
+					<texturenofocus>b-skipbwd.png</texturenofocus>
+					<texturefocus>b-skipbwd_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Previous)</onclick>
 					<width>98</width>
 					<height>66</height>
 				</control>
 				<control type="button" id="14">
-					<texturenofocus>Dialogs/button_stop.png</texturenofocus>
-					<texturefocus>Dialogs/button_stop_fo.png</texturefocus>
+					<texturenofocus>b-stop.png</texturenofocus>
+					<texturefocus>b-stop_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Stop)</onclick>
 					<onclick>XBMC.Action(previousmenu)</onclick>
 					<width>98</width>
@@ -137,8 +137,8 @@
 					<height>66</height>
 				</control>
 				<control type="button" id="16">
-					<texturenofocus>Dialogs/button_skipfwd.png</texturenofocus>
-					<texturefocus>Dialogs/button_skipfwd_fo.png</texturefocus>
+					<texturenofocus>b-skipfwd.png</texturenofocus>
+					<texturefocus>b-skipfwd_fo.png</texturefocus>
 					<onclick>XBMC.PlayerControl(Next)</onclick>
 					<width>98</width>
 					<height>66</height>
@@ -148,25 +148,25 @@
 				<posx>308</posx>
 				<posy>179</posy>
 				<control type="image">
-					<texture>Dialogs/button_pause.png</texture>
+					<texture>b-pause.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(15)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_play.png</texture>
+					<texture>b-play.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + !Control.HasFocus(15)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_pause_fo.png</texture>
+					<texture>b-pause_fo.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>![Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(15)</visible>
 				</control>
 				<control type="image">
-					<texture>Dialogs/button_play_fo.png</texture>
+					<texture>b-play_fo.png</texture>
 					<width>98</width>
 					<height>66</height>
 					<visible>[Player.Paused | Player.Forwarding | Player.Rewinding] + Control.HasFocus(15)</visible>
@@ -179,11 +179,11 @@
 				<onright>12</onright>
 				<width>98</width>
 				<height>66</height>
-				<texturefocus>Dialogs/button_shuffle_fo.png</texturefocus>
-				<texturenofocus>Dialogs/button_shuffle.png</texturenofocus>
+				<texturefocus>b-shuffle_fo.png</texturefocus>
+				<texturenofocus>b-shuffle.png</texturenofocus>
 				<usealttexture>Playlist.IsRandom</usealttexture>
-				<alttexturefocus>Dialogs/button_shuffleon_fo.png</alttexturefocus>
-				<alttexturenofocus>Dialogs/button_shuffleon.png</alttexturenofocus>
+				<alttexturefocus>b-shuffleon_fo.png</alttexturefocus>
+				<alttexturenofocus>b-shuffleon.png</alttexturenofocus>
 				<onclick>PlayerControl(random)</onclick>
 			</control>
 		</control>

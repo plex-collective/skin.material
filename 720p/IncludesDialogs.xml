@@ -20,16 +20,16 @@
 	<include name="dialogWindowTop">
 		<width>662</width>
 		<height>94</height>
-		<texture>Dialogs/DialogTop.png</texture>
+		<texture>dialog-top.png</texture>
 	</include>
 	<include name="dialogWindowCenter">
 		<width>662</width>
-		<texture>Dialogs/DialogCenter.png</texture>
+		<texture>dialog-center.png</texture>
 	</include>
 	<include name="dialogWindowBottom">
 		<width>662</width>
 		<height>94</height>
-		<texture>Dialogs/DialogBottom.png</texture>
+		<texture>dialog-bottom.png</texture>
 	</include>
 	<include name="dialogHeading">
 		<align>center</align>
@@ -59,7 +59,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb.png</texturefocus>
+		<texturefocus>b-keyboard.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
@@ -71,9 +71,9 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb-wide.png</texturefocus>
+		<texturefocus>b-keyboard-wide.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<alttexturefocus>Dialogs/buttonkb-wide.png</alttexturefocus>
+		<alttexturefocus>b-keyboard-wide.png</alttexturefocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>Orange</focusedcolor>
@@ -85,7 +85,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb-space.png</texturefocus>
+		<texturefocus>b-keyboard-space.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>

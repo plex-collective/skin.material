@@ -29,7 +29,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>b-settings.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -44,7 +44,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>b-settings.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -76,7 +76,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>b-settings_wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -95,7 +95,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>b-settings_wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -128,7 +128,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>b-settings_wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -147,7 +147,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>b-settings_wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -163,7 +163,7 @@
 				<control type="button" id="1003">
 					<description>Slideshow Folder</description>
 					<width>770</width>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>b-settings_wide.png</texturefocus>
 					<label>- $LOCALIZE[31103]</label>
 					<label2>$INFO[Skin.String(CustomSlideshowFolder)]</label2>
 					<onclick>Skin.SetPath(CustomSlideshowFolder)</onclick>
