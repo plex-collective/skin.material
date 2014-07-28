@@ -464,8 +464,8 @@
 						<texturenofocus>osd-nav-play.png</texturenofocus>
 						<texturefocus>osd-nav-play-focused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>osd-nav-paused.png</alttexturenofocus>
-						<alttexturefocus>osd-nav-paused-focused.png</alttexturefocus>
+						<alttexturenofocus>osd-nav-pause.png</alttexturenofocus>
+						<alttexturefocus>osd-nav-pause-focused.png</alttexturefocus>
 						<onup>2012</onup>
 						<ondown>2012</ondown>
 						<onleft>1011</onleft>
@@ -586,8 +586,8 @@
 						<texturenofocus>osd-nav-play.png</texturenofocus>
 						<texturefocus>osd-nav-play-focused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>osd-nav-paused.png</alttexturenofocus>
-						<alttexturefocus>osd-nav-paused-focused.png</alttexturefocus>
+						<alttexturenofocus>osd-nav-pause.png</alttexturenofocus>
+						<alttexturefocus>osd-nav-pause-focused.png</alttexturefocus>
 						<onup>1012</onup>
 						<ondown>1012</ondown>
 						<onleft>2011</onleft>

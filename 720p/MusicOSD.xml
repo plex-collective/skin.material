@@ -75,7 +75,7 @@
 					<posx>505</posx>
 					<posy>16</posy>
 					<control type="image">
-						<texture>osd-nav-paused.png</texture>
+						<texture>osd-nav-pause.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>!Player.Paused + !Control.HasFocus(1012)</visible>
@@ -87,7 +87,7 @@
 						<visible>Player.Paused + !Control.HasFocus(1012)</visible>
 					</control>
 					<control type="image">
-						<texture>osd-nav-paused-focused.png</texture>
+						<texture>osd-nav-pause-focused.png</texture>
 						<width>62</width>
 						<height>38</height>
 						<visible>!Player.Paused + Control.HasFocus(1012)</visible>
