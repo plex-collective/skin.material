@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-			<texture>overlays/background.png</texture>
+			<texture>bg-overlay.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="group">

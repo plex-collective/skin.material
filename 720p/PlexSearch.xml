@@ -7,7 +7,7 @@
 			<posy>0</posy>
 			<width>404</width>
 			<height>720</height>
-			<texture>background_sidebar.png</texture>
+			<texture>bg-sidebar.png</texture>
 		</control>
 		<!-- Loading indicator -->
 		<control type="group">
@@ -17,7 +17,7 @@
 			<control type="multiimage">
 				<width>140</width>
 				<height>134</height>
-				<imagepath background="true">HUD/Loading</imagepath>
+				<imagepath background="true">hud/loading</imagepath>
 				<timeperimage>50</timeperimage>
 				<fadetime>1</fadetime>
 				<loop>yes</loop>
@@ -32,7 +32,7 @@
 				<posx>0</posx>
 				<posy>19</posy>
 				<textcolor>Gray</textcolor>
-				<focusedcolor>Gray</focusedcolor>
+				<!--focusedcolor>Gray</focusedcolor-->
 				<width>402</width>
 				<font>list1</font>
 				<label>$LOCALIZE[31400]</label>
@@ -45,7 +45,7 @@
 				<posy>74</posy>
 				<width>294</width>
 				<height>42</height>
-				<texture>search_input.png</texture>
+				<texture>search-input.png</texture>
 			</control>
 			<!-- text field -->
 			<control type="edit" id="310">
@@ -56,11 +56,11 @@
 				<focusedcolor>Gray</focusedcolor>
 				<width>289</width>
 				<height>43</height>
-				<onleft>-</onleft>
+				<onleft>noop</onleft>
 				<ondown>9001</ondown>
 				<onright>350</onright>
-				<emptylabel>-</emptylabel>
-				<emptycolor>opaquegrey</emptycolor>
+				<!--emptylabel>-</emptylabel-->
+				<!--emptycolor>opaquegrey</emptycolor-->
 				<align>left</align>
 				<aligny>center</aligny>
 				<textoffsetx>16</textoffsetx>
@@ -79,8 +79,8 @@
 					<itemgap>-1</itemgap>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>false</usecontrolcoords>
-					<onup>-</onup>
-					<ondown>-</ondown>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<renderfocusedlast>false</renderfocusedlast>
@@ -512,7 +512,7 @@
 							<font>keyboardbuttonsmall</font>
 							<posx>0</posx>
 							<onup>95</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>5100</onleft>
 							<onright>32</onright>
 							<label>$LOCALIZE[31403]</label>
@@ -523,10 +523,10 @@
 						<control type="button" id="10">
 							<font>keyboardbuttonsmall</font>
 							<posx>224</posx>
-							<texturenofocus>Dialogs/buttonkb-delete.png</texturenofocus>
-							<texturefocus>Dialogs/buttonkb-delete_fo.png</texturefocus>
+							<texturenofocus>keyboard-b-delete.png</texturenofocus>
+							<texturefocus>keyboard-b-delete-focused.png</texturefocus>
 							<onup>100</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>32</onleft>
 							<onright>9001</onright>
 							<include>keyboardWideButton</include>
@@ -538,10 +538,10 @@
 							<posx>100</posx>
 							<width>116</width>
 							<onup>97</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>8</onleft>
 							<onright>10</onright>
-							<texturefocus>Dialogs/buttonkb-spacesearch.png</texturefocus>
+							<texturefocus>keyboard-b-space-search.png</texturefocus>
 							<label>$LOCALIZE[31402]</label>
 							<include>keyboardWideButton</include>
 							<textoffsetx>-16</textoffsetx>
@@ -576,7 +576,7 @@
 							<posy>28</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31404]</label>
@@ -591,8 +591,8 @@
 							<visible allowhiddenfocus="false">true</visible>
 							<orientation>horizontal</orientation>
 							<ondown>7003</ondown>
-							<onup>-</onup>
-							<onright>-</onright>
+							<onup>noop</onup>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
 							<width>890</width>
@@ -604,7 +604,7 @@
 										<posy>163</posy>
 										<width>96</width>
 										<height>144</height>
-										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -613,8 +613,8 @@
 										<width>96</width>
 										<height>144</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_poster_search.png</bordertexture>
+										<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-poster-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -646,7 +646,7 @@
 									<posy>163</posy>
 									<width>96</width>
 									<height>144</height>
-									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -655,8 +655,8 @@
 									<width>96</width>
 									<height>144</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_poster_search.png</bordertexture>
+									<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-poster-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -664,7 +664,7 @@
 									<width>132</width>
 									<height>180</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_poster_search.png</texture>
+									<texture>search-poster-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>67</posx>
@@ -703,7 +703,7 @@
 							<posy>28</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31405]</label>
@@ -718,10 +718,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7004</ondown>
 							<onup>7001</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<height>200</height>
 							<itemlayout width="134" height="172">
@@ -731,7 +731,7 @@
 										<posy>163</posy>
 										<width>96</width>
 										<height>144</height>
-										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -740,8 +740,8 @@
 										<width>96</width>
 										<height>144</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_poster_search.png</bordertexture>
+										<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-poster-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -773,7 +773,7 @@
 									<posy>163</posy>
 									<width>96</width>
 									<height>144</height>
-									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -782,8 +782,8 @@
 									<width>96</width>
 									<height>144</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_poster_search.png</bordertexture>
+									<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-poster-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -791,7 +791,7 @@
 									<width>132</width>
 									<height>180</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_poster_search.png</texture>
+									<texture>search-poster-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>67</posx>
@@ -830,7 +830,7 @@
 							<posy>8</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31002]</label>
@@ -845,7 +845,7 @@
 							<orientation>horizontal</orientation>
 							<ondown>9008</ondown>
 							<onup>9002</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
 							<width>880</width>
@@ -856,7 +856,7 @@
 										<posy>143</posy>
 										<width>124</width>
 										<height>124</height>
-										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -865,8 +865,8 @@
 										<width>124</width>
 										<height>124</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_square_search.png</bordertexture>
+										<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-square-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -920,7 +920,7 @@
 									<posy>143</posy>
 									<width>124</width>
 									<height>124</height>
-									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -929,8 +929,8 @@
 									<width>124</width>
 									<height>124</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_square_search.png</bordertexture>
+									<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-square-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -938,7 +938,7 @@
 									<width>160</width>
 									<height>160</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_square_search.png</texture>
+									<texture>search-square-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>81</posx>
@@ -1004,7 +1004,7 @@
 							<posy>28</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31406]</label>
@@ -1019,10 +1019,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7009</ondown>
 							<onup>7004</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>880</width>
 							<itemlayout width="134" height="172">
 								<control type="group">
@@ -1031,7 +1031,7 @@
 										<posy>163</posy>
 										<width>96</width>
 										<height>144</height>
-										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1040,8 +1040,8 @@
 										<width>96</width>
 										<height>144</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_poster_search.png</bordertexture>
+										<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-poster-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -1073,7 +1073,7 @@
 									<posy>163</posy>
 									<width>96</width>
 									<height>144</height>
-									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -1082,8 +1082,8 @@
 									<width>96</width>
 									<height>144</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_poster_search.png</bordertexture>
+									<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-poster-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -1091,7 +1091,7 @@
 									<width>132</width>
 									<height>180</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_poster_search.png</texture>
+									<texture>search-poster-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>67</posx>
@@ -1131,7 +1131,7 @@
 							<posy>8</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31407]</label>
@@ -1146,10 +1146,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7010</ondown>
 							<onup>7008</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">
@@ -1158,7 +1158,7 @@
 										<posy>143</posy>
 										<width>124</width>
 										<height>124</height>
-										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1167,8 +1167,8 @@
 										<width>124</width>
 										<height>124</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_square_search.png</bordertexture>
+										<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-square-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -1222,7 +1222,7 @@
 									<posy>143</posy>
 									<width>124</width>
 									<height>124</height>
-									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -1231,8 +1231,8 @@
 									<width>124</width>
 									<height>124</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_square_search.png</bordertexture>
+									<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-square-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -1240,7 +1240,7 @@
 									<width>160</width>
 									<height>160</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_square_search.png</texture>
+									<texture>search-square-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>81</posx>
@@ -1306,7 +1306,7 @@
 							<posy>8</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31408]</label>
@@ -1321,10 +1321,10 @@
 							<orientation>horizontal</orientation>
 							<onup>7009</onup>
 							<ondown>7013</ondown>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">
@@ -1333,7 +1333,7 @@
 										<posy>143</posy>
 										<width>124</width>
 										<height>124</height>
-										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1342,8 +1342,8 @@
 										<width>124</width>
 										<height>124</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_square_search.png</bordertexture>
+										<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-square-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -1397,7 +1397,7 @@
 									<posy>143</posy>
 									<width>124</width>
 									<height>124</height>
-									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -1406,8 +1406,8 @@
 									<width>124</width>
 									<height>124</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_square_search.png</bordertexture>
+									<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-square-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -1415,7 +1415,7 @@
 									<width>160</width>
 									<height>160</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_square_search.png</texture>
+									<texture>search-square-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>81</posx>
@@ -1481,7 +1481,7 @@
 							<posy>28</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31005]</label>
@@ -1496,10 +1496,10 @@
 							<orientation>horizontal</orientation>
 							<onup>7010</onup>
 							<ondown>7012</ondown>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>880</width>
 							<itemlayout width="134" height="172">
 								<control type="group">
@@ -1508,7 +1508,7 @@
 										<posy>163</posy>
 										<width>96</width>
 										<height>144</height>
-										<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1517,8 +1517,8 @@
 										<width>96</width>
 										<height>144</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_poster_search.png</bordertexture>
+										<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-poster-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -1550,7 +1550,7 @@
 									<posy>163</posy>
 									<width>96</width>
 									<height>144</height>
-									<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -1559,8 +1559,8 @@
 									<width>96</width>
 									<height>144</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_poster_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_poster_search.png</bordertexture>
+									<texture background="true" diffuse="search-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-poster-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -1568,7 +1568,7 @@
 									<width>132</width>
 									<height>180</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_poster_search.png</texture>
+									<texture>search-poster-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>67</posx>
@@ -1608,7 +1608,7 @@
 							<posy>8</posy>
 							<width>806</width>
 							<height>207</height>
-							<texture>thumb_background_search.png</texture>
+							<texture>search-bg-thumb.png</texture>
 						</control>
 						<control type="label" id="8001">
 							<label>$LOCALIZE[31203]</label>
@@ -1621,12 +1621,12 @@
 							<posy>44</posy>
 							<visible allowhiddenfocus="false">true</visible>
 							<orientation>horizontal</orientation>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onup>7013</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">
@@ -1635,7 +1635,7 @@
 										<posy>143</posy>
 										<width>124</width>
 										<height>124</height>
-										<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+										<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 									</control>
 									<control type="image">
@@ -1644,8 +1644,8 @@
 										<width>124</width>
 										<height>124</height>
 										<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-										<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-										<bordertexture>border_square_search.png</bordertexture>
+										<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+										<bordertexture>search-square-border.png</bordertexture>
 									</control>
 								</control>
 								<control type="label">
@@ -1699,7 +1699,7 @@
 									<posy>143</posy>
 									<width>124</width>
 									<height>124</height>
-									<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -1708,8 +1708,8 @@
 									<width>124</width>
 									<height>124</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture background="true" diffuse="diffuse_square_search.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_square_search.png</bordertexture>
+									<texture background="true" diffuse="search-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>search-square-border.png</bordertexture>
 								</control>
 								<control type="image">
 									<posx>1</posx>
@@ -1717,7 +1717,7 @@
 									<width>160</width>
 									<height>160</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture>focus_square_search.png</texture>
+									<texture>search-square-focus.png</texture>
 								</control>
 								<control type="label">
 									<posx>81</posx>
@@ -1783,7 +1783,7 @@
 			<posy>0</posy>
 			<width>876</width>
 			<height>4</height>
-			<texture>background_search_top.png</texture>
+			<texture>search-bg-top.png</texture>
 		</control>
 	</controls>
 </window>

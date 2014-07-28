@@ -5,7 +5,7 @@
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
 				<description>List View</description>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes)]</visible>
 					<!-- MPAA / TV Rating -->
@@ -21,7 +21,7 @@
 						<posy>266</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 						<visible>IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="image">
@@ -29,7 +29,7 @@
 						<posy>159</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 						<visible>!IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
 					</control>
 					<control type="group">
@@ -39,7 +39,7 @@
 							<posy>630</posy>
 							<width>464</width>
 							<height>330</height>
-							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="top" align="center">keep</aspectratio>
 							<fadetime>1</fadetime>
 							<visible>IsEmpty(ListItem.Plot)</visible>
@@ -49,7 +49,7 @@
 							<posy>519</posy>
 							<width>464</width>
 							<height>280</height>
-							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="top" align="center">keep</aspectratio>
 							<fadetime>1</fadetime>
 							<visible>!IsEmpty(ListItem.Plot)</visible>
@@ -59,9 +59,9 @@
 							<posy>300</posy>
 							<width>464</width>
 							<height>330</height>
-							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="bottom" align="center">keep</aspectratio>
-							<bordertexture>border_square.png</bordertexture>
+							<bordertexture>lib-square-border.png</bordertexture>
 							<fadetime>1</fadetime>
 							<visible>IsEmpty(ListItem.Plot)</visible>
 						</control>
@@ -70,9 +70,9 @@
 							<posy>239</posy>
 							<width>464</width>
 							<height>280</height>
-							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="bottom" align="center">keep</aspectratio>
-							<bordertexture>border_square.png</bordertexture>
+							<bordertexture>lib-square-border.png</bordertexture>
 							<fadetime>1</fadetime>
 							<visible>!IsEmpty(ListItem.Plot)</visible>
 						</control>
@@ -84,7 +84,7 @@
 							<posy>630</posy>
 							<width>330</width>
 							<height>330</height>
-							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 							<visible>IsEmpty(ListItem.Plot)</visible>
@@ -94,7 +94,7 @@
 							<posy>519</posy>
 							<width>280</width>
 							<height>280</height>
-							<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 							<visible>!IsEmpty(ListItem.Plot)</visible>
@@ -104,9 +104,9 @@
 							<posy>300</posy>
 							<width>330</width>
 							<height>330</height>
-							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_square.png</bordertexture>
+							<bordertexture>lib-square-border.png</bordertexture>
 							<fadetime>1</fadetime>
 							<visible>IsEmpty(ListItem.Plot)</visible>
 						</control>
@@ -115,15 +115,15 @@
 							<posy>239</posy>
 							<width>280</width>
 							<height>280</height>
-							<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_square.png</bordertexture>
+							<bordertexture>lib-square-border.png</bordertexture>
 							<fadetime>1</fadetime>
 							<visible>!IsEmpty(ListItem.Plot)</visible>
 						</control>
 					</control>
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
 					<!-- Total Episodes Overlay -->
@@ -146,7 +146,7 @@
 						<posy>159</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 					</control>
 					<!-- Current Thumb reflection-->
 					<control type="image">
@@ -154,7 +154,7 @@
 						<posy>519</posy>
 						<width>188</width>
 						<height>280</height>
-						<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<fadetime>1</fadetime>
 					</control>
@@ -171,14 +171,14 @@
 						<posy>239</posy>
 						<width>188</width>
 						<height>280</height>
-						<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<bordertexture>border_poster.png</bordertexture>
+						<bordertexture>lib-poster-border.png</bordertexture>
 						<fadetime>1</fadetime>
 					</control>
 					<!-- /Current Thumb -->
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>Container.Content(episodes)</visible>
 					<control type="image">
@@ -186,7 +186,7 @@
 						<posy>114</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 					</control>
 					<!-- Current Thumb reflection-->
 					<control type="image">
@@ -194,7 +194,7 @@
 						<posy>474</posy>
 						<width>400</width>
 						<height>224</height>
-						<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-episode-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<fadetime>1</fadetime>
 					</control>
@@ -211,14 +211,14 @@
 						<posy>250</posy>
 						<width>400</width>
 						<height>224</height>
-						<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-episode-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
-						<bordertexture>border_episode.png</bordertexture>
+						<bordertexture>lib-episode-border.png</bordertexture>
 						<fadetime>1</fadetime>
 					</control>
 					<!-- /Current Thumb -->
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>Container.Content(artists) + !SubString(Container.FirstTitle,iTunes,Left)</visible>
 					<control type="image">
@@ -226,7 +226,7 @@
 						<posy>159</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 					</control>
 					<!-- Current Thumb reflection-->
 					<control type="image">
@@ -234,7 +234,7 @@
 						<posy>519</posy>
 						<width>280</width>
 						<height>280</height>
-						<texture background="true" diffuse="reflection_artist.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-artist-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
 						<fadetime>1</fadetime>
 					</control>
@@ -245,14 +245,14 @@
 						<posy>239</posy>
 						<width>280</width>
 						<height>280</height>
-						<texture background="true" diffuse="diffuse_artist.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-artist-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
-						<bordertexture>border_artist.png</bordertexture>
+						<bordertexture>lib-artist-border.png</bordertexture>
 						<fadetime>1</fadetime>
 					</control>
 					<!-- /Current Thumb -->
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>Container.Content(albums) | Container.Content(songs) | [Container.Content(artists) + SubString(Container.FirstTitle,iTunes,Left)]</visible>
 					<control type="image">
@@ -260,7 +260,7 @@
 						<posy>266</posy>
 						<width>598</width>
 						<height>415</height>
-						<texture>thumb_background.png</texture>
+						<texture>bg-thumb.png</texture>
 					</control>
 					<!-- Current Thumb reflection-->
 					<control type="image">
@@ -268,7 +268,7 @@
 						<posy>630</posy>
 						<width>330</width>
 						<height>330</height>
-						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
 						<fadetime>1</fadetime>
 					</control>
@@ -279,15 +279,15 @@
 						<posy>300</posy>
 						<width>330</width>
 						<height>330</height>
-						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
-						<bordertexture>border_square.png</bordertexture>
+						<bordertexture>lib-square-border.png</bordertexture>
 						<fadetime>1</fadetime>
 					</control>
 					<!-- /Current Thumb -->
 				</control>
 			</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!--=============================================================================================-->
 			<!-- ### INFO/METADATA ### -->
 			<!-- movies list -->
 			<control type="grouplist">
@@ -469,7 +469,7 @@
 						</control>
 					</control>
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group">
 					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
 					<height>-12</height>
@@ -538,7 +538,7 @@
 					<label/>
 					<visible>!Skin.HasSetting(HIDE_EXTRA_DETAILS)</visible>
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<!-- Show Description -->
 				<control type="textbox">
 					<description>Plot/Details</description>
@@ -552,7 +552,7 @@
 					<autoscroll delay="10000" time="3000" repeat="10000"/>
 				</control>
 			</control>
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!--=============================================================================================-->
 			<!-- seasons list -->
 			<control type="grouplist">
 				<visible>Container.Content(seasons)</visible>
@@ -764,7 +764,7 @@
 				</control>
 			</control>
 		</control>
-		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--=============================================================================================-->
 
 		<!-- View Switcher (only if enabled in skin options) -->
 		<control type="button" id="41">
@@ -777,7 +777,7 @@
 			<onfocus>SetFocus(555)</onfocus>
 		</control>
 
-		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--=============================================================================================-->
 		<!-- ### LIST VIEW ITSELF ### -->
 		<control type="list" id="50">
 			<posx>664</posx>
@@ -785,7 +785,7 @@
 			<width>551</width>
 			<height>426</height>
 			<onleft>41</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 
@@ -887,7 +887,7 @@
 						<posy>1</posy>
 						<width>512</width>
 						<height>54</height>
-						<texture>button_media.png</texture>
+						<texture>b-media.png</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
@@ -898,8 +898,8 @@
 						<posy>1</posy>
 						<width>549</width>
 						<height>54</height>
-						<texture>button_media.png</texture>
-						<aspectratio>strech</aspectratio>
+						<texture>b-media.png</texture>
+						<aspectratio>stretch</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
 					</control>
@@ -1021,7 +1021,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
@@ -1113,7 +1113,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
@@ -1164,8 +1164,8 @@
 			<posy>237</posy>
 			<width>1200</width>
 			<height>440</height>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(2) + Container.HasFiles</visible>
 			<preloaditems>2</preloaditems>
@@ -1176,8 +1176,8 @@
 					<width>128</width>
 					<height>128</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_photo.png</bordertexture>
+					<texture background="true" diffuse="lib-photo-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>lib-photo-border.png</bordertexture>
 				</control>
 			</itemlayout>
 			<focusedlayout height="164" width="164">
@@ -1187,8 +1187,8 @@
 					<width>128</width>
 					<height>128</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_photo.png</bordertexture>
+					<texture background="true" diffuse="lib-photo-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>lib-photo-border.png</bordertexture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -1196,7 +1196,7 @@
 					<width>164</width>
 					<height>164</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture>focus_photo.png</texture>
+					<texture>lib-photo-focus.png</texture>
 				</control>
 			</focusedlayout>
 		</control>
@@ -1209,7 +1209,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud/hud-background.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>

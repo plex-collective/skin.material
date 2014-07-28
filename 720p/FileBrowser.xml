@@ -17,14 +17,14 @@
 			<control type="image">
 				<width>732</width>
 				<height>636</height>
-				<texture>Dialogs/dialog_filebrowser.png</texture>
+				<texture>filebrowser-dialog.png</texture>
 			</control>
 			<control type="image">
 				<posx>120</posx>
 				<posy>175</posy>
 				<width>490</width>
 				<height>294</height>
-				<texture>Dialogs/browse.png</texture>
+				<texture>dialog-browse.png</texture>
 			</control>
 			<control type="label" id="411">
 				<description>heading label</description>
@@ -164,7 +164,7 @@
 							<posy>5</posy>
 							<width>450</width>
 							<height>38</height>
-							<texture>Dialogs/button_browse.png</texture>
+							<texture>b-browse.png</texture>
 						</control>
 						<control type="label">
 							<posx>18</posx>
@@ -215,7 +215,7 @@
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<label>OK</label>
-				<texturefocus>Dialogs/button_filebrowser.png</texturefocus>
+				<texturefocus>filebrowser-b.png</texturefocus>
 				<include>dialogButton</include>
 			</control>
 		</control>

@@ -12,7 +12,7 @@
 			<control type="image">
 				<include>FullScreenScaled</include>
 				<include>fadeinout</include>
-				<texture>nrg/menuBackground.png</texture>
+				<texture>bg-menu.png</texture>
 				<colordiffuse>FFFF0000</colordiffuse>
 			</control>
 			<control type="image">
@@ -63,9 +63,9 @@
 				<posy>360</posy>
 				<width>348</width>
 				<height>324</height>
-				<texture>background_overlay.png</texture>
+				<texture>bg-overlay.png</texture>
 			</control>
-			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<control type="wraplist" id="300">
 				<description>Media Menu</description>
 				<!--visible allowhiddenfocus="true">[Control.HasFocus(300) | Stringcompare(Container(299).ListItem(0).Label2,media)] + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible-->
@@ -149,7 +149,7 @@
 					</item>
 				</content>
 			</control>
-			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- The submenu for System -->
 			<control type="wraplist" id="301">
 				<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
@@ -243,7 +243,7 @@
 					</item>
 				</content>
 			</control>
-			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- The submenu for Preferences -->
 			<control type="wraplist" id="302">
 				<!--visible allowhiddenfocus="true">Control.HasFocus(302) | Stringcompare(Container(299).ListItem(0).Label2,pref)</visible-->
@@ -331,7 +331,7 @@
 					</item>
 				</content>
 			</control>
-			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- The submenu for DVD -->
 			<control type="fixedlist" id="303">
 				<!--visible allowhiddenfocus="true">Control.HasFocus(303) + System.HasMediadvd | Stringcompare(Container(299).ListItem(0).Label2,dvd)</visible-->
@@ -398,7 +398,7 @@
 					</item>
 				</content>
 			</control>
-			<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- On Deck & Recently Used Channels -->
 
 			<!--control type="grouplist" id="5999"-->
@@ -413,7 +413,7 @@
 
 				<!-- Background Overlay -->
 				<!--control type="image">
-					<texture>background_overlay.png</texture>
+					<texture>bg-overlay.png</texture>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>930</width>
@@ -489,14 +489,14 @@
 		<!-- TODO: create specific graphic for this -->
 		<!--control type="image">
 			<visible>Control.HasFocus(300)</visible>
-			<texture background="true">homemenu_diffuse.png</texture>
+			<texture background="true">home-menu-diffuse.png</texture>
 			<posx>0</posx>
 			<posy>379</posy>
 			<width>1280</width>
 			<height>330</height>
 		</control>
 		<control type="image">
-			<texture>home_fade_bottom.png</texture>
+			<texture>home-fade-bottom.png</texture>
 			<posx>0</posx>
 			<posy>675</posy>
 			<width>1280</width>

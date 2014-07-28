@@ -16,7 +16,7 @@
 			<posy>20</posy>
 			<width>1192</width>
 			<height>680</height>
-			<texture>Dialogs/SettingsDialog.png</texture>
+			<texture>settings-dialog.png</texture>
 		</control>
 		<control type="group">
 			<posy>123</posy>
@@ -54,7 +54,7 @@
 					<width>212</width>
 					<height>54</height>
 					<align>center</align>
-					<texturefocus>Dialogs/button_small.png</texturefocus>
+					<texturefocus>b-small.png</texturefocus>
 					<label>186</label>
 					<onup>11</onup>
 				</control>
@@ -63,7 +63,7 @@
 					<width>210</width>
 					<height>54</height>
 					<align>center</align>
-					<texturefocus>Dialogs/button_small.png</texturefocus>
+					<texturefocus>b-small.png</texturefocus>
 					<label>222</label>
 					<onup>11</onup>
 				</control>
@@ -72,7 +72,7 @@
 					<width>212</width>
 					<height>54</height>
 					<align>center</align>
-					<texturefocus>Dialogs/button_small.png</texturefocus>
+					<texturefocus>b-small.png</texturefocus>
 					<label>409</label>
 					<ondown>11</ondown>
 				</control>

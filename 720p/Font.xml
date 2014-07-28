@@ -2,7 +2,7 @@
 <fonts>
 	<aliases>
 		<alias font="HelveticaNeue" variant="Bold" alias="Arial" aliasStyle="bold" />
-		<alias font="HelveticaNeue" variant="Medium" alias="Arial" aliasStyle="regular" />
+		<!--alias font="HelveticaNeue" variant="Medium" alias="Arial" aliasStyle="regular" /-->
 	</aliases>
 	<fontset id="default" unicode="true">
 		<font>

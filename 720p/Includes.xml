@@ -45,7 +45,7 @@
 			<posy>17</posy>
 			<width>16</width>
 			<height>16</height>
-			<texture>BackgroundAudio.png</texture>
+			<texture>bg-audio.png</texture>
 		</control>
 	</include>
 

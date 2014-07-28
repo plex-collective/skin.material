@@ -8,7 +8,7 @@
 			<posy>0</posy>
 			<width>404</width>
 			<height>720</height>
-			<texture>background_sidebar.png</texture>
+			<texture>bg-sidebar.png</texture>
 		</control>
 		<include>HeaderSettings</include>
 		<control type="grouplist" id="3">
@@ -34,7 +34,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<textoffsety>0</textoffsety>
 				<textoffsetx>30</textoffsetx>
 				<label>$LOCALIZE[31110]</label>
@@ -51,7 +51,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<textoffsety>0</textoffsety>
 				<textoffsetx>30</textoffsetx>
 				<label>$LOCALIZE[31111]</label>
@@ -68,7 +68,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<textoffsety>0</textoffsety>
 				<textoffsetx>30</textoffsetx>
 				<!-- TODO: Localize -->
@@ -86,7 +86,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<textoffsety>0</textoffsety>
 				<textoffsetx>30</textoffsetx>
 				<!-- TODO: Localize -->
@@ -104,7 +104,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>button_settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<textoffsety>0</textoffsety>
 				<textoffsetx>30</textoffsetx>
 				<!-- TODO: Localize -->
@@ -149,7 +149,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>90</textoffsetx>
 					<radioposx>726</radioposx>
@@ -169,7 +169,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>90</textoffsetx>
 					<radioposx>726</radioposx>
@@ -205,7 +205,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[31101]</label>
@@ -225,7 +225,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<label>- $LOCALIZE[31102]</label>
@@ -238,7 +238,7 @@
 				<control type="button" id="1103">
 					<description>Slideshow Folder</description>
 					<width>770</width>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<label>- $LOCALIZE[31103]</label>
 					<label2>$INFO[Skin.String(CUSTOM_SLIDESHOW_FOLDER)]</label2>
 					<onclick>Skin.SetPath(CUSTOM_SLIDESHOW_FOLDER)</onclick>
@@ -271,7 +271,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -292,7 +292,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -313,7 +313,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -334,7 +334,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -356,7 +356,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -377,7 +377,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -399,7 +399,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -436,7 +436,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -457,7 +457,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -478,7 +478,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
@@ -500,7 +500,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
@@ -535,7 +535,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>button_settings_wide.png</texturefocus>
+					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<!-- TODO: Localize -->
