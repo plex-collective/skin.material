@@ -11,7 +11,7 @@
 				<posy>46</posy>
 				<width>899</width>
 				<height>621</height>
-				<texture>thumb_background_now_playing.png</texture>
+				<texture>lib-now-playing-thumb-bg.png</texture>
 				<fadetime>200</fadetime>
 				<visible>Player.HasAudio</visible>
 			</control>
@@ -22,7 +22,7 @@
 					<posy>392</posy>
 					<width>392</width>
 					<height>392</height>
-					<texture diffuse="reflection_now_playing.png" flipy="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="lib-now-playing-reflection.png" flipy="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="bottom" align="center">stretch</aspectratio>
 				</control>
 				<description>Current cover</description>
@@ -30,9 +30,9 @@
 				<control type="image">
 					<width>392</width>
 					<height>392</height>
-					<texture diffuse="diffuse_now_playing.png">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="lib-now-playing-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-					<bordertexture>border_now_playing.png</bordertexture>
+					<bordertexture>border-now-playing.png</bordertexture>
 				</control>
 			</control>
 			<control type="group">
@@ -123,7 +123,7 @@
 				<posy>46</posy>
 				<width>899</width>
 				<height>621</height>
-				<texture flipx="true">thumb_background_now_playing.png</texture>
+				<texture flipx="true">lib-now-playing-thumb-bg.png</texture>
 				<fadetime>200</fadetime>
 				<visible>Player.HasAudio</visible>
 			</control>
@@ -134,7 +134,7 @@
 					<posy>392</posy>
 					<width>392</width>
 					<height>392</height>
-					<texture diffuse="reflection_now_playing.png" flipy="true">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="lib-now-playing-reflection.png" flipy="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="bottom" align="center">stretch</aspectratio>
 				</control>
 				<description>Current cover</description>
@@ -142,9 +142,9 @@
 				<control type="image">
 					<width>392</width>
 					<height>392</height>
-					<texture diffuse="diffuse_now_playing.png">$INFO[MusicPlayer.Cover]</texture>
+					<texture diffuse="lib-now-playing-diffuse.png">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="bottom" align="center">keep</aspectratio>
-					<bordertexture>border_now_playing.png</bordertexture>
+					<bordertexture>border-now-playing.png</bordertexture>
 				</control>
 			</control>
 			<control type="group">

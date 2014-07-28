@@ -9,7 +9,7 @@
 			<control type="group">
 				<description>Header (Time)</description>
 				<control type="image">
-					<texture>background_overlay_header.png</texture>
+					<texture>bg-overlay-header.png</texture>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
@@ -68,7 +68,7 @@
 							<posy>24</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture>thumb_background.png</texture>
+							<texture>bg-thumb.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster Thumb Reflection</description>
@@ -76,7 +76,7 @@
 							<posy>122</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+							<texture background="true" diffuse="lib-episode-reflection.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 						</control>
@@ -86,9 +86,9 @@
 							<posy>24</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture background="true" diffuse="diffuse_episode.png">$INFO[VideoPlayer.Cover]</texture>
+							<texture background="true" diffuse="lib-episode-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_episode.png</bordertexture>
+							<bordertexture>lib-episode-border.png</bordertexture>
 							<fadetime>1</fadetime>
 						</control>
 					</control>
@@ -102,7 +102,7 @@
 							<posy>-15</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture>thumb_background.png</texture>
+							<texture>bg-thumb.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster Thumb Reflection</description>
@@ -110,7 +110,7 @@
 							<posy>155</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+							<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 						</control>
@@ -120,9 +120,9 @@
 							<posy>-15</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture background="true" diffuse="diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
+							<texture background="true" diffuse="lib-poster-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_episode.png</bordertexture>
+							<bordertexture>lib-episode-border.png</bordertexture>
 							<fadetime>1</fadetime>
 						</control>
 					</control>

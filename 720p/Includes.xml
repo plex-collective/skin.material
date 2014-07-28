@@ -3,7 +3,7 @@
 	<!--ENERGIZED-->
 	<!-- Include energized overrides and improvements -->
 	<include file="nrgOverrides.xml"/>
-	
+
 	<include file="CommonViews.xml"/>
 	<include file="Defaults.xml"/>
 	<include file="IncludesDialogs.xml"/>
@@ -41,7 +41,7 @@
 				<posy>17</posy>
 				<width>16</width>
 				<height>18</height>
-				<texture>BackgroundAudio.png</texture>
+				<texture>bg-audio.png</texture>
 			</control>
 			<control type="label">
 				<posy>0</posy>
@@ -371,7 +371,7 @@
 			<fadetime>300</fadetime>
 		</control>
 		<control type="image">
-			<texture>background_overlay_diffuse.png</texture>
+			<texture>bg-overlay-diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -379,7 +379,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="image">
-			<texture>background_overlay_header.png</texture>
+			<texture>bg-overlay-header.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -387,7 +387,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="image">
-			<texture>background_overlay.png</texture>
+			<texture>bg-overlay.png</texture>
 			<posx>0</posx>
 			<posy>212</posy>
 			<width>1280</width>

@@ -91,7 +91,7 @@
 		<control type="group">
 			<visible>Container.Content(photo) | Container.Content(album)</visible>
 			<control type="image">
-				<texture>background_home.png</texture> <!-- MISSING from both versions, was background.png -->
+				<texture>home-bg.png</texture> <!-- MISSING from both versions, was background.png -->
 				<include>FullScreenBGImageDims</include>
 				<visible>true</visible>
 			</control>
@@ -109,7 +109,7 @@
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">
-			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- XXX: MISSING bottom_home; maybe its b-home -->
+			<texture diffuse="buttom_home.png">bg-overlay-diffuse.png</texture> <!-- XXX: MISSING bottom_home; maybe its home-b -->
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -124,7 +124,7 @@
 			<posy>17</posy>
 			<width>16</width>
 			<height>16</height>
-			<texture>BackgroundAudio.png</texture>
+			<texture>bg-audio.png</texture>
 		</control>
 	</include>
 </includes>

@@ -8,7 +8,7 @@
 			<posy>0</posy>
 			<width>404</width>
 			<height>720</height>
-			<texture>background_sidebar.png</texture>
+			<texture>bg-sidebar.png</texture>
 		</control>
 		<include>HeaderSettings</include>
 		<control type="grouplist" id="3">
@@ -29,7 +29,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>b-settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -44,7 +44,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>b-settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -76,7 +76,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -95,7 +95,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -128,7 +128,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -147,7 +147,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -163,7 +163,7 @@
 				<control type="button" id="1003">
 					<description>Slideshow Folder</description>
 					<width>770</width>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<label>- $LOCALIZE[31103]</label>
 					<label2>$INFO[Skin.String(CustomSlideshowFolder)]</label2>
 					<onclick>Skin.SetPath(CustomSlideshowFolder)</onclick>

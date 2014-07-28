@@ -7,7 +7,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>b-settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -23,7 +23,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>b-settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -39,7 +39,7 @@
 				<textcolor>White</textcolor>
 				<focusedcolor>Orange</focusedcolor>
 				<texturenofocus>-</texturenofocus>
-				<texturefocus>b-settings.png</texturefocus>
+				<texturefocus>settings-b.png</texturefocus>
 				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -70,7 +70,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -89,7 +89,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -108,7 +108,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -127,7 +127,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -146,7 +146,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -165,7 +165,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -198,7 +198,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -217,7 +217,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -238,7 +238,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -270,7 +270,7 @@
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>
 					<texturenofocus>-</texturenofocus>
-					<texturefocus>b-settings_wide.png</texturefocus>
+					<texturefocus>settings-b-wide.png</texturefocus>
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>

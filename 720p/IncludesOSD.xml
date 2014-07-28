@@ -14,7 +14,7 @@
 			<posy>292</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="osd-reflection-poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-poster-reflection.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
@@ -23,9 +23,9 @@
 			<posy>82</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="osd-diffuse-poster.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-poster-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>osd-border-poster.png</bordertexture>
+			<bordertexture>osd-poster-border.png</bordertexture>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		<control type="image">
@@ -33,7 +33,7 @@
 			<posy>292</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="osd-reflection-square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-square-reflection.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
@@ -42,9 +42,9 @@
 			<posy>82</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="osd-diffuse-square.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-square-diffuse.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>osd-border-square.png</bordertexture>
+			<bordertexture>osd-square-border.png</bordertexture>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="group" id="1">

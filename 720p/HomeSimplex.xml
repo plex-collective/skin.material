@@ -68,7 +68,7 @@
 			<include>BGFanart</include>
 
 			<control type="image">
-				<texture background="true">thumb_shelf_home.png</texture>
+				<texture background="true">home-shelf-thumb.png</texture>
 				<posx>0</posx>
 				<posy>265</posy>
 				<width>1280</width>
@@ -78,21 +78,21 @@
 			</control>
 			<!-- Menubar focus/unfocus -->
 			<control type="image">
-				<texture>homemenu_shadow.png</texture>
+				<texture>home-menu-shadow.png</texture>
 				<posx>0</posx>
 				<posy>294</posy>
 				<width>1280</width>
 				<height>76</height>
 			</control>
 			<control type="image">
-				<texture>homemenu.png</texture>
+				<texture>home-menu.png</texture>
 				<posx>0</posx>
 				<posy>304</posy>
 				<width>1280</width>
 				<height>50</height>
 			</control>
 			<control type="image">
-				<texture>homemenu_focus.png</texture>
+				<texture>home-menu-focus.png</texture>
 				<posx>0</posx>
 				<posy>304</posy>
 				<width>1280</width>
@@ -270,7 +270,7 @@
 					<control type="image">
 						<width>288</width>
 						<height>54</height>
-						<texture>b-home.png</texture>
+						<texture>home-b.png</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnPrevious">Focus</animation>
@@ -403,7 +403,7 @@
 					<control type="image">
 						<width>288</width>
 						<height>54</height>
-						<texture>b-home.png</texture>
+						<texture>home-b.png</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnPrevious">Focus</animation>
@@ -516,7 +516,7 @@
 					<control type="image">
 						<width>288</width>
 						<height>54</height>
-						<texture>b-home.png</texture>
+						<texture>home-b.png</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnPrevious">Focus</animation>
@@ -592,7 +592,7 @@
 				<visible>!Control.HasFocus(300)</visible>
 			</control>
 			<control type="image">
-				<texture background="true">homemenu_diffuse.png</texture>
+				<texture background="true">home-menu-diffuse.png</texture>
 				<posx>0</posx>
 				<posy>304</posy>
 				<width>1280</width>
@@ -647,7 +647,7 @@
 									<posy>219</posy>
 									<width>200</width>
 									<height>200</height>
-									<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+									<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 								</control>
 								<control type="image">
@@ -656,8 +656,8 @@
 									<width>200</width>
 									<height>200</height>
 									<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-									<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-									<bordertexture>border_square_home.png</bordertexture>
+									<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+									<bordertexture>home-square-border.png</bordertexture>
 								</control>
 								<control type="label">
 									<posx>119</posx>
@@ -707,7 +707,7 @@
 								<posy>219</posy>
 								<width>200</width>
 								<height>200</height>
-								<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+								<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -716,8 +716,8 @@
 								<width>200</width>
 								<height>200</height>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-								<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-								<bordertexture>border_square_home.png</bordertexture>
+								<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+								<bordertexture>home-square-border.png</bordertexture>
 							</control>
 							<control type="image">
 								<posx>1</posx>
@@ -725,7 +725,7 @@
 								<width>236</width>
 								<height>236</height>
 								<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-								<texture>focus_square_home.png</texture>
+								<texture>home-square-focus.png</texture>
 							</control>
 							<control type="label">
 								<posx>119</posx>
@@ -789,7 +789,7 @@
 			</control>
 		</control>
 		<control type="image">
-			<texture>home_fade_bottom.png</texture>
+			<texture>home-fade-bottom.png</texture>
 			<posx>0</posx>
 			<posy>675</posy>
 			<width>1280</width>

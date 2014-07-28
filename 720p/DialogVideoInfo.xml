@@ -9,7 +9,7 @@
 			<visible>Container.Content(Movies)</visible>
 			<control type="group">
 				<control type="image">
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 					<width>598</width>
 					<height>415</height>
 					<posx>-87</posx>
@@ -20,7 +20,7 @@
 					<posy>638</posy>
 					<width>260</width>
 					<height>388</height>
-					<texture diffuse="reflection_big_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-big-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -28,9 +28,9 @@
 					<posy>250</posy>
 					<width>260</width>
 					<height>388</height>
-					<texture diffuse="diffuse_big_poster.png">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-big-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_big_poster.png</bordertexture>
+					<bordertexture>lib-poster-big-border.png</bordertexture>
 				</control>
 			</control>
 			<control type="image">
@@ -285,7 +285,7 @@
 			<visible>Container.Content(TVShows)</visible>
 			<control type="group">
 				<control type="image">
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 					<width>598</width>
 					<height>415</height>
 					<posx>-87</posx>
@@ -296,7 +296,7 @@
 					<posy>638</posy>
 					<width>260</width>
 					<height>388</height>
-					<texture diffuse="reflection_big_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-big-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
@@ -304,9 +304,9 @@
 					<posy>250</posy>
 					<width>260</width>
 					<height>388</height>
-					<texture diffuse="diffuse_big_poster.png">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-big-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio>stretch</aspectratio>
-					<bordertexture>border_big_poster.png</bordertexture>
+					<bordertexture>lib-poster-big-border.png</bordertexture>
 				</control>
 			</control>
 			<control type="image">
@@ -443,14 +443,14 @@
 					<posy>114</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<control type="image">
 					<posx>82</posx>
 					<posy>474</posy>
 					<width>400</width>
 					<height>224</height>
-					<texture diffuse="reflection_episode.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-episode-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -458,9 +458,9 @@
 					<posy>250</posy>
 					<width>400</width>
 					<height>224</height>
-					<texture diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-episode-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_episode.png</bordertexture>
+					<bordertexture>lib-episode-border.png</bordertexture>
 				</control>
 			</control>
 			<control type="grouplist">

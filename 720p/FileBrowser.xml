@@ -17,7 +17,7 @@
 			<control type="image">
 				<width>732</width>
 				<height>636</height>
-				<texture>dialog-filebrowser.png</texture>
+				<texture>filebrowser-dialog.png</texture>
 			</control>
 			<control type="image">
 				<posx>120</posx>
@@ -215,7 +215,7 @@
 				<onleft>450</onleft>
 				<onright>450</onright>
 				<label>OK</label>
-				<texturefocus>b-filebrowser.png</texturefocus>
+				<texturefocus>filebrowser-b.png</texturefocus>
 				<include>dialogButton</include>
 			</control>
 		</control>

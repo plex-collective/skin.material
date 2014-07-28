@@ -168,7 +168,7 @@
 					<posy>219</posy>
 					<width>134</width>
 					<height>200</height>
-					<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -177,8 +177,8 @@
 					<width>134</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_poster_home.png</bordertexture>
+					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 			</control>
 		</itemlayout>
@@ -189,7 +189,7 @@
 					<posy>219</posy>
 					<width>134</width>
 					<height>200</height>
-					<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+					<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -198,8 +198,8 @@
 					<width>134</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.GrandparentThumb]</texture>
-					<bordertexture>border_poster_home.png</bordertexture>
+					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
 					<posx>86</posx>
@@ -249,7 +249,7 @@
 				<posy>219</posy>
 				<width>134</width>
 				<height>200</height>
-				<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -258,8 +258,8 @@
 				<width>134</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_poster_home.png</bordertexture>
+				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -267,7 +267,7 @@
 				<width>170</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_poster_home.png</texture>
+				<texture>home-poster-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>86</posx>
@@ -304,7 +304,7 @@
 				<posy>219</posy>
 				<width>134</width>
 				<height>200</height>
-				<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+				<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -313,8 +313,8 @@
 				<width>134</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.GrandparentThumb]</texture>
-				<bordertexture>border_poster_home.png</bordertexture>
+				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -322,7 +322,7 @@
 				<width>170</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_poster_home.png</texture>
+				<texture>home-poster-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>86</posx>
@@ -376,7 +376,7 @@
 					<posy>219</posy>
 					<width>200</width>
 					<height>200</height>
-					<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -385,8 +385,8 @@
 					<width>200</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_square_home.png</bordertexture>
+					<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-square-border.png</bordertexture>
 				</control>
 			</control>
 		</itemlayout>
@@ -396,7 +396,7 @@
 				<posy>219</posy>
 				<width>200</width>
 				<height>200</height>
-				<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -405,8 +405,8 @@
 				<width>200</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_square_home.png</bordertexture>
+				<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-square-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -414,7 +414,7 @@
 				<width>236</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_square_home.png</texture>
+				<texture>home-square-focus.png</texture>
 			</control>
 		</focusedlayout>
 		<itemlayout width="238" height="280" condition="Container(11001).ListItem(0).Type(album)">
@@ -424,7 +424,7 @@
 					<posy>219</posy>
 					<width>200</width>
 					<height>200</height>
-					<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -433,8 +433,8 @@
 					<width>200</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_square_home.png</bordertexture>
+					<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-square-border.png</bordertexture>
 				</control>
 				<control type="label">
 					<posx>119</posx>
@@ -484,7 +484,7 @@
 				<posy>219</posy>
 				<width>200</width>
 				<height>200</height>
-				<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -493,8 +493,8 @@
 				<width>200</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_square_home.png</bordertexture>
+				<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-square-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -502,7 +502,7 @@
 				<width>236</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_square_home.png</texture>
+				<texture>home-square-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>119</posx>
@@ -570,7 +570,7 @@
 					<posy>219</posy>
 					<width>134</width>
 					<height>200</height>
-					<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -579,8 +579,8 @@
 					<width>134</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_poster_home.png</bordertexture>
+					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 			</control>
 		</itemlayout>
@@ -591,7 +591,7 @@
 					<posy>219</posy>
 					<width>134</width>
 					<height>200</height>
-					<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+					<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -600,8 +600,8 @@
 					<width>134</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.GrandparentThumb]</texture>
-					<bordertexture>border_poster_home.png</bordertexture>
+					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
 					<posx>86</posx>
@@ -651,7 +651,7 @@
 				<posy>219</posy>
 				<width>134</width>
 				<height>200</height>
-				<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -660,8 +660,8 @@
 				<width>134</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_poster_home.png</bordertexture>
+				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -669,7 +669,7 @@
 				<width>170</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_poster_home.png</texture>
+				<texture>home-poster-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>86</posx>
@@ -706,7 +706,7 @@
 				<posy>219</posy>
 				<width>134</width>
 				<height>200</height>
-				<texture diffuse="reflection_poster.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
+				<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -715,8 +715,8 @@
 				<width>134</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="diffuse_poster_home.png">$INFO[ListItem.GrandparentThumb]</texture>
-				<bordertexture>border_poster_home.png</bordertexture>
+				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -724,7 +724,7 @@
 				<width>170</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_poster_home.png</texture>
+				<texture>home-poster-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>86</posx>
@@ -778,7 +778,7 @@
 					<posy>219</posy>
 					<width>200</width>
 					<height>200</height>
-					<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -787,8 +787,8 @@
 					<width>200</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_square_home.png</bordertexture>
+					<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-square-border.png</bordertexture>
 				</control>
 			</control>
 		</itemlayout>
@@ -798,7 +798,7 @@
 				<posy>219</posy>
 				<width>200</width>
 				<height>200</height>
-				<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -807,8 +807,8 @@
 				<width>200</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_square_home.png</bordertexture>
+				<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-square-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -816,7 +816,7 @@
 				<width>236</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_square_home.png</texture>
+				<texture>home-square-focus.png</texture>
 			</control>
 		</focusedlayout>
 		<itemlayout width="238" height="280" condition="Container(11000).ListItem(0).Type(album)">
@@ -826,7 +826,7 @@
 					<posy>219</posy>
 					<width>200</width>
 					<height>200</height>
-					<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -835,8 +835,8 @@
 					<width>200</width>
 					<height>200</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_square_home.png</bordertexture>
+					<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>home-square-border.png</bordertexture>
 				</control>
 				<control type="label">
 					<posx>119</posx>
@@ -886,7 +886,7 @@
 				<posy>219</posy>
 				<width>200</width>
 				<height>200</height>
-				<texture diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+				<texture diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
 			</control>
 			<control type="image">
@@ -895,8 +895,8 @@
 				<width>200</width>
 				<height>200</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture diffuse="diffuse_square_home.png">$INFO[ListItem.Thumb]</texture>
-				<bordertexture>border_square_home.png</bordertexture>
+				<texture diffuse="home-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<bordertexture>home-square-border.png</bordertexture>
 			</control>
 			<control type="image">
 				<posx>1</posx>
@@ -904,7 +904,7 @@
 				<width>236</width>
 				<height>236</height>
 				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-				<texture>focus_square_home.png</texture>
+				<texture>home-square-focus.png</texture>
 			</control>
 			<control type="label">
 				<posx>119</posx>

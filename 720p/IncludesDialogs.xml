@@ -59,7 +59,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>b-keyboard.png</texturefocus>
+		<texturefocus>keyboard-b.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
@@ -71,9 +71,9 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>b-keyboard-wide.png</texturefocus>
+		<texturefocus>keyboard-b-wide.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<alttexturefocus>b-keyboard-wide.png</alttexturefocus>
+		<alttexturefocus>keyboard-b-wide.png</alttexturefocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>Orange</focusedcolor>
@@ -85,7 +85,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>b-keyboard-space.png</texturefocus>
+		<texturefocus>keyboard-b-space.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>

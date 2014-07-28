@@ -78,7 +78,7 @@
 
 				<!-- Background behind OnDeck -->
 				<control type="image">
-					<texture background="true">thumb_background_home.png</texture>
+					<texture background="true">home-bg-thumb.png</texture>
 					<posx>0</posx>
 					<posy>265</posy>
 					<width>1280</width>
@@ -87,7 +87,7 @@
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<control type="image">
-					<texture background="true">thumb_background_home.png</texture>
+					<texture background="true">home-bg-thumb.png</texture>
 					<posx>0</posx>
 					<posy>265</posy>
 					<width>498</width>
@@ -96,7 +96,7 @@
 					<animation effect="fade" start="0" end="100" time="400" delay="50">Visible</animation>
 				</control>
 				<control type="image">
-					<texture background="true">thumb_background_home.png</texture>
+					<texture background="true">home-bg-thumb.png</texture>
 					<posx>782</posx>
 					<center>right</center>
 					<posy>265</posy>
@@ -109,7 +109,7 @@
 				<!-- Menubar focus/unfocus -->
 				<control type="image">
 					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible>
-					<texture>homemenu_shadow.png</texture>
+					<texture>home-menu-shadow.png</texture>
 					<posx>0</posx>
 					<posy>294</posy>
 					<width>1280</width>
@@ -117,14 +117,14 @@
 				</control>
 				<control type="image">
 					<visible>![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible>
-					<texture>homemenu.png</texture>
+					<texture>home-menu.png</texture>
 					<posx>0</posx>
 					<posy>304</posy>
 					<width>1280</width>
 					<height>50</height>
 				</control>
 				<control type="image">
-					<texture>homemenu_focus.png</texture>
+					<texture>home-menu-focus.png</texture>
 					<posx>0</posx>
 					<posy>304</posy>
 					<width>1280</width>
@@ -292,7 +292,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>b-home.png</texture>
+							<texture>home-b.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(300).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(300).OnPrevious">Focus</animation>
@@ -377,7 +377,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>b-home.png</texture>
+							<texture>home-b.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(301).OnPrevious">Focus</animation>
@@ -493,7 +493,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>b-home.png</texture>
+							<texture>home-b.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(303).OnPrevious">Focus</animation>
@@ -597,7 +597,7 @@
 						<control type="image">
 							<width>288</width>
 							<height>54</height>
-							<texture>b-home.png</texture>
+							<texture>home-b.png</texture>
 							<aspectratio>keep</aspectratio>
 							<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnNext">Focus</animation>
 							<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(304).OnPrevious">Focus</animation>
@@ -674,7 +674,7 @@
 					<visible>!Control.HasFocus(299) + ![Control.HasFocus(11000) | Control.HasFocus(11001) | Control.HasFocus(11002) | Control.HasFocus(11003)]</visible>
 				</control>
 				<control type="image">
-					<texture background="true">homemenu_diffuse.png</texture>
+					<texture background="true">home-menu-diffuse.png</texture>
 					<posx>0</posx>
 					<posy>304</posy>
 					<width>1280</width>
@@ -744,14 +744,14 @@
 			<!-- TODO: create specific graphic for this -->
 			<control type="image">
 				<visible>Control.HasFocus(300)</visible>
-				<texture background="true">homemenu_diffuse.png</texture>
+				<texture background="true">home-menu-diffuse.png</texture>
 				<posx>0</posx>
 				<posy>379</posy>
 				<width>1280</width>
 				<height>330</height>
 			</control>
 			<control type="image">
-				<texture>home_fade_bottom.png</texture>
+				<texture>home-fade-bottom.png</texture>
 				<posx>0</posx>
 				<posy>675</posy>
 				<width>1280</width>

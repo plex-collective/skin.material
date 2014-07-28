@@ -15,14 +15,14 @@
 			<posy>78</posy>
 			<width>732</width>
 			<height>564</height>
-			<texture>dialog-keyboard.png</texture>
+			<texture>keyboard-dialog.png</texture>
 		</control>
 		<control type="image">
 			<posx>394</posx>
 			<posy>234</posy>
 			<width>490</width>
 			<height>42</height>
-			<texture>dialog-keyboard-textentry.png</texture>
+			<texture>keyboard-dialog-textentry.png</texture>
 		</control>
 		<control type="group">
 			<posx>340</posx>
@@ -321,10 +321,10 @@
 				<posy>274</posy>
 				<control type="togglebutton" id="302">
 					<description>SHIFT button</description>
-					<texturenofocus>b-keyboard-shift.png</texturenofocus>
-					<texturefocus>b-keyboard-shift_fo.png</texturefocus>
-					<alttexturenofocus>b-keyboard-shiftalt.png</alttexturenofocus>
-					<alttexturefocus>b-keyboard-shiftalt_fo.png</alttexturefocus>
+					<texturenofocus>keyboard-b-shift.png</texturenofocus>
+					<texturefocus>keyboard-b-shift-focused.png</texturefocus>
+					<alttexturenofocus>keyboard-b-shift-alt.png</alttexturenofocus>
+					<alttexturefocus>keyboard-b-shift-alt-focused.png</alttexturefocus>
 					<onleft>8</onleft>
 					<onright>90</onright>
 					<onup>65</onup>
@@ -397,8 +397,8 @@
 				<control type="button" id="8">
 					<description>Delete button</description>
 					<posx>398</posx>
-					<texturenofocus>b-keyboard-delete.png</texturenofocus>
-					<texturefocus>b-keyboard-delete_fo.png</texturefocus>
+					<texturenofocus>keyboard-b-delete.png</texturenofocus>
+					<texturefocus>keyboard-b-delete-focused.png</texturefocus>
 					<onleft>77</onleft>
 					<onright>302</onright>
 					<onup>76</onup>

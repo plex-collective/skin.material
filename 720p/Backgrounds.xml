@@ -100,7 +100,7 @@
 
 		<!-- Fanart Dimming overlay -->
 		<control type="largeimage">
-			<texture>background_overlay_diffuse.png</texture>
+			<texture>bg-overlay-diffuse.png</texture>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -108,7 +108,7 @@
 			<visible>true</visible>
 		</control>
 		<control type="image">
-			<texture>background_home.png</texture>
+			<texture>home-bg.png</texture>
 			<posx>0</posx>
 			<posy>304</posy>
 			<width>1280</width>
