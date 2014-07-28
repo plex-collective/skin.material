@@ -14,7 +14,7 @@
 		<posy>-280</posy>
 		<width>1920</width>
 		<height>1080</height>
-		<texture>Dialogs/Diffuse.png</texture>
+		<texture>diffuse.png</texture>
 		<aspectratio>scale</aspectratio>
 	</include>
 	<include name="dialogWindowTop">
@@ -46,7 +46,7 @@
 	<include name="dialogButton">
 		<height>54</height>
 		<width>422</width>
-		<texturefocus>Dialogs/Button.png</texturefocus>
+		<texturefocus>button.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>
 		<textcolor>White</textcolor>

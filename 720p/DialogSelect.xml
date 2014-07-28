@@ -57,7 +57,13 @@
 							<control type="image">
 								<width>422</width>
 								<height>54</height>
+<<<<<<< HEAD
 								<texture>Dialogs/button.png</texture>
+||||||| merged common ancestors
+								<texture>dialogs/button.png</texture>
+=======
+								<texture>button.png</texture>
+>>>>>>> origin
 								<aspectratio>keep</aspectratio>
 								<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(3).OnNext">Focus</animation>
 								<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(3).OnPrevious">Focus</animation>
