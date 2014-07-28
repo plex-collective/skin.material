@@ -65,7 +65,7 @@
 		<textoffsetx>30</textoffsetx>
 		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureradiofocus>Controls/Radio.png</textureradiofocus>
+		<textureradiofocus>controls-radio.png</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 		<radiowidth>20</radiowidth>
 		<radioheight>20</radioheight>
@@ -87,10 +87,10 @@
 		<textoffsetx>70</textoffsetx>
 		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureup>Controls/SpinUp.png</textureup>
-		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
-		<texturedown>Controls/SpinDown.png</texturedown>
-		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<textureup>controls-spin-up.png</textureup>
+		<textureupfocus>controls-spin-up-focused.png</textureupfocus>
+		<texturedown>controls-spin-down.png</texturedown>
+		<texturedownfocus>controls-spin-down-focused.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
@@ -107,10 +107,10 @@
 		<aligny>center</aligny>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>settings-b-dialog.png</texturefocus>
-		<textureup>Controls/SpinUp.png</textureup>
-		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
-		<texturedown>Controls/SpinDown.png</texturedown>
-		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<textureup>controls-spin-up.png</textureup>
+		<textureupfocus>controls-spin-up-focused.png</textureupfocus>
+		<texturedown>controls-spin-down.png</texturedown>
+		<texturedownfocus>controls-spin-down-focused.png</texturedownfocus>
 		<spinwidth>14</spinwidth>
 		<spinheight>12</spinheight>
 		<reverse>yes</reverse>
@@ -124,17 +124,17 @@
 		<description>Default Progress Bar</description>
 		<visible>true</visible>
 		<texturebg>osd-bg-progress.png</texturebg>
-		<lefttexture>Controls/ProgressLeft.png</lefttexture>
-		<midtexture>Controls/ProgressMid.png</midtexture>
-		<righttexture>Controls/ProgressRight.png</righttexture>
+		<lefttexture>controls-progress-left.png</lefttexture>
+		<midtexture>controls-progress-mid.png</midtexture>
+		<righttexture>controls-progress-right.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="sliderex">
 		<sliderwidth>100</sliderwidth>
 		<sliderheight>16</sliderheight>
-		<texturesliderbar>Controls/Slider.png</texturesliderbar>
-		<textureslidernib>Controls/SliderNib.png</textureslidernib>
-		<textureslidernibfocus>Controls/SliderNibFocused.png</textureslidernibfocus>
+		<texturesliderbar>controls-slider.png</texturesliderbar>
+		<textureslidernib>controls-slider-nib.png</textureslidernib>
+		<textureslidernibfocus>controls-slider-nib-focused.png</textureslidernibfocus>
 		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>

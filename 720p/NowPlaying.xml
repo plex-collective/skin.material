@@ -105,7 +105,7 @@
 					<width>474</width>
 					<info>Player.Progress</info>
 					<height>16</height>
-					<texturebg>Controls/ProgressBackground.png</texturebg>
+					<texturebg>controls-progress-background.png</texturebg>
 				</control>
 			</control>
 			<control type="group">
@@ -220,7 +220,7 @@
 					<width>474</width>
 					<info>Player.Progress</info>
 					<height>16</height>
-					<texturebg>Controls/ProgressBackground.png</texturebg>
+					<texturebg>controls-progress-background.png</texturebg>
 				</control>
 			</control>
 			<control type="group">
