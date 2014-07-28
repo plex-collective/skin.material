@@ -6,7 +6,7 @@
 			<posy>49</posy>
 			<height>282</height>
 			<width>1062</width>
-			<texture>OSD/MediaInfoBackground.png</texture>
+			<texture>osd-bg-media-info.png</texture>
 			<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible>
 		</control>
 		<control type="image">
@@ -14,7 +14,7 @@
 			<posy>292</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="OSD/osd_reflection_poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-reflection-poster.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
@@ -23,9 +23,9 @@
 			<posy>82</posy>
 			<width>142</width>
 			<height>210</height>
-			<texture diffuse="OSD/osd_diffuse_poster.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-diffuse-poster.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>OSD/osd_border_poster.png</bordertexture>
+			<bordertexture>osd-border-poster.png</bordertexture>
 			<visible>VideoPlayer.Content(movies)</visible>
 		</control>
 		<control type="image">
@@ -33,7 +33,7 @@
 			<posy>292</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="OSD/osd_reflection_square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-reflection-square.png" flipy="true">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
@@ -42,9 +42,9 @@
 			<posy>82</posy>
 			<width>210</width>
 			<height>210</height>
-			<texture diffuse="OSD/osd_diffuse_square.png">$INFO[VideoPlayer.Cover]</texture>
+			<texture diffuse="osd-diffuse-square.png">$INFO[VideoPlayer.Cover]</texture>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<bordertexture>OSD/osd_border_square.png</bordertexture>
+			<bordertexture>osd-border-square.png</bordertexture>
 			<visible>[VideoPlayer.Content(episodes)]</visible>
 		</control>
 		<control type="group" id="1">
@@ -148,7 +148,7 @@
 				<posy>0</posy>
 				<height>120</height>
 				<width>1074</width>
-				<texture>OSD/SeekBarBackground.png</texture>
+				<texture>osd-bg-seekbar.png</texture>
 			</control>
 			<control type="progress" id="23">
 				<description>Progressbar</description>
@@ -306,7 +306,7 @@
 			<itemgap>10</itemgap>
 			<orientation>horizontal</orientation>
 			<control type="image">
-				<texture flipx="true">OSD/PlayerSpeed.png</texture>
+				<texture flipx="true">osd-nav-player-speed.png</texture>
 				<width>26</width>
 				<height>16</height>
 				<visible>player.rewinding</visible>
@@ -392,7 +392,7 @@
 				<visible>player.rewinding32x</visible>
 			</control>
 			<control type="image">
-				<texture>OSD/PlayerSpeed.png</texture>
+				<texture>osd-nav-player-speed.png</texture>
 				<width>26</width>
 				<height>16</height>
 				<visible>player.forwarding</visible>
@@ -412,7 +412,7 @@
 					<posy>0</posy>
 					<height>120</height>
 					<width>1074</width>
-					<texture>OSD/OSDBackground.png</texture>
+					<texture>osd-bg.png</texture>
 				</control>
 				<control type="group" id="213">
 					<width>790</width>
@@ -425,8 +425,8 @@
 						<posx>317</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Stop.png</texturenofocus>
-						<texturefocus>OSD/StopFocused.png</texturefocus>
+						<texturenofocus>osd-nav-stop.png</texturenofocus>
+						<texturefocus>osd-nav-stop-focused.png</texturefocus>
 						<onup>2009</onup>
 						<ondown>2009</ondown>
 						<onleft>1017</onleft>
@@ -437,8 +437,8 @@
 						<posx>379</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/SkipBack.png</texturenofocus>
-						<texturefocus>OSD/SkipBackFocused.png</texturefocus>
+						<texturenofocus>osd-nav-skip-back.png</texturenofocus>
+						<texturefocus>osd-nav-skip-back-focused.png</texturefocus>
 						<onup>2010</onup>
 						<ondown>2010</ondown>
 						<onleft>1009</onleft>
@@ -449,8 +449,8 @@
 						<posx>441</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Rewind.png</texturenofocus>
-						<texturefocus>OSD/RewindFocused.png</texturefocus>
+						<texturenofocus>osd-nav-rewind.png</texturenofocus>
+						<texturefocus>osd-nav-rewind-focused.png</texturefocus>
 						<onup>2011</onup>
 						<ondown>2011</ondown>
 						<onleft>1010</onleft>
@@ -461,11 +461,11 @@
 						<posx>503</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Play.png</texturenofocus>
-						<texturefocus>OSD/PlayFocused.png</texturefocus>
+						<texturenofocus>osd-nav-play.png</texturenofocus>
+						<texturefocus>osd-nav-play-focused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-						<alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
+						<alttexturenofocus>osd-nav-paused.png</alttexturenofocus>
+						<alttexturefocus>osd-nav-paused-focused.png</alttexturefocus>
 						<onup>2012</onup>
 						<ondown>2012</ondown>
 						<onleft>1011</onleft>
@@ -476,8 +476,8 @@
 						<posx>565</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/FastForward.png</texturenofocus>
-						<texturefocus>OSD/FastForwardFocused.png</texturefocus>
+						<texturenofocus>osd-nav-fast-forward.png</texturenofocus>
+						<texturefocus>osd-nav-fast-forward-focused.png</texturefocus>
 						<onup>2013</onup>
 						<ondown>2013</ondown>
 						<onleft>1012</onleft>
@@ -488,8 +488,8 @@
 						<posx>627</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/SkipForward.png</texturenofocus>
-						<texturefocus>OSD/SkipForwardFocused.png</texturefocus>
+						<texturenofocus>osd-nav-skip-forward.png</texturenofocus>
+						<texturefocus>osd-nav-skip-forward-focused.png</texturefocus>
 						<onup>2014</onup>
 						<ondown>2014</ondown>
 						<onleft>1013</onleft>
@@ -500,8 +500,8 @@
 						<posx>689</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/DVD.png</texturenofocus>
-						<texturefocus>OSD/DVDFocused.png</texturefocus>
+						<texturenofocus>osd-dvd.png</texturenofocus>
+						<texturefocus>osd-dvd-focused.png</texturefocus>
 						<onup>2015</onup>
 						<ondown>2015</ondown>
 						<onleft>1014</onleft>
@@ -514,8 +514,8 @@
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/AudioSettings.png</texturenofocus>
-						<texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
+						<texturenofocus>osd-settings-audio.png</texturenofocus>
+						<texturefocus>osd-settings-audio-focused.png</texturefocus>
 						<onup>2016</onup>
 						<ondown>2016</ondown>
 						<onleft>1015</onleft>
@@ -527,8 +527,8 @@
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/VideoSettings.png</texturenofocus>
-						<texturefocus>OSD/VideoSettingsFocused.png</texturefocus>
+						<texturenofocus>osd-settings-video.png</texturenofocus>
+						<texturefocus>osd-settings-video-focused.png</texturefocus>
 						<onup>2017</onup>
 						<ondown>2017</ondown>
 						<onleft>1016</onleft>
@@ -547,8 +547,8 @@
 						<posx>317</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Stop.png</texturenofocus>
-						<texturefocus>OSD/StopFocused.png</texturefocus>
+						<texturenofocus>osd-nav-stop.png</texturenofocus>
+						<texturefocus>osd-nav-stop-focused.png</texturefocus>
 						<onup>1009</onup>
 						<ondown>1009</ondown>
 						<onleft>2017</onleft>
@@ -559,8 +559,8 @@
 						<posx>379</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/SkipBack.png</texturenofocus>
-						<texturefocus>OSD/SkipBackFocused.png</texturefocus>
+						<texturenofocus>osd-nav-skip-back.png</texturenofocus>
+						<texturefocus>osd-nav-skip-back-focused.png</texturefocus>
 						<onup>1010</onup>
 						<ondown>1010</ondown>
 						<onleft>2009</onleft>
@@ -571,8 +571,8 @@
 						<posx>441</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Rewind.png</texturenofocus>
-						<texturefocus>OSD/RewindFocused.png</texturefocus>
+						<texturenofocus>osd-nav-rewind.png</texturenofocus>
+						<texturefocus>osd-nav-rewind-focused.png</texturefocus>
 						<onup>1011</onup>
 						<ondown>1011</ondown>
 						<onleft>2010</onleft>
@@ -583,11 +583,11 @@
 						<posx>503</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/Play.png</texturenofocus>
-						<texturefocus>OSD/PlayFocused.png</texturefocus>
+						<texturenofocus>osd-nav-play.png</texturenofocus>
+						<texturefocus>osd-nav-play-focused.png</texturefocus>
 						<usealttexture>Player.Playing</usealttexture>
-						<alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-						<alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
+						<alttexturenofocus>osd-nav-paused.png</alttexturenofocus>
+						<alttexturefocus>osd-nav-paused-focused.png</alttexturefocus>
 						<onup>1012</onup>
 						<ondown>1012</ondown>
 						<onleft>2011</onleft>
@@ -598,8 +598,8 @@
 						<posx>565</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/FastForward.png</texturenofocus>
-						<texturefocus>OSD/FastForwardFocused.png</texturefocus>
+						<texturenofocus>osd-nav-fast-forward.png</texturenofocus>
+						<texturefocus>osd-nav-fast-forward-focused.png</texturefocus>
 						<onup>1013</onup>
 						<ondown>1013</ondown>
 						<onleft>2012</onleft>
@@ -610,8 +610,8 @@
 						<posx>627</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/SkipForward.png</texturenofocus>
-						<texturefocus>OSD/SkipForwardFocused.png</texturefocus>
+						<texturenofocus>osd-nav-skip-forward.png</texturenofocus>
+						<texturefocus>osd-nav-skip-forward-focused.png</texturefocus>
 						<onup>1014</onup>
 						<ondown>1014</ondown>
 						<onleft>2013</onleft>
@@ -622,8 +622,8 @@
 						<posx>689</posx>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/DVD.png</texturenofocus>
-						<texturefocus>OSD/DVDFocused.png</texturefocus>
+						<texturenofocus>osd-dvd.png</texturenofocus>
+						<texturefocus>osd-dvd-focused.png</texturefocus>
 						<onup>1015</onup>
 						<ondown>1015</ondown>
 						<onleft>2014</onleft>
@@ -636,8 +636,8 @@
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/AudioSettings.png</texturenofocus>
-						<texturefocus>OSD/AudioSettingsFocused.png</texturefocus>
+						<texturenofocus>osd-settings-audio.png</texturenofocus>
+						<texturefocus>osd-settings-audio-focused.png</texturefocus>
 						<onup>1016</onup>
 						<ondown>1016</ondown>
 						<onleft>2015</onleft>
@@ -649,8 +649,8 @@
 						<posy>1</posy>
 						<width>62</width>
 						<height>38</height>
-						<texturenofocus>OSD/VideoSettings.png</texturenofocus>
-						<texturefocus>OSD/VideoSettingsFocused.png</texturefocus>
+						<texturenofocus>osd-settings-video.png</texturenofocus>
+						<texturefocus>osd-settings-video-focused.png</texturefocus>
 						<onup>1017</onup>
 						<ondown>1017</ondown>
 						<onleft>2016</onleft>
@@ -661,7 +661,7 @@
 				<control type="image">
 					<posx>689</posx>
 					<posy>16</posy>
-					<texture>OSD/DVDDisabled.png</texture>
+					<texture>osd-dvd-disabled.png</texture>
 					<width>62</width>
 					<height>38</height>
 					<visible>!VideoPlayer.HasMenu</visible>
@@ -772,7 +772,7 @@
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<texture flipx="true">OSD/PlayerSpeed.png</texture>
+						<texture flipx="true">osd-nav-player-speed.png</texture>
 						<width>26</width>
 						<height>16</height>
 						<visible>player.rewinding</visible>
@@ -858,7 +858,7 @@
 						<visible>player.rewinding32x</visible>
 					</control>
 					<control type="image">
-						<texture>OSD/PlayerSpeed.png</texture>
+						<texture>osd-nav-player-speed.png</texture>
 						<width>26</width>
 						<height>16</height>
 						<visible>player.forwarding</visible>

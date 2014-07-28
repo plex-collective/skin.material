@@ -1268,7 +1268,7 @@
 					<description>Title</description>
 					<width>1008</width>
 					<height>201</height>
-					<texture border="0,1,0,11">OSD/OSDBackground.png</texture>
+					<texture border="0,1,0,11">osd-bg.png</texture>
 				</control>
 				<!-- Episode Thumb -->
 				<control type="group">
@@ -1543,7 +1543,7 @@
 					<description>Title</description>
 					<width>1008</width>
 					<height>201</height>
-					<texture border="0,1,0,11">OSD/OSDBackground.png</texture>
+					<texture border="0,1,0,11">osd-bg.png</texture>
 				</control>
 				<!-- Episode Thumb -->
 				<control type="group">

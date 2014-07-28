@@ -123,7 +123,7 @@
 	<default type="progress">
 		<description>Default Progress Bar</description>
 		<visible>true</visible>
-		<texturebg>OSD/ProgressBackground.png</texturebg>
+		<texturebg>osd-bg-progress.png</texturebg>
 		<lefttexture>Controls/ProgressLeft.png</lefttexture>
 		<midtexture>Controls/ProgressMid.png</midtexture>
 		<righttexture>Controls/ProgressRight.png</righttexture>

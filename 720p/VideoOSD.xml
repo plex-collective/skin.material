@@ -5,7 +5,7 @@
 		<control type="group">
 			<include>OSDMenu</include>
 			<!-- Don't show OSDMenu if HideSeekBarOnPause is enabled -->
-			<visible>![Skin.HasSetting(HideSeekBarOnPause) + Player.Paused] + ![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDAudioSettings)]</visible>
+			<visible>![Skin.HasSetting(HideSeekBarOnPause) + Player.Paused] + ![Window.IsActive(OSDVideoSettings) | Window.IsActive(OSDosd-audio-settings)]</visible>
 		</control>
 		<control type="group">
 			<include>OSDMediaInfo</include>
