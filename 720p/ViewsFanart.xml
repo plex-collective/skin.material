@@ -696,7 +696,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud-background.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>

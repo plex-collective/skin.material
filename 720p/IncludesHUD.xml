@@ -9,7 +9,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud-background.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>
@@ -37,10 +37,10 @@
 	</include>
 	<include name="LoadingHUD">
 		<control type="group">
-			<control type="image">	
+			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud-background.png</texture>
 			</control>
 			<control type="multiimage">
 				<width>140</width>
@@ -60,14 +60,14 @@
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>HUD/PlayerHUDBackground.png</texture>
+			<texture>hud-player-background.png</texture>
 		</control>
 		<control type="image">
 			<posx>534</posx>
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>HUD/Volume.png</texture>
+			<texture>hud-volume.png</texture>
 			<visible>!Player.Muted</visible>
 		</control>
 		<control type="image">
@@ -75,7 +75,7 @@
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>HUD/VolumeMuted.png</texture>
+			<texture>hud-volume-muted.png</texture>
 			<visible>Player.Muted</visible>
 		</control>
 		<control type="progress" id="1">
@@ -84,9 +84,9 @@
 			<width>172</width>
 			<height>18</height>
 			<reveal>true</reveal>
-			<texturebg>HUD/VolumeBarBackground.png</texturebg>
+			<texturebg>hud-volume-bar-background.png</texturebg>
 			<lefttexture>-</lefttexture>
-			<midtexture>HUD/VolumeBar.png</midtexture>
+			<midtexture>hud-volume-bar.png</midtexture>
 			<righttexture>-</righttexture>
 			<info>Player.Volume</info>
 		</control>
@@ -97,12 +97,12 @@
 			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud-background.png</texture>
 			</control>
 			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/Pause.png</texture>
+				<texture>hud-pause.png</texture>
 			</control>
 		</control>
 	</include>
