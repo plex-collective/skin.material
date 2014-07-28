@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<strings>
+
+<!--  Video  -->
+	<string id="31001">Episodio</string>
+	<string id="31002">Episodios</string>
+	<string id="31003">Temporada</string>
+	<string id="31004">Detalles</string>
+	<string id="31005">Actores</string>
+	<string id="31006">Director</string>
+	<string id="31007">Escritor</string>
+	<string id="31008">Estreno</string>
+	<string id="31009">Fecha de</string>
+	<string id="31010">estreno</string>
+	<string id="31011">Duración</string>
+	<string id="31012">No visto</string>
+	<string id="31013">Cambiar</string>
+	<string id="31014">Ilustración</string>
+	<string id="31015">Cartel</string>
+	<string id="31016">Imagen de fondo</string>
+	<string id="31017">Imagen de episodio</string>
+	<string id="31020">Elija un cartel para esta película</string>
+	<string id="31021">Elija un cartel para esta serie de TV</string>
+	<string id="31022">Elija una imagen de fondo para esta película</string>
+	<string id="31023">Elija una imagen de fondo para esta serie de TV</string>
+	<string id="31024">Elija una imagen de fondo para este episodio</string>
+
+<!--  Skin Preferences  -->
+	<string id="31101">Mostrar pase de diapositivos</string>
+	<string id="31102">Presentación personalizada</string>
+	<string id="31103">Imágenes de la presentación</string>
+	<string id="31104">Mostrar 'En curso' antes de</string>
+	<string id="31105">Mostrar menú de apagado</string>
+	<string id="31106">Salir de Plex</string>
+	<string id="31107">Reposo</string>
+	<string id="31108">Apagar</string>
+	<string id="31109">Mostrar</string>
+	<string id="31110">General</string>
+	<string id="31111">Pase de diapos.</string>
+	<string id="31112">Sistema</string>
+
+<!--  Preferences  -->
+	<string id="31200">Preferencias</string>
+	<string id="31201">Skin</string>
+	<string id="31202">Apariencia</string>
+	<string id="31203">Vídeos</string>
+	<string id="31204">Música</string>
+	<string id="31205">Imágenes</string>
+	<string id="31206">Red</string>
+	<string id="31207">Sistema</string>
+
+<!--  Channels  -->
+	<string id="31300">Canales</string>
+	<string id="31301">Vídeo</string>
+	<string id="31302">Audio</string>
+	<string id="31303">Imágenes</string>
+	<string id="31304">Aplicaciones</string>
+	<string id="31305">Canales</string>
+	<string id="31306">Directorio de canales</string>	
+	<string id="31307">Canales de vídeo</string>
+	<string id="31308">Canales de audio</string>
+	<string id="31309">Canales de imágenes</string>
+
+<!--  Search  -->
+	<string id="31400">Buscar</string>
+	<string id="31401">Borrar</string>
+	<string id="31402">Espacio></string>
+	<string id="31403">Restaurar</string>
+	<string id="31404">Películas</string>
+	<string id="31405">Series de TV</string>
+	<string id="31406">Artistas</string>
+	<string id="31407">Álbumes</string>
+	<string id="31408">Canciones</string>
+	
+<!--  Home  -->
+	<string id="31500">Inicio</string>
+	<string id="31501">Recientemente añadido</string>
+	<string id="31502">En curso</string>
+	<string id="31504">Contenido compartido</string>
+
+<!--  DVD  -->
+	<string id="31600">Reproducir</string>
+	<string id="31601">Expulsar DVD</string>
+
+<!--  Music  -->
+	<string id="31700">de</string>
+
+</strings>

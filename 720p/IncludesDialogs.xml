@@ -14,22 +14,22 @@
 		<posy>-280</posy>
 		<width>1920</width>
 		<height>1080</height>
-		<texture>Dialogs/Diffuse.png</texture>
+		<texture>diffuse.png</texture>
 		<aspectratio>scale</aspectratio>
 	</include>
 	<include name="dialogWindowTop">
 		<width>662</width>
 		<height>94</height>
-		<texture>Dialogs/DialogTop.png</texture>
+		<texture>dialog-top.png</texture>
 	</include>
 	<include name="dialogWindowCenter">
 		<width>662</width>
-		<texture>Dialogs/DialogCenter.png</texture>
+		<texture>dialog-center.png</texture>
 	</include>
 	<include name="dialogWindowBottom">
 		<width>662</width>
 		<height>94</height>
-		<texture>Dialogs/DialogBottom.png</texture>
+		<texture>dialog-bottom.png</texture>
 	</include>
 	<include name="dialogHeading">
 		<align>center</align>
@@ -46,7 +46,7 @@
 	<include name="dialogButton">
 		<height>54</height>
 		<width>422</width>
-		<texturefocus>Dialogs/Button.png</texturefocus>
+		<texturefocus>button.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>
 		<textcolor>White</textcolor>
@@ -59,7 +59,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb.png</texturefocus>
+		<texturefocus>keyboard-b.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
@@ -71,9 +71,9 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb-wide.png</texturefocus>
+		<texturefocus>keyboard-b-wide.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<alttexturefocus>Dialogs/buttonkb-wide.png</alttexturefocus>
+		<alttexturefocus>keyboard-b-wide.png</alttexturefocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>Orange</focusedcolor>
@@ -85,7 +85,7 @@
 		<height>54</height>
 		<align>center</align>
 		<aligny>top</aligny>
-		<texturefocus>Dialogs/buttonkb-space.png</texturefocus>
+		<texturefocus>keyboard-b-space.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>keyboardbutton</font>
 		<textcolor>White</textcolor>

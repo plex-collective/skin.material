@@ -10,7 +10,7 @@
 					<posy>266</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 					<visible>IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="image">
@@ -18,7 +18,7 @@
 					<posy>159</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 					<visible>!IsEmpty(ListItem.Plot) + !IsEmpty(ListItem.Thumb)</visible>
 				</control>
 				<control type="group">
@@ -28,7 +28,7 @@
 						<posy>630</posy>
 						<width>464</width>
 						<height>330</height>
-						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="top" align="center">keep</aspectratio>
 						<fadetime>1</fadetime>
 						<visible>IsEmpty(ListItem.Plot)</visible>
@@ -38,7 +38,7 @@
 						<posy>519</posy>
 						<width>464</width>
 						<height>280</height>
-						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="top" align="center">keep</aspectratio>
 						<fadetime>1</fadetime>
 						<visible>!IsEmpty(ListItem.Plot)</visible>
@@ -48,9 +48,9 @@
 						<posy>300</posy>
 						<width>464</width>
 						<height>330</height>
-						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
-						<bordertexture>border_square.png</bordertexture>
+						<bordertexture>lib-square-border.png</bordertexture>
 						<fadetime>1</fadetime>
 						<visible>IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -59,9 +59,9 @@
 						<posy>239</posy>
 						<width>464</width>
 						<height>280</height>
-						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="bottom" align="center">keep</aspectratio>
-						<bordertexture>border_square.png</bordertexture>
+						<bordertexture>lib-square-border.png</bordertexture>
 						<fadetime>1</fadetime>
 						<visible>!IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -73,7 +73,7 @@
 						<posy>630</posy>
 						<width>330</width>
 						<height>330</height>
-						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
 						<fadetime>1</fadetime>
 						<visible>IsEmpty(ListItem.Plot)</visible>
@@ -83,7 +83,7 @@
 						<posy>519</posy>
 						<width>280</width>
 						<height>280</height>
-						<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="top" align="center" scalediffuse="false">scale</aspectratio>
 						<fadetime>1</fadetime>
 						<visible>!IsEmpty(ListItem.Plot)</visible>
@@ -93,9 +93,9 @@
 						<posy>300</posy>
 						<width>330</width>
 						<height>330</height>
-						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
-						<bordertexture>border_square.png</bordertexture>
+						<bordertexture>lib-square-border.png</bordertexture>
 						<fadetime>1</fadetime>
 						<visible>IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -104,9 +104,9 @@
 						<posy>239</posy>
 						<width>280</width>
 						<height>280</height>
-						<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+						<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 						<aspectratio aligny="bottom" align="center" scalediffuse="false">scale</aspectratio>
-						<bordertexture>border_square.png</bordertexture>
+						<bordertexture>lib-square-border.png</bordertexture>
 						<fadetime>1</fadetime>
 						<visible>!IsEmpty(ListItem.Plot)</visible>
 					</control>
@@ -119,7 +119,7 @@
 					<posy>159</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<!-- Current Thumb reflection-->
 				<control type="image">
@@ -127,7 +127,7 @@
 					<posy>519</posy>
 					<width>188</width>
 					<height>280</height>
-					<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -138,9 +138,9 @@
 					<posy>239</posy>
 					<width>188</width>
 					<height>280</height>
-					<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_poster.png</bordertexture>
+					<bordertexture>lib-poster-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 				<!-- /Current Thumb -->
@@ -152,7 +152,7 @@
 					<posy>114</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<!-- Current Thumb reflection-->
 				<control type="image">
@@ -160,7 +160,7 @@
 					<posy>474</posy>
 					<width>400</width>
 					<height>224</height>
-					<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-episode-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -171,9 +171,9 @@
 					<posy>250</posy>
 					<width>400</width>
 					<height>224</height>
-					<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-episode-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_episode.png</bordertexture>
+					<bordertexture>lib-episode-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 				<!-- /Current Thumb -->
@@ -185,7 +185,7 @@
 					<posy>159</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<!-- Current Thumb reflection-->
 				<control type="image">
@@ -193,7 +193,7 @@
 					<posy>519</posy>
 					<width>280</width>
 					<height>280</height>
-					<texture background="true" diffuse="reflection_artist.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-artist-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -204,9 +204,9 @@
 					<posy>239</posy>
 					<width>280</width>
 					<height>280</height>
-					<texture background="true" diffuse="diffuse_artist.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-artist-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
-					<bordertexture>border_artist.png</bordertexture>
+					<bordertexture>lib-artist-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 				<!-- /Current Thumb -->
@@ -218,7 +218,7 @@
 					<posy>266</posy>
 					<width>598</width>
 					<height>415</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<!-- Current Thumb reflection-->
 				<control type="image">
@@ -226,7 +226,7 @@
 					<posy>630</posy>
 					<width>330</width>
 					<height>330</height>
-					<texture background="true" diffuse="reflection_square.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-square-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="bottom" align="center">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -237,9 +237,9 @@
 					<posy>300</posy>
 					<width>330</width>
 					<height>330</height>
-					<texture background="true" diffuse="diffuse_square.png">$INFO[ListItem.Thumb]</texture>
+					<texture background="true" diffuse="lib-square-diffuse.png">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false" aligny="top" align="center">scale</aspectratio>
-					<bordertexture>border_square.png</bordertexture>
+					<bordertexture>lib-square-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 				<!-- /Current Thumb -->
@@ -566,27 +566,27 @@
 							<font>list1</font>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 						</control>
 						<control type="image">
@@ -595,7 +595,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCount.png</texture>
+							<texture>badges-unwatched-count.png</texture>
 							<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
 						</control>
 						<control type="label">
@@ -641,7 +641,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -677,7 +677,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>54</height>
-					<texture>button_media.png</texture>
+					<texture>b-media.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
@@ -821,27 +821,27 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
@@ -850,7 +850,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>54</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,Focused.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,-focused.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
@@ -861,7 +861,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCount.png</texture>
+							<texture>badges-unwatched-count.png</texture>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -870,7 +870,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCountFocused.png</texture>
+							<texture>badges-unwatched-count-focused.png</texture>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
@@ -945,7 +945,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -955,7 +955,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlayingFocused.png</texture>
+							<texture>badges-now-playing-focused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
@@ -1049,27 +1049,27 @@
 							<font>plot1</font>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 						</control>
 					</control>
@@ -1080,7 +1080,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
@@ -1156,27 +1156,27 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayUnwatched.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,OverlayInProgress.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
@@ -1185,7 +1185,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>74</height>
-							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,Focused.png]</texture>
+							<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,-focused.png]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
@@ -1239,7 +1239,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -1275,7 +1275,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
@@ -1349,7 +1349,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -1359,7 +1359,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlayingFocused.png</texture>
+							<texture>badges-now-playing-focused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
@@ -1413,8 +1413,8 @@
 			<posy>237</posy>
 			<width>1200</width>
 			<height>440</height>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(2) + Container.HasFiles</visible>
 			<preloaditems>2</preloaditems>
@@ -1425,8 +1425,8 @@
 					<width>128</width>
 					<height>128</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_photo.png</bordertexture>
+					<texture background="true" diffuse="lib-photo-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>lib-photo-border.png</bordertexture>
 				</control>
 			</itemlayout>
 			<focusedlayout height="164" width="164">
@@ -1436,8 +1436,8 @@
 					<width>128</width>
 					<height>128</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="diffuse_photo.png">$INFO[ListItem.Thumb]</texture>
-					<bordertexture>border_photo.png</bordertexture>
+					<texture background="true" diffuse="lib-photo-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<bordertexture>lib-photo-border.png</bordertexture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -1445,7 +1445,7 @@
 					<width>164</width>
 					<height>164</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture>focus_photo.png</texture>
+					<texture>lib-photo-focus.png</texture>
 				</control>
 			</focusedlayout>
 		</control>

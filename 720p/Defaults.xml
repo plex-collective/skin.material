@@ -38,7 +38,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Orange</focusedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -50,10 +50,8 @@
 		<textcolor>White</textcolor>
 		<align>center</align>
 		<aligny>center</aligny>
-		<alttexturefocus>dialogs/buttonkb-focus.png</alttexturefocus>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="radiobutton">
@@ -63,40 +61,40 @@
 		<font>list1</font>
 		<textcolor>White</textcolor>
 		<align>left</align>
+		<aligny>center</aligny>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureradiofocus>Controls/Radio.png</textureradiofocus>
+		<textureradiofocus>controls-radio.png</textureradiofocus>
 		<textureradionofocus>-</textureradionofocus>
 		<radiowidth>20</radiowidth>
 		<radioheight>20</radioheight>
 		<focusedcolor>Orange</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<radioposx>900</radioposx>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrol">
 		<description>Default Spin Control</description>
 		<align>left</align>
+		<aligny>center</aligny>
 		<width>16</width>
 		<height>54</height>
-		<align>center</align>
+		<!--align>center</align-->
 		<font>list2</font>
 		<textcolor>White</textcolor>
 		<textoffsetx>70</textoffsetx>
-		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
-		<textureup>Controls/SpinUp.png</textureup>
-		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
-		<texturedown>Controls/SpinDown.png</texturedown>
-		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<textureup>controls-spin-up.png</textureup>
+		<textureupfocus>controls-spin-up-focused.png</textureupfocus>
+		<texturedown>controls-spin-down.png</texturedown>
+		<texturedownfocus>controls-spin-down-focused.png</texturedownfocus>
 		<reverse>yes</reverse>
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrolex">
@@ -107,11 +105,11 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<texturenofocus>-</texturenofocus>
-		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
-		<textureup>Controls/SpinUp.png</textureup>
-		<textureupfocus>Controls/SpinUpFocused.png</textureupfocus>
-		<texturedown>Controls/SpinDown.png</texturedown>
-		<texturedownfocus>Controls/SpinDownFocused.png</texturedownfocus>
+		<texturefocus>settings-b-dialog.png</texturefocus>
+		<textureup>controls-spin-up.png</textureup>
+		<textureupfocus>controls-spin-up-focused.png</textureupfocus>
+		<texturedown>controls-spin-down.png</texturedown>
+		<texturedownfocus>controls-spin-down-focused.png</texturedownfocus>
 		<spinwidth>14</spinwidth>
 		<spinheight>12</spinheight>
 		<reverse>yes</reverse>
@@ -124,19 +122,19 @@
 	<default type="progress">
 		<description>Default Progress Bar</description>
 		<visible>true</visible>
-		<texturebg>OSD/ProgressBackground.png</texturebg>
-		<lefttexture>Controls/ProgressLeft.png</lefttexture>
-		<midtexture>Controls/ProgressMid.png</midtexture>
-		<righttexture>Controls/ProgressRight.png</righttexture>
+		<texturebg>osd-bg-progress.png</texturebg>
+		<lefttexture>controls-progress-left.png</lefttexture>
+		<midtexture>controls-progress-mid.png</midtexture>
+		<righttexture>controls-progress-right.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="sliderex">
 		<sliderwidth>100</sliderwidth>
 		<sliderheight>16</sliderheight>
-		<texturesliderbar>Controls/Slider.png</texturesliderbar>
-		<textureslidernib>Controls/SliderNib.png</textureslidernib>
-		<textureslidernibfocus>Controls/SliderNibFocused.png</textureslidernibfocus>
-		<texturefocus>dialogs/button_settings_dialog.png</texturefocus>
+		<texturesliderbar>controls-slider.png</texturesliderbar>
+		<textureslidernib>controls-slider-nib.png</textureslidernib>
+		<textureslidernibfocus>controls-slider-nib-focused.png</textureslidernibfocus>
+		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>list1</font>
 		<height>54</height>

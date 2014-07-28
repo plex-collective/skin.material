@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<strings>
+
+<!--  Video  -->
+	<string id="31001">Avsnitt</string>
+	<string id="31002">Avsnitt</string>
+	<string id="31003">Säsong</string>
+	<string id="31004">Detaljer</string>
+	<string id="31005">Skådespelare</string>
+	<string id="31006">Regissör</string>
+	<string id="31007">Författare</string>
+	<string id="31008">Släppdatum</string>
+	<string id="31009">Första</string>
+	<string id="31010">Sänd</string>
+	<string id="31011">Längd</string>
+	<string id="31012">Osedd</string>
+	<string id="31013">Ändra</string>
+	<string id="31014">Bild</string>
+	<string id="31015">Affisch</string>
+	<string id="31016">Bakgrundsbild</string>
+	<string id="31017">Avsnittsbild</string>
+	<string id="31020">Välj en affisch för denna film</string>
+	<string id="31021">Välj en affisch för denna TV-serie</string>
+	<string id="31022">Välj en bakgrund för denna film</string>
+	<string id="31023">Välj en bakgrund för denna TV-serie</string>
+	<string id="31024">Välj en bild för detta avsnitt</string>
+
+<!--  Skin Preferences  -->
+	<string id="31101">Visa bildspel</string>
+	<string id="31102">Anpassat bildspel</string>
+	<string id="31103">Bildspel bilder</string>
+	<string id="31104">Visa "On Deck" före</string>
+	<string id="31105">Visa Systemet meny</string>
+	<string id="31106">Avsluta</string>
+	<string id="31107">Vila</string>
+	<string id="31108">Stäng av</string>
+	<string id="31109">Visa</string>
+	<string id="31110">Hem</string>
+	<string id="31111">Bildspel</string>
+	<string id="31112">Systemet</string>
+
+<!--  Preferences  -->
+	<string id="31200">Inställningar</string>
+	<string id="31201">Tema</string>
+	<string id="31202">Utseende</string>
+	<string id="31203">Videos</string>
+	<string id="31204">Musik</string>
+	<string id="31205">Bilder</string>
+	<string id="31206">Nätverk</string>
+	<string id="31207">System</string>
+
+<!--  Channels  -->
+	<string id="31300">Kanaler</string>
+	<string id="31301">Video</string>
+	<string id="31302">Ljud</string>
+	<string id="31303">Bilder</string>
+	<string id="31304">Program</string>
+	<string id="31305">Plex</string>
+	<string id="31306">Kanalkatalog</string>
+	<string id="31307">Videokanaler</string>
+	<string id="31308">Ljudkanaler</string>
+	<string id="31309">Bildkanaler</string>
+
+<!--  Search  -->
+	<string id="31400">Sök</string>
+	<string id="31401">Sudda</string>
+	<string id="31402">Tomrum</string>
+	<string id="31403">Rensa</string>
+	<string id="31404">Filmer</string>
+	<string id="31405">TV-serier</string>
+	<string id="31406">Artister</string>
+	<string id="31407">Album</string>
+	<string id="31408">Låtar</string>
+        
+<!--  Home  -->
+	<string id="31500">Hem</string>
+	<string id="31501">Senast tillagda</string>
+	<string id="31502">On Deck</string>
+	<string id="31504">Delat innehåll</string>
+
+<!--  DVD  -->
+	<string id="31600">Spela</string>
+	<string id="31601">Mata ut skiva</string>
+
+<!--  Music  -->
+	<string id="31700">av</string>
+	
+</strings>

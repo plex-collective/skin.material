@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <includes>
 	<include name="FanartList">
-		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--=============================================================================================-->
 		<!-- ### INFO/METADATA ### -->
 
 		<!--======================================================================================================================================================================================================-->
@@ -14,7 +14,7 @@
 			<!--control type="group">
 				<description>Header (Clock)</description>
 				<control type="image">
-					<texture>background_overlay_header.png</texture>
+					<texture>bg-overlay-header.png</texture>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
@@ -36,9 +36,9 @@
 				<posy>534</posy>
 				<width>1125</width>
 
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<!-- Thumbs -->
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<control type="group" id="52003">
 					<posy>15</posy>
 					<height>201</height>
@@ -48,7 +48,7 @@
 						<description>Title</description>
 						<width>1125</width>
 						<height>201</height>
-						<texture border="0,1,0,11">OSD/OSDBackground.png</texture>
+						<texture border="0,1,0,11">osd-bg.png</texture>
 					</control>
 					<!-- Episode Thumb -->
 					<control type="group">
@@ -60,7 +60,7 @@
 							<posy>24</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture>thumb_background.png</texture>
+							<texture>bg-thumb.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster Thumb Reflection</description>
@@ -68,7 +68,7 @@
 							<posy>122</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-episode-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 						</control>
@@ -81,9 +81,9 @@
 							<posy>24</posy>
 							<width>150</width>
 							<height>99</height>
-							<texture background="true" diffuse="diffuse_episode.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-episode-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_episode.png</bordertexture>
+							<bordertexture>lib-episode-border.png</bordertexture>
 							<fadetime>1</fadetime>
 						</control>
 					</control>
@@ -97,7 +97,7 @@
 							<posy>-15</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture>thumb_background.png</texture>
+							<texture>bg-thumb.png</texture>
 						</control>
 						<control type="image">
 							<description>Poster Thumb Reflection</description>
@@ -105,7 +105,7 @@
 							<posy>155</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<fadetime>1</fadetime>
 						</control>
@@ -115,22 +115,22 @@
 							<posy>-15</posy>
 							<width>114</width>
 							<height>171</height>
-							<texture background="true" diffuse="diffuse_poster.png">$INFO[ListItem.Thumb]</texture>
+							<texture background="true" diffuse="lib-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<bordertexture>border_episode.png</bordertexture>
+							<bordertexture>lib-episode-border.png</bordertexture>
 							<fadetime>1</fadetime>
 						</control>
 					</control>
 				</control>
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<!-- Info -->
-				<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!--=============================================================================================-->
 				<!-- Movies, TvShow, Seasons or Episodes Info -->
 				<control type="group">
 					<visible>[Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					<width>912</width>
 					<height>150</height>
-					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<!--=============================================================================================-->
 					<control type="group">
 						<posx>188</posx>
 						<posy>39</posy>
@@ -147,7 +147,6 @@
 							<aligny>center</aligny>
 							<textcolor>Orange</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
-							<shadowcolor>ff000000</shadowcolor>
 							<font>osd</font>
 						</control>
 						<!-- Image Rating -->
@@ -163,7 +162,7 @@
 							<aspectratio aligny="bottom" align="left">keep</aspectratio>
 						</control>
 					</control>
-					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<!--=============================================================================================-->
 					<control type="group">
 						<posx>188</posx>
 						<posy>45</posy>
@@ -211,7 +210,7 @@
 							<wrapmultiline>false</wrapmultiline>
 						</control>
 					</control>
-					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<!--=============================================================================================-->
 					<!-- Plot outline -->
 					<control type="textbox" id="8">
 						<visible>!IsEmpty(ListItem.PlotOutline)</visible>
@@ -241,7 +240,7 @@
 						<font>plot1</font>
 						<autoscroll delay="10000" time="3000" repeat="10000"/>
 					</control>
-					<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+					<!--=============================================================================================-->
 					<control type="group">
 						<posx>188</posx>
 						<posy>159</posy>
@@ -308,7 +307,7 @@
 		</control>
 
 
-		<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<!--=============================================================================================-->
 		<!-- ### LIST VIEW ITSELF ### -->
 		<control type="list" id="555">
 			<posx>12</posx>
@@ -316,7 +315,7 @@
 			<width>551</width>
 			<height>480</height>
 			<onleft>42</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 
@@ -415,7 +414,7 @@
 						<posy>1</posy>
 						<width>512</width>
 						<height>54</height>
-						<texture>button_media.png</texture>
+						<texture>b-media.png</texture>
 						<!--texture>nrg/list-focus.png</texture>
 						<colordiffuse>11B5B5B5</colordiffuse-->
 						<aspectratio>keep</aspectratio>
@@ -428,7 +427,7 @@
 						<posy>1</posy>
 						<width>549</width>
 						<height>54</height>
-						<texture>button_media.png</texture>
+						<texture>b-media.png</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
@@ -551,7 +550,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
@@ -641,7 +640,7 @@
 					<posy>1</posy>
 					<width>512</width>
 					<height>70</height>
-					<texture>button_media_info.png</texture>
+					<texture>b-media-info.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnNext">Focus</animation>
 					<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container().OnPrevious">Focus</animation>
@@ -696,7 +695,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>HUD/HUDBackground.png</texture>
+				<texture>hud/hud-background.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>

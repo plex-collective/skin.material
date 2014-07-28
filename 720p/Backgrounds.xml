@@ -139,7 +139,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>background_overlay_diffuse.png</texture>
+			<texture>bg-overlay-diffuse.png</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -166,21 +166,21 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>background_overlay_diffuse.png</texture>
+			<texture>bg-overlay-diffuse.png</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
 			<height>48</height>
-			<texture>background_overlay_header.png</texture>
+			<texture>bg-overlay-header.png</texture>
 		</control>
 		<control type="image">
 			<posx>0</posx>
 			<posy>212</posy>
 			<width>1280</width>
 			<height>508</height>
-			<texture>background_overlay.png</texture>
+			<texture>bg-overlay.png</texture>
 		</control>
 	</include>
 
@@ -201,7 +201,7 @@
 			<visible>Container.Content(photo) | Container.Content(album)</visible>
 			<control type="image">
 				<include>FullScreenScaled</include>
-				<texture>background_home.png</texture> <!-- MISSING from both versions, was background.png -->
+				<texture>background.png</texture>
 				<visible>true</visible>
 			</control>
 			<control type="largeimage">
@@ -214,7 +214,7 @@
 		<control type="image">
 			<include>FullScreenScaled</include>
 			<include>fadeinout</include>
-			<texture>nrg/menuBackground.png</texture>
+			<texture>bg-menu.png</texture>
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">
@@ -222,7 +222,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>48</height>
-			<texture diffuse="buttom_home.png">background_overlay_diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
+			<texture diffuse="home-b.png">bg-overlay-diffuse.png</texture> <!-- MISSING bottom_home; maybe its button_home -->
 		</control>
 	</include>
 

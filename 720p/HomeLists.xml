@@ -31,7 +31,7 @@
 			<posy>0</posy>
 			<width>1090</width>
 			<height>223</height>
-			<texture>background_overlay.png</texture>
+			<texture>bg-overlay.png</texture>
 		</control>
 	</include>
 
@@ -148,7 +148,7 @@
 				<onright>-</onright>
 			</control>
 			-->
-			<!--------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- Second row panel -->
 			<control type="panel" id="110012222">
 				<!--
@@ -512,7 +512,7 @@
 			<width>117</width>
 			<height>174</height>
 			<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-			<texture diffuse="reflection_poster.png" flipy="true" background="true">$VAR[listitem_poster_art]</texture>
+			<texture diffuse="lib-poster-reflection.png" flipy="true" background="true">$VAR[listitem_poster_art]</texture>
 		</control>
 
 		<!-- Poster border and diffuse color -->
@@ -524,8 +524,8 @@
 			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
 			<colordiffuse>$VAR[listitem_diffuse_color]</colordiffuse>
 			<!--disabledcolordiffuse>Orange</disabledcolordiffuse-->
-			<texture diffuse="mask-poster-small.png" background="true">$VAR[listitem_poster_art]</texture>
-			<!--bordertexture>border_poster_home.png</bordertexture-->
+			<texture diffuse="lib-poster-small-mask.png" background="true">$VAR[listitem_poster_art]</texture>
+			<!--bordertexture>home-poster-border.png</bordertexture-->
 		</control>
 	</include>
 	<include name="ListItemPosterFocusedLayout">
@@ -538,7 +538,7 @@
 			<height>178</height>
 			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
 			<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
-			<texture>mask-poster-small.png</texture>
+			<texture>lib-poster-small-mask.png</texture>
 		</control>
 
 		<!-- Focused item non-diffused -->
@@ -548,8 +548,8 @@
 			<width>117</width>
 			<height>174</height>
 			<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-			<texture diffuse="mask-poster-small.png" background="true">$VAR[listitem_poster_art]</texture>
-			<!--bordertexture>mask-poster-small.png</bordertexture-->
+			<texture diffuse="lib-poster-small-mask.png" background="true">$VAR[listitem_poster_art]</texture>
+			<!--bordertexture>lib-poster-small-mask.png</bordertexture-->
 		</control>
 	</include>
 
@@ -765,7 +765,7 @@
 					<posy>24</posy>
 					<width>150</width>
 					<height>99</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<control type="image">
 					<description>Poster Thumb Reflection</description>
@@ -773,7 +773,7 @@
 					<posy>122</posy>
 					<width>150</width>
 					<height>99</height>
-					<texture background="true" diffuse="reflection_episode.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<texture background="true" diffuse="lib-episode-reflection.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -783,9 +783,9 @@
 					<posy>24</posy>
 					<width>150</width>
 					<height>99</height>
-					<texture background="true" diffuse="diffuse_episode.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<texture background="true" diffuse="lib-episode-diffuse.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_episode.png</bordertexture>
+					<bordertexture>lib-episode-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 			</control>
@@ -799,7 +799,7 @@
 					<posy>-15</posy>
 					<width>114</width>
 					<height>171</height>
-					<texture>thumb_background.png</texture>
+					<texture>bg-thumb.png</texture>
 				</control>
 				<control type="image">
 					<description>Poster Thumb Reflection</description>
@@ -807,7 +807,7 @@
 					<posy>155</posy>
 					<width>114</width>
 					<height>171</height>
-					<texture background="true" diffuse="reflection_poster.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<texture background="true" diffuse="lib-poster-reflection.png" flipy="true">$INFO[Container(11001).ListItem(0).Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>1</fadetime>
 				</control>
@@ -817,9 +817,9 @@
 					<posy>-15</posy>
 					<width>114</width>
 					<height>171</height>
-					<texture background="true" diffuse="diffuse_poster.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
+					<texture background="true" diffuse="lib-poster-border.png">$INFO[Container(11001).ListItem(0).Thumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<bordertexture>border_episode.png</bordertexture>
+					<bordertexture>lib-episode-border.png</bordertexture>
 					<fadetime>1</fadetime>
 				</control>
 			</control>
@@ -837,13 +837,12 @@
 			<width>501</width>
 			<height>222</height>
 
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- Info -->
-			<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<!-- =================================================================================================== -->
 			<!-- Movies, TvShow, Seasons or Episodes Info -->
 			<control type="group">
 				<visible>[ListItem.Type(movie) | ListItem.Type(episode)]</visible>
-				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 				<control type="group">
 					<description>Title and Image Ratings</description>
 					<posx>0</posx>  <!--      186 orig          -->
@@ -882,7 +881,7 @@
 						<info>ListItem.StarRating</info>
 					</control>
 				</control>
-				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- =========================================================================================== -->
 				<control type="group">
 					<posx>0</posx>
 					<posy>24</posy>
@@ -915,7 +914,7 @@
 						<label>$VAR[text_rating]</label>
 					</control>
 				</control>
-				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- =========================================================================================== -->
 				<!-- Under-rule -->
 				<control type="image">
 					<posx>0</posx>
@@ -925,7 +924,7 @@
 					<texture>white.png</texture>
 					<colordiffuse>$VAR[color_primary_focused]</colordiffuse>
 				</control>
-				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- =========================================================================================== -->
 				<!-- Plot outline -->
 				<control type="group">
 					<include>VisibleStatementFor11001ListitemFocusedItem</include>
@@ -961,7 +960,7 @@
 						<label>$INFO[ListItem.Plot]</label>
 					</control>
 				</control>
-				<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+				<!-- =========================================================================================== -->
 				<!-- Media Flags & duration-->
 				<control type="group">
 					<posx>0</posx>

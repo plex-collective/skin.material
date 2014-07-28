@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.material" version="0.0.1-develop" name="Material" provider-name="plex-collective">
+<addon id="skin.material" version="0.0.2-develop" name="Material" provider-name="plex-collective">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 	</requires>
