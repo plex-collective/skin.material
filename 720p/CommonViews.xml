@@ -566,20 +566,20 @@
 							<font>list1</font>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
@@ -595,7 +595,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCount.png</texture>
+							<texture>badges-unwatched-count.png</texture>
 							<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
 						</control>
 						<control type="label">
@@ -641,7 +641,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -821,20 +821,20 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png) + ![Container.Content(tvshows) | Container.Content(seasons)]</visible>
 							<posy>22</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>2</posy>
@@ -861,7 +861,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCount.png</texture>
+							<texture>badges-unwatched-count.png</texture>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 						</control>
 						<control type="image">
@@ -870,7 +870,7 @@
 							<posx>450</posx>
 							<width>36</width>
 							<height>24</height>
-							<texture>Badges/UnwatchedCountFocused.png</texture>
+							<texture>badges-unwatched-count-focused.png</texture>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
@@ -945,7 +945,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -955,7 +955,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlayingFocused.png</texture>
+							<texture>badges-now-playing-focused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>Container.Content(songs) + StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>
@@ -1049,20 +1049,20 @@
 							<font>plot1</font>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-unwatched.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-in-progress.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
@@ -1156,20 +1156,20 @@
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnPrevious">Focus</animation>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-unwatched.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-unwatched.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/Unwatched.png</texture>
+							<texture>badges-unwatched.png</texture>
 						</control>
 						<control type="image">
-							<visible>StringCompare(ListItem.Overlay,ovverlay-in-progress.png)</visible>
+							<visible>StringCompare(ListItem.Overlay,badges-in-progress.png)</visible>
 							<posy>30</posy>
 							<posx>10</posx>
 							<width>12</width>
 							<height>12</height>
-							<texture>Badges/InProgress.png</texture>
+							<texture>badges-in-progress.png</texture>
 						</control>
 						<control type="image">
 							<posy>0</posy>
@@ -1239,7 +1239,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 						</control>
@@ -1349,7 +1349,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlaying.png</texture>
+							<texture>badges-now-playing.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
@@ -1359,7 +1359,7 @@
 							<posx>457</posx>
 							<width>22</width>
 							<height>20</height>
-							<texture>Badges/NowPlayingFocused.png</texture>
+							<texture>badges-now-playing-focused.png</texture>
 							<aspectratio align="left" alingy="center">keep</aspectratio>
 							<visible>StringCompare(MusicPlayer.Title,ListItem.Title) + StringCompare(MusicPlayer.Artist,ListItem.Artist) + StringCompare(MusicPlayer.Album,ListItem.Album) + Container.Content(songs)</visible>
 							<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container(50).OnNext">Focus</animation>

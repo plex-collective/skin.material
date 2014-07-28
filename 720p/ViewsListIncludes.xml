@@ -251,7 +251,7 @@
 		<control type="image">
 			<width>36</width>
 			<height>24</height>
-			<texture>Badges/UnwatchedCount.png</texture>
+			<texture>badges-unwatched-count.png</texture>
 			<animation effect="fade" start="0" end="100" delay="180" time="250">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control>
@@ -276,7 +276,7 @@
 		<control type="image">
 			<width>36</width>
 			<height>24</height>
-			<texture>Badges/UnwatchedCountFocused.png</texture>
+			<texture>badges-unwatched-count-focused.png</texture>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control>
@@ -321,7 +321,7 @@
 		<!--control type="image">
 			<width>51</width>
 			<height>24</height>
-			<texture>Badges/UnwatchedCount.png</texture>
+			<texture>badges-unwatched-count.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control-->
 		<control type="label">
@@ -344,7 +344,7 @@
 		<!--control type="image">
 			<width>51</width>
 			<height>24</height>
-			<texture>Badges/UnwatchedCountFocused.png</texture>
+			<texture>badges-unwatched-count-focused.png</texture>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
 		</control-->
@@ -395,7 +395,7 @@
 		<control type="image">
 			<width>22</width>
 			<height>20</height>
-			<texture>Badges/NowPlaying.png</texture>
+			<texture>badges-now-playing.png</texture>
 			<aspectratio align="left" alingy="center">keep</aspectratio>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control>
@@ -406,7 +406,7 @@
 		<control type="image">
 			<width>22</width>
 			<height>20</height>
-			<texture>Badges/NowPlayingFocused.png</texture>
+			<texture>badges-now-playing-focused.png</texture>
 			<aspectratio align="left" alingy="center">keep</aspectratio>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
