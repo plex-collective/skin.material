@@ -371,7 +371,7 @@
 		<control type="image">
 			<width>36</width>
 			<height>54</height>
-			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,.png]</texture>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<animation effect="fade" start="100" end="0" time="100" delay="100" reversible="false">Focus</animation>
 		</control>
@@ -381,7 +381,7 @@
 		<control type="image">
 			<width>36</width>
 			<height>54</height>
-			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),Badges/Resolution/,Focused.png]</texture>
+			<texture>$INFO[Listitem.Property(mediaTag-videoResolution),badges-resolution-,-focused.png]</texture>
 			<aspectratio align="left" aligny="center">keep</aspectratio>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnNext">Focus</animation>
 			<animation effect="fade" start="0" end="100" time="100" delay="100" reversible="false" condition="Container().OnPrevious">Focus</animation>
