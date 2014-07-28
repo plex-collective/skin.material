@@ -12,14 +12,12 @@
 			<include condition="!Skin.HasSetting(SHOW_GRID)">SlideShowHome</include>
 			<control type="image">
 				<include>FullScreenScaled</include>
-				<include>fadeinout</include>
 				<texture>bg-menu.png</texture>
 				<colordiffuse>FFFF0000</colordiffuse>
 			</control>
 			<control type="image">
 				<include>FullScreenScaled</include>
-				<include>fadeinout</include>
-				<texture>nrg/bg-gradient-blue-bottom.png</texture>
+				<texture>bg-gradient-blue-bottom.png</texture>
 				<colordiffuse>FFFF0000</colordiffuse>
 			</control>
 			-->
@@ -88,7 +86,7 @@
 				<onup>5999</onup>
 				<ondown>5999</ondown>
 				<onleft>301</onleft>
-				<onright>-</onright>
+				<onright>noop</onright>
 
 				<scrolltime>200</scrolltime>
 
@@ -186,9 +184,9 @@
 				<height>324</height>
 				<align>right</align>
 
-				<onup>-</onup>
-				<ondown>-</ondown>
-				<onleft>-</onleft>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
+				<onleft>noop</onleft>
 				<onright>300</onright>
 
 				<focusposition>2</focusposition>
@@ -280,8 +278,8 @@
 				<width>348</width>
 				<height>324</height>
 
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
 				<onleft>301</onleft>
 				<onright>300</onright>
 
@@ -368,8 +366,8 @@
 				<width>348</width>
 				<height>324</height>
 
-				<onup>-</onup>
-				<ondown>-</ondown>
+				<onup>noop</onup>
+				<ondown>noop</ondown>
 				<onleft>301</onleft>
 				<onright>300</onright>
 

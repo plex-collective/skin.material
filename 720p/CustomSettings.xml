@@ -480,7 +480,6 @@
 					<texturenofocus>-</texturenofocus>
 					<texturefocus>settings-b.png</texturefocus>
 					<textoffsety>0</textoffsety>
-					<radioposx>726</radioposx>
 					<!-- TODO: Localize -->
 					<label>Reset Settings</label>
 					<pulseonselect>false</pulseonselect>
@@ -495,7 +494,6 @@
 					<height>54</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<radioposx>726</radioposx>
 					<font>list1</font>
 					<textcolor>White</textcolor>
 					<focusedcolor>Orange</focusedcolor>

@@ -2,9 +2,9 @@
 <window id="2003">
 	<defaultcontrol always="true">1</defaultcontrol>
 	<controls>
-		<include>Background</include>
+		<include>BGDefault</include>
 		<include>Header</include>
-		<include>Time</include>
+		<include>Clock</include>
 		<control type="group">
 			<visible>Container.Content(Movies)</visible>
 			<control type="group">

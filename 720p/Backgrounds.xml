@@ -213,7 +213,6 @@
 		</control>
 		<control type="image">
 			<include>FullScreenScaled</include>
-			<include>fadeinout</include>
 			<texture>bg-menu.png</texture>
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>

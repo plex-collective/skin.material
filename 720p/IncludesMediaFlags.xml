@@ -13,7 +13,7 @@
 
 	<!-- MPAA / TV Rating -->
 	<include name="LargeContentRatingMediaFlags">
-		<!----------------------------------------------------------------------------------------------->
+		<!-- =========================================================================================================== -->
 		<control type="image">
 			<visible>!IsEmpty(ListItem.Art(mediaTag::contentRating))</visible>
 			<posx>0</posx>

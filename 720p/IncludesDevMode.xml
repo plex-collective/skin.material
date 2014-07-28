@@ -20,7 +20,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<aligny>top</aligny>
-			<texture>nrg/debuggrid720.png</texture>
+			<texture>dev-debuggrid720.png</texture>
 			<colordiffuse>Orange</colordiffuse>
 			<aspectratio>scale</aspectratio>
 			<animation effect="fade" end="40" condition="true">Conditional</animation>

@@ -60,7 +60,7 @@ Coding Style Used
         <label>$VAR[listitem_poster_title_2]</label>
 
         <!-- actions -->
-        <onup>-</onup>
+        <onup>noop</onup>
         <scroll>true</scroll>
 
         <!-- animation -->
