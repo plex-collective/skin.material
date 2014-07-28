@@ -15,7 +15,7 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>64</height>
-				<texture>hud-notification.png</texture>
+				<texture>hud/hud-notification.png</texture>
 			</control>
 			<control type="grouplist">
 				<posy>4</posy>
@@ -43,14 +43,14 @@
 				<posy>258</posy>
 				<width>212</width>
 				<height>204</height>
-				<texture>hud-player-background.png</texture>
+				<texture>hud/hud-player-background.png</texture>
 			</control>
 			<control type="image">
 				<posx>534</posx>
 				<posy>258</posy>
 				<width>212</width>
 				<height>204</height>
-				<texture>hud-subtitles.png</texture>
+				<texture>hud/hud-subtitles.png</texture>
 			</control>
 			<control type="label" id="402">
 				<posx>534</posx>

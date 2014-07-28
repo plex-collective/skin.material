@@ -30,7 +30,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture>nrg/debuggrid720.png</texture>
+			<texture>dev-debuggrid720.png</texture>
 			<colordiffuse>Orange</colordiffuse>
 			<aspectratio>scale</aspectratio>
 			<aligny>top</aligny>
@@ -105,7 +105,7 @@
 		<control type="image">
 			<include>FullScreenBGImageDims</include>
 			<include>fadeinout</include>
-			<texture>nrg/menuBackground.png</texture>
+			<texture>bg-menu.png</texture>
 			<colordiffuse>FFFF0000</colordiffuse>
 		</control>
 		<control type="image">

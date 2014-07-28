@@ -9,7 +9,7 @@
 				<posy>396</posy>
 				<width>140</width>
 				<height>134</height>
-				<texture>hud-background.png</texture>
+				<texture>hud/hud-background.png</texture>
 			</control>
 			<control type="label">
 				<posx>850</posx>
@@ -40,12 +40,12 @@
 			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>hud-background.png</texture>
+				<texture>hud/hud-background.png</texture>
 			</control>
 			<control type="multiimage">
 				<width>140</width>
 				<height>134</height>
-				<imagepath>HUD/loading</imagepath>
+				<imagepath>hud/loading</imagepath>
 				<timeperimage>50</timeperimage>
 				<fadetime>1</fadetime>
 				<loop>yes</loop>
@@ -60,14 +60,14 @@
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>hud-player-background.png</texture>
+			<texture>hud/hud-player-background.png</texture>
 		</control>
 		<control type="image">
 			<posx>534</posx>
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>hud-volume.png</texture>
+			<texture>hud/hud-volume.png</texture>
 			<visible>!Player.Muted</visible>
 		</control>
 		<control type="image">
@@ -75,7 +75,7 @@
 			<posy>258</posy>
 			<width>212</width>
 			<height>204</height>
-			<texture>hud-volume-muted.png</texture>
+			<texture>hud/hud-volume-muted.png</texture>
 			<visible>Player.Muted</visible>
 		</control>
 		<control type="progress" id="1">
@@ -84,9 +84,9 @@
 			<width>172</width>
 			<height>18</height>
 			<reveal>true</reveal>
-			<texturebg>hud-volume-bar-background.png</texturebg>
+			<texturebg>hud/hud-volume-bar-background.png</texturebg>
 			<lefttexture>-</lefttexture>
-			<midtexture>hud-volume-bar.png</midtexture>
+			<midtexture>hud/hud-volume-bar.png</midtexture>
 			<righttexture>-</righttexture>
 			<info>Player.Volume</info>
 		</control>
@@ -97,12 +97,12 @@
 			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>hud-background.png</texture>
+				<texture>hud/hud-background.png</texture>
 			</control>
 			<control type="image">
 				<width>140</width>
 				<height>134</height>
-				<texture>hud-pause.png</texture>
+				<texture>hud/hud-pause.png</texture>
 			</control>
 		</control>
 	</include>
