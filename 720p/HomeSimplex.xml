@@ -107,7 +107,7 @@
 				<posy>289</posy>
 				<width>1500</width>
 				<height>300</height>
-				<onup>-</onup>
+				<onup>noop</onup>
 				<ondown>350</ondown>
 				<onright>300</onright>
 				<focusposition>3</focusposition>
@@ -224,7 +224,7 @@
 				<width>422</width>
 				<height>324</height>
 				<onup>300</onup>
-				<ondown>-</ondown>
+				<ondown>noop</ondown>
 				<onleft>352</onleft>
 				<onright>351</onright>
 				<scrolltime>200</scrolltime>
@@ -357,7 +357,7 @@
 				<width>422</width>
 				<height>324</height>
 				<onup>300</onup>
-				<ondown>-</ondown>
+				<ondown>noop</ondown>
 				<onleft>352</onleft>
 				<onright>351</onright>
 				<scrolltime>200</scrolltime>
@@ -470,7 +470,7 @@
 				<width>422</width>
 				<height>324</height>
 				<onup>300</onup>
-				<ondown>-</ondown>
+				<ondown>noop</ondown>
 				<onleft>352</onleft>
 				<onright>351</onright>
 				<scrolltime>200</scrolltime>
@@ -632,9 +632,9 @@
 					<control type="list" id="11003">
 						<visible allowhiddenfocus="false">false</visible>
 						<orientation>horizontal</orientation>
-						<onright>-</onright>
-						<onleft>-</onleft>
-						<ondown>-</ondown>
+						<onright>noop</onright>
+						<onleft>noop</onleft>
+						<ondown>noop</ondown>
 						<onup>300</onup>
 						<width>1190</width>
 						<height>340</height>

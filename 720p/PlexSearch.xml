@@ -32,7 +32,7 @@
 				<posx>0</posx>
 				<posy>19</posy>
 				<textcolor>Gray</textcolor>
-				<focusedcolor>Gray</focusedcolor>
+				<!--focusedcolor>Gray</focusedcolor-->
 				<width>402</width>
 				<font>list1</font>
 				<label>$LOCALIZE[31400]</label>
@@ -56,11 +56,11 @@
 				<focusedcolor>Gray</focusedcolor>
 				<width>289</width>
 				<height>43</height>
-				<onleft>-</onleft>
+				<onleft>noop</onleft>
 				<ondown>9001</ondown>
 				<onright>350</onright>
-				<emptylabel>-</emptylabel>
-				<emptycolor>opaquegrey</emptycolor>
+				<!--emptylabel>-</emptylabel-->
+				<!--emptycolor>opaquegrey</emptycolor-->
 				<align>left</align>
 				<aligny>center</aligny>
 				<textoffsetx>16</textoffsetx>
@@ -79,8 +79,8 @@
 					<itemgap>-1</itemgap>
 					<orientation>vertical</orientation>
 					<usecontrolcoords>false</usecontrolcoords>
-					<onup>-</onup>
-					<ondown>-</ondown>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<renderfocusedlast>false</renderfocusedlast>
@@ -512,7 +512,7 @@
 							<font>keyboardbuttonsmall</font>
 							<posx>0</posx>
 							<onup>95</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>5100</onleft>
 							<onright>32</onright>
 							<label>$LOCALIZE[31403]</label>
@@ -526,7 +526,7 @@
 							<texturenofocus>keyboard-b-delete.png</texturenofocus>
 							<texturefocus>keyboard-b-delete-focused.png</texturefocus>
 							<onup>100</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>32</onleft>
 							<onright>9001</onright>
 							<include>keyboardWideButton</include>
@@ -538,7 +538,7 @@
 							<posx>100</posx>
 							<width>116</width>
 							<onup>97</onup>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onleft>8</onleft>
 							<onright>10</onright>
 							<texturefocus>keyboard-b-space-search.png</texturefocus>
@@ -591,8 +591,8 @@
 							<visible allowhiddenfocus="false">true</visible>
 							<orientation>horizontal</orientation>
 							<ondown>7002</ondown>
-							<onup>-</onup>
-							<onright>-</onright>
+							<onup>noop</onup>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
 							<width>890</width>
@@ -718,10 +718,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7004</ondown>
 							<onup>7001</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<height>200</height>
 							<itemlayout width="134" height="172">
@@ -845,7 +845,7 @@
 							<orientation>horizontal</orientation>
 							<ondown>9008</ondown>
 							<onup>9002</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
 							<width>880</width>
@@ -1019,10 +1019,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7009</ondown>
 							<onup>7004</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>880</width>
 							<itemlayout width="134" height="172">
 								<control type="group">
@@ -1146,10 +1146,10 @@
 							<orientation>horizontal</orientation>
 							<ondown>7010</ondown>
 							<onup>7008</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">
@@ -1321,10 +1321,10 @@
 							<orientation>horizontal</orientation>
 							<onup>7009</onup>
 							<ondown>7013</ondown>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">
@@ -1496,10 +1496,10 @@
 							<orientation>horizontal</orientation>
 							<onup>7010</onup>
 							<ondown>7012</ondown>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>880</width>
 							<itemlayout width="134" height="172">
 								<control type="group">
@@ -1621,12 +1621,12 @@
 							<posy>44</posy>
 							<visible allowhiddenfocus="false">true</visible>
 							<orientation>horizontal</orientation>
-							<ondown>-</ondown>
+							<ondown>noop</ondown>
 							<onup>7013</onup>
-							<onright>-</onright>
+							<onright>noop</onright>
 							<onleft>350</onleft>
 							<posx>45</posx>
-							<posy>0</posy>
+							<!--posy>0</posy-->
 							<width>890</width>
 							<itemlayout width="160" height="280">
 								<control type="group">

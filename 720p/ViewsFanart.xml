@@ -147,7 +147,6 @@
 							<aligny>center</aligny>
 							<textcolor>Orange</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
-							<shadowcolor>ff000000</shadowcolor>
 							<font>osd</font>
 						</control>
 						<!-- Image Rating -->
@@ -316,7 +315,7 @@
 			<width>551</width>
 			<height>480</height>
 			<onleft>42</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 

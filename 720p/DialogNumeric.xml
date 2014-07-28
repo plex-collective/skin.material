@@ -42,7 +42,7 @@
 				<width>460</width>
 				<height>38</height>
 				<font>keyboardentry</font>
-				<ondown>52</ondown>
+				<!--ondown>52</ondown-->
 				<textcolor>Gray</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>

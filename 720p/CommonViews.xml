@@ -1413,8 +1413,8 @@
 			<posy>237</posy>
 			<width>1200</width>
 			<height>440</height>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(2) + Container.HasFiles</visible>
 			<preloaditems>2</preloaditems>

@@ -152,7 +152,6 @@
 							<aligny>center</aligny>
 							<textcolor>Orange</textcolor>
 							<shadowcolor>Shadow</shadowcolor>
-							<shadowcolor>ff000000</shadowcolor>
 							<font>osd</font>
 						</control>
 						<!-- Image Rating -->

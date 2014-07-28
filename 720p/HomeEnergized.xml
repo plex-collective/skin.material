@@ -98,7 +98,7 @@
 				<control type="image">
 					<texture background="true">home-bg-thumb.png</texture>
 					<posx>782</posx>
-					<center>right</center>
+					<align>right</align>
 					<posy>265</posy>
 					<width>498</width>
 					<height>414</height>
@@ -255,7 +255,7 @@
 					<width>348</width>
 					<height>324</height>
 					<onup>299</onup>
-					<ondown>-</ondown>
+					<ondown>noop</ondown>
 					<onleft>5101</onleft>
 					<onright>5100</onright>
 					<scrolltime>200</scrolltime>
@@ -340,7 +340,7 @@
 					<width>422</width>
 					<height>324</height>
 					<onup>299</onup>
-					<ondown>-</ondown>
+					<ondown>noop</ondown>
 					<onleft>352</onleft>
 					<onright>351</onright>
 					<scrolltime>200</scrolltime>
@@ -456,7 +456,7 @@
 					<width>422</width>
 					<height>324</height>
 					<onup>299</onup>
-					<ondown>-</ondown>
+					<ondown>noop</ondown>
 					<onleft>352</onleft>
 					<onright>351</onright>
 					<scrolltime>200</scrolltime>
@@ -551,7 +551,7 @@
 					<width>422</width>
 					<height>324</height>
 					<onup>299</onup>
-					<ondown>-</ondown>
+					<ondown>noop</ondown>
 					<onleft>352</onleft>
 					<onright>351</onright>
 					<scrolltime>200</scrolltime>

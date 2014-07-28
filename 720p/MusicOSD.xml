@@ -23,8 +23,8 @@
 					<posy>16</posy>
 					<height>96</height>
 					<itemgap>0</itemgap>
-					<onup>-</onup>
-					<ondown>-</ondown>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
 					<onright>17</onright>
 					<onleft>19</onleft>
 					<orientation>horizontal</orientation>

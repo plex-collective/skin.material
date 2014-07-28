@@ -785,7 +785,7 @@
 			<width>551</width>
 			<height>426</height>
 			<onleft>41</onleft>
-			<onright>-</onright>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
 
@@ -899,7 +899,7 @@
 						<width>549</width>
 						<height>54</height>
 						<texture>b-media.png</texture>
-						<aspectratio>strech</aspectratio>
+						<aspectratio>stretch</aspectratio>
 						<animation effect="slide" start="0,-52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnNext">Focus</animation>
 						<animation effect="slide" start="0,52" end="0,0" time="200" reversible="false" easing="out" condition="Container(50).OnPrevious">Focus</animation>
 					</control>
@@ -1164,8 +1164,8 @@
 			<posy>237</posy>
 			<width>1200</width>
 			<height>440</height>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(2) + Container.HasFiles</visible>
 			<preloaditems>2</preloaditems>

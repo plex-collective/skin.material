@@ -20,8 +20,8 @@
 			<control type="list" id="11000">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>300</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -52,8 +52,8 @@
 			<control type="list" id="11002">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>300</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -82,8 +82,8 @@
 			<control type="list" id="11001">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>300</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -113,8 +113,8 @@
 			<control type="list" id="11001">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>11000</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -143,9 +143,9 @@
 			<control type="list" id="11000">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
-				<ondown>-</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
+				<ondown>noop</ondown>
 				<onup>11001</onup>
 				<width>1190</width>
 				<height>340</height>
@@ -173,8 +173,8 @@
 			<control type="list" id="11000">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>11001</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -203,9 +203,9 @@
 			<control type="list" id="11001">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
-				<ondown>-</ondown>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
+				<ondown>noop</ondown>
 				<onup>11000</onup>
 				<width>1190</width>
 				<height>340</height>
@@ -321,8 +321,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 					<colordiffuse>FFAAAAAA</colordiffuse>
 				</control>
@@ -332,8 +332,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
@@ -374,8 +374,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 					<colordiffuse>FFAAAAAA</colordiffuse>
 				</control>
@@ -385,8 +385,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
@@ -436,8 +436,8 @@
 				<posy>19</posy>
 				<width>134</width>
 				<height>200</height>
-				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
@@ -488,8 +488,8 @@
 				<posy>19</posy>
 				<width>134</width>
 				<height>200</height>
-				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
@@ -727,8 +727,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 					<colordiffuse>FFAAAAAA</colordiffuse>
 				</control>
@@ -738,8 +738,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
@@ -780,8 +780,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 					<colordiffuse>FFAAAAAA</colordiffuse>
 				</control>
@@ -791,8 +791,8 @@
 					<posy>19</posy>
 					<width>134</width>
 					<height>200</height>
-					<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-					<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+					<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 					<bordertexture>home-poster-border.png</bordertexture>
 				</control>
 				<control type="label">
@@ -842,8 +842,8 @@
 				<posy>19</posy>
 				<width>134</width>
 				<height>200</height>
-				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.Thumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
@@ -894,8 +894,8 @@
 				<posy>19</posy>
 				<width>134</width>
 				<height>200</height>
-				<aspectratio scalediffuse="false" align="center" background="true">scale</aspectratio>
-				<texture diffuse="home-poster-diffuse.png">$INFO[ListItem.GrandparentThumb]</texture>
+				<aspectratio scalediffuse="false" align="center">scale</aspectratio>
+				<texture diffuse="home-poster-diffuse.png" background="true">$INFO[ListItem.GrandparentThumb]</texture>
 				<bordertexture>home-poster-border.png</bordertexture>
 			</control>
 			<control type="image">
@@ -1125,8 +1125,8 @@
 			<control type="list" id="11003">
 				<visible allowhiddenfocus="false">false</visible>
 				<orientation>horizontal</orientation>
-				<onright>-</onright>
-				<onleft>-</onleft>
+				<onright>noop</onright>
+				<onleft>noop</onleft>
 				<ondown>300</ondown>
 				<onup>300</onup>
 				<width>1190</width>
@@ -1365,7 +1365,6 @@
 						<aligny>center</aligny>
 						<textcolor>Orange</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
-						<shadowcolor>ff000000</shadowcolor>
 						<font>osd</font>
 					</control>
 					<control type="label">
@@ -1379,7 +1378,6 @@
 						<aligny>center</aligny>
 						<textcolor>Orange</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
-						<shadowcolor>ff000000</shadowcolor>
 						<font>osd</font>
 					</control>
 					<!-- Image Rating -->
@@ -1640,7 +1638,6 @@
 						<aligny>center</aligny>
 						<textcolor>Orange</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
-						<shadowcolor>ff000000</shadowcolor>
 						<font>osd</font>
 					</control>
 					<control type="label">
@@ -1654,7 +1651,6 @@
 						<aligny>center</aligny>
 						<textcolor>Orange</textcolor>
 						<shadowcolor>Shadow</shadowcolor>
-						<shadowcolor>ff000000</shadowcolor>
 						<font>osd</font>
 					</control>
 					<!-- Image Rating -->

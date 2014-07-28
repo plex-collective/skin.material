@@ -52,7 +52,6 @@
 		<aligny>center</aligny>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="radiobutton">
@@ -62,6 +61,7 @@
 		<font>list1</font>
 		<textcolor>White</textcolor>
 		<align>left</align>
+		<aligny>center</aligny>
 		<textoffsetx>30</textoffsetx>
 		<texturefocus>settings-b-dialog.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
@@ -72,16 +72,16 @@
 		<focusedcolor>Orange</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<radioposx>900</radioposx>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrol">
 		<description>Default Spin Control</description>
 		<align>left</align>
+		<aligny>center</aligny>
 		<width>16</width>
 		<height>54</height>
-		<align>center</align>
+		<!--align>center</align-->
 		<font>list2</font>
 		<textcolor>White</textcolor>
 		<textoffsetx>70</textoffsetx>
@@ -95,7 +95,6 @@
 		<focusedcolor>White</focusedcolor>
 		<selectedcolor>White</selectedcolor>
 		<disabledcolor>DarkGray</disabledcolor>
-		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrolex">

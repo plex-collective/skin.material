@@ -224,7 +224,7 @@
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
+					<!--radioposx>726</radioposx-->
 					<!-- TODO: Localize -->
 					<label>Reset Settings</label>
 					<onclick>Skin.ResetSettings</onclick>
@@ -245,7 +245,7 @@
 					<textoffsety>0</textoffsety>
 					<textoffsetx>30</textoffsetx>
 					<pulseonselect>false</pulseonselect>
-					<radioposx>726</radioposx>
+					<!--radioposx>726</radioposx-->
 					<!-- TODO: Localize -->
 					<label>Reload Skin</label>
 					<onclick>XBMC.ReloadSkin()</onclick>

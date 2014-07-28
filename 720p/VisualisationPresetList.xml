@@ -19,8 +19,8 @@
 			<posy>40</posy>
 			<width>500</width>
 			<height>382</height>
-			<onleft>-</onleft>
-			<onright>-</onright>
+			<onleft>noop</onleft>
+			<onright>noop</onright>
 			<onup>2</onup>
 			<ondown>2</ondown>
 			<itemlayout height="32">
